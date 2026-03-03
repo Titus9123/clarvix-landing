@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarvix - שירותי דיגיטל לעסקים</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/i18next@23.7.6/dist/umd/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-browser-languagedetector@7.2.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>Clarvix</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#services" data-i18n="nav.services">שירותים</a>
+                <a href="#pricing" data-i18n="nav.pricing">תמחור</a>
+                <a href="#contact" data-i18n="nav.contact">צור קשר</a>
+                <select id="language-selector" class="language-selector">
+                    <option value="he">עברית</option>
+                    <option value="ar">العربية</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2 data-i18n="hero.title">הגדל את הנראות הדיגיטלית שלך עם Clarvix</h2>
+            <p data-i18n="hero.subtitle">שירותי ביקורת דיגיטל וגיוס לידים B2B בעברית וערבית</p>
+            <button class="cta-button" data-i18n="hero.cta">התחל עכשיו</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-i18n="services.title">שירותינו</h2>
+            
+            <!-- Service 1: Digital Presence Audit -->
+            <div class="service-card">
+                <h3 data-i18n="services.audit.title">ביקורת נראות דיגיטלית</h3>
+                <p data-i18n="services.audit.description">ניתוח מקיף של הנראות שלך ברשת</p>
+                <div class="service-tiers">
+                    <div class="tier">
+                        <h4 data-i18n="services.audit.basic">בסיסי</h4>
+                        <p class="price">₪185</p>
+                        <ul>
+                            <li data-i18n="services.audit.basic.feature1">דוח SEO בסיסי</li>
+                            <li data-i18n="services.audit.basic.feature2">ניתוח מדיה חברתית</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="audit-basic" data-price="185">הוסף לסל</button>
+                    </div>
+                    <div class="tier">
+                        <h4 data-i18n="services.audit.standard">סטנדרטי</h4>
+                        <p class="price">₪370</p>
+                        <ul>
+                            <li data-i18n="services.audit.standard.feature1">דוח SEO מפורט</li>
+                            <li data-i18n="services.audit.standard.feature2">ניתוח תחרותי</li>
+                            <li data-i18n="services.audit.standard.feature3">המלצות שיפור</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="audit-standard" data-price="370">הוסף לסל</button>
+                    </div>
+                    <div class="tier">
+                        <h4 data-i18n="services.audit.premium">פרימיום</h4>
+                        <p class="price">₪555</p>
+                        <ul>
+                            <li data-i18n="services.audit.premium.feature1">דוח SEO מקיף</li>
+                            <li data-i18n="services.audit.premium.feature2">ניתוח תחרותי עמוק</li>
+                            <li data-i18n="services.audit.premium.feature3">תוכנית פעולה 90 יום</li>
+                            <li data-i18n="services.audit.premium.feature4">ייעוץ ישיר</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="audit-premium" data-price="555">הוסף לסל</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service 2: B2B Lead Generation -->
+            <div class="service-card">
+                <h3 data-i18n="services.leadgen.title">גיוס לידים B2B</h3>
+                <p data-i18n="services.leadgen.description">לידים מוקדמים מוכשרים עבור עסקך</p>
+                <div class="service-tiers">
+                    <div class="tier">
+                        <h4 data-i18n="services.leadgen.starter">התחלה</h4>
+                        <p class="price">₪9,250<span>/חודש</span></p>
+                        <ul>
+                            <li data-i18n="services.leadgen.starter.feature1">10-15 לידים מוכשרים</li>
+                            <li data-i18n="services.leadgen.starter.feature2">דוחות חודשיים</li>
+                            <li data-i18n="services.leadgen.starter.feature3">עברית וערבית</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="leadgen-starter" data-price="9250">הוסף לסל</button>
+                    </div>
+                    <div class="tier">
+                        <h4 data-i18n="services.leadgen.professional">מקצועי</h4>
+                        <p class="price">₪18,500<span>/חודש</span></p>
+                        <ul>
+                            <li data-i18n="services.leadgen.professional.feature1">20-30 לידים מוכשרים</li>
+                            <li data-i18n="services.leadgen.professional.feature2">דוחות שבועיים</li>
+                            <li data-i18n="services.leadgen.professional.feature3">ניתוח תחרותי</li>
+                            <li data-i18n="services.leadgen.professional.feature4">עברית וערבית</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="leadgen-professional" data-price="18500">הוסף לסל</button>
+                    </div>
+                    <div class="tier">
+                        <h4 data-i18n="services.leadgen.enterprise">ארגוני</h4>
+                        <p class="price">₪37,000<span>/חודש</span></p>
+                        <ul>
+                            <li data-i18n="services.leadgen.enterprise.feature1">40-60 לידים מוכשרים</li>
+                            <li data-i18n="services.leadgen.enterprise.feature2">דוחות יומיים</li>
+                            <li data-i18n="services.leadgen.enterprise.feature3">ניתוח תחרותי עמוק</li>
+                            <li data-i18n="services.leadgen.enterprise.feature4">ייעוץ ישיר</li>
+                            <li data-i18n="services.leadgen.enterprise.feature5">עברית וערבית</li>
+                        </ul>
+                        <button class="add-to-cart" data-product="leadgen-enterprise" data-price="37000">הוסף לסל</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <h2 data-i18n="pricing.title">תמחור שקוף</h2>
+            <p data-i18n="pricing.subtitle">בחר את החבילה המתאימה לך</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-i18n="contact.title">צור קשר</h2>
+            <form id="contact-form">
+                <input type="email" placeholder="אימייל" required data-i18n-placeholder="contact.email">
+                <input type="text" placeholder="שם" required data-i18n-placeholder="contact.name">
+                <textarea placeholder="הודעה" required data-i18n-placeholder="contact.message"></textarea>
+                <button type="submit" data-i18n="contact.submit">שלח</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div id="cart" class="cart">
+        <h3 data-i18n="cart.title">סל קניות</h3>
+        <div id="cart-items"></div>
+        <div class="cart-total">
+            <p data-i18n="cart.total">סה"כ: <span id="total-price">₪0</span></p>
+        </div>
+        <button id="checkout-btn" class="checkout-button" data-i18n="cart.checkout">המשך לתשלום</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Clarvix. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="translations.js"></script>
+</body>
+</html>
