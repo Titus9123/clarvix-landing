@@ -1,0 +1,404 @@
+/* ============================================================
+   CLARVIX — Order Modal Styles
+   Fiverr redirect flow
+   ============================================================ */
+
+/* ── OVERLAY ─────────────────────────────────────────────── */
+.order-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(5, 14, 24, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* Hidden by default */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.order-overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ── MODAL CARD ──────────────────────────────────────────── */
+.order-modal {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: #0F2236;
+  border: 1px solid rgba(10, 191, 191, 0.22);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.6),
+    0 0 60px rgba(10, 191, 191, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  transform: translateY(24px) scale(0.97);
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.order-overlay.open .order-modal {
+  transform: translateY(0) scale(1);
+}
+
+/* Scrollbar styling */
+.order-modal::-webkit-scrollbar {
+  width: 4px;
+}
+
+.order-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.order-modal::-webkit-scrollbar-thumb {
+  background: rgba(10, 191, 191, 0.25);
+  border-radius: 4px;
+}
+
+/* ── CLOSE BUTTON ────────────────────────────────────────── */
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 50%;
+  color: #8FA3B8;
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+
+.modal-close:hover {
+  background: rgba(192, 57, 43, 0.15);
+  border-color: rgba(192, 57, 43, 0.4);
+  color: #C0392B;
+  transform: rotate(90deg);
+}
+
+/* ── MODAL HEADER ────────────────────────────────────────── */
+.modal-header {
+  text-align: center;
+  margin-bottom: 28px;
+  padding-right: 28px;
+  /* clear close btn */
+}
+
+.modal-logo-img {
+  height: 44px;
+  width: auto;
+  margin: 0 auto 16px;
+  display: block;
+}
+
+.modal-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.modal-sub {
+  font-size: 0.88rem;
+  color: #8FA3B8;
+  line-height: 1.6;
+}
+
+/* ── PACKAGE SELECTOR ────────────────────────────────────── */
+.package-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.pkg-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.pkg-option:hover {
+  border-color: rgba(10, 191, 191, 0.3);
+  background: rgba(10, 191, 191, 0.04);
+}
+
+.pkg-option.selected {
+  border-color: #0ABFBF;
+  background: rgba(10, 191, 191, 0.08);
+  box-shadow: 0 0 0 1px #0ABFBF inset;
+}
+
+/* Custom radio dot */
+.pkg-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  flex-shrink: 0;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.pkg-option.selected .pkg-radio {
+  border-color: #0ABFBF;
+  background: #0ABFBF;
+  box-shadow: 0 0 0 3px rgba(10, 191, 191, 0.2);
+}
+
+.pkg-option.selected .pkg-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #0F2236;
+}
+
+.pkg-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+
+.pkg-name {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.2;
+}
+
+.pkg-desc {
+  font-size: 0.78rem;
+  color: #8FA3B8;
+}
+
+.pkg-price {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0ABFBF;
+  flex-shrink: 0;
+}
+
+/* ── SEPARATOR ───────────────────────────────────────────── */
+.modal-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 4px 0 20px;
+}
+
+/* ── FORM ────────────────────────────────────────────────── */
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .order-modal {
+    padding: 28px 20px;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #8FA3B8;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid rgba(255, 255, 255, 0.10);
+  border-radius: 9px;
+  padding: 11px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: #FFFFFF;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+  color: rgba(143, 163, 184, 0.5);
+}
+
+.form-input:focus {
+  border-color: #0ABFBF;
+  background: rgba(10, 191, 191, 0.06);
+  box-shadow: 0 0 0 3px rgba(10, 191, 191, 0.12);
+}
+
+.form-input.error {
+  border-color: #C0392B;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+/* ── ERROR MESSAGE ───────────────────────────────────────── */
+.form-error {
+  font-size: 0.82rem;
+  color: #C0392B;
+  background: rgba(192, 57, 43, 0.08);
+  border: 1px solid rgba(192, 57, 43, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: none;
+  /* shown via JS */
+}
+
+.form-error.visible {
+  display: block;
+}
+
+/* ── SUBMIT BUTTON ───────────────────────────────────────── */
+.btn-order-submit {
+  width: 100%;
+  padding: 15px 24px;
+  background: linear-gradient(135deg, #0ABFBF, #07A5A5);
+  border: none;
+  border-radius: 10px;
+  color: #0D1B2A;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 24px rgba(10, 191, 191, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  letter-spacing: 0.01em;
+}
+
+.btn-order-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(10, 191, 191, 0.5);
+  background: linear-gradient(135deg, #0DD4D4, #0ABFBF);
+}
+
+.btn-order-submit:active {
+  transform: translateY(0);
+}
+
+.btn-order-submit:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── FOOTNOTE ────────────────────────────────────────────── */
+.modal-footnote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 0.78rem;
+  color: #4A6178;
+  line-height: 1.5;
+  text-align: center;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.fiverr-badge {
+  height: 22px;
+  width: auto;
+  opacity: 0.6;
+  filter: grayscale(0.3) brightness(1.2);
+  flex-shrink: 0;
+}
+
+/* ── SUCCESS STATE ───────────────────────────────────────── */
+.modal-success {
+  text-align: center;
+  padding: 20px 0 8px;
+  display: none;
+}
+
+.modal-success.visible {
+  display: block;
+}
+
+.success-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.success-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.success-sub {
+  font-size: 0.9rem;
+  color: #8FA3B8;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.success-note {
+  font-size: 0.78rem;
+  color: #4A6178;
+}
+
+/* RTL Overrides for Hebrew */
+[dir='rtl'] .modal-header { padding-right: 0; padding-left: 28px; }
+[dir='rtl'] .modal-close { right: auto; left: 20px; }
+[dir='rtl'] .pkg-info { text-align: right; }
+[dir='rtl'] .pkg-price { text-align: left; }
+[dir='rtl'] .form-label { text-align: right; }
+[dir='rtl'] .form-input { text-align: right; }
