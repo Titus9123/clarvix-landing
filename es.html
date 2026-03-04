@@ -1,41 +1,34 @@
-<!DOCTYPE html><html lang="es"><head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clarvix — Auditoría Digital y Generación de Leads B2B</title>
   <meta name="description" content="Clarvix ofrece Auditorías Digitales de Conversión de Leads y Generación de Leads B2B para negocios locales. Descubre por qué pierdes leads y obtén un plan de acción de 30 días.">
-
   <link rel="icon" type="image/png" href="images/favicon.png">
-
   <script>
-    var FIVERR_BASE = 'https://www.fiverr.com/albertneuman402/perform-a-lead-conversion-digital-audit-with-score-benchmark-and-30-day-plan';
-    var FIVERR_BASIC = FIVERR_BASE + '?package=1';
-    var FIVERR_STANDARD = FIVERR_BASE + '?package=2';
-    var FIVERR_PREMIUM = FIVERR_BASE + '?package=3';
+    var PAYONEER_EMAIL = 'clarvix@clarvix.net';
+    var CONTACT_EMAIL = 'contact.clarvix@gmail.com';
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="order-modal.css">
-
   <meta property="og:title" content="Clarvix — Auditoría Digital y Generación de Leads B2B">
   <meta property="og:description" content="Clarvix ofrece Auditorías Digitales de Conversión de Leads y Generación de Leads B2B para negocios locales.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.clarvix.net/es.html">
   <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
-  <meta name="twitter:card" content="summary_large_image">
   <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
   <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
   <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
+  <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
   <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
-
-  <!-- Apollo Website Tracker -->
   <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
 </head>
-
 <body>
 
-  <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav-inner">
       <div class="logo">
@@ -47,21 +40,21 @@
         <a href="#how-it-works" class="nav-link">Cómo funciona</a>
         <a href="#pricing" class="nav-link">Precios</a>
         <div class="lang-toggle">
-          <a href="index.html" class="lang-btn" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
-          <a href="es.html" class="lang-btn active" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
-          <a href="he.html" class="lang-btn" style="text-decoration:none">HE</a>
+          <a href="index.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','es')" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')" style="text-decoration:none">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')" style="text-decoration:none">AR</a>
         </div>
         <button class="btn-primary" onclick="openOrder()">Comenzar →</button>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-glow"></div>
     <div class="container hero-content">
-      <div class="badge-pill">🔍 Disponible en Fiverr</div>
+      <div class="badge-pill">🔍 Servicios Digitales Profesionales</div>
       <h1 class="hero-title">
         <span>Tu negocio merece más leads.</span><br>
         <span class="highlight">Auditamos tu presencia y los generamos.</span>
@@ -72,25 +65,13 @@
         <a href="#services" class="btn-ghost">▶ Ver nuestros servicios</a>
       </div>
       <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">8</span>
-          <span class="stat-label">Categorías auditadas</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">Categorías auditadas</span></div>
         <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">48h</span>
-          <span class="stat-label">Entrega de auditoría</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">48h</span><span class="stat-label">Entrega de auditoría</span></div>
         <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">B2B</span>
-          <span class="stat-label">Generación de leads</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">B2B</span><span class="stat-label">Generación de leads</span></div>
         <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Basado en datos</span>
-        </div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">Basado en datos</span></div>
       </div>
     </div>
     <div class="hero-image-wrap">
@@ -99,68 +80,36 @@
     </div>
   </section>
 
-  <!-- PROBLEM SECTION -->
   <section class="problem" id="problem">
     <div class="container">
       <div class="section-tag">El Problema Silencioso</div>
       <h2 class="section-title">Estás invirtiendo en marketing. ¿Pero dónde están los leads?</h2>
       <p class="section-sub">La mayoría de los negocios locales gastan dinero en anuncios, redes sociales y SEO — y luego se preguntan por qué no suena el teléfono. El problema no es tu gasto en marketing. Es lo que pasa después de que alguien hace clic en tu enlace.</p>
-
       <div class="pain-grid">
-        <div class="pain-card">
-          <div class="pain-icon">📊</div>
-          <h3>Sin Seguimiento</h3>
-          <p>No tienes idea de qué canales te envían leads. Cada dólar de marketing va a una caja negra. No puedes mejorar lo que no puedes medir.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">📝</div>
-          <h3>Sin Captura de Leads</h3>
-          <p>Más del 70% de los visitantes prefieren llenar un formulario antes que llamar. Si no hay formulario, chat ni WhatsApp — se van y no vuelven.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">⚡</div>
-          <h3>Sitio Móvil Lento</h3>
-          <p>El 53% de los visitantes abandona una página que tarda más de 3 segundos en cargar. Un sitio móvil lento es una puerta abierta para tus competidores.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">📍</div>
-          <h3>Invisible en Google Maps</h3>
-          <p>El top 3 de Google obtiene el 44% de todos los clics en búsquedas locales. Si no estás ahí, eres invisible para casi la mitad de las personas que buscan tu servicio ahora mismo.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">⭐</div>
-          <h3>Cero Reseñas</h3>
-          <p>Competidores con 30+ reseñas vs. tú con 0 — no es una pelea justa. Las reseñas son la señal de confianza #1 para decisiones de alto valor.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">🎯</div>
-          <h3>Mensajes Genéricos</h3>
-          <p>'Bienvenido a nuestro sitio web.' Los visitantes deciden en 5 segundos si quedarse o irse. Un titular genérico significa que se van. Siempre.</p>
-        </div>
+        <div class="pain-card"><div class="pain-icon">📊</div><h3>Sin Seguimiento</h3><p>No tienes idea de qué canales te envían leads. Cada dólar de marketing va a una caja negra. No puedes mejorar lo que no puedes medir.</p></div>
+        <div class="pain-card"><div class="pain-icon">📝</div><h3>Sin Captura de Leads</h3><p>Más del 70% de los visitantes prefieren llenar un formulario antes que llamar. Si no hay formulario, chat ni WhatsApp — se van y no vuelven.</p></div>
+        <div class="pain-card"><div class="pain-icon">⚡</div><h3>Sitio Móvil Lento</h3><p>El 53% de los visitantes abandona una página que tarda más de 3 segundos en cargar. Un sitio móvil lento es una puerta abierta para tus competidores.</p></div>
+        <div class="pain-card"><div class="pain-icon">📍</div><h3>Invisible en Google Maps</h3><p>El top 3 de Google obtiene el 44% de todos los clics en búsquedas locales. Si no estás ahí, eres invisible para casi la mitad de las personas que buscan tu servicio.</p></div>
+        <div class="pain-card"><div class="pain-icon">⭐</div><h3>Cero Reseñas</h3><p>Competidores con 30+ reseñas vs. tú con 0 — no es una pelea justa. Las reseñas son la señal de confianza #1 para decisiones de alto valor.</p></div>
+        <div class="pain-card"><div class="pain-icon">🎯</div><h3>Mensajes Genéricos</h3><p>'Bienvenido a nuestro sitio web.' Los visitantes deciden en 5 segundos si quedarse o irse. Un titular genérico significa que se van. Siempre.</p></div>
       </div>
-
       <div class="problem-callout">
         <div class="callout-icon">💸</div>
-        <div class="callout-text">
-          <strong>El costo real no es tu sitio lento. Es cada lead que tus competidores están capturando en lugar de ti.</strong>
-        </div>
+        <div class="callout-text"><strong>El costo real no es tu sitio lento. Es cada lead que tus competidores están capturando en lugar de ti.</strong></div>
       </div>
     </div>
   </section>
 
-  <!-- SERVICES TABS -->
   <section class="services-tabs" id="services">
     <div class="container">
       <div class="section-tag center">Nuestros Servicios</div>
       <h2 class="section-title center">Dos formas de hacer crecer tus leads</h2>
       <p class="section-sub center">Elige el servicio que se adapta a tu etapa actual — o combina ambos para el máximo impacto.</p>
-
       <div class="tab-nav" role="tablist">
         <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('audit', this)">🔍 Auditoría de Presencia Digital</button>
         <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('leadgen', this)">🚀 Generación de Leads B2B</button>
       </div>
 
-      <!-- TAB: AUDIT -->
       <div class="tab-panel active" id="tab-audit">
         <div class="solution-inner">
           <div class="solution-image-col">
@@ -169,148 +118,111 @@
           <div class="solution-text-col">
             <div class="section-tag">Auditoría de Presencia Digital</div>
             <h2 class="section-title left">Una auditoría. Todo lo que necesitas para empezar a convertir.</h2>
-            <p class="solution-desc">Clarvix analiza tu negocio en 8 dimensiones críticas. Puntuamos cada elemento con datos reales y verificables públicamente. Sin relleno. Sin suposiciones. Solo hallazgos precisos y accionables que te muestran exactamente qué arreglar, en qué orden, y por qué importa para tu resultado final.</p>
+            <p class="solution-desc">Clarvix analiza tu negocio en 8 dimensiones críticas. Puntuamos cada elemento con datos reales y verificables públicamente. Sin relleno. Sin suposiciones. Solo hallazgos precisos y accionables.</p>
             <div class="score-preview">
-              <div class="score-bar-item">
-                <span class="sbi-label">Seguimiento y Atribución</span>
-                <div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div>
-                <span class="sbi-val red">3/15</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Embudo de Conversión</span>
-                <div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div>
-                <span class="sbi-val amber">8/20</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Presencia Local</span>
-                <div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div>
-                <span class="sbi-val red">5/15</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Seguridad y Confianza</span>
-                <div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div>
-                <span class="sbi-val green">6/10</span>
-              </div>
+              <div class="score-bar-item"><span class="sbi-label">Seguimiento y Atribución</span><div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div><span class="sbi-val red">3/15</span></div>
+              <div class="score-bar-item"><span class="sbi-label">Embudo de Conversión</span><div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div><span class="sbi-val amber">8/20</span></div>
+              <div class="score-bar-item"><span class="sbi-label">Presencia Local</span><div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div><span class="sbi-val red">5/15</span></div>
+              <div class="score-bar-item"><span class="sbi-label">Seguridad y Confianza</span><div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div><span class="sbi-val green">6/10</span></div>
             </div>
             <button class="btn-primary" onclick="openOrder()">Obtener mi Auditoría →</button>
           </div>
         </div>
       </div>
 
-      <!-- TAB: LEAD GENERATION -->
       <div class="tab-panel" id="tab-leadgen">
         <div class="leadgen-overview">
           <div class="solution-text-col">
             <div class="section-tag">Generación de Leads B2B</div>
             <h2 class="section-title left">Leads calificados. Entregados en tu bandeja cada mes.</h2>
-            <p class="leadgen-desc">Deja de esperar a que los prospectos te encuentren. Clarvix identifica, califica y entrega leads B2B que coinciden con tu perfil de cliente ideal — para que tu equipo de ventas se enfoque en cerrar, no en prospectar. Operamos en mercados de habla inglesa, española y hebrea.</p>
+            <p class="leadgen-desc">Deja de esperar a que los prospectos te encuentren. Clarvix identifica, califica y entrega leads B2B que coinciden con tu perfil de cliente ideal — para que tu equipo de ventas se enfoque en cerrar, no en prospectar. Operamos en mercados EN, ES, HE y AR.</p>
             <div class="leadgen-stats">
-              <div class="lg-stat">
-                <div class="lg-stat-num">10–60</div>
-                <div class="lg-stat-label">Leads calificados / mes</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">3</div>
-                <div class="lg-stat-label">Idiomas cubiertos</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">100%</div>
-                <div class="lg-stat-label">Contactos verificados</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">ICP</div>
-                <div class="lg-stat-label">Segmentación por perfil ideal</div>
-              </div>
+              <div class="lg-stat"><div class="lg-stat-num">10–60</div><div class="lg-stat-label">Leads calificados / mes</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">4</div><div class="lg-stat-label">Idiomas cubiertos</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">100%</div><div class="lg-stat-label">Contactos verificados</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">ICP</div><div class="lg-stat-label">Segmentación por perfil ideal</div></div>
             </div>
-            <button class="btn-primary" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Consulta Generación de Leads B2B'">Consultar sobre Lead Gen →</button>
+            <button class="btn-primary" onclick="openLeadGenOrder('Professional — $549/mes')">Consultar sobre Lead Gen →</button>
           </div>
           <div class="leadgen-visual">
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">🎯</div>
-              <div class="lg-step-text">
-                <h4>Definición del ICP</h4>
-                <p>Definimos tu perfil de cliente ideal — industria, tamaño, rol, geografía.</p>
-              </div>
-            </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">🔎</div>
-              <div class="lg-step-text">
-                <h4>Investigación de Prospectos</h4>
-                <p>Identificamos y verificamos tomadores de decisiones que coinciden con tus criterios.</p>
-              </div>
-            </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">✅</div>
-              <div class="lg-step-text">
-                <h4>Calificación de Leads</h4>
-                <p>Cada lead es revisado manualmente por ajuste, señales de intención y precisión del contacto.</p>
-              </div>
-            </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">📬</div>
-              <div class="lg-step-text">
-                <h4>Entrega e Informes</h4>
-                <p>Leads entregados en formato estructurado con informes semanales o mensuales.</p>
-              </div>
-            </div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">🎯</div><div class="lg-step-text"><h4>Definición del ICP</h4><p>Definimos tu perfil de cliente ideal — industria, tamaño, rol, geografía.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">🔎</div><div class="lg-step-text"><h4>Investigación de Prospectos</h4><p>Identificamos y verificamos tomadores de decisiones que coinciden con tus criterios.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">✅</div><div class="lg-step-text"><h4>Calificación de Leads</h4><p>Cada lead es revisado manualmente por ajuste, señales de intención y precisión del contacto.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">📬</div><div class="lg-step-text"><h4>Entrega e Informes</h4><p>Leads entregados en formato estructurado con informes semanales o mensuales.</p></div></div>
           </div>
         </div>
 
-        <!-- Lead Gen Pricing -->
+        <!-- Lead Gen Pricing — mismo formato que Audit -->
         <div class="leadgen-pricing">
           <div class="section-tag center" style="margin-bottom:32px">Planes de Generación de Leads</div>
-          <div class="leadgen-pricing-cards">
-            <div class="leadgen-card">
-              <div class="leadgen-tier">Starter</div>
-              <div class="leadgen-price">$500</div>
-              <div class="leadgen-price-period">/ mes</div>
-              <div class="leadgen-sub">10–15 Leads B2B Calificados</div>
-              <ul class="leadgen-features">
+          <h2 class="section-title center" style="margin-bottom:40px">Pipeline consistente. Crecimiento predecible.</h2>
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <div class="pricing-tier">Starter</div>
+              <div class="pricing-price">$299</div>
+              <div class="pricing-price-period">/ mes</div>
+              <div class="pricing-sub">10–15 Leads B2B Calificados</div>
+              <ul class="pricing-features">
                 <li class="bold">Incluye:</li>
                 <li>10–15 leads verificados/mes</li>
-                <li>Sesión de definición de ICP</li>
+                <li>Sesión de definición de ICP (1h)</li>
                 <li>Informe mensual de entrega</li>
                 <li>Nombre, empresa, rol, email</li>
-                <li>Mercados EN / ES / HE</li>
+                <li>Mercados EN / ES / HE / AR</li>
+                <li>Datos de Google Maps</li>
+                <li class="bold cross-title">No incluye:</li>
+                <li class="cross">URL de LinkedIn</li>
+                <li class="cross">Puntuación de intención</li>
+                <li class="cross">Inteligencia competitiva</li>
+                <li class="cross">Informes semanales</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Plan Starter Lead Gen'">Contáctanos →</button>
-              <p class="leadgen-note">Ideal para equipos pequeños que inician su pipeline de outbound.</p>
+              <p class="pricing-for-who">Ideal para equipos pequeños que inician su pipeline de outbound.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter — $299/mes')">Ordenar vía Payoneer →</button>
             </div>
-
-            <div class="leadgen-card featured">
-              <div class="leadgen-badge">Más Popular</div>
-              <div class="leadgen-tier">Professional</div>
-              <div class="leadgen-price">$950</div>
-              <div class="leadgen-price-period">/ mes</div>
-              <div class="leadgen-sub">20–30 Leads B2B Calificados</div>
-              <ul class="leadgen-features">
+            <div class="pricing-card premium">
+              <div class="pricing-badge">Más Popular</div>
+              <div class="pricing-tier">Professional</div>
+              <div class="pricing-price">$549</div>
+              <div class="pricing-price-period">/ mes</div>
+              <div class="pricing-sub">20–30 Leads B2B Calificados</div>
+              <ul class="pricing-features">
                 <li class="bold">Todo en Starter, más:</li>
                 <li>20–30 leads verificados/mes</li>
-                <li>Inteligencia competitiva</li>
-                <li>Informes semanales de entrega</li>
-                <li>Perfil de LinkedIn incluido</li>
+                <li>URL de LinkedIn incluida</li>
                 <li>Puntuación de señales de intención</li>
-                <li>Soporte prioritario</li>
+                <li>Informe de inteligencia competitiva</li>
+                <li>Informes semanales de entrega</li>
+                <li>Validación de email (sin rebotes)</li>
+                <li>Soporte prioritario (respuesta 24h)</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Plan Professional Lead Gen'">Contáctanos →</button>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional — $549/mes')">Ordenar vía Payoneer →</button>
             </div>
-
-            <div class="leadgen-card">
-              <div class="leadgen-tier">Enterprise</div>
-              <div class="leadgen-price">$1,800</div>
-              <div class="leadgen-price-period">/ mes</div>
-              <div class="leadgen-sub">40–60 Leads B2B Calificados</div>
-              <ul class="leadgen-features">
+            <div class="pricing-card">
+              <div class="pricing-tier">Enterprise</div>
+              <div class="pricing-price">$999</div>
+              <div class="pricing-price-period">/ mes</div>
+              <div class="pricing-sub">40–60 Leads B2B Calificados</div>
+              <ul class="pricing-features">
                 <li class="bold">Todo en Professional, más:</li>
                 <li>40–60 leads verificados/mes</li>
-                <li>Análisis avanzado de competidores</li>
+                <li>Análisis competitivo avanzado</li>
                 <li>Actualizaciones diarias del pipeline</li>
-                <li>Llamadas de consultoría directa</li>
-                <li>Integración personalizada con CRM</li>
-                <li>Account manager dedicado</li>
+                <li>Llamadas de consulta (2/mes)</li>
+                <li>Formato listo para CRM</li>
+                <li>Gestor de cuenta dedicado</li>
+                <li>Segmentación multi-industria</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Plan Enterprise Lead Gen'">Contáctanos →</button>
-              <p class="leadgen-note">Para equipos en crecimiento que necesitan un pipeline consistente y de alto volumen.</p>
+              <p class="pricing-for-who">Para equipos en crecimiento que necesitan un pipeline de alto volumen.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise — $999/mes')">Ordenar vía Payoneer →</button>
+            </div>
+          </div>
+          <div class="payoneer-info">
+            <div class="payoneer-inner">
+              <div class="payoneer-icon">💳</div>
+              <div class="payoneer-text">
+                <strong>Pago seguro vía Payoneer</strong>
+                <p>Envía el pago a <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> en Payoneer. Incluye el nombre del plan y tu empresa en las notas. Confirmamos en 24 horas e iniciamos tu primer lote en 72 horas.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -318,122 +230,78 @@
     </div>
   </section>
 
-  <!-- VIDEO SECTION -->
   <section class="video-section" id="video">
     <div class="container">
-      <div class="section-tag center">Véalo en Acción</div>
-      <h2 class="section-title center">Mira cómo funciona una auditoría Clarvix</h2>
+      <div class="section-tag center">Vélo en Acción</div>
+      <h2 class="section-title center">Cómo funciona una auditoría Clarvix</h2>
       <p class="section-sub center">Un recorrido por un informe de auditoría real — desde el desglose de puntuación hasta el plan de acción de 30 días.</p>
       <div class="video-wrapper">
-        <div class="video-en">
-          <video class="video-frame" id="audit-video-en" controls preload="metadata" style="width:100%;aspect-ratio:16/9;background:#0D1B2A;border-radius:12px;border:1px solid rgba(10,191,191,0.2);">
-            <source src="videos/clarvix_spanish.mp4" type="video/mp4">
-            <source src="videos/maximize_conversion.mp4" type="video/mp4">
-            <p>Tu navegador no soporta video HTML.</p>
-          </video>
-          <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">Maximiza tu Conversión de Leads — sin relleno, solo claridad.</p>
+        <div class="video-placeholder-box">
+          <div class="vp-content">
+            <div class="vp-icon">🎬</div>
+            <div class="vp-title">Video Explicativo</div>
+            <div class="vp-sub">Próximamente — un recorrido completo por un informe de auditoría Clarvix real.<br>Desglose de puntuación, hallazgos, benchmark competitivo y plan de acción de 30 días.</div>
+            <div class="vp-badge">🔔 Disponible pronto</div>
+          </div>
         </div>
+        <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">Maximiza tu Conversión de Leads — sin relleno, solo claridad.</p>
       </div>
     </div>
   </section>
 
-  <!-- HOW IT WORKS -->
   <section class="how-it-works" id="how-it-works">
     <div class="container">
       <div class="section-tag center">El Proceso</div>
-      <h2 class="section-title center">De la orden a los insights en 48 horas</h2>
+      <h2 class="section-title center">Del pedido a los insights en 48 horas</h2>
       <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>Realizas el pedido</h3>
-          <p>Comparte la URL de tu sitio web y el nombre de tu negocio. Eso es todo lo que necesitamos para empezar.</p>
-        </div>
+        <div class="step-card"><div class="step-num">01</div><h3>Realizas el pedido</h3><p>Comparte tu URL y nombre de negocio. Paga de forma segura vía Payoneer. Eso es todo lo que necesitamos.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>Ejecutamos la auditoría completa</h3>
-          <p>Analizamos 8 categorías críticas usando PageSpeed Insights, Google e inspección manual. Cada dato es real y verificable.</p>
-        </div>
+        <div class="step-card"><div class="step-num">02</div><h3>Ejecutamos la auditoría</h3><p>Analizamos 8 categorías críticas usando PageSpeed Insights, Google e inspección manual. Cada dato es real y verificable.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>Recibes tu informe</h3>
-          <p>Un PDF profesional con tu Puntuación de Conversión de Leads, los 10 principales hallazgos con niveles de gravedad, benchmark de competidores y plan de acción de 30 días.</p>
-        </div>
+        <div class="step-card"><div class="step-num">03</div><h3>Recibes tu informe</h3><p>Un PDF profesional con tu Lead Conversion Score, los 10 hallazgos principales con niveles de severidad, benchmark competitivo y plan de acción de 30 días.</p></div>
         <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h3>Tomas acción</h3>
-          <p>Usa el plan tú mismo o entrégaselo a tu desarrollador. Cada corrección está descrita en lenguaje sencillo con esfuerzo estimado e impacto esperado.</p>
-        </div>
+        <div class="step-card"><div class="step-num">04</div><h3>Tomas acción</h3><p>Usa el plan tú mismo o pásalo a tu desarrollador. Cada corrección está descrita en lenguaje simple con esfuerzo estimado e impacto esperado.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- WHAT YOU GET -->
   <section class="what-you-get" id="what-you-get">
     <div class="container">
       <div class="section-tag center">Entregables</div>
       <h2 class="section-title center">Todo lo que incluye tu informe de auditoría</h2>
       <div class="deliverables-grid">
-        <div class="deliverable-card featured">
-          <div class="deliverable-icon">🎯</div>
-          <h3>Puntuación de Conversión de Leads</h3>
-          <p>Tu negocio puntúa sobre 100 puntos en 8 categorías críticas. Ve al instante dónde estás y qué está arrastrando tu puntuación hacia abajo.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">🔍</div>
-          <h3>Top 10 Hallazgos</h3>
-          <p>Cada hallazgo incluye qué existe, qué falta, el impacto en el negocio, la corrección exacta y el esfuerzo estimado. Priorizados como Crítico, Importante o Recomendado.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">⚡</div>
-          <h3>Análisis PageSpeed</h3>
-          <p>Rendimiento móvil y de escritorio verificado a través de Google PageSpeed Insights. LCP, TBT, FCP, CLS, Speed Index — con los umbrales de Google para comparación.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📊</div>
-          <h3>Benchmark de Competidores</h3>
-          <p>Ve exactamente cómo te comparas con 3 competidores locales directos en cada métrica clave. Sabe precisamente dónde estás perdiendo la batalla por los leads.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📅</div>
-          <h3>Plan de Acción de 30 Días</h3>
-          <p>Un plan priorizado paso a paso. Cada tarea tiene un responsable, cronograma y nivel de prioridad. Tu equipo sabe exactamente qué hacer y en qué orden.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📈</div>
-          <h3>Objetivo de Puntuación</h3>
-          <p>Proyectamos tu puntuación alcanzable después de implementar las correcciones críticas — para que sepas exactamente qué esperar y puedas responsabilizar a tu equipo.</p>
-        </div>
+        <div class="deliverable-card featured"><div class="deliverable-icon">🎯</div><h3>Lead Conversion Score</h3><p>Tu negocio puntuado sobre 100 en 8 categorías críticas. Ve inmediatamente dónde estás y qué está arrastrando tu puntuación hacia abajo.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">🔍</div><h3>Top 10 Hallazgos</h3><p>Cada hallazgo incluye qué existe, qué falta, el impacto en el negocio, la corrección exacta y el esfuerzo estimado. Priorizados como Crítico, Importante o Recomendado.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">⚡</div><h3>Análisis de PageSpeed</h3><p>Rendimiento móvil y desktop verificado a través de Google PageSpeed Insights. LCP, TBT, FCP, CLS, Speed Index — con los umbrales de Google para comparación.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📊</div><h3>Benchmark Competitivo</h3><p>Ve exactamente cómo te comparas con 3 competidores locales directos en cada métrica clave. Sabe precisamente dónde estás perdiendo la batalla por los leads.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📅</div><h3>Plan de Acción de 30 Días</h3><p>Un plan priorizado paso a paso. Cada tarea tiene un responsable, cronograma y nivel de prioridad. Tu equipo sabe exactamente qué hacer y en qué orden.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📈</div><h3>Puntuación Objetivo</h3><p>Proyectamos tu puntuación alcanzable después de implementar las correcciones críticas — para que sepas exactamente qué esperar.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- INDUSTRIES / WHO ITS FOR -->
   <section class="for-who" id="for-who">
     <div class="container">
       <div class="section-tag center">Para Quién Es</div>
       <h2 class="section-title center">Diseñado para negocios locales que viven y mueren por los leads</h2>
       <div class="industries-grid">
-        <div class="industry-badge">🏠 <span>Bienes Raíces</span></div>
-        <div class="industry-badge">⚖️ <span>Firmas de Abogados</span></div>
+        <div class="industry-badge">🏠 <span>Inmobiliarias</span></div>
+        <div class="industry-badge">⚖️ <span>Despachos Jurídicos</span></div>
         <div class="industry-badge">🏥 <span>Clínicas Médicas</span></div>
-        <div class="industry-badge">🦷 <span>Consultorios Dentales</span></div>
-        <div class="industry-badge">🏗️ <span>Contratistas</span></div>
-        <div class="industry-badge">💆 <span>Bienestar &amp; Spas</span></div>
+        <div class="industry-badge">🦷 <span>Clínicas Dentales</span></div>
+        <div class="industry-badge">🏗️ <span>Constructoras</span></div>
+        <div class="industry-badge">💆 <span>Bienestar y Spas</span></div>
         <div class="industry-badge">🍽️ <span>Restaurantes</span></div>
-        <div class="industry-badge">🚗 <span>Servicios Automotrices</span></div>
-        <div class="industry-badge">📚 <span>Educación y Tutorías</span></div>
-        <div class="industry-badge">🏋️ <span>Gimnasios &amp; Fitness</span></div>
+        <div class="industry-badge">🚗 <span>Servicios de Auto</span></div>
+        <div class="industry-badge">📚 <span>Educación y Tutoría</span></div>
+        <div class="industry-badge">🏋️ <span>Gimnasios y Fitness</span></div>
         <div class="industry-badge">🔧 <span>Servicios del Hogar</span></div>
         <div class="industry-badge">💼 <span>Servicios B2B</span></div>
       </div>
-      <p class="for-who-note">Si tienes un sitio web, realizas cualquier forma de marketing digital y dependes de leads para hacer crecer tu negocio — esta auditoría es para ti.</p>
+      <p class="for-who-note">Si tienes un sitio web, realizas cualquier forma de marketing digital y dependes de los leads para crecer — esta auditoría es para ti.</p>
     </div>
   </section>
 
-  <!-- RESULTS / ROI -->
   <section class="results" id="results">
     <div class="container">
       <div class="results-inner">
@@ -444,9 +312,9 @@
           <ul class="results-list">
             <li><span class="results-check">✓</span><span>Deja de desperdiciar presupuesto en canales que no convierten</span></li>
             <li><span class="results-check">✓</span><span>Convierte el tráfico existente en leads reales sin gastar más</span></li>
-            <li><span class="results-check">✓</span><span>Supera a los competidores que están capturando tus clientes potenciales</span></li>
-            <li><span class="results-check">✓</span><span>Construye señales de confianza que hagan que los visitantes te elijan a ti</span></li>
-            <li><span class="results-check">✓</span><span>Conoce exactamente cuál es el ROI de tu marketing digital, por primera vez</span></li>
+            <li><span class="results-check">✓</span><span>Supera a competidores que están capturando tus clientes potenciales</span></li>
+            <li><span class="results-check">✓</span><span>Construye señales de confianza que hacen que los visitantes te elijan a ti</span></li>
+            <li><span class="results-check">✓</span><span>Conoce exactamente cuál es tu ROI de marketing digital, por primera vez</span></li>
           </ul>
         </div>
         <div class="results-visual">
@@ -455,7 +323,7 @@
             <div class="scd-score red">42<span>/100</span></div>
             <div class="scd-status">CRÍTICO</div>
             <div class="scd-arrow">↓</div>
-            <div class="scd-label">OBJETIVO DESPUÉS DE 30 DÍAS</div>
+            <div class="scd-label">OBJETIVO A 30 DÍAS</div>
             <div class="scd-score amber">68<span>/100</span></div>
             <div class="scd-status amber">NECESITA TRABAJO</div>
             <p class="scd-note">Mejora promedio al corregir los 5 problemas críticos principales</p>
@@ -465,21 +333,19 @@
     </div>
   </section>
 
-  <!-- PRICING CTA -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-tag center">Precios de Auditoría</div>
       <h2 class="section-title center">Un informe. Todo incluido.</h2>
       <div class="pricing-cards">
-        <!-- PLAN 1: BASIC -->
         <div class="pricing-card">
           <div class="pricing-tier">Básico</div>
-          <div class="pricing-price">$50</div>
-          <div class="pricing-sub">Auditoría de Conversión de Leads — Diagnóstico Básico</div>
+          <div class="pricing-price">$45</div>
+          <div class="pricing-sub">Auditoría de Conversión — Diagnóstico Central</div>
           <ul class="pricing-features">
             <li class="bold">Incluye:</li>
             <li>Puntuación 0–100 (8 categorías)</li>
-            <li>Análisis PageSpeed (móvil + escritorio)</li>
+            <li>Análisis PageSpeed (móvil + desktop)</li>
             <li>Revisión de formularios, CTA y fricción</li>
             <li>Verificación de seguimiento (GA4, Pixel)</li>
             <li>Revisión básica de GBP</li>
@@ -487,20 +353,18 @@
             <li>Plan de acción de 14 días</li>
             <li>PDF profesional (8–10 páginas)</li>
             <li class="bold cross-title">No incluye:</li>
-            <li class="cross">Benchmark profundo de competidores</li>
+            <li class="cross">Benchmark competitivo profundo</li>
             <li class="cross">10 hallazgos completos</li>
             <li class="cross">Plan completo de 30 días</li>
             <li class="cross">Soporte post-auditoría</li>
           </ul>
-          <p class="pricing-for-who">Para pequeñas empresas que quieren entender por qué no están generando leads.</p>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">Ordenar en Fiverr →</button>
+          <p class="pricing-for-who">Para negocios pequeños que quieren entender por qué no generan leads.</p>
+          <button class="btn-primary btn-full" onclick="openOrder('basic')">Ordenar vía Payoneer →</button>
         </div>
-
-        <!-- PLAN 2: STANDARD -->
         <div class="pricing-card premium">
           <div class="pricing-badge">Más Popular</div>
           <div class="pricing-tier">Estándar</div>
-          <div class="pricing-price">$80</div>
+          <div class="pricing-price">$85</div>
           <div class="pricing-sub">Auditoría Completa + Benchmark Competitivo</div>
           <ul class="pricing-features">
             <li class="bold">Todo en Básico, más:</li>
@@ -509,44 +373,50 @@
             <li>10 hallazgos estructurados</li>
             <li>Plan de acción completo de 30 días</li>
             <li>Puntuación objetivo proyectada</li>
-            <li>Prioridad: CRÍTICO / IMPORTANTE / RECOMENDADO</li>
+            <li>Prioridad CRÍTICO / IMPORTANTE / RECOMENDADO</li>
             <li>Identificación de 'Fugas de Leads'</li>
-            <li>Revisión básica de SEO técnico</li>
+            <li>Revisión técnica básica de SEO</li>
             <li>PDF completo (10–12 páginas)</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">Ordenar en Fiverr →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('standard')">Ordenar vía Payoneer →</button>
         </div>
-
-        <!-- PLAN 3: PREMIUM -->
         <div class="pricing-card">
           <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$150</div>
+          <div class="pricing-price">$160</div>
           <div class="pricing-sub">Auditoría Estratégica de Presencia Digital</div>
           <ul class="pricing-features">
             <li class="bold">Todo en Estándar, más:</li>
             <li>Análisis profundo del embudo de conversión</li>
-            <li>Evaluación de mensajes y diferenciadores estratégicos</li>
+            <li>Evaluación de mensajería y diferenciador estratégico</li>
             <li>Revisión avanzada de intención de búsqueda</li>
             <li>Mapa de fricción del usuario</li>
             <li>Revisión de velocidad con explicación técnica</li>
-            <li>Plan estratégico de 30 + 60 días</li>
+            <li>Plan estratégico 30 días + 60 días</li>
             <li>Recomendaciones de herramientas específicas</li>
-            <li>Documento bonus: 'Desglose de Prioridades de Implementación'</li>
+            <li>Doc bonus: 'Desglose de Prioridades de Implementación'</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">Ordenar en Fiverr →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('premium')">Ordenar vía Payoneer →</button>
+        </div>
+      </div>
+      <div class="payoneer-info">
+        <div class="payoneer-inner">
+          <div class="payoneer-icon">💳</div>
+          <div class="payoneer-text">
+            <strong>Pago seguro vía Payoneer</strong>
+            <p>Envía el pago a <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> en Payoneer. Incluye tu nombre de negocio y URL del sitio en las notas. Auditoría entregada en 48 horas tras la confirmación del pago.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
   <section class="cta-section" id="cta">
     <div class="cta-glow"></div>
     <div class="container cta-inner">
       <h2 class="cta-title">¿Listo para descubrir qué te está costando leads?</h2>
-      <p class="cta-sub">Obtén tu Puntuación de Conversión de Leads, tus 10 hallazgos críticos y tu plan de acción de 30 días. Entregado en 48 horas.</p>
+      <p class="cta-sub">Obtén tu Lead Conversion Score, tus 10 hallazgos críticos y tu plan de acción de 30 días. Entregado en 48 horas.</p>
       <div class="cta-buttons">
-        <button class="btn-primary btn-xl" onclick="openOrder()">Obtener mi Auditoría en Fiverr →</button>
+        <button class="btn-primary btn-xl" onclick="openOrder()">Obtener mi Auditoría →</button>
         <a href="mailto:contact.clarvix@gmail.com" class="btn-ghost-light">¿Preguntas? Escríbenos</a>
       </div>
       <p class="cta-email">contact.clarvix@gmail.com</p>
@@ -559,7 +429,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
@@ -576,60 +445,90 @@
     </div>
   </footer>
 
-  <!-- ORDER MODAL -->
+  <!-- AUDIT ORDER MODAL -->
   <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
     <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" onclick="closeOrder()" aria-label="Cerrar">✕</button>
       <div class="modal-header">
         <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 id="modal-title" class="modal-title">Iniciar mi Auditoría</h2>
-        <p class="modal-sub">Cuéntanos sobre tu negocio. Completarás tu pedido de forma segura en Fiverr.</p>
+        <h2 id="modal-title" class="modal-title">Ordenar tu Auditoría</h2>
+        <p class="modal-sub">Selecciona tu paquete. El pago se procesa de forma segura vía Payoneer.</p>
       </div>
       <div class="package-selector" id="packageSelector">
         <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
           <div class="pkg-radio" id="radioBasic"></div>
-          <div class="pkg-info"><span class="pkg-name">Básico</span><span class="pkg-desc">Diagnóstico Básico</span></div>
-          <span class="pkg-price">$50</span>
+          <div class="pkg-info"><span class="pkg-name">Básico</span><span class="pkg-desc">Diagnóstico Central</span></div>
+          <span class="pkg-price">$45</span>
         </label>
         <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
           <div class="pkg-radio" id="radioStandard"></div>
           <div class="pkg-info"><span class="pkg-name">Estándar</span><span class="pkg-desc">Auditoría Completa + Benchmark</span></div>
-          <span class="pkg-price">$80</span>
+          <span class="pkg-price">$85</span>
         </label>
         <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
           <div class="pkg-radio" id="radioPremium"></div>
           <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">Auditoría Estratégica Avanzada</span></div>
-          <span class="pkg-price">$150</span>
+          <span class="pkg-price">$160</span>
         </label>
       </div>
       <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label" for="businessName">Nombre del Negocio</label>
-            <input type="text" id="businessName" class="form-input" placeholder="ej. Clínica Dental Beverly Hills" required autocomplete="organization">
+            <input type="text" id="businessName" class="form-input" placeholder="ej. Dental Beverly Hills" required>
           </div>
           <div class="form-group">
             <label class="form-label" for="websiteUrl">URL del Sitio Web</label>
-            <input type="url" id="websiteUrl" class="form-input" placeholder="https://tunegocio.com" required autocomplete="url">
+            <input type="url" id="websiteUrl" class="form-input" placeholder="https://tunegocio.com" required>
           </div>
         </div>
         <div class="form-group">
           <label class="form-label" for="businessCity">Ciudad y País</label>
-          <input type="text" id="businessCity" class="form-input" placeholder="ej. Buenos Aires, Argentina" autocomplete="address-level2">
+          <input type="text" id="businessCity" class="form-input" placeholder="ej. Miami, FL">
         </div>
-        <p class="form-error" id="formError">Por favor completa el nombre de tu negocio y la URL del sitio web.</p>
+        <p class="form-error" id="formError">Por favor completa el nombre del negocio y la URL del sitio.</p>
         <button type="submit" class="btn-order-submit" id="orderSubmit">
-          <span class="submit-text">Continuar a Fiverr →</span>
-          <span class="submit-loading" style="display:none;">⟳ Redirigiendo...</span>
+          <span class="submit-text">Proceder al Pago →</span>
+          <span class="submit-loading" style="display:none;">⟳ Procesando...</span>
         </button>
-        <p class="modal-footnote">
-          <span>Serás redirigido a Fiverr para completar tu pago de forma segura. Clarvix nunca maneja tus datos de pago.</span>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Fiverr_logo_%28since_2020%29.svg/120px-Fiverr_logo_%28since_2020%29.svg.png" alt="Fiverr" class="fiverr-badge">
-        </p>
+        <p class="modal-footnote">Recibirás instrucciones de pago vía email en minutos. El pago se procesa de forma segura vía <strong>Payoneer</strong>.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LEAD GEN ORDER MODAL -->
+  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
+    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="Cerrar">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 class="modal-title">Iniciar Generación de Leads</h2>
+        <p class="modal-sub" id="leadgen-plan-label">Professional — $549/mes</p>
+      </div>
+      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lgBusinessName">Nombre del Negocio</label>
+            <input type="text" id="lgBusinessName" class="form-input" placeholder="ej. Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lgEmail">Tu Email</label>
+            <input type="email" id="lgEmail" class="form-input" placeholder="tu@empresa.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lgICP">Describe tu cliente ideal (industria, rol, ubicación)</label>
+          <input type="text" id="lgICP" class="form-input" placeholder="ej. Agencias inmobiliarias en Miami, FL — Dueño o Gerente">
+        </div>
+        <p class="form-error" id="lgFormError">Por favor completa el nombre del negocio y tu email.</p>
+        <button type="submit" class="btn-order-submit" id="lgSubmit">
+          <span class="submit-text">Enviar Consulta →</span>
+          <span class="submit-loading" style="display:none;">⟳ Enviando...</span>
+        </button>
+        <p class="modal-footnote">Confirmaremos tu pedido y enviaremos instrucciones de pago Payoneer a <strong>clarvix@clarvix.net</strong> en 24 horas.</p>
       </form>
     </div>
   </div>
 
   <script src="app.js"></script>
-
 </body></html>
