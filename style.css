@@ -1745,3 +1745,122 @@ h3 {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+/* ── PRICING PRICE PERIOD (Lead Gen monthly label) ──────── */
+.pricing-price-period {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  margin-bottom: 10px;
+  margin-top: -8px;
+}
+
+/* ── VIDEO PLACEHOLDER BOX ──────────────────────────────── */
+.video-placeholder-box {
+  aspect-ratio: 16/9;
+  background: linear-gradient(135deg, var(--navy3), #0A1E32);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(10, 191, 191, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-placeholder-box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(10, 191, 191, 0.08), transparent 60%);
+}
+
+.vp-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px;
+}
+
+.vp-icon {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+}
+
+.vp-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+
+.vp-sub {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  max-width: 480px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.vp-badge {
+  display: inline-block;
+  background: rgba(10, 191, 191, 0.12);
+  border: 1px solid rgba(10, 191, 191, 0.25);
+  color: var(--cyan);
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 6px 18px;
+  border-radius: 100px;
+}
+
+/* ── PAYONEER INFO BANNER ────────────────────────────────── */
+.payoneer-info {
+  margin-top: 40px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payoneer-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: rgba(10, 191, 191, 0.06);
+  border: 1px solid rgba(10, 191, 191, 0.20);
+  border-radius: var(--radius-lg);
+  padding: 28px 32px;
+}
+
+.payoneer-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.payoneer-text strong {
+  display: block;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.payoneer-text p {
+  font-size: 0.9rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .payoneer-inner {
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+  }
+  .vp-content {
+    padding: 24px 16px;
+  }
+  .vp-title {
+    font-size: 1.2rem;
+  }
+}
