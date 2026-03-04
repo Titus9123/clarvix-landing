@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clarvix — Digital Audit &amp; B2B Lead Generation</title>
@@ -7,11 +9,14 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script>
-    var FIVERR_BASE = 'https://www.fiverr.com/albertneuman402/perform-a-lead-conversion-digital-audit-with-score-benchmark-and-30-day-plan';
-    var FIVERR_BASIC = FIVERR_BASE + '?package=1';
-    var FIVERR_STANDARD = FIVERR_BASE + '?package=2';
-    var FIVERR_PREMIUM = FIVERR_BASE + '?package=3';
+    /* ── Payoneer payment email ── */
+    var PAYONEER_EMAIL = 'clarvix@clarvix.net';
+    /* ── Audit prices ── */
+    var AUDIT_PRICES = { basic: 45, standard: 85, premium: 160 };
+    /* ── Contact email ── */
+    var CONTACT_EMAIL = 'contact.clarvix@gmail.com';
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -24,13 +29,12 @@
   <meta property="og:url" content="https://www.clarvix.net/">
   <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta name="twitter:description" content="Clarvix delivers professional Lead Conversion Digital Audits and B2B Lead Generation for local businesses.">
-  <meta name="twitter:image" content="https://www.clarvix.net/images/hero_dashboard.png">
   <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
   <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
   <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
+  <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
   <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -46,6 +50,40 @@
 
   <!-- Apollo Website Tracker -->
   <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
+
+  <!-- Geo-language redirect: IL→HE, Arab countries→AR -->
+  <script>
+  (function(){
+    try {
+      var saved = localStorage.getItem('clarvix_lang');
+      var path = window.location.pathname;
+      var isRoot = (path === '/' || path === '/index.html' || path === '');
+      if (saved && !isRoot) return; // already on a language page
+      if (saved === 'es' && isRoot) { window.location.replace('es.html'); return; }
+      if (saved === 'he' && isRoot) { window.location.replace('he.html'); return; }
+      if (saved === 'ar' && isRoot) { window.location.replace('ar.html'); return; }
+      if (saved === 'en' || saved) return; // en or already set
+      // Auto-detect by IP geolocation (free, no API key needed)
+      fetch('https://ipapi.co/json/')
+        .then(function(r){ return r.json(); })
+        .then(function(d){
+          var cc = (d.country_code || '').toUpperCase();
+          var arabCountries = ['SA','AE','EG','JO','LB','IQ','KW','BH','QA','OM','YE','LY','TN','DZ','MA','SD','SY','PS'];
+          if (cc === 'IL') {
+            localStorage.setItem('clarvix_lang','he');
+            window.location.replace('he.html');
+          } else if (arabCountries.indexOf(cc) !== -1) {
+            localStorage.setItem('clarvix_lang','ar');
+            window.location.replace('ar.html');
+          } else {
+            localStorage.setItem('clarvix_lang','en');
+          }
+        }).catch(function(){
+          localStorage.setItem('clarvix_lang','en');
+        });
+    } catch(e){}
+  })();
+  </script>
 </head>
 
 <body>
@@ -62,9 +100,10 @@
         <a href="#how-it-works" class="nav-link">How it works</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <div class="lang-toggle">
-          <a href="index.html" class="lang-btn active" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
-          <a href="es.html" class="lang-btn" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
-          <a href="he.html" class="lang-btn" style="text-decoration:none">HE</a>
+          <a href="index.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')" style="text-decoration:none">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')" style="text-decoration:none">AR</a>
         </div>
         <button class="btn-primary" onclick="openOrder()">Get Started →</button>
       </div>
@@ -76,7 +115,7 @@
     <div class="hero-bg-grid"></div>
     <div class="hero-glow"></div>
     <div class="container hero-content">
-      <div class="badge-pill">🔍 Available on Fiverr</div>
+      <div class="badge-pill">🔍 Professional Digital Services</div>
       <h1 class="hero-title">
         <span>Your business deserves more leads.</span><br>
         <span class="highlight">We audit your presence and generate them.</span>
@@ -214,18 +253,19 @@
 
       <!-- TAB: LEAD GENERATION -->
       <div class="tab-panel" id="tab-leadgen">
+        <!-- Lead Gen Overview -->
         <div class="leadgen-overview">
           <div class="solution-text-col">
             <div class="section-tag">B2B Lead Generation</div>
             <h2 class="section-title left">Qualified leads. Delivered to your inbox every month.</h2>
-            <p class="leadgen-desc">Stop waiting for prospects to find you. Clarvix identifies, qualifies, and delivers B2B leads that match your ideal customer profile — so your sales team spends time closing, not prospecting. We operate in English, Spanish, and Hebrew markets.</p>
+            <p class="leadgen-desc">Stop waiting for prospects to find you. Clarvix identifies, qualifies, and delivers B2B leads that match your ideal customer profile — so your sales team spends time closing, not prospecting. We operate in English, Spanish, Hebrew, and Arabic markets.</p>
             <div class="leadgen-stats">
               <div class="lg-stat">
                 <div class="lg-stat-num">10–60</div>
                 <div class="lg-stat-label">Qualified leads / month</div>
               </div>
               <div class="lg-stat">
-                <div class="lg-stat-num">3</div>
+                <div class="lg-stat-num">4</div>
                 <div class="lg-stat-label">Languages covered</div>
               </div>
               <div class="lg-stat">
@@ -237,7 +277,7 @@
                 <div class="lg-stat-label">Ideal profile targeting</div>
               </div>
             </div>
-            <button class="btn-primary" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=B2B Lead Generation Inquiry'">Inquire About Lead Gen →</button>
+            <button class="btn-primary" onclick="window.location.href='mailto:'+CONTACT_EMAIL+'?subject=B2B Lead Generation Inquiry'">Inquire About Lead Gen →</button>
           </div>
           <div class="leadgen-visual">
             <div class="lg-pipeline-step">
@@ -271,65 +311,92 @@
           </div>
         </div>
 
-        <!-- Lead Gen Pricing -->
+        <!-- Lead Gen Pricing Cards — same format as Audit pricing -->
         <div class="leadgen-pricing">
           <div class="section-tag center" style="margin-bottom:32px">Lead Generation Plans</div>
-          <div class="leadgen-pricing-cards">
-            <div class="leadgen-card">
-              <div class="leadgen-tier">Starter</div>
-              <div class="leadgen-price">$500</div>
-              <div class="leadgen-price-period">/ month</div>
-              <div class="leadgen-sub">10–15 Qualified B2B Leads</div>
-              <ul class="leadgen-features">
+          <h2 class="section-title center" style="margin-bottom:40px">Consistent pipeline. Predictable growth.</h2>
+          <div class="pricing-cards">
+
+            <!-- STARTER -->
+            <div class="pricing-card">
+              <div class="pricing-tier">Starter</div>
+              <div class="pricing-price">$299</div>
+              <div class="pricing-price-period">/ month</div>
+              <div class="pricing-sub">10–15 Qualified B2B Leads</div>
+              <ul class="pricing-features">
                 <li class="bold">Includes:</li>
                 <li>10–15 verified leads/month</li>
-                <li>ICP definition session</li>
+                <li>ICP definition session (1h)</li>
                 <li>Monthly delivery report</li>
                 <li>Name, company, role, email</li>
-                <li>EN / ES / HE markets</li>
+                <li>EN / ES / HE / AR markets</li>
+                <li>Google Maps data sourcing</li>
+                <li class="bold cross-title">Does not include:</li>
+                <li class="cross">LinkedIn profile URL</li>
+                <li class="cross">Intent signal scoring</li>
+                <li class="cross">Competitor intelligence</li>
+                <li class="cross">Weekly reports</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Starter Lead Gen Plan'">Contact Us →</button>
-              <p class="leadgen-note">Ideal for small teams starting their outbound pipeline.</p>
+              <p class="pricing-for-who">Ideal for small teams starting their outbound pipeline.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/month')">Order via Payoneer →</button>
             </div>
 
-            <div class="leadgen-card featured">
-              <div class="leadgen-badge">Most Popular</div>
-              <div class="leadgen-tier">Professional</div>
-              <div class="leadgen-price">$950</div>
-              <div class="leadgen-price-period">/ month</div>
-              <div class="leadgen-sub">20–30 Qualified B2B Leads</div>
-              <ul class="leadgen-features">
+            <!-- PROFESSIONAL -->
+            <div class="pricing-card premium">
+              <div class="pricing-badge">Most Popular</div>
+              <div class="pricing-tier">Professional</div>
+              <div class="pricing-price">$549</div>
+              <div class="pricing-price-period">/ month</div>
+              <div class="pricing-sub">20–30 Qualified B2B Leads</div>
+              <ul class="pricing-features">
                 <li class="bold">Everything in Starter, plus:</li>
                 <li>20–30 verified leads/month</li>
-                <li>Competitor intelligence</li>
-                <li>Weekly delivery reports</li>
-                <li>LinkedIn profile included</li>
+                <li>LinkedIn profile URL included</li>
                 <li>Intent signal scoring</li>
-                <li>Priority support</li>
+                <li>Competitor intelligence report</li>
+                <li>Weekly delivery reports</li>
+                <li>Email validation (bounce-free)</li>
+                <li>Priority support (24h response)</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Professional Lead Gen Plan'">Contact Us →</button>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/month')">Order via Payoneer →</button>
             </div>
 
-            <div class="leadgen-card">
-              <div class="leadgen-tier">Enterprise</div>
-              <div class="leadgen-price">$1,800</div>
-              <div class="leadgen-price-period">/ month</div>
-              <div class="leadgen-sub">40–60 Qualified B2B Leads</div>
-              <ul class="leadgen-features">
+            <!-- ENTERPRISE -->
+            <div class="pricing-card">
+              <div class="pricing-tier">Enterprise</div>
+              <div class="pricing-price">$999</div>
+              <div class="pricing-price-period">/ month</div>
+              <div class="pricing-sub">40–60 Qualified B2B Leads</div>
+              <ul class="pricing-features">
                 <li class="bold">Everything in Professional, plus:</li>
                 <li>40–60 verified leads/month</li>
                 <li>Advanced competitor analysis</li>
                 <li>Daily pipeline updates</li>
-                <li>Direct consultation calls</li>
-                <li>Custom CRM integration</li>
+                <li>Direct consultation calls (2/mo)</li>
+                <li>Custom CRM-ready format</li>
                 <li>Dedicated account manager</li>
+                <li>Multi-industry targeting</li>
               </ul>
-              <button class="btn-primary btn-full" onclick="window.location.href='mailto:contact.clarvix@gmail.com?subject=Enterprise Lead Gen Plan'">Contact Us →</button>
-              <p class="leadgen-note">For scaling teams that need a consistent, high-volume pipeline.</p>
+              <p class="pricing-for-who">For scaling teams that need a consistent, high-volume pipeline.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/month')">Order via Payoneer →</button>
+            </div>
+
+          </div><!-- /pricing-cards -->
+
+          <!-- Payoneer payment info -->
+          <div class="payoneer-info">
+            <div class="payoneer-inner">
+              <div class="payoneer-icon">💳</div>
+              <div class="payoneer-text">
+                <strong>Secure payment via Payoneer</strong>
+                <p>Send payment to <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> on Payoneer. Include your plan name and business name in the notes. We confirm within 24 hours and begin your first batch within 72 hours.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+
+        </div><!-- /leadgen-pricing -->
+      </div><!-- /tab-leadgen -->
+
     </div>
   </section>
 
@@ -340,13 +407,15 @@
       <h2 class="section-title center">Watch how a Clarvix audit works</h2>
       <p class="section-sub center">A walkthrough of a real audit report — from the score breakdown to the 30-day action plan.</p>
       <div class="video-wrapper">
-        <div class="video-en">
-          <video class="video-frame" id="audit-video-en" controls preload="metadata" style="width:100%;aspect-ratio:16/9;background:#0D1B2A;border-radius:12px;border:1px solid rgba(10,191,191,0.2);">
-            <source src="videos/maximize_conversion.mp4" type="video/mp4">
-            <p>Your browser doesn't support HTML video.</p>
-          </video>
-          <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">Maximize Your Lead Conversion — no fluff, just clarity.</p>
+        <div class="video-placeholder-box" id="video-placeholder">
+          <div class="vp-content">
+            <div class="vp-icon">🎬</div>
+            <div class="vp-title">Video Walkthrough</div>
+            <div class="vp-sub">Coming soon — a full walkthrough of a real Clarvix audit report.<br>Score breakdown, findings, competitor benchmark, and 30-day action plan.</div>
+            <div class="vp-badge">🔔 Available shortly</div>
+          </div>
         </div>
+        <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">Maximize Your Lead Conversion — no fluff, just clarity.</p>
       </div>
     </div>
   </section>
@@ -360,7 +429,7 @@
         <div class="step-card">
           <div class="step-num">01</div>
           <h3>You place the order</h3>
-          <p>Share your website URL and business name. That's all we need to get started.</p>
+          <p>Share your website URL and business name. Pay securely via Payoneer. That's all we need to get started.</p>
         </div>
         <div class="step-arrow">→</div>
         <div class="step-card">
@@ -479,16 +548,17 @@
     </div>
   </section>
 
-  <!-- PRICING CTA -->
+  <!-- AUDIT PRICING -->
   <section class="pricing" id="pricing">
     <div class="container">
       <div class="section-tag center">Audit Pricing</div>
       <h2 class="section-title center">One report. Everything included.</h2>
       <div class="pricing-cards">
-        <!-- PLAN 1: BASIC -->
+
+        <!-- BASIC -->
         <div class="pricing-card">
           <div class="pricing-tier">Basic</div>
-          <div class="pricing-price">$50</div>
+          <div class="pricing-price">$45</div>
           <div class="pricing-sub">Lead Conversion Audit — Core Diagnosis</div>
           <ul class="pricing-features">
             <li class="bold">Includes:</li>
@@ -507,14 +577,14 @@
             <li class="cross">Post-audit support</li>
           </ul>
           <p class="pricing-for-who">For small businesses wanting to understand why they aren't generating leads.</p>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order on Fiverr →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order via Payoneer →</button>
         </div>
 
-        <!-- PLAN 2: STANDARD -->
+        <!-- STANDARD -->
         <div class="pricing-card premium">
           <div class="pricing-badge">Most Popular</div>
           <div class="pricing-tier">Standard</div>
-          <div class="pricing-price">$80</div>
+          <div class="pricing-price">$85</div>
           <div class="pricing-sub">Full Audit + Competitive Benchmark</div>
           <ul class="pricing-features">
             <li class="bold">Everything in Basic, plus:</li>
@@ -528,13 +598,13 @@
             <li>Basic technical SEO review</li>
             <li>Full PDF (10–12 pages)</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order on Fiverr →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order via Payoneer →</button>
         </div>
 
-        <!-- PLAN 3: PREMIUM -->
+        <!-- PREMIUM -->
         <div class="pricing-card">
           <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$150</div>
+          <div class="pricing-price">$160</div>
           <div class="pricing-sub">Strategic Digital Presence Audit</div>
           <ul class="pricing-features">
             <li class="bold">Everything in Standard, plus:</li>
@@ -547,9 +617,22 @@
             <li>Specific tool recommendations</li>
             <li>Bonus doc: 'Implementation Priorities Breakdown'</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order on Fiverr →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order via Payoneer →</button>
+        </div>
+
+      </div>
+
+      <!-- Payoneer payment info for audit -->
+      <div class="payoneer-info">
+        <div class="payoneer-inner">
+          <div class="payoneer-icon">💳</div>
+          <div class="payoneer-text">
+            <strong>Secure payment via Payoneer</strong>
+            <p>Send payment to <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> on Payoneer. Include your business name and website URL in the notes. Audit delivered within 48 hours of payment confirmation.</p>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 
@@ -560,7 +643,7 @@
       <h2 class="cta-title">Ready to find out what's costing you leads?</h2>
       <p class="cta-sub">Get your Lead Conversion Score, your 10 critical findings, and your 30-day action plan. Delivered in 48 hours.</p>
       <div class="cta-buttons">
-        <button class="btn-primary btn-xl" onclick="openOrder()">Get My Audit on Fiverr →</button>
+        <button class="btn-primary btn-xl" onclick="openOrder()">Get My Audit →</button>
         <a href="mailto:contact.clarvix@gmail.com" class="btn-ghost-light">Questions? Email us</a>
       </div>
       <p class="cta-email">contact.clarvix@gmail.com</p>
@@ -590,30 +673,30 @@
     </div>
   </footer>
 
-  <!-- ORDER MODAL -->
+  <!-- ORDER MODAL (Audit — Payoneer) -->
   <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
     <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" onclick="closeOrder()" aria-label="Close">✕</button>
       <div class="modal-header">
         <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 id="modal-title" class="modal-title">Start Your Audit</h2>
-        <p class="modal-sub">Tell us about your business. You'll complete your order securely on Fiverr.</p>
+        <h2 id="modal-title" class="modal-title">Order Your Audit</h2>
+        <p class="modal-sub">Select your package. Payment is processed securely via Payoneer.</p>
       </div>
       <div class="package-selector" id="packageSelector">
         <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
           <div class="pkg-radio" id="radioBasic"></div>
           <div class="pkg-info"><span class="pkg-name">Basic</span><span class="pkg-desc">Core Diagnosis</span></div>
-          <span class="pkg-price">$50</span>
+          <span class="pkg-price">$45</span>
         </label>
         <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
           <div class="pkg-radio" id="radioStandard"></div>
           <div class="pkg-info"><span class="pkg-name">Standard</span><span class="pkg-desc">Full Audit + Benchmark</span></div>
-          <span class="pkg-price">$80</span>
+          <span class="pkg-price">$85</span>
         </label>
         <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
           <div class="pkg-radio" id="radioPremium"></div>
           <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">Strategic Advanced Audit</span></div>
-          <span class="pkg-price">$150</span>
+          <span class="pkg-price">$160</span>
         </label>
       </div>
       <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
@@ -633,12 +716,47 @@
         </div>
         <p class="form-error" id="formError">Please fill in your business name and website URL.</p>
         <button type="submit" class="btn-order-submit" id="orderSubmit">
-          <span class="submit-text">Proceed to Fiverr →</span>
-          <span class="submit-loading" style="display:none;">⟳ Redirecting...</span>
+          <span class="submit-text">Proceed to Payment →</span>
+          <span class="submit-loading" style="display:none;">⟳ Processing...</span>
         </button>
         <p class="modal-footnote">
-          <span>You will be taken to Fiverr to complete your payment securely. Clarvix never handles your payment details.</span>
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Fiverr_logo_%28since_2020%29.svg/120px-Fiverr_logo_%28since_2020%29.svg.png" alt="Fiverr" class="fiverr-badge">
+          <span>You will receive payment instructions via email within minutes. Payment is processed securely via <strong>Payoneer</strong>.</span>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LEAD GEN ORDER MODAL -->
+  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
+    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 class="modal-title">Start Lead Generation</h2>
+        <p class="modal-sub" id="leadgen-plan-label">Professional — $549/month</p>
+      </div>
+      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lgBusinessName">Business Name</label>
+            <input type="text" id="lgBusinessName" class="form-input" placeholder="e.g. Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lgEmail">Your Email</label>
+            <input type="email" id="lgEmail" class="form-input" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lgICP">Describe your ideal customer (industry, role, location)</label>
+          <input type="text" id="lgICP" class="form-input" placeholder="e.g. Real estate agencies in Miami, FL — Owner or Manager">
+        </div>
+        <p class="form-error" id="lgFormError">Please fill in your business name and email.</p>
+        <button type="submit" class="btn-order-submit" id="lgSubmit">
+          <span class="submit-text">Send Inquiry →</span>
+          <span class="submit-loading" style="display:none;">⟳ Sending...</span>
+        </button>
+        <p class="modal-footnote">
+          We'll confirm your order and send Payoneer payment instructions to <strong>clarvix@clarvix.net</strong> within 24 hours.
         </p>
       </form>
     </div>
