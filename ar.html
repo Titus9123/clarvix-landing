@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — تدقيق رقمي وتوليد عملاء محتملين B2B</title>
+  <meta name="description" content="Clarvix تقدم تدقيقات رقمية احترافية لتحويل العملاء المحتملين وخدمات توليد العملاء المحتملين B2B للشركات المحلية. اكتشف لماذا تخسر العملاء المحتملين واحصل على خطة عمل لمدة 30 يوماً.">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script>
+    var PAYONEER_EMAIL = 'clarvix@clarvix.net';
+    var CONTACT_EMAIL = 'contact.clarvix@gmail.com';
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+  <style>
+    body { font-family: 'Segoe UI', 'Tahoma', 'Inter', system-ui, sans-serif; }
+    .step-arrow { transform: scaleX(-1); }
+  </style>
+  <meta property="og:title" content="Clarvix — تدقيق رقمي وتوليد عملاء محتملين B2B">
+  <meta property="og:description" content="Clarvix تقدم تدقيقات رقمية احترافية لتحويل العملاء المحتملين وخدمات توليد العملاء المحتملين B2B للشركات المحلية.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.clarvix.net/ar.html">
+  <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
+  <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
+  <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
+  <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
+  <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
+  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">تدقيق رقمي وتوليد عملاء محتملين</span>
+      </div>
+      <div class="nav-right">
+        <a href="#services" class="nav-link">الخدمات</a>
+        <a href="#how-it-works" class="nav-link">كيف يعمل</a>
+        <a href="#pricing" class="nav-link">الأسعار</a>
+        <div class="lang-toggle">
+          <a href="index.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')" style="text-decoration:none">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','ar')" style="text-decoration:none">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openOrder()">ابدأ الآن ←</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero" id="hero">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">🔍 خدمات رقمية احترافية</div>
+      <h1 class="hero-title">
+        <span>عملك يستحق المزيد من العملاء المحتملين.</span><br>
+        <span class="highlight">نحن ندقق حضورك الرقمي ونولّد لك العملاء.</span>
+      </h1>
+      <p class="hero-sub">تقدم Clarvix خدمتين قويتين: <strong>تدقيق الحضور الرقمي</strong> الاحترافي الذي يكشف بالضبط لماذا تخسر العملاء المحتملين — وخدمة <strong>توليد العملاء المحتملين B2B</strong> التي تسلّم العملاء المؤهلين مباشرة إلى خط مبيعاتك.</p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openOrder()">احصل على تدقيقي ←</button>
+        <a href="#services" class="btn-ghost">▶ شاهد خدماتنا</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item"><span class="stat-num">8</span><span class="stat-label">فئات التدقيق</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">48h</span><span class="stat-label">تسليم التدقيق</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">B2B</span><span class="stat-label">توليد عملاء محتملين</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat-item"><span class="stat-num">100%</span><span class="stat-label">مبني على البيانات</span></div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Audit Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-tag">المشكلة الصامتة</div>
+      <h2 class="section-title">أنت تستثمر في التسويق. لكن أين العملاء المحتملون؟</h2>
+      <p class="section-sub">معظم الشركات المحلية تنفق المال على الإعلانات ووسائل التواصل الاجتماعي وتحسين محركات البحث — ثم تتساءل لماذا لا يرن الهاتف. المشكلة ليست في إنفاقك التسويقي. إنها ما يحدث بعد أن ينقر شخص ما على رابطك.</p>
+      <div class="pain-grid">
+        <div class="pain-card"><div class="pain-icon">📊</div><h3>بدون تتبع</h3><p>ليس لديك فكرة عن القنوات التي ترسل لك عملاء محتملين. كل دولار تسويقي يذهب إلى صندوق أسود. لا يمكنك تحسين ما لا يمكنك قياسه.</p></div>
+        <div class="pain-card"><div class="pain-icon">📝</div><h3>بدون التقاط العملاء المحتملين</h3><p>أكثر من 70% من الزوار يفضلون ملء نموذج بدلاً من الاتصال. إذا لم يكن هناك نموذج أو دردشة أو واتساب — فإنهم يغادرون ولا يعودون.</p></div>
+        <div class="pain-card"><div class="pain-icon">⚡</div><h3>موقع جوال بطيء</h3><p>53% من الزوار يتركون صفحة تستغرق أكثر من 3 ثوانٍ للتحميل. الموقع الجوال البطيء هو باب مفتوح لمنافسيك.</p></div>
+        <div class="pain-card"><div class="pain-icon">📍</div><h3>غير مرئي على خرائط جوجل</h3><p>أفضل 3 نتائج في جوجل تحصل على 44% من جميع النقرات في البحث المحلي. إذا لم تكن هناك، فأنت غير مرئي لما يقرب من نصف الأشخاص الذين يبحثون عن خدمتك الآن.</p></div>
+        <div class="pain-card"><div class="pain-icon">⭐</div><h3>صفر مراجعات</h3><p>منافسون لديهم أكثر من 30 مراجعة مقابلك بصفر — هذه ليست منافسة عادلة. المراجعات هي إشارة الثقة رقم 1 للقرارات ذات القيمة العالية.</p></div>
+        <div class="pain-card"><div class="pain-icon">🎯</div><h3>رسائل عامة</h3><p>'مرحباً بكم في موقعنا.' يقرر الزوار في 5 ثوانٍ ما إذا كانوا سيبقون أو يغادرون. العنوان العام يعني أنهم يغادرون. دائماً.</p></div>
+      </div>
+      <div class="problem-callout">
+        <div class="callout-icon">💸</div>
+        <div class="callout-text"><strong>التكلفة الحقيقية ليست موقعك البطيء. إنها كل عميل محتمل يلتقطه منافسوك بدلاً منك.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-tabs" id="services">
+    <div class="container">
+      <div class="section-tag center">خدماتنا</div>
+      <h2 class="section-title center">طريقتان لتنمية عملائك المحتملين</h2>
+      <p class="section-sub center">اختر الخدمة التي تناسب مرحلتك الحالية — أو اجمع كليهما لتحقيق أقصى تأثير.</p>
+      <div class="tab-nav" role="tablist">
+        <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('audit', this)">🔍 تدقيق الحضور الرقمي</button>
+        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('leadgen', this)">🚀 توليد العملاء المحتملين B2B</button>
+      </div>
+
+      <div class="tab-panel active" id="tab-audit">
+        <div class="solution-inner">
+          <div class="solution-image-col">
+            <img src="images/audit_report_mockup.png" alt="Clarvix Audit Report" class="solution-img" loading="lazy">
+          </div>
+          <div class="solution-text-col">
+            <div class="section-tag">تدقيق الحضور الرقمي</div>
+            <h2 class="section-title left">تدقيق واحد. كل ما تحتاجه للبدء في التحويل.</h2>
+            <p class="solution-desc">تحلل Clarvix عملك في 8 أبعاد حرجة. نقيّم كل عنصر بالبيانات الحقيقية والقابلة للتحقق علناً. بدون حشو. بدون تخمينات. فقط نتائج دقيقة وقابلة للتنفيذ.</p>
+            <div class="score-preview">
+              <div class="score-bar-item"><span class="sbi-label">التتبع والإسناد</span><div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div><span class="sbi-val red">3/15</span></div>
+              <div class="score-bar-item"><span class="sbi-label">مسار التحويل</span><div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div><span class="sbi-val amber">8/20</span></div>
+              <div class="score-bar-item"><span class="sbi-label">الحضور المحلي</span><div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div><span class="sbi-val red">5/15</span></div>
+              <div class="score-bar-item"><span class="sbi-label">الأمان والثقة</span><div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div><span class="sbi-val green">6/10</span></div>
+            </div>
+            <button class="btn-primary" onclick="openOrder()">احصل على تدقيقي ←</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" id="tab-leadgen">
+        <div class="leadgen-overview">
+          <div class="solution-text-col">
+            <div class="section-tag">توليد العملاء المحتملين B2B</div>
+            <h2 class="section-title left">عملاء محتملون مؤهلون. يُسلَّمون إلى صندوق بريدك كل شهر.</h2>
+            <p class="leadgen-desc">توقف عن انتظار العملاء المحتملين ليجدوك. تحدد Clarvix وتؤهل وتسلّم عملاء B2B المحتملين الذين يتطابقون مع ملفك الشخصي المثالي للعميل — حتى يتمكن فريق مبيعاتك من التركيز على الإغلاق، وليس التنقيب. نعمل في أسواق EN وES وHE وAR.</p>
+            <div class="leadgen-stats">
+              <div class="lg-stat"><div class="lg-stat-num">10–60</div><div class="lg-stat-label">عميل محتمل مؤهل / شهر</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">4</div><div class="lg-stat-label">لغات مشمولة</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">100%</div><div class="lg-stat-label">جهات اتصال موثقة</div></div>
+              <div class="lg-stat"><div class="lg-stat-num">ICP</div><div class="lg-stat-label">استهداف بالملف الشخصي المثالي</div></div>
+            </div>
+            <button class="btn-primary" onclick="openLeadGenOrder('Professional — $549/شهر')">استفسر عن توليد العملاء ←</button>
+          </div>
+          <div class="leadgen-visual">
+            <div class="lg-pipeline-step"><div class="lg-step-icon">🎯</div><div class="lg-step-text"><h4>تعريف ICP</h4><p>نحدد ملفك الشخصي المثالي للعميل — الصناعة والحجم والدور والجغرافيا.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">🔎</div><div class="lg-step-text"><h4>بحث العملاء المحتملين</h4><p>نحدد ونتحقق من صانعي القرار الذين يتطابقون مع معاييرك.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">✅</div><div class="lg-step-text"><h4>تأهيل العملاء المحتملين</h4><p>يتم مراجعة كل عميل محتمل يدوياً للتحقق من الملاءمة وإشارات النية ودقة معلومات الاتصال.</p></div></div>
+            <div class="lg-pipeline-step"><div class="lg-step-icon">📬</div><div class="lg-step-text"><h4>التسليم والتقارير</h4><p>يتم تسليم العملاء المحتملين بتنسيق منظم مع تقارير أسبوعية أو شهرية.</p></div></div>
+          </div>
+        </div>
+
+        <!-- Lead Gen Pricing — same format as Audit -->
+        <div class="leadgen-pricing">
+          <div class="section-tag center" style="margin-bottom:32px">خطط توليد العملاء المحتملين</div>
+          <h2 class="section-title center" style="margin-bottom:40px">خط أنابيب ثابت. نمو يمكن التنبؤ به.</h2>
+          <div class="pricing-cards">
+            <div class="pricing-card">
+              <div class="pricing-tier">Starter</div>
+              <div class="pricing-price">$299</div>
+              <div class="pricing-price-period">/ شهر</div>
+              <div class="pricing-sub">10–15 عميل محتمل B2B مؤهل</div>
+              <ul class="pricing-features">
+                <li class="bold">يشمل:</li>
+                <li>10–15 عميل محتمل موثق/شهر</li>
+                <li>جلسة تعريف ICP (ساعة)</li>
+                <li>تقرير تسليم شهري</li>
+                <li>الاسم والشركة والدور والبريد الإلكتروني</li>
+                <li>أسواق EN / ES / HE / AR</li>
+                <li>بيانات خرائط جوجل</li>
+                <li class="bold cross-title">لا يشمل:</li>
+                <li class="cross">رابط LinkedIn</li>
+                <li class="cross">نقاط إشارات النية</li>
+                <li class="cross">الاستخبارات التنافسية</li>
+                <li class="cross">تقارير أسبوعية</li>
+              </ul>
+              <p class="pricing-for-who">مثالي للفرق الصغيرة التي تبدأ خط أنابيب الاتصال الخارجي.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter — $299/شهر')">اطلب عبر Payoneer ←</button>
+            </div>
+            <div class="pricing-card premium">
+              <div class="pricing-badge">الأكثر شعبية</div>
+              <div class="pricing-tier">Professional</div>
+              <div class="pricing-price">$549</div>
+              <div class="pricing-price-period">/ شهر</div>
+              <div class="pricing-sub">20–30 عميل محتمل B2B مؤهل</div>
+              <ul class="pricing-features">
+                <li class="bold">كل شيء في Starter، بالإضافة إلى:</li>
+                <li>20–30 عميل محتمل موثق/شهر</li>
+                <li>رابط LinkedIn مشمول</li>
+                <li>نقاط إشارات النية</li>
+                <li>تقرير الاستخبارات التنافسية</li>
+                <li>تقارير تسليم أسبوعية</li>
+                <li>التحقق من البريد الإلكتروني (بدون ارتداد)</li>
+                <li>دعم ذو أولوية (رد خلال 24 ساعة)</li>
+              </ul>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional — $549/شهر')">اطلب عبر Payoneer ←</button>
+            </div>
+            <div class="pricing-card">
+              <div class="pricing-tier">Enterprise</div>
+              <div class="pricing-price">$999</div>
+              <div class="pricing-price-period">/ شهر</div>
+              <div class="pricing-sub">40–60 عميل محتمل B2B مؤهل</div>
+              <ul class="pricing-features">
+                <li class="bold">كل شيء في Professional، بالإضافة إلى:</li>
+                <li>40–60 عميل محتمل موثق/شهر</li>
+                <li>تحليل تنافسي متقدم</li>
+                <li>تحديثات خط الأنابيب اليومية</li>
+                <li>مكالمات استشارية (2/شهر)</li>
+                <li>تنسيق جاهز لـ CRM</li>
+                <li>مدير حساب مخصص</li>
+                <li>استهداف متعدد الصناعات</li>
+              </ul>
+              <p class="pricing-for-who">للفرق النامية التي تحتاج إلى خط أنابيب عالي الحجم.</p>
+              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise — $999/شهر')">اطلب عبر Payoneer ←</button>
+            </div>
+          </div>
+          <div class="payoneer-info">
+            <div class="payoneer-inner">
+              <div class="payoneer-icon">💳</div>
+              <div class="payoneer-text">
+                <strong>دفع آمن عبر Payoneer</strong>
+                <p>أرسل الدفعة إلى <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> على Payoneer. أدرج اسم الخطة واسم شركتك في الملاحظات. نؤكد خلال 24 ساعة ونبدأ دفعتك الأولى خلال 72 ساعة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="section-tag center">شاهده في العمل</div>
+      <h2 class="section-title center">كيف يعمل تدقيق Clarvix</h2>
+      <p class="section-sub center">جولة في تقرير تدقيق حقيقي — من تفاصيل النقاط إلى خطة العمل لمدة 30 يوماً.</p>
+      <div class="video-wrapper">
+        <div class="video-placeholder-box">
+          <div class="vp-content">
+            <div class="vp-icon">🎬</div>
+            <div class="vp-title">فيديو تعليمي</div>
+            <div class="vp-sub">قريباً — جولة كاملة في تقرير تدقيق Clarvix الحقيقي.<br>تفاصيل النقاط والنتائج والمقارنة التنافسية وخطة العمل لمدة 30 يوماً.</div>
+            <div class="vp-badge">🔔 متاح قريباً</div>
+          </div>
+        </div>
+        <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">عظّم تحويل عملائك المحتملين — بدون حشو، فقط وضوح.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-tag center">العملية</div>
+      <h2 class="section-title center">من الطلب إلى الرؤى في 48 ساعة</h2>
+      <div class="steps-grid">
+        <div class="step-card"><div class="step-num">01</div><h3>تقدم طلبك</h3><p>شارك رابط موقعك واسم عملك. ادفع بأمان عبر Payoneer. هذا كل ما نحتاجه.</p></div>
+        <div class="step-arrow">←</div>
+        <div class="step-card"><div class="step-num">02</div><h3>نجري التدقيق الكامل</h3><p>نحلل 8 فئات حرجة باستخدام PageSpeed Insights وجوجل والفحص اليدوي. كل نقطة بيانات حقيقية وقابلة للتحقق.</p></div>
+        <div class="step-arrow">←</div>
+        <div class="step-card"><div class="step-num">03</div><h3>تستلم تقريرك</h3><p>ملف PDF احترافي مع نقاط تحويل العملاء المحتملين لديك، وأفضل 10 نتائج مع مستويات الخطورة، والمقارنة التنافسية وخطة العمل لمدة 30 يوماً.</p></div>
+        <div class="step-arrow">←</div>
+        <div class="step-card"><div class="step-num">04</div><h3>تتخذ الإجراء</h3><p>استخدم الخطة بنفسك أو مررها إلى مطورك. كل إصلاح موصوف بلغة بسيطة مع الجهد المقدر والتأثير المتوقع.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="what-you-get" id="what-you-get">
+    <div class="container">
+      <div class="section-tag center">ماذا تحصل</div>
+      <h2 class="section-title center">كل ما يتضمنه تقرير التدقيق الخاص بك</h2>
+      <div class="deliverables-grid">
+        <div class="deliverable-card featured"><div class="deliverable-icon">🎯</div><h3>نقاط تحويل العملاء المحتملين</h3><p>عملك مُقيَّم من 100 في 8 فئات حرجة. شاهد فوراً أين أنت وما الذي يسحب نقاطك للأسفل.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">🔍</div><h3>أفضل 10 نتائج</h3><p>كل نتيجة تشمل ما هو موجود وما هو مفقود والتأثير على العمل والإصلاح الدقيق والجهد المقدر. مصنفة كحرجة أو مهمة أو موصى بها.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">⚡</div><h3>تحليل PageSpeed</h3><p>أداء الجوال وسطح المكتب موثق عبر Google PageSpeed Insights. LCP وTBT وFCP وCLS ومؤشر السرعة — مع عتبات جوجل للمقارنة.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📊</div><h3>المقارنة التنافسية</h3><p>شاهد بالضبط كيف تقارن مع 3 منافسين محليين مباشرين في كل مقياس رئيسي. اعرف بالضبط أين تخسر معركة العملاء المحتملين.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📅</div><h3>خطة عمل 30 يوماً</h3><p>خطة خطوة بخطوة ذات أولوية. كل مهمة لها مالك وجدول زمني ومستوى أولوية. يعرف فريقك بالضبط ماذا يفعل وبأي ترتيب.</p></div>
+        <div class="deliverable-card"><div class="deliverable-icon">📈</div><h3>النقاط المستهدفة</h3><p>نتوقع نقاطك القابلة للتحقيق بعد تنفيذ الإصلاحات الحرجة — حتى تعرف بالضبط ماذا تتوقع.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="for-who" id="for-who">
+    <div class="container">
+      <div class="section-tag center">لمن هذا</div>
+      <h2 class="section-title center">مصمم للشركات المحلية التي تعيش وتموت بالعملاء المحتملين</h2>
+      <div class="industries-grid">
+        <div class="industry-badge">🏠 <span>العقارات</span></div>
+        <div class="industry-badge">⚖️ <span>مكاتب المحامين</span></div>
+        <div class="industry-badge">🏥 <span>العيادات الطبية</span></div>
+        <div class="industry-badge">🦷 <span>عيادات الأسنان</span></div>
+        <div class="industry-badge">🏗️ <span>المقاولون</span></div>
+        <div class="industry-badge">💆 <span>السبا والعافية</span></div>
+        <div class="industry-badge">🍽️ <span>المطاعم</span></div>
+        <div class="industry-badge">🚗 <span>خدمات السيارات</span></div>
+        <div class="industry-badge">📚 <span>التعليم والتدريس</span></div>
+        <div class="industry-badge">🏋️ <span>الصالات الرياضية</span></div>
+        <div class="industry-badge">🔧 <span>خدمات المنزل</span></div>
+        <div class="industry-badge">💼 <span>خدمات B2B</span></div>
+      </div>
+      <p class="for-who-note">إذا كان لديك موقع إلكتروني وتمارس أي شكل من أشكال التسويق الرقمي وتعتمد على العملاء المحتملين للنمو — فهذا التدقيق مناسب لك.</p>
+    </div>
+  </section>
+
+  <section class="results" id="results">
+    <div class="container">
+      <div class="results-inner">
+        <div class="results-text">
+          <div class="section-tag">العائد على الاستثمار</div>
+          <h2 class="section-title left">عميل محتمل واحد يدفع ثمن التدقيق 10 مرات.</h2>
+          <p>فكر في قيمة عميل جديد واحد لعملك. $500؟ $5,000؟ $50,000؟ الآن فكر في عدد العملاء الذين يزورون موقعك الآن — ويغادرون دون الاتصال بك. هذا هو التسرب الذي نصلحه.</p>
+          <ul class="results-list">
+            <li><span class="results-check">✓</span><span>توقف عن إهدار ميزانية الإعلانات على القنوات التي لا تحول</span></li>
+            <li><span class="results-check">✓</span><span>حوّل الزيارات الحالية إلى عملاء محتملين حقيقيين دون إنفاق المزيد</span></li>
+            <li><span class="results-check">✓</span><span>تفوق على المنافسين الذين يلتقطون عملاءك المحتملين</span></li>
+            <li><span class="results-check">✓</span><span>ابنِ إشارات الثقة التي تجعل الزوار يختارونك</span></li>
+            <li><span class="results-check">✓</span><span>اعرف بالضبط ما هو عائد استثمارك التسويقي الرقمي، لأول مرة</span></li>
+          </ul>
+        </div>
+        <div class="results-visual">
+          <div class="score-card-demo">
+            <div class="scd-label">قبل CLARVIX</div>
+            <div class="scd-score red">42<span>/100</span></div>
+            <div class="scd-status">حرج</div>
+            <div class="scd-arrow">↓</div>
+            <div class="scd-label">الهدف بعد 30 يوماً</div>
+            <div class="scd-score amber">68<span>/100</span></div>
+            <div class="scd-status amber">يحتاج عمل</div>
+            <p class="scd-note">متوسط التحسن من إصلاح أفضل 5 مشاكل حرجة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-tag center">أسعار التدقيق</div>
+      <h2 class="section-title center">تقرير واحد. كل شيء مشمول.</h2>
+      <div class="pricing-cards">
+        <div class="pricing-card">
+          <div class="pricing-tier">أساسي</div>
+          <div class="pricing-price">$45</div>
+          <div class="pricing-sub">تدقيق تحويل العملاء — التشخيص الأساسي</div>
+          <ul class="pricing-features">
+            <li class="bold">يشمل:</li>
+            <li>نقاط 0–100 (8 فئات)</li>
+            <li>تحليل PageSpeed (جوال + سطح مكتب)</li>
+            <li>مراجعة النماذج وCTA والاحتكاك</li>
+            <li>التحقق من التتبع (GA4, Pixel)</li>
+            <li>مراجعة GBP أساسية</li>
+            <li>5 نتائج ذات أولوية</li>
+            <li>خطة عمل 14 يوماً</li>
+            <li>PDF احترافي (8–10 صفحات)</li>
+            <li class="bold cross-title">لا يشمل:</li>
+            <li class="cross">مقارنة تنافسية عميقة</li>
+            <li class="cross">10 نتائج كاملة</li>
+            <li class="cross">خطة كاملة 30 يوماً</li>
+            <li class="cross">دعم ما بعد التدقيق</li>
+          </ul>
+          <p class="pricing-for-who">للشركات الصغيرة التي تريد فهم سبب عدم توليدها للعملاء المحتملين.</p>
+          <button class="btn-primary btn-full" onclick="openOrder('basic')">اطلب عبر Payoneer ←</button>
+        </div>
+        <div class="pricing-card premium">
+          <div class="pricing-badge">الأكثر شعبية</div>
+          <div class="pricing-tier">قياسي</div>
+          <div class="pricing-price">$85</div>
+          <div class="pricing-sub">تدقيق كامل + مقارنة تنافسية</div>
+          <ul class="pricing-features">
+            <li class="bold">كل شيء في الأساسي، بالإضافة إلى:</li>
+            <li>3 منافسين محللين</li>
+            <li>مقارنة تنافسية (10 مقاييس)</li>
+            <li>10 نتائج منظمة</li>
+            <li>خطة عمل كاملة 30 يوماً</li>
+            <li>نقاط هدف متوقعة</li>
+            <li>أولوية حرج / مهم / موصى به</li>
+            <li>تحديد 'تسربات العملاء المحتملين'</li>
+            <li>مراجعة SEO تقنية أساسية</li>
+            <li>PDF كامل (10–12 صفحة)</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openOrder('standard')">اطلب عبر Payoneer ←</button>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-tier">مميز</div>
+          <div class="pricing-price">$160</div>
+          <div class="pricing-sub">تدقيق الحضور الرقمي الاستراتيجي</div>
+          <ul class="pricing-features">
+            <li class="bold">كل شيء في القياسي، بالإضافة إلى:</li>
+            <li>تحليل عميق لمسار التحويل</li>
+            <li>تقييم الرسائل والمميز الاستراتيجي</li>
+            <li>مراجعة متقدمة لنية البحث</li>
+            <li>خريطة احتكاك المستخدم</li>
+            <li>مراجعة السرعة مع شرح تقني</li>
+            <li>خطة استراتيجية 30 يوم + 60 يوم</li>
+            <li>توصيات أدوات محددة</li>
+            <li>مستند مكافأة: 'تفصيل أولويات التنفيذ'</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openOrder('premium')">اطلب عبر Payoneer ←</button>
+        </div>
+      </div>
+      <div class="payoneer-info">
+        <div class="payoneer-inner">
+          <div class="payoneer-icon">💳</div>
+          <div class="payoneer-text">
+            <strong>دفع آمن عبر Payoneer</strong>
+            <p>أرسل الدفعة إلى <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> على Payoneer. أدرج اسم عملك ورابط موقعك في الملاحظات. يتم تسليم التدقيق خلال 48 ساعة من تأكيد الدفع.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">هل أنت مستعد لاكتشاف ما يكلفك العملاء المحتملين؟</h2>
+      <p class="cta-sub">احصل على نقاط تحويل العملاء المحتملين لديك، وأفضل 10 نتائج حرجة، وخطة عمل 30 يوماً. يُسلَّم خلال 48 ساعة.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openOrder()">احصل على تدقيقي ←</button>
+        <a href="mailto:contact.clarvix@gmail.com" class="btn-ghost-light">أسئلة؟ راسلنا</a>
+      </div>
+      <p class="cta-email">contact.clarvix@gmail.com</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">حقائق. وضوح. عمل.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>تدقيق رقمي وتوليد عملاء محتملين B2B</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">الخدمات</a>
+        <a href="#how-it-works">كيف يعمل</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="mailto:contact.clarvix@gmail.com">contact.clarvix@gmail.com</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. حقائق. وضوح. عمل.</p>
+    </div>
+  </footer>
+
+  <!-- AUDIT ORDER MODAL -->
+  <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
+    <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" onclick="closeOrder()" aria-label="إغلاق">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="modal-title" class="modal-title">اطلب تدقيقك</h2>
+        <p class="modal-sub">اختر حزمتك. تتم معالجة الدفع بأمان عبر Payoneer.</p>
+      </div>
+      <div class="package-selector" id="packageSelector">
+        <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
+          <div class="pkg-radio" id="radioBasic"></div>
+          <div class="pkg-info"><span class="pkg-name">أساسي</span><span class="pkg-desc">التشخيص الأساسي</span></div>
+          <span class="pkg-price">$45</span>
+        </label>
+        <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
+          <div class="pkg-radio" id="radioStandard"></div>
+          <div class="pkg-info"><span class="pkg-name">قياسي</span><span class="pkg-desc">تدقيق كامل + مقارنة</span></div>
+          <span class="pkg-price">$85</span>
+        </label>
+        <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
+          <div class="pkg-radio" id="radioPremium"></div>
+          <div class="pkg-info"><span class="pkg-name">مميز</span><span class="pkg-desc">تدقيق استراتيجي متقدم</span></div>
+          <span class="pkg-price">$160</span>
+        </label>
+      </div>
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="businessName">اسم العمل</label>
+            <input type="text" id="businessName" class="form-input" placeholder="مثال: عيادة أسنان دبي" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="websiteUrl">رابط الموقع</label>
+            <input type="url" id="websiteUrl" class="form-input" placeholder="https://yoursite.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="businessCity">المدينة والبلد</label>
+          <input type="text" id="businessCity" class="form-input" placeholder="مثال: دبي، الإمارات">
+        </div>
+        <p class="form-error" id="formError">يرجى ملء اسم العمل ورابط الموقع.</p>
+        <button type="submit" class="btn-order-submit" id="orderSubmit">
+          <span class="submit-text">المتابعة إلى الدفع ←</span>
+          <span class="submit-loading" style="display:none;">⟳ جارٍ المعالجة...</span>
+        </button>
+        <p class="modal-footnote">ستتلقى تعليمات الدفع عبر البريد الإلكتروني في غضون دقائق. تتم معالجة الدفع بأمان عبر <strong>Payoneer</strong>.</p>
+      </form>
+    </div>
+  </div>
+
+  <!-- LEAD GEN ORDER MODAL -->
+  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
+    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="إغلاق">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 class="modal-title">ابدأ توليد العملاء المحتملين</h2>
+        <p class="modal-sub" id="leadgen-plan-label">Professional — $549/شهر</p>
+      </div>
+      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lgBusinessName">اسم العمل</label>
+            <input type="text" id="lgBusinessName" class="form-input" placeholder="مثال: Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lgEmail">بريدك الإلكتروني</label>
+            <input type="email" id="lgEmail" class="form-input" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lgICP">صف عميلك المثالي (الصناعة، الدور، الموقع)</label>
+          <input type="text" id="lgICP" class="form-input" placeholder="مثال: وكالات عقارية في دبي — مالك أو مدير">
+        </div>
+        <p class="form-error" id="lgFormError">يرجى ملء اسم العمل وبريدك الإلكتروني.</p>
+        <button type="submit" class="btn-order-submit" id="lgSubmit">
+          <span class="submit-text">إرسال الاستفسار ←</span>
+          <span class="submit-loading" style="display:none;">⟳ جارٍ الإرسال...</span>
+        </button>
+        <p class="modal-footnote">سنؤكد طلبك ونرسل تعليمات دفع Payoneer إلى <strong>clarvix@clarvix.net</strong> خلال 24 ساعة.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body></html>
