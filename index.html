@@ -3,17 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarvix — Digital Audit &amp; B2B Lead Generation</title>
-  <meta name="description" content="Clarvix delivers professional Lead Conversion Digital Audits and B2B Lead Generation for local businesses. Discover why you're losing leads and get a 30-day action plan.">
+  <title>Clarvix — Digital Audit &amp; B2B Lead Generation | clarvix.net</title>
+  <meta name="description" content="Clarvix delivers professional Digital Presence Audits and B2B Lead Generation. Find out why you're losing leads and get qualified prospects delivered to your inbox every month.">
+  <meta name="keywords" content="digital presence audit, B2B lead generation, lead conversion audit, digital marketing audit, local business leads, SEO audit, Google Business Profile audit">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Clarvix">
+  <link rel="canonical" href="https://www.clarvix.net/">
 
   <link rel="icon" type="image/png" href="images/favicon.png">
 
   <script>
-    /* ── Payoneer payment email ── */
     var PAYONEER_EMAIL = 'clarvix@clarvix.net';
-    /* ── Audit prices ── */
     var AUDIT_PRICES = { basic: 45, standard: 85, premium: 160 };
-    /* ── Contact email ── */
     var CONTACT_EMAIL = 'contact.clarvix@gmail.com';
   </script>
 
@@ -23,47 +24,78 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="order-modal.css">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta property="og:description" content="Clarvix delivers professional Lead Conversion Digital Audits and B2B Lead Generation for local businesses.">
+  <meta property="og:description" content="Find out why you're losing leads. Get a professional Digital Audit or B2B Lead Generation service — delivered in 48 hours.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.clarvix.net/">
   <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
+  <meta name="twitter:description" content="Find out why you're losing leads. Professional Digital Audit or B2B Lead Generation — delivered in 48 hours.">
+
+  <!-- Hreflang for multilingual SEO -->
   <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
   <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
   <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
   <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
   <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
 
+  <!-- Schema.org structured data -->
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Clarvix",
-  "url": "https://www.clarvix.net",
-  "logo": "https://www.clarvix.net/images/logo.png",
-  "description": "Clarvix delivers professional Lead Conversion Digital Audits and B2B Lead Generation for local businesses.",
-  "address": { "@type": "PostalAddress", "addressLocality": "Online", "addressCountry": "US" },
-  "provider": { "@type": "Organization", "name": "Clarvix" }
-}
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clarvix",
+    "url": "https://www.clarvix.net",
+    "logo": "https://www.clarvix.net/images/logo.png",
+    "description": "Clarvix delivers professional Digital Presence Audits and B2B Lead Generation for local businesses.",
+    "address": { "@type": "PostalAddress", "addressLocality": "Online", "addressCountry": "US" },
+    "priceRange": "$45 - $999",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Clarvix Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Digital Presence Audit",
+            "description": "Professional Lead Conversion Digital Audit — score your business across 8 categories, get 10 findings and a 30-day action plan."
+          },
+          "price": "45",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "B2B Lead Generation",
+            "description": "Monthly delivery of qualified B2B leads matching your ideal customer profile in EN, ES, HE, and AR markets."
+          },
+          "price": "299",
+          "priceCurrency": "USD"
+        }
+      ]
+    }
+  }
   </script>
 
   <!-- Apollo Website Tracker -->
   <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
 
-  <!-- Geo-language redirect: IL→HE, Arab countries→AR -->
+  <!-- Geo-language redirect -->
   <script>
   (function(){
     try {
       var saved = localStorage.getItem('clarvix_lang');
       var path = window.location.pathname;
       var isRoot = (path === '/' || path === '/index.html' || path === '');
-      if (saved && !isRoot) return; // already on a language page
+      if (saved && !isRoot) return;
       if (saved === 'es' && isRoot) { window.location.replace('es.html'); return; }
       if (saved === 'he' && isRoot) { window.location.replace('he.html'); return; }
       if (saved === 'ar' && isRoot) { window.location.replace('ar.html'); return; }
-      if (saved === 'en' || saved) return; // en or already set
-      // Auto-detect by IP geolocation (free, no API key needed)
+      if (saved === 'en' || saved) return;
       fetch('https://ipapi.co/json/')
         .then(function(r){ return r.json(); })
         .then(function(d){
@@ -78,9 +110,7 @@
           } else {
             localStorage.setItem('clarvix_lang','en');
           }
-        }).catch(function(){
-          localStorage.setItem('clarvix_lang','en');
-        });
+        }).catch(function(){ localStorage.setItem('clarvix_lang','en'); });
     } catch(e){}
   })();
   </script>
@@ -97,33 +127,33 @@
       </div>
       <div class="nav-right">
         <a href="#services" class="nav-link">Services</a>
-        <a href="#how-it-works" class="nav-link">How it works</a>
         <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
         <div class="lang-toggle">
-          <a href="index.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')" style="text-decoration:none">EN</a><span class="lang-sep">|</span>
-          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')" style="text-decoration:none">ES</a><span class="lang-sep">|</span>
-          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')" style="text-decoration:none">HE</a><span class="lang-sep">|</span>
-          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')" style="text-decoration:none">AR</a>
+          <a href="index.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
         </div>
         <button class="btn-primary" onclick="openOrder()">Get Started →</button>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO — short, punchy, direct -->
   <section class="hero" id="hero">
     <div class="hero-bg-grid"></div>
     <div class="hero-glow"></div>
     <div class="container hero-content">
-      <div class="badge-pill">🔍 Professional Digital Services</div>
+      <div class="badge-pill">🔍 Digital Audit &amp; B2B Lead Generation</div>
       <h1 class="hero-title">
-        <span>Your business deserves more leads.</span><br>
-        <span class="highlight">We audit your presence and generate them.</span>
+        <span>You're losing leads</span><br>
+        <span class="highlight">every single day.</span>
       </h1>
-      <p class="hero-sub">Clarvix offers two powerful services: a professional <strong>Digital Presence Audit</strong> that reveals exactly why you're losing leads — and a <strong>B2B Lead Generation</strong> service that delivers qualified prospects directly to your pipeline.</p>
+      <p class="hero-sub">We find out exactly why — and fix it. Clarvix audits your digital presence and delivers qualified B2B leads directly to your pipeline.</p>
       <div class="hero-ctas">
         <button class="btn-primary btn-lg" onclick="openOrder()">Get My Audit →</button>
-        <a href="#services" class="btn-ghost">▶ See our services</a>
+        <a href="#services" class="btn-ghost">See our services ↓</a>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
@@ -133,12 +163,12 @@
         <div class="stat-divider"></div>
         <div class="stat-item">
           <span class="stat-num">48h</span>
-          <span class="stat-label">Audit delivery</span>
+          <span class="stat-label">Delivery</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <span class="stat-num">B2B</span>
-          <span class="stat-label">Lead generation</span>
+          <span class="stat-num">4</span>
+          <span class="stat-label">Languages</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
@@ -153,397 +183,73 @@
     </div>
   </section>
 
-  <!-- PROBLEM SECTION -->
-  <section class="problem" id="problem">
-    <div class="container">
-      <div class="section-tag">The Silent Problem</div>
-      <h2 class="section-title">You're investing in marketing. But where are the leads?</h2>
-      <p class="section-sub">Most local businesses spend money on ads, social media, and SEO — then wonder why the phone isn't ringing. The problem isn't your marketing spend. It's what happens after someone clicks your link.</p>
-
-      <div class="pain-grid">
-        <div class="pain-card">
-          <div class="pain-icon">📊</div>
-          <h3>No Tracking</h3>
-          <p>You have no idea which channels send you leads. Every marketing dollar goes into a black box. You can't improve what you can't measure.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">📝</div>
-          <h3>No Lead Capture</h3>
-          <p>Over 70% of visitors prefer to fill a form rather than call. If there's no form, no chat, no WhatsApp — they leave and never come back.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">⚡</div>
-          <h3>Slow Mobile Site</h3>
-          <p>53% of visitors abandon a page that takes more than 3 seconds to load. A slow mobile site is an open door for your competitors.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">📍</div>
-          <h3>Invisible on Google Maps</h3>
-          <p>The Google 3-pack gets 44% of all local search clicks. If you're not there, you're invisible to nearly half of all people looking for your service right now.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">⭐</div>
-          <h3>Zero Reviews</h3>
-          <p>Competitors with 30+ reviews vs. you with 0 — it's not a fair fight. Reviews are the #1 trust signal for high-value decisions.</p>
-        </div>
-        <div class="pain-card">
-          <div class="pain-icon">🎯</div>
-          <h3>Generic Messaging</h3>
-          <p>'Welcome to our website.' Visitors decide in 5 seconds whether to stay or leave. A generic headline means they leave. Every time.</p>
-        </div>
-      </div>
-
-      <div class="problem-callout">
-        <div class="callout-icon">💸</div>
-        <div class="callout-text">
-          <strong>The real cost isn't your slow website. It's every lead your competitors are capturing instead of you.</strong>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SERVICES TABS -->
-  <section class="services-tabs" id="services">
+  <!-- SERVICES — two cards, side by side, immediately visible -->
+  <section class="services-section" id="services">
     <div class="container">
       <div class="section-tag center">Our Services</div>
       <h2 class="section-title center">Two ways to grow your leads</h2>
-      <p class="section-sub center">Choose the service that fits your current stage — or combine both for maximum impact.</p>
+      <p class="section-sub center" style="max-width:600px;margin:0 auto 56px">Choose one or combine both. Either way, you stop guessing and start growing.</p>
 
-      <div class="tab-nav" role="tablist">
-        <button class="tab-btn active" role="tab" aria-selected="true" onclick="switchTab('audit', this)">🔍 Digital Presence Audit</button>
-        <button class="tab-btn" role="tab" aria-selected="false" onclick="switchTab('leadgen', this)">🚀 B2B Lead Generation</button>
-      </div>
+      <div class="services-two-col">
 
-      <!-- TAB: AUDIT -->
-      <div class="tab-panel active" id="tab-audit">
-        <div class="solution-inner">
-          <div class="solution-image-col">
-            <img src="images/audit_report_mockup.png" alt="Clarvix Audit Report" class="solution-img" loading="lazy">
-          </div>
-          <div class="solution-text-col">
-            <div class="section-tag">Digital Presence Audit</div>
-            <h2 class="section-title left">One audit. Everything you need to start converting.</h2>
-            <p class="solution-desc">Clarvix analyses your business across 8 critical dimensions. We score every element with real, publicly verifiable data. No fluff. No guesses. Just precise, actionable findings that show you exactly what to fix, in what order, and why it matters for your bottom line.</p>
-            <div class="score-preview">
-              <div class="score-bar-item">
-                <span class="sbi-label">Tracking &amp; Attribution</span>
-                <div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div>
-                <span class="sbi-val red">3/15</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Conversion Funnel</span>
-                <div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div>
-                <span class="sbi-val amber">8/20</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Local Presence</span>
-                <div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div>
-                <span class="sbi-val red">5/15</span>
-              </div>
-              <div class="score-bar-item">
-                <span class="sbi-label">Security &amp; Trust</span>
-                <div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div>
-                <span class="sbi-val green">6/10</span>
-              </div>
+        <!-- SERVICE 1: AUDIT -->
+        <div class="service-card">
+          <div class="service-card-icon">🔍</div>
+          <div class="service-card-tag">Digital Presence Audit</div>
+          <h3 class="service-card-title">Your website is leaking leads. We show you exactly where.</h3>
+          <p class="service-card-desc">We score your business across 8 critical dimensions — speed, tracking, conversion, local presence, trust, and more. You get a professional PDF with your score, 10 prioritized findings, competitor benchmark, and a 30-day action plan.</p>
+          <div class="score-preview">
+            <div class="score-bar-item">
+              <span class="sbi-label">Tracking &amp; Attribution</span>
+              <div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div>
+              <span class="sbi-val red">3/15</span>
             </div>
-            <button class="btn-primary" onclick="openOrder()">Get My Audit →</button>
-          </div>
-        </div>
-      </div>
-
-      <!-- TAB: LEAD GENERATION -->
-      <div class="tab-panel" id="tab-leadgen">
-        <!-- Lead Gen Overview -->
-        <div class="leadgen-overview">
-          <div class="solution-text-col">
-            <div class="section-tag">B2B Lead Generation</div>
-            <h2 class="section-title left">Qualified leads. Delivered to your inbox every month.</h2>
-            <p class="leadgen-desc">Stop waiting for prospects to find you. Clarvix identifies, qualifies, and delivers B2B leads that match your ideal customer profile — so your sales team spends time closing, not prospecting. We operate in English, Spanish, Hebrew, and Arabic markets.</p>
-            <div class="leadgen-stats">
-              <div class="lg-stat">
-                <div class="lg-stat-num">10–60</div>
-                <div class="lg-stat-label">Qualified leads / month</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">4</div>
-                <div class="lg-stat-label">Languages covered</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">100%</div>
-                <div class="lg-stat-label">Verified contacts</div>
-              </div>
-              <div class="lg-stat">
-                <div class="lg-stat-num">ICP</div>
-                <div class="lg-stat-label">Ideal profile targeting</div>
-              </div>
+            <div class="score-bar-item">
+              <span class="sbi-label">Conversion Funnel</span>
+              <div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div>
+              <span class="sbi-val amber">8/20</span>
             </div>
-            <button class="btn-primary" onclick="window.location.href='mailto:'+CONTACT_EMAIL+'?subject=B2B Lead Generation Inquiry'">Inquire About Lead Gen →</button>
-          </div>
-          <div class="leadgen-visual">
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">🎯</div>
-              <div class="lg-step-text">
-                <h4>ICP Definition</h4>
-                <p>We define your ideal customer profile — industry, size, role, geography.</p>
-              </div>
+            <div class="score-bar-item">
+              <span class="sbi-label">Local Presence</span>
+              <div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div>
+              <span class="sbi-val red">5/15</span>
             </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">🔎</div>
-              <div class="lg-step-text">
-                <h4>Prospect Research</h4>
-                <p>We identify and verify decision-makers that match your criteria.</p>
-              </div>
-            </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">✅</div>
-              <div class="lg-step-text">
-                <h4>Lead Qualification</h4>
-                <p>Every lead is manually reviewed for fit, intent signals, and contact accuracy.</p>
-              </div>
-            </div>
-            <div class="lg-pipeline-step">
-              <div class="lg-step-icon">📬</div>
-              <div class="lg-step-text">
-                <h4>Delivery &amp; Reporting</h4>
-                <p>Leads delivered in a structured format with weekly or monthly reports.</p>
-              </div>
+            <div class="score-bar-item">
+              <span class="sbi-label">Security &amp; Trust</span>
+              <div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div>
+              <span class="sbi-val green">6/10</span>
             </div>
           </div>
+          <a href="#pricing" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">See Audit Plans →</a>
         </div>
 
-        <!-- Lead Gen Pricing Cards — same format as Audit pricing -->
-        <div class="leadgen-pricing">
-          <div class="section-tag center" style="margin-bottom:32px">Lead Generation Plans</div>
-          <h2 class="section-title center" style="margin-bottom:40px">Consistent pipeline. Predictable growth.</h2>
-          <div class="pricing-cards">
-
-            <!-- STARTER -->
-            <div class="pricing-card">
-              <div class="pricing-tier">Starter</div>
-              <div class="pricing-price">$299</div>
-              <div class="pricing-price-period">/ month</div>
-              <div class="pricing-sub">10–15 Qualified B2B Leads</div>
-              <ul class="pricing-features">
-                <li class="bold">Includes:</li>
-                <li>10–15 verified leads/month</li>
-                <li>ICP definition session (1h)</li>
-                <li>Monthly delivery report</li>
-                <li>Name, company, role, email</li>
-                <li>EN / ES / HE / AR markets</li>
-                <li>Google Maps data sourcing</li>
-                <li class="bold cross-title">Does not include:</li>
-                <li class="cross">LinkedIn profile URL</li>
-                <li class="cross">Intent signal scoring</li>
-                <li class="cross">Competitor intelligence</li>
-                <li class="cross">Weekly reports</li>
-              </ul>
-              <p class="pricing-for-who">Ideal for small teams starting their outbound pipeline.</p>
-              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/month')">Order via Payoneer →</button>
+        <!-- SERVICE 2: LEAD GEN -->
+        <div class="service-card service-card-leadgen">
+          <div class="service-card-icon">🚀</div>
+          <div class="service-card-tag">B2B Lead Generation</div>
+          <h3 class="service-card-title">Stop waiting for prospects. Get them delivered every month.</h3>
+          <p class="service-card-desc">We identify, qualify, and deliver B2B leads that match your ideal customer profile — name, company, role, and verified email. We operate in English, Spanish, Hebrew, and Arabic markets. Your sales team closes. We prospect.</p>
+          <div class="leadgen-stats">
+            <div class="lg-stat">
+              <div class="lg-stat-num">10–60</div>
+              <div class="lg-stat-label">Leads / month</div>
             </div>
-
-            <!-- PROFESSIONAL -->
-            <div class="pricing-card premium">
-              <div class="pricing-badge">Most Popular</div>
-              <div class="pricing-tier">Professional</div>
-              <div class="pricing-price">$549</div>
-              <div class="pricing-price-period">/ month</div>
-              <div class="pricing-sub">20–30 Qualified B2B Leads</div>
-              <ul class="pricing-features">
-                <li class="bold">Everything in Starter, plus:</li>
-                <li>20–30 verified leads/month</li>
-                <li>LinkedIn profile URL included</li>
-                <li>Intent signal scoring</li>
-                <li>Competitor intelligence report</li>
-                <li>Weekly delivery reports</li>
-                <li>Email validation (bounce-free)</li>
-                <li>Priority support (24h response)</li>
-              </ul>
-              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/month')">Order via Payoneer →</button>
+            <div class="lg-stat">
+              <div class="lg-stat-num">4</div>
+              <div class="lg-stat-label">Languages</div>
             </div>
-
-            <!-- ENTERPRISE -->
-            <div class="pricing-card">
-              <div class="pricing-tier">Enterprise</div>
-              <div class="pricing-price">$999</div>
-              <div class="pricing-price-period">/ month</div>
-              <div class="pricing-sub">40–60 Qualified B2B Leads</div>
-              <ul class="pricing-features">
-                <li class="bold">Everything in Professional, plus:</li>
-                <li>40–60 verified leads/month</li>
-                <li>Advanced competitor analysis</li>
-                <li>Daily pipeline updates</li>
-                <li>Direct consultation calls (2/mo)</li>
-                <li>Custom CRM-ready format</li>
-                <li>Dedicated account manager</li>
-                <li>Multi-industry targeting</li>
-              </ul>
-              <p class="pricing-for-who">For scaling teams that need a consistent, high-volume pipeline.</p>
-              <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/month')">Order via Payoneer →</button>
+            <div class="lg-stat">
+              <div class="lg-stat-num">100%</div>
+              <div class="lg-stat-label">Verified</div>
             </div>
-
-          </div><!-- /pricing-cards -->
-
-          <!-- Payoneer payment info -->
-          <div class="payoneer-info">
-            <div class="payoneer-inner">
-              <div class="payoneer-icon">💳</div>
-              <div class="payoneer-text">
-                <strong>Secure payment via Payoneer</strong>
-                <p>Send payment to <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> on Payoneer. Include your plan name and business name in the notes. We confirm within 24 hours and begin your first batch within 72 hours.</p>
-              </div>
+            <div class="lg-stat">
+              <div class="lg-stat-num">ICP</div>
+              <div class="lg-stat-label">Targeted</div>
             </div>
           </div>
+          <a href="#leadgen-pricing" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">See Lead Gen Plans →</a>
+        </div>
 
-        </div><!-- /leadgen-pricing -->
-      </div><!-- /tab-leadgen -->
-
-    </div>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section class="video-section" id="video">
-    <div class="container">
-      <div class="section-tag center">See It In Action</div>
-      <h2 class="section-title center">Watch how a Clarvix audit works</h2>
-      <p class="section-sub center">A walkthrough of a real audit report — from the score breakdown to the 30-day action plan.</p>
-      <div class="video-wrapper">
-        <div class="video-placeholder-box" id="video-placeholder">
-          <div class="vp-content">
-            <div class="vp-icon">🎬</div>
-            <div class="vp-title">Video Walkthrough</div>
-            <div class="vp-sub">Coming soon — a full walkthrough of a real Clarvix audit report.<br>Score breakdown, findings, competitor benchmark, and 30-day action plan.</div>
-            <div class="vp-badge">🔔 Available shortly</div>
-          </div>
-        </div>
-        <p class="video-caption" style="margin-top:16px;text-align:center;color:#8FA3B8;">Maximize Your Lead Conversion — no fluff, just clarity.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-tag center">The Process</div>
-      <h2 class="section-title center">From order to insights in 48 hours</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>You place the order</h3>
-          <p>Share your website URL and business name. Pay securely via Payoneer. That's all we need to get started.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>We run the full audit</h3>
-          <p>We analyse 8 critical categories using PageSpeed Insights, Google, and manual inspection. Every data point is real and verifiable.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>You receive your report</h3>
-          <p>A professional PDF with your Lead Conversion Score, Top 10 findings with severity levels, competitor benchmark, and 30-day action plan.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h3>You take action</h3>
-          <p>Use the plan yourself or hand it to your developer. Every fix is described in plain language with estimated effort and expected impact.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHAT YOU GET -->
-  <section class="what-you-get" id="what-you-get">
-    <div class="container">
-      <div class="section-tag center">Deliverables</div>
-      <h2 class="section-title center">Everything inside your audit report</h2>
-      <div class="deliverables-grid">
-        <div class="deliverable-card featured">
-          <div class="deliverable-icon">🎯</div>
-          <h3>Lead Conversion Score</h3>
-          <p>Your business scores against 100 points across 8 critical categories. Instantly see where you stand and what's dragging your score down.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">🔍</div>
-          <h3>Top 10 Findings</h3>
-          <p>Each finding includes what exists, what's missing, the business impact, the exact fix, and estimated effort. Prioritized as Critical, Important, or Recommended.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">⚡</div>
-          <h3>PageSpeed Analysis</h3>
-          <p>Mobile and desktop performance verified through Google PageSpeed Insights. LCP, TBT, FCP, CLS, Speed Index — with Google's thresholds for comparison.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📊</div>
-          <h3>Competitor Benchmark</h3>
-          <p>See exactly how you stack up against 3 direct local competitors across every key metric. Know precisely where you're losing the battle for leads.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📅</div>
-          <h3>30-Day Action Plan</h3>
-          <p>A prioritized, step-by-step plan. Every task has an owner, timeline, and priority level. Your team knows exactly what to do and in what order.</p>
-        </div>
-        <div class="deliverable-card">
-          <div class="deliverable-icon">📈</div>
-          <h3>Score Target</h3>
-          <p>We project your achievable score after implementing the critical fixes — so you know exactly what to expect and can hold your team accountable.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INDUSTRIES / WHO ITS FOR -->
-  <section class="for-who" id="for-who">
-    <div class="container">
-      <div class="section-tag center">Who It's For</div>
-      <h2 class="section-title center">Built for local businesses that live and die by leads</h2>
-      <div class="industries-grid">
-        <div class="industry-badge">🏠 <span>Real Estate</span></div>
-        <div class="industry-badge">⚖️ <span>Law Firms</span></div>
-        <div class="industry-badge">🏥 <span>Medical Clinics</span></div>
-        <div class="industry-badge">🦷 <span>Dental Practices</span></div>
-        <div class="industry-badge">🏗️ <span>Contractors</span></div>
-        <div class="industry-badge">💆 <span>Wellness &amp; Spas</span></div>
-        <div class="industry-badge">🍽️ <span>Restaurants</span></div>
-        <div class="industry-badge">🚗 <span>Auto Services</span></div>
-        <div class="industry-badge">📚 <span>Education &amp; Tutoring</span></div>
-        <div class="industry-badge">🏋️ <span>Gyms &amp; Fitness</span></div>
-        <div class="industry-badge">🔧 <span>Home Services</span></div>
-        <div class="industry-badge">💼 <span>B2B Services</span></div>
-      </div>
-      <p class="for-who-note">If you have a website, run any form of digital marketing, and rely on leads to grow your business — this audit is for you.</p>
-    </div>
-  </section>
-
-  <!-- RESULTS / ROI -->
-  <section class="results" id="results">
-    <div class="container">
-      <div class="results-inner">
-        <div class="results-text">
-          <div class="section-tag">The ROI</div>
-          <h2 class="section-title left">One lead pays for the audit 10 times over.</h2>
-          <p>Think about what a single new client is worth to your business. $500? $5,000? $50,000? Now think about how many clients are visiting your site right now — and leaving without contacting you. That's the leak we fix.</p>
-          <ul class="results-list">
-            <li><span class="results-check">✓</span><span>Stop wasting ad spend on channels that don't convert</span></li>
-            <li><span class="results-check">✓</span><span>Turn existing traffic into actual leads without spending more</span></li>
-            <li><span class="results-check">✓</span><span>Beat competitors who are capturing your potential clients</span></li>
-            <li><span class="results-check">✓</span><span>Build trust signals that make visitors choose you over anyone else</span></li>
-            <li><span class="results-check">✓</span><span>Know exactly what your digital marketing ROI is, for the first time</span></li>
-          </ul>
-        </div>
-        <div class="results-visual">
-          <div class="score-card-demo">
-            <div class="scd-label">BEFORE CLARVIX</div>
-            <div class="scd-score red">42<span>/100</span></div>
-            <div class="scd-status">CRITICAL</div>
-            <div class="scd-arrow">↓</div>
-            <div class="scd-label">TARGET AFTER 30 DAYS</div>
-            <div class="scd-score amber">68<span>/100</span></div>
-            <div class="scd-status amber">NEEDS WORK</div>
-            <p class="scd-note">Average improvement from fixing the top 5 critical issues</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -551,8 +257,9 @@
   <!-- AUDIT PRICING -->
   <section class="pricing" id="pricing">
     <div class="container">
-      <div class="section-tag center">Audit Pricing</div>
+      <div class="section-tag center">Digital Presence Audit</div>
       <h2 class="section-title center">One report. Everything included.</h2>
+      <p class="section-sub center" style="max-width:560px;margin:0 auto 48px">Delivered as a professional PDF within 48 hours. Real data. No fluff.</p>
       <div class="pricing-cards">
 
         <!-- BASIC -->
@@ -576,8 +283,7 @@
             <li class="cross">Full 30-day plan</li>
             <li class="cross">Post-audit support</li>
           </ul>
-          <p class="pricing-for-who">For small businesses wanting to understand why they aren't generating leads.</p>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order via Payoneer →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order Now →</button>
         </div>
 
         <!-- STANDARD -->
@@ -598,7 +304,7 @@
             <li>Basic technical SEO review</li>
             <li>Full PDF (10–12 pages)</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order via Payoneer →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order Now →</button>
         </div>
 
         <!-- PREMIUM -->
@@ -617,22 +323,135 @@
             <li>Specific tool recommendations</li>
             <li>Bonus doc: 'Implementation Priorities Breakdown'</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order via Payoneer →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order Now →</button>
         </div>
 
       </div>
+    </div>
+  </section>
 
-      <!-- Payoneer payment info for audit -->
-      <div class="payoneer-info">
-        <div class="payoneer-inner">
-          <div class="payoneer-icon">💳</div>
-          <div class="payoneer-text">
-            <strong>Secure payment via Payoneer</strong>
-            <p>Send payment to <a href="mailto:clarvix@clarvix.net" style="color:#0ABFBF">clarvix@clarvix.net</a> on Payoneer. Include your business name and website URL in the notes. Audit delivered within 48 hours of payment confirmation.</p>
+  <!-- LEAD GEN PRICING -->
+  <section class="pricing" id="leadgen-pricing" style="padding-top:0">
+    <div class="container">
+      <div class="section-tag center">B2B Lead Generation</div>
+      <h2 class="section-title center">Consistent pipeline. Predictable growth.</h2>
+      <p class="section-sub center" style="max-width:560px;margin:0 auto 48px">Qualified leads delivered every month. You close — we prospect.</p>
+      <div class="pricing-cards">
+
+        <!-- STARTER -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">$299</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">10–15 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Includes:</li>
+            <li>10–15 verified leads/month</li>
+            <li>ICP definition session (1h)</li>
+            <li>Monthly delivery report</li>
+            <li>Name, company, role, email</li>
+            <li>EN / ES / HE / AR markets</li>
+            <li>Google Maps data sourcing</li>
+            <li class="bold cross-title">Does not include:</li>
+            <li class="cross">LinkedIn profile URL</li>
+            <li class="cross">Intent signal scoring</li>
+            <li class="cross">Competitor intelligence</li>
+            <li class="cross">Weekly reports</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/month')">Order Now →</button>
+        </div>
+
+        <!-- PROFESSIONAL -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Professional</div>
+          <div class="pricing-price">$549</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">20–30 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Starter, plus:</li>
+            <li>20–30 verified leads/month</li>
+            <li>LinkedIn profile URL included</li>
+            <li>Intent signal scoring</li>
+            <li>Competitor intelligence report</li>
+            <li>Weekly delivery reports</li>
+            <li>Email validation (bounce-free)</li>
+            <li>Priority support (24h response)</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/month')">Order Now →</button>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price">$999</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">40–60 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Professional, plus:</li>
+            <li>40–60 verified leads/month</li>
+            <li>Advanced competitor analysis</li>
+            <li>Daily pipeline updates</li>
+            <li>Direct consultation calls (2/mo)</li>
+            <li>Custom CRM-ready format</li>
+            <li>Dedicated account manager</li>
+            <li>Multi-industry targeting</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/month')">Order Now →</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-tag center">The Process</div>
+      <h2 class="section-title center">From order to insights in 48 hours</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>You place the order</h3>
+          <p>Share your website URL and business name. Pay securely. That's all we need to get started.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>We run the full audit</h3>
+          <p>We analyse 8 critical categories using PageSpeed Insights, Google, and manual inspection. Every data point is real and verifiable.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>You receive your report</h3>
+          <p>A professional PDF with your Lead Conversion Score, top findings, competitor benchmark, and 30-day action plan.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>You take action</h3>
+          <p>Use the plan yourself or hand it to your developer. Every fix is described in plain language with estimated effort and impact.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO SECTION -->
+  <section class="video-section" id="video">
+    <div class="container">
+      <div class="section-tag center">See It In Action</div>
+      <h2 class="section-title center">Watch how a Clarvix audit works</h2>
+      <div class="video-wrapper">
+        <div class="video-placeholder-box" id="video-placeholder">
+          <div class="vp-content">
+            <div class="vp-icon">🎬</div>
+            <div class="vp-title">Video Walkthrough</div>
+            <div class="vp-sub">Coming soon — a full walkthrough of a real Clarvix audit report.<br>Score breakdown, findings, competitor benchmark, and 30-day action plan.</div>
+            <div class="vp-badge">🔔 Available shortly</div>
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -640,8 +459,8 @@
   <section class="cta-section" id="cta">
     <div class="cta-glow"></div>
     <div class="container cta-inner">
-      <h2 class="cta-title">Ready to find out what's costing you leads?</h2>
-      <p class="cta-sub">Get your Lead Conversion Score, your 10 critical findings, and your 30-day action plan. Delivered in 48 hours.</p>
+      <h2 class="cta-title">Ready to stop losing leads?</h2>
+      <p class="cta-sub">Get your Lead Conversion Score, 10 critical findings, and a 30-day action plan. Delivered in 48 hours.</p>
       <div class="cta-buttons">
         <button class="btn-primary btn-xl" onclick="openOrder()">Get My Audit →</button>
         <a href="mailto:contact.clarvix@gmail.com" class="btn-ghost-light">Questions? Email us</a>
@@ -665,22 +484,22 @@
       </div>
       <div class="footer-links">
         <a href="#services">Services</a>
-        <a href="#how-it-works">How it works</a>
         <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
         <a href="mailto:contact.clarvix@gmail.com">contact.clarvix@gmail.com</a>
       </div>
       <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
     </div>
   </footer>
 
-  <!-- ORDER MODAL (Audit — Payoneer) -->
+  <!-- ORDER MODAL (Audit) -->
   <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
     <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
       <button class="modal-close" onclick="closeOrder()" aria-label="Close">✕</button>
       <div class="modal-header">
         <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
         <h2 id="modal-title" class="modal-title">Order Your Audit</h2>
-        <p class="modal-sub">Select your package. Payment is processed securely via Payoneer.</p>
+        <p class="modal-sub">Select your package and we'll send you payment instructions within minutes.</p>
       </div>
       <div class="package-selector" id="packageSelector">
         <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
@@ -719,9 +538,7 @@
           <span class="submit-text">Proceed to Payment →</span>
           <span class="submit-loading" style="display:none;">⟳ Processing...</span>
         </button>
-        <p class="modal-footnote">
-          <span>You will receive payment instructions via email within minutes. Payment is processed securely via <strong>Payoneer</strong>.</span>
-        </p>
+        <p class="modal-footnote">Payment instructions will be sent to your email within minutes.</p>
       </form>
     </div>
   </div>
@@ -755,13 +572,12 @@
           <span class="submit-text">Send Inquiry →</span>
           <span class="submit-loading" style="display:none;">⟳ Sending...</span>
         </button>
-        <p class="modal-footnote">
-          We'll confirm your order and send Payoneer payment instructions to <strong>clarvix@clarvix.net</strong> within 24 hours.
-        </p>
+        <p class="modal-footnote">We'll confirm your order and send payment instructions within 24 hours.</p>
       </form>
     </div>
   </div>
 
   <script src="app.js"></script>
 
-</body></html>
+</body>
+</html>
