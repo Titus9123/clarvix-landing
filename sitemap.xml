@@ -2,9 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Main pages -->
   <url>
     <loc>https://www.clarvix.net/</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clarvix.net/"/>
@@ -16,7 +17,7 @@
 
   <url>
     <loc>https://www.clarvix.net/es.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clarvix.net/"/>
@@ -28,7 +29,7 @@
 
   <url>
     <loc>https://www.clarvix.net/he.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clarvix.net/"/>
@@ -40,7 +41,7 @@
 
   <url>
     <loc>https://www.clarvix.net/ar.html</loc>
-    <lastmod>2026-03-05</lastmod>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.clarvix.net/"/>
@@ -48,6 +49,60 @@
     <xhtml:link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html"/>
     <xhtml:link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/"/>
+  </url>
+
+  <!-- Blog index -->
+  <url>
+    <loc>https://www.clarvix.net/blog/</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Blog articles EN -->
+  <url>
+    <loc>https://www.clarvix.net/blog/en-digital-presence-audit.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.clarvix.net/blog/en-b2b-lead-generation.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles ES -->
+  <url>
+    <loc>https://www.clarvix.net/blog/es-auditoria-presencia-digital.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://www.clarvix.net/blog/es-generacion-leads-b2b.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles HE -->
+  <url>
+    <loc>https://www.clarvix.net/blog/he-digital-audit.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Blog articles AR -->
+  <url>
+    <loc>https://www.clarvix.net/blog/ar-lead-generation.html</loc>
+    <lastmod>2026-03-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
