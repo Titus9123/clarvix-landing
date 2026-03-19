@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — Optimización de Ingresos con IA | clarvix.net</title>
+  <meta name="description" content="Clarvix detecta fugas ocultas de monetización, diagnostica causas probables y entrega acciones priorizadas para recuperar ingresos perdidos.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/ai-revenue-optimization-es.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    // Used by landing/app.js mailto flows.
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clarvix Optimización de Ingresos con IA",
+    "url": "https://www.clarvix.net/ai-revenue-optimization-es.html",
+    "logo": "https://www.clarvix.net/images/logo.png",
+    "description": "Detecta pérdida de ingresos, diagnostica causas probables y entrega acciones priorizadas para recuperar ingresos."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">Servicios Clarvix</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">Servicios</a>
+        <a href="#pricing" class="nav-link">Precios</a>
+        <a href="#how-it-works" class="nav-link">Cómo funciona</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <div class="lang-toggle">
+          <a href="ai-revenue-optimization.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-es.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openAiRevOrder('basic')">Comenzar →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">Recuperar ingresos</div>
+      <h1 class="hero-title">
+        <span>Está perdiendo ingresos.</span><br>
+        <span class="highlight">Le mostramos exactamente dónde.</span>
+      </h1>
+      <p class="hero-sub">
+        Analizamos su rendimiento digital, detectamos fugas ocultas de monetización y le damos acciones claras para recuperar ingresos perdidos.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openAiRevOrder('basic')">Solicitar mi auditoría de ingresos</button>
+        <a href="#pricing" class="btn-ghost">Ver planes ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Pasos de diagnóstico</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Lista de acciones</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">Fase 1</span>
+          <span class="stat-label">Producto de diagnóstico</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">Plan</span>
+          <span class="stat-label">Siguiente paso estratégico</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Revenue Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem" style="padding-top:92px;padding-bottom:86px">
+    <div class="container">
+      <h2 class="section-title center">La mayoría de las empresas no tienen un problema de tráfico. Tienen un problema de monetización.</h2>
+      <div class="problem-callout" style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:28px;">
+        <div class="callout-icon">💸</div>
+        <div class="callout-text">
+          <strong>Incluso con atención, los ingresos pueden filtrarse.</strong>
+          <p style="margin:10px 0 0;line-height:1.7;color:var(--text);">
+            Muchos equipos ya tienen visitas, leads y ofertas. Aun así, pierden dinero por seguimiento débil, rutas de conversión poco claras, puntos de monetización con bajo rendimiento e ineficiencias ocultas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THIS SERVICE DOES -->
+  <section class="what-you-get" id="service-does" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">Qué hace este servicio</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        Convierte señales dispersas en un plan de acción que su equipo puede ejecutar.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Detecta dónde se están filtrando los ingresos</li>
+        <li>Identifica causas probables</li>
+        <li>Señala puntos débiles de conversión y monetización</li>
+        <li>Prioriza las acciones con el mayor impacto financiero</li>
+        <li>Convierte señales confusas en próximos pasos claros</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <section class="what-you-get" id="what-you-receive" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">Lo que recibe</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        Un diagnóstico de Fase 1 estructurado, enfocado en recuperar ingresos, no en asesoría genérica.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Análisis de fugas de ingresos</li>
+        <li>Diagnóstico claro de los problemas clave</li>
+        <li>Plan de acción priorizado</li>
+        <li>Oportunidades de impacto estimadas</li>
+        <li>Informe estructurado con próximos pasos prácticos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">El proceso</div>
+      <h2 class="section-title center">Cómo funciona</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>Comparte tu negocio y tu contexto de rendimiento</h3>
+          <p>Revisamos la información disponible sobre tráfico, ofertas, embudo o tu configuración de monetización.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>Analizamos los puntos débiles</h3>
+          <p>Buscamos inconsistencias de rendimiento, fricción en la conversión y pérdidas de monetización.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>Identificamos fugas de ingresos</h3>
+          <p>Señalamos dónde se está perdiendo dinero y qué problemas importan más.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Recibes acciones claras para recuperar</h3>
+          <p>Obtienes un informe estructurado con qué corregir primero y dónde está el mayor potencial.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="what-you-get" id="who-this-for" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">Para quién es</h2>
+      <p class="section-sub center" style="max-width:680px;margin:10px auto 44px">
+        Si los ingresos bajan, este diagnóstico es el paso que te ayuda a recuperar con confianza.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Empresas que ya atraen tráfico pero no logran resultados</li>
+        <li>Sitios web o embudos con conversiones débiles</li>
+        <li>Empresas que gestionan anuncios o monetizan la atención</li>
+        <li>Propietarios que quieren decisiones claras de ingresos, no consejos vagos</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY THIS IS DIFFERENT -->
+  <section class="what-you-get" id="why-this-is-different" style="padding-top:72px;padding-bottom:36px">
+    <div class="container">
+      <h2 class="section-title center">Por qué es diferente</h2>
+      <p class="section-sub center" style="max-width:760px;margin:18px auto 0">
+        Las auditorías tradicionales se quedan en observaciones. Este servicio usa análisis asistido por IA para detectar patrones más rápido, organizar hallazgos con más claridad y destacar oportunidades de recuperación con mayor prioridad. El resultado es un plan de acción que su equipo puede seguir de inmediato.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" style="padding-top:52px">
+    <div class="container">
+      <div class="section-tag center">Precios</div>
+      <h2 class="section-title center">Elige la profundidad que necesitas</h2>
+      <p class="section-sub center" style="max-width:620px;margin:0 auto 44px">
+        Elige el nivel de diagnóstico. Recibirás acciones de recuperación de ingresos claras y priorizadas basadas en tus datos.
+      </p>
+
+      <div class="pricing-cards">
+        <!-- BASIC -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Básico</div>
+          <div class="pricing-price">$199</div>
+          <div class="pricing-sub">Revisión rápida de ingresos</div>
+          <ul class="pricing-features">
+            <li class="bold">Ideal para un diagnóstico inicial</li>
+            <li>Revisión enfocada de posibles fugas de monetización</li>
+            <li>3-5 hallazgos clave</li>
+            <li>Resumen de acciones con próximos pasos claros</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('basic')">Solicitar →</button>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">Más popular</div>
+          <div class="pricing-tier">Estándar</div>
+          <div class="pricing-price">$399</div>
+          <div class="pricing-sub">Diagnóstico de ingresos</div>
+          <ul class="pricing-features">
+            <li class="bold">Ideal para un análisis estructurado completo</li>
+            <li>Revisión más amplia de puntos débiles de conversión y monetización</li>
+            <li>Hallazgos priorizados</li>
+            <li>Recomendaciones de recuperación con resumen enfocado en impacto</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('standard')">Solicitar →</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-price">$799</div>
+          <div class="pricing-sub">Análisis profundo de optimización de ingresos</div>
+          <ul class="pricing-features">
+            <li class="bold">Ideal para una acción estratégica más profunda</li>
+            <li>Análisis extendido de causas probables</li>
+            <li>Recomendaciones más detalladas</li>
+            <li>Prioridad más fuerte y guía estratégica de próximos pasos</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('premium')">Solicitar →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">Deje de perder ingresos en silencio.</h2>
+      <p class="cta-sub">Obtenga un diagnóstico claro de dónde su negocio no está rindiendo y qué debe corregir primero.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openAiRevOrder('standard')">Solicitar mi auditoría de ingresos</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">¿Preguntas? Escríbanos</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>Optimización de Ingresos con IA</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">Todos los servicios</a>
+        <a href="#pricing">Precios</a>
+        <a href="#how-it-works">Cómo funciona</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- AI REVENUE OPTIMIZATION ORDER MODAL — mailto draft -->
+  <div class="order-overlay" id="aiRevOverlay" onclick="if(event.target===this)closeAiRevOrder()">
+    <div class="order-modal" id="aiRevModal" role="dialog" aria-modal="true" aria-labelledby="aiRev-modal-title">
+      <button class="modal-close" onclick="closeAiRevOrder()" aria-label="Cerrar">✕</button>
+
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="aiRev-modal-title" class="modal-title">Optimización de Ingresos con IA</h2>
+        <p class="modal-sub" id="aiRev-tier-label">Revisión rápida de ingresos — $199</p>
+      </div>
+
+      <div class="package-selector" id="aiRevPackageSelector">
+        <label class="pkg-option" id="aiRevTierBasic" onclick="selectAiRevTier('basic')">
+          <div class="pkg-radio" id="aiRevRadioBasic"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Básico</span>
+            <span class="pkg-desc">Revisión rápida de ingresos</span>
+          </div>
+          <span class="pkg-price">$199</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierStandard" onclick="selectAiRevTier('standard')">
+          <div class="pkg-radio" id="aiRevRadioStandard"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Estándar</span>
+            <span class="pkg-desc">Diagnóstico de ingresos</span>
+          </div>
+          <span class="pkg-price">$399</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierPremium" onclick="selectAiRevTier('premium')">
+          <div class="pkg-radio" id="aiRevRadioPremium"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Premium</span>
+            <span class="pkg-desc">Análisis profundo</span>
+          </div>
+          <span class="pkg-price">$799</span>
+        </label>
+      </div>
+
+      <form class="order-form" id="aiRevForm" onsubmit="submitAiRevOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="aiRevBusinessName">Nombre de la empresa</label>
+            <input type="text" id="aiRevBusinessName" class="form-input" placeholder="e.g. Acme Corp" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="aiRevWebsiteUrl">URL del sitio web</label>
+            <input type="url" id="aiRevWebsiteUrl" class="form-input" placeholder="https://tusitio.com" required autocomplete="url">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevEmail">Tu email</label>
+          <input type="email" id="aiRevEmail" class="form-input" placeholder="tu@empresa.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevBusinessSummary">Breve descripción de tu negocio</label>
+          <textarea id="aiRevBusinessSummary" class="form-input" placeholder="Qué vendes, a quién vendes y de qué fuente dependen tus ingresos." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevRevenueModel">Fuente principal de ingresos / modelo de monetización</label>
+          <textarea id="aiRevRevenueModel" class="form-input" placeholder="e.g. reservas a partir de leads, suscripciones SaaS, ecommerce, anuncios, etc." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevMainConcern">Tu principal preocupación o objetivo</label>
+          <textarea id="aiRevMainConcern" class="form-input" placeholder="e.g. caída de conversiones, ROI débil en anuncios, ingresos por debajo de la demanda, u otro objetivo de recuperación." rows="3" required></textarea>
+        </div>
+
+        <p class="form-error" id="aiRevFormError">Por favor completa el nombre del negocio, la URL del sitio web, el email y tu principal preocupación.</p>
+
+        <button type="submit" class="btn-order-submit" id="aiRevSubmit">
+          <span class="submit-text">Enviar consulta →</span>
+          <span class="submit-loading" style="display:none;">⟳ Preparando…</span>
+        </button>
+
+        <p class="modal-footnote">
+          Si tienes capturas de pantalla o informes exportados, adjúntalos en tu respuesta por email después de que se abra el borrador.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

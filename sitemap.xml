@@ -51,6 +51,44 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/"/>
   </url>
 
+  <!-- Service pages EN -->
+  <url>
+    <loc>https://www.clarvix.net/digital-presence-audit.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.clarvix.net/lead-engine.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.clarvix.net/ai-revenue-optimization.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.clarvix.net/ai-revenue-optimization-es.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.clarvix.net/ai-revenue-optimization-he.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://www.clarvix.net/ai-revenue-optimization-ar.html</loc>
+    <lastmod>2026-03-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
   <!-- Blog index -->
   <url>
     <loc>https://www.clarvix.net/blog/</loc>
@@ -58,7 +96,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://www.clarvix.net/blog/index.html</loc>
     <lastmod>2026-03-19</lastmod>
@@ -73,7 +110,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.clarvix.net/blog/en-b2b-lead-generation.html</loc>
     <lastmod>2026-03-19</lastmod>
@@ -88,7 +124,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.clarvix.net/blog/es-generacion-leads-b2b.html</loc>
     <lastmod>2026-03-19</lastmod>
@@ -103,7 +138,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.clarvix.net/blog/he-lead-generation.html</loc>
     <lastmod>2026-03-19</lastmod>
@@ -118,7 +152,6 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-
   <url>
     <loc>https://www.clarvix.net/blog/ar-lead-generation.html</loc>
     <lastmod>2026-03-19</lastmod>

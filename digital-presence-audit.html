@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — Digital Presence Audit | clarvix.net</title>
+  <meta name="description" content="Clarvix Digital Presence Audit diagnoses what is leaking leads and provides a prioritized plan to improve conversions and capture more revenue.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/digital-presence-audit.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    // Used by landing/app.js mailto flows.
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">Digital Presence Audit</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">Services</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <div class="lang-toggle">
+          <a href="index.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openOrder()">Get Started →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">Detect lead leaks</div>
+      <h1 class="hero-title">
+        <span>Your website is leaking leads.</span><br>
+        <span class="highlight">We show you where.</span>
+      </h1>
+      <p class="hero-sub">
+        Clarvix audits your digital presence across critical lead-conversion dimensions and delivers a prioritized plan so your team can improve capture and conversion.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openOrder('standard')">Get my audit →</button>
+        <a href="#pricing" class="btn-ghost">See plans ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Audit categories</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">10</span>
+          <span class="stat-label">Prioritized findings</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">30</span>
+          <span class="stat-label">Day action plan</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">Data-backed</span>
+          <span class="stat-label">No guesswork</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Audit Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- AUDIT PRICING -->
+  <section class="pricing" id="pricing" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">Digital Presence Audit</div>
+      <h2 class="section-title center">One report. Everything included.</h2>
+      <p class="section-sub center" style="max-width:560px;margin:0 auto 48px">Delivered as a professional PDF. Real data. No fluff.</p>
+
+      <div class="pricing-cards">
+        <!-- BASIC -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Basic</div>
+          <div class="pricing-price">$45</div>
+          <div class="pricing-sub">Lead Conversion Audit — Core Diagnosis</div>
+          <ul class="pricing-features">
+            <li class="bold">Includes:</li>
+            <li>Score 0–100 (8 categories)</li>
+            <li>PageSpeed Analysis (mobile + desktop)</li>
+            <li>Form, CTA &amp; friction review</li>
+            <li>Tracking verification (GA4, Pixel)</li>
+            <li>Basic GBP review</li>
+            <li>5 prioritized findings</li>
+            <li>14-day action plan</li>
+            <li>Professional PDF (8–10 pages)</li>
+            <li class="bold cross-title">Does not include:</li>
+            <li class="cross">Deep competitor benchmark</li>
+            <li class="cross">10 full findings</li>
+            <li class="cross">Full 30-day plan</li>
+            <li class="cross">Post-audit support</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order now →</button>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Standard</div>
+          <div class="pricing-price">$85</div>
+          <div class="pricing-sub">Full Audit + Competitive Benchmark</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Basic, plus:</li>
+            <li>3 competitors analyzed</li>
+            <li>Comparative benchmark (10 metrics)</li>
+            <li>10 structured findings</li>
+            <li>Full 30-day action plan</li>
+            <li>Projected target score</li>
+            <li>CRITICAL / IMPORTANT / RECOMMENDED priority</li>
+            <li>Identification of 'Lead Leaks'</li>
+            <li>Basic technical SEO review</li>
+            <li>Full PDF (10–12 pages)</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order now →</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Premium</div>
+          <div class="pricing-price">$160</div>
+          <div class="pricing-sub">Strategic Digital Presence Audit</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Standard, plus:</li>
+            <li>Deep conversion funnel analysis</li>
+            <li>Messaging &amp; strategic differentiator evaluation</li>
+            <li>Advanced search intent review</li>
+            <li>User friction map</li>
+            <li>Speed review with technical explanation</li>
+            <li>Strategic 30-day + 60-day plan</li>
+            <li>Specific tool recommendations</li>
+            <li>Bonus doc: 'Implementation Priorities Breakdown'</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order now →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">The Process</div>
+      <h2 class="section-title center">From order to insights</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>You place the order</h3>
+          <p>Share your website URL and business name.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>We run the full audit</h3>
+          <p>We analyze lead-conversion categories and compile findings.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>You receive your report</h3>
+          <p>Get your score, findings, benchmark, and action plan.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>You take action</h3>
+          <p>Use the plan yourself or hand it to your developer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">Ready to stop losing leads?</h2>
+      <p class="cta-sub">Send an inquiry for your audit package. Payment details are provided after confirmation.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openOrder('standard')">Get my audit →</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">Questions? Email us</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>Digital Presence Audit</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">All Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="/ai-revenue-optimization.html">AI Revenue Optimization</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- ORDER MODAL (Audit) -->
+  <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
+    <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" onclick="closeOrder()" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="modal-title" class="modal-title">Start Your Audit</h2>
+        <p class="modal-sub">Select your package and we\'ll send payment details after confirmation.</p>
+      </div>
+
+      <div class="package-selector" id="packageSelector">
+        <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
+          <div class="pkg-radio" id="radioBasic"></div>
+          <div class="pkg-info"><span class="pkg-name">Basic</span><span class="pkg-desc">Core Diagnosis</span></div>
+          <span class="pkg-price">$45</span>
+        </label>
+        <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
+          <div class="pkg-radio" id="radioStandard"></div>
+          <div class="pkg-info"><span class="pkg-name">Standard</span><span class="pkg-desc">Full Audit + Benchmark</span></div>
+          <span class="pkg-price">$85</span>
+        </label>
+        <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
+          <div class="pkg-radio" id="radioPremium"></div>
+          <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">Strategic Advanced Audit</span></div>
+          <span class="pkg-price">$160</span>
+        </label>
+      </div>
+
+      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="businessName">Business Name</label>
+            <input type="text" id="businessName" class="form-input" placeholder="e.g. Beverly Hills Dental" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="websiteUrl">Website URL</label>
+            <input type="url" id="websiteUrl" class="form-input" placeholder="https://yourbusiness.com" required autocomplete="url">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="businessCity">City &amp; Country</label>
+          <input type="text" id="businessCity" class="form-input" placeholder="e.g. Los Angeles, CA" autocomplete="address-level2">
+        </div>
+        <p class="form-error" id="formError">Please fill in your business name and website URL.</p>
+        <button type="submit" class="btn-order-submit" id="orderSubmit">
+          <span class="submit-text">Proceed →</span>
+          <span class="submit-loading" style="display:none;">⟳ Preparing…</span>
+        </button>
+        <p class="modal-footnote">Payment details are provided after confirmation.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

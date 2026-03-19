@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — تحسين الإيرادات بالذكاء الاصطناعي | clarvix.net</title>
+  <meta name="description" content="Clarvix يكتشف تسربات خفية في تحقيق الدخل، ويشخّص الأسباب المحتملة، ويقدّم إجراءات مُرتّبة بالأولوية لاستعادة الإيرادات المفقودة.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/ai-revenue-optimization-ar.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    // Used by landing/app.js mailto flows.
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clarvix تحسين الإيرادات بالذكاء الاصطناعي",
+    "url": "https://www.clarvix.net/ai-revenue-optimization-ar.html",
+    "logo": "https://www.clarvix.net/images/logo.png",
+    "description": "يكتشف فقدان الإيرادات، يشخّص الأسباب المحتملة، ويقدّم إجراءات مُرتّبة لاستعادة الإيرادات."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">خدمات Clarvix</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">الخدمات</a>
+        <a href="#pricing" class="nav-link">الأسعار</a>
+        <a href="#how-it-works" class="nav-link">كيف يعمل</a>
+        <a href="/blog/" class="nav-link">المدونة</a>
+        <div class="lang-toggle">
+          <a href="ai-revenue-optimization.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-ar.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openAiRevOrder('basic')">ابدأ →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">استعادة الإيرادات</div>
+      <h1 class="hero-title">
+        <span>أنت تخسر إيرادات.</span><br>
+        <span class="highlight">نريك بالضبط أين.</span>
+      </h1>
+      <p class="hero-sub">
+        نحلل أدائك الرقمي ونكتشف تسربات خفية في تحقيق الدخل، ثم نزوّدك بإجراءات واضحة لاستعادة الإيرادات المفقودة.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openAiRevOrder('basic')">اطلب تدقيق الإيرادات</button>
+        <a href="#pricing" class="btn-ghost">عرض الخطط ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">خطوات التشخيص</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">قائمة الإجراءات</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">المرحلة 1</span>
+          <span class="stat-label">حزمة التشخيص</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">توجيه</span>
+          <span class="stat-label">خطوتك التالية</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Revenue Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem" style="padding-top:92px;padding-bottom:86px">
+    <div class="container">
+      <h2 class="section-title center">لا تعاني معظم الشركات من مشكلة في عدد الزيارات. بل من مشكلة في تحقيق الدخل.</h2>
+      <div class="problem-callout" style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:28px;">
+        <div class="callout-icon">💸</div>
+        <div class="callout-text">
+          <strong>حتى مع وجود اهتمام، قد تتسرب الإيرادات.</strong>
+          <p style="margin:10px 0 0;line-height:1.7;color:var(--text);">
+            كثير من الفرق لديها زيارات وفرص وعروض. ومع ذلك، تخسر المال بسبب ضعف التتبع، ومسارات تحويل غير واضحة، ونقاط تحقيق دخل لا تعمل كما ينبغي، إضافة إلى أوجه كفاءة غير مرئية.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THIS SERVICE DOES -->
+  <section class="what-you-get" id="service-does" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">ما الذي يفعله هذا الخدمة</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        يحوّل إشارات الأداء المتناثرة إلى خطة واضحة لتنفيذ استرداد الإيرادات.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>يكشف أين تتسرب الإيرادات</li>
+        <li>يحدد الأسباب المحتملة</li>
+        <li>يُبرز نقاط ضعف التحويل وتحقيق الدخل</li>
+        <li>يرتب الإجراءات حسب أعلى أثر مالي</li>
+        <li>يحّول الإشارات المربكة إلى خطوات قادمة واضحة</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <section class="what-you-get" id="what-you-receive" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">ما الذي تستلمه</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        تشخيص المرحلة 1 بشكل منظم يركز على استعادة الإيرادات، وليس على نصائح تسويق عامة.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>تحليل تسربات الإيرادات</li>
+        <li>تشخيص واضح للقضايا الرئيسية</li>
+        <li>خطة إجراءات مرتبة بالأولوية</li>
+        <li>فرص أثر مقدّرة</li>
+        <li>تقرير منظم بخطوات عملية قابلة للتنفيذ</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">العملية</div>
+      <h2 class="section-title center">كيف يعمل</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>أنت تشارك بيانات عملك وسياق الأداء</h3>
+          <p>نراجع المعلومات المتاحة حول زياراتك وعروضك ومسار التحويل وإعداد تحقيق الدخل لديك.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>نحلل نقاط الضعف</h3>
+          <p>نبحث عن تناقضات الأداء، واحتكاك التحويل، وخسائر تحقيق الدخل.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>نحدد تسربات الإيرادات</h3>
+          <p>نوضح أين تُفقد الأموال وما هي القضايا الأهم التي يجب التعامل معها أولاً.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>تستلم إجراءات واضحة لاستعادة الإيرادات</h3>
+          <p>تحصل على تقرير منظم يوضح ما الذي يجب إصلاحه أولاً وأين يوجد أكبر مجال للتحسن.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="what-you-get" id="who-this-for" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">لمن هذا مناسب</h2>
+      <p class="section-sub center" style="max-width:680px;margin:10px auto 44px">
+        إذا كانت الإيرادات تتراجع، فهذا التشخيص يساعدك على استعادة المسار بثقة.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>الشركات التي تجلب زيارات لكنها لا تحقق النتائج المطلوبة</li>
+        <li>مواقع أو مسارات تحويل بنتائج ضعيفة</li>
+        <li>الشركات التي تدير إعلانات أو تحقق دخل من الاهتمام</li>
+        <li>المالكون الذين يريدون قرارات إيرادات أوضح بدل نصائح تسويق عامة</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY THIS IS DIFFERENT -->
+  <section class="what-you-get" id="why-this-is-different" style="padding-top:72px;padding-bottom:36px">
+    <div class="container">
+      <h2 class="section-title center">لماذا هو مختلف</h2>
+      <p class="section-sub center" style="max-width:760px;margin:18px auto 0">
+        غالباً ما تنتهي المراجعات التقليدية عند حدود الملاحظات. يستخدم هذا الخدمة تحليلاً مدعماً بالذكاء الاصطناعي لاكتشاف الأنماط بشكل أسرع وتنظيم النتائج بوضوح وتقديم فرص استعادة الإيرادات ذات الأولوية الأعلى. والنتيجة: خطة عمل قابلة للتنفيذ مباشرة.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" style="padding-top:52px">
+    <div class="container">
+      <div class="section-tag center">الأسعار</div>
+      <h2 class="section-title center">اختر العمق الذي تحتاجه</h2>
+      <p class="section-sub center" style="max-width:620px;margin:0 auto 44px">
+        اختر مستوى التشخيص. ستحصل على إجراءات لاستعادة الإيرادات واضحة ومُرتبة بالأولوية بناءً على بياناتك.
+      </p>
+
+      <div class="pricing-cards">
+        <!-- BASIC -->
+        <div class="pricing-card">
+          <div class="pricing-tier">أساسي</div>
+          <div class="pricing-price">$199</div>
+          <div class="pricing-sub">مراجعة سريعة للإيرادات</div>
+          <ul class="pricing-features">
+            <li class="bold">مناسب لتشخيص أولي</li>
+            <li>مراجعة مركزة لتسربات تحقيق الدخل المحتملة</li>
+            <li>3-5 نقاط رئيسية</li>
+            <li>ملخص إجراءات قصير وخطوات واضحة للبدء</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('basic')">اطلب الآن →</button>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">الأكثر شيوعاً</div>
+          <div class="pricing-tier">قياسي</div>
+          <div class="pricing-price">$399</div>
+          <div class="pricing-sub">تشخيص الإيرادات</div>
+          <ul class="pricing-features">
+            <li class="bold">مناسب لتحليل منظم كامل</li>
+            <li>مراجعة أوسع لنقاط ضعف التحويل وتحقيق الدخل</li>
+            <li>نتائج مرتبة بالأولوية</li>
+            <li>توصيات لاستعادة الإيرادات مع ملخص يركز على الأثر</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('standard')">اطلب الآن →</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card">
+          <div class="pricing-tier">فاخر</div>
+          <div class="pricing-price">$799</div>
+          <div class="pricing-sub">تعميق تحسين الإيرادات</div>
+          <ul class="pricing-features">
+            <li class="bold">مناسب لخطوة استراتيجية أعمق</li>
+            <li>تحليل ممتد للأسباب المحتملة</li>
+            <li>توصيات أكثر تفصيلاً</li>
+            <li>ترتيب أولويات أقوى وتوجيه للخطوة التالية</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('premium')">اطلب الآن →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">توقف عن خسارة الإيرادات بصمت.</h2>
+      <p class="cta-sub">احصل على تشخيص واضح لما لا يعمل كما ينبغي في نشاطك — وما الذي يجب إصلاحه أولاً.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openAiRevOrder('standard')">اطلب تدقيق الإيرادات الخاص بي</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">هل لديك أسئلة؟ راسلنا</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>تحسين الإيرادات بالذكاء الاصطناعي</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">كل الخدمات</a>
+        <a href="#pricing">الأسعار</a>
+        <a href="#how-it-works">كيف يعمل</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- AI REVENUE OPTIMIZATION ORDER MODAL — mailto draft -->
+  <div class="order-overlay" id="aiRevOverlay" onclick="if(event.target===this)closeAiRevOrder()">
+    <div class="order-modal" id="aiRevModal" role="dialog" aria-modal="true" aria-labelledby="aiRev-modal-title">
+      <button class="modal-close" onclick="closeAiRevOrder()" aria-label="إغلاق">✕</button>
+
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="aiRev-modal-title" class="modal-title">تحسين الإيرادات بالذكاء الاصطناعي</h2>
+        <p class="modal-sub" id="aiRev-tier-label">مراجعة سريعة للإيرادات — $199</p>
+      </div>
+
+      <div class="package-selector" id="aiRevPackageSelector">
+        <label class="pkg-option" id="aiRevTierBasic" onclick="selectAiRevTier('basic')">
+          <div class="pkg-radio" id="aiRevRadioBasic"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">أساسي</span>
+            <span class="pkg-desc">مراجعة سريعة للإيرادات</span>
+          </div>
+          <span class="pkg-price">$199</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierStandard" onclick="selectAiRevTier('standard')">
+          <div class="pkg-radio" id="aiRevRadioStandard"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">قياسي</span>
+            <span class="pkg-desc">تشخيص الإيرادات</span>
+          </div>
+          <span class="pkg-price">$399</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierPremium" onclick="selectAiRevTier('premium')">
+          <div class="pkg-radio" id="aiRevRadioPremium"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">فاخر</span>
+            <span class="pkg-desc">تعميق تحسين الإيرادات</span>
+          </div>
+          <span class="pkg-price">$799</span>
+        </label>
+      </div>
+
+      <form class="order-form" id="aiRevForm" onsubmit="submitAiRevOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="aiRevBusinessName">اسم النشاط</label>
+            <input type="text" id="aiRevBusinessName" class="form-input" placeholder="مثال: Acme" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="aiRevWebsiteUrl">رابط الموقع</label>
+            <input type="url" id="aiRevWebsiteUrl" class="form-input" placeholder="https://example.com" required autocomplete="url">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevEmail">بريدك الإلكتروني</label>
+          <input type="email" id="aiRevEmail" class="form-input" placeholder="you@company.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevBusinessSummary">وصف مختصر للنشاط</label>
+          <textarea id="aiRevBusinessSummary" class="form-input" placeholder="ماذا تقدم، لمن تقدم، وما الذي تعتمد عليه كمصدر للدخل." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevRevenueModel">مصدر الدخل الرئيسي / نموذج تحقيق الدخل</label>
+          <textarea id="aiRevRevenueModel" class="form-input" placeholder="مثال: تحويل من العملاء المحتملين، اشتراكات برمجية، متجر إلكتروني، إعلانات، إلخ." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevMainConcern">المشكلة أو الهدف الأساسي</label>
+          <textarea id="aiRevMainConcern" class="form-input" placeholder="مثال: ضعف التحويل، ROI ضعيف للإعلانات، دخل أقل من المتوقع، أو أي هدف لاستعادة الإيرادات." rows="3" required></textarea>
+        </div>
+
+        <p class="form-error" id="aiRevFormError">يرجى ملء اسم النشاط، رابط الموقع، البريد الإلكتروني، والمشكلة الرئيسية.</p>
+
+        <button type="submit" class="btn-order-submit" id="aiRevSubmit">
+          <span class="submit-text">إرسال الطلب →</span>
+          <span class="submit-loading" style="display:none;">⟳ جارٍ التحضير…</span>
+        </button>
+
+        <p class="modal-footnote">
+          إذا لديك لقطات شاشة أو تقارير تم تصديرها، أرفقها في ردّك عبر البريد بعد فتح المسودة.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

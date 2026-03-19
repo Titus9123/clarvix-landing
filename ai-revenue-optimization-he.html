@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — אופטימיזציית הכנסות עם בינה מלאכותית | clarvix.net</title>
+  <meta name="description" content="Clarvix מזהה דליפות נסתרות של מוניטיזציה, מאבחנת סיבות סבירות ומספקת פעולות מועדפות כדי להחזיר הכנסות שאבדו.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/ai-revenue-optimization-he.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    // Used by landing/app.js mailto flows.
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clarvix אופטימיזציית הכנסות עם בינה מלאכותית",
+    "url": "https://www.clarvix.net/ai-revenue-optimization-he.html",
+    "logo": "https://www.clarvix.net/images/logo.png",
+    "description": "מזהה אובדן הכנסות, מאבחנת סיבות סבירות ומספקת פעולות מועדפות כדי להחזיר הכנסות."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">שירותי Clarvix</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">שירותים</a>
+        <a href="#pricing" class="nav-link">מחירים</a>
+        <a href="#how-it-works" class="nav-link">איך זה עובד</a>
+        <a href="/blog/" class="nav-link">בלוג</a>
+        <div class="lang-toggle">
+          <a href="ai-revenue-optimization.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-he.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ai-revenue-optimization-ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openAiRevOrder('basic')">התחל →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">שיקום הכנסות</div>
+      <h1 class="hero-title">
+        <span>אתה מאבד הכנסות.</span><br>
+        <span class="highlight">אנחנו מראים לך בדיוק איפה.</span>
+      </h1>
+      <p class="hero-sub">
+        אנחנו מנתחים את הביצועים הדיגיטליים שלך, מזהים דליפות מוניטיזציה נסתרות, ומספקים פעולות ברורות כדי להחזיר הכנסה שאבדה.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openAiRevOrder('basic')">קבל את בדיקת ההכנסות שלך</button>
+        <a href="#pricing" class="btn-ghost">לצפייה בתוכניות ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">שלבי אבחון</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">1</span>
+          <span class="stat-label">רשימת פעולות</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">פאזה 1</span>
+          <span class="stat-label">מוצר אבחון</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">יעד</span>
+          <span class="stat-label">הצעד הבא</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Revenue Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem" style="padding-top:92px;padding-bottom:86px">
+    <div class="container">
+      <h2 class="section-title center">לרוב העסקים אין בעיית תנועה. יש להם בעיית מוניטיזציה.</h2>
+      <div class="problem-callout" style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:28px;">
+        <div class="callout-icon">💸</div>
+        <div class="callout-text">
+          <strong>גם כשיש עניין, הכנסות עדיין יכולות לדלוף.</strong>
+          <p style="margin:10px 0 0;line-height:1.7;color:var(--text);">
+            הרבה צוותים כבר מקבלים תנועה, לידים והצעות. ובכל זאת, הכסף זולג בגלל מעקב חלש, מסלולי המרה לא ברורים, נקודות מוניטיזציה שלא מניבות מספיק, וחוסר יעילות סמוי.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THIS SERVICE DOES -->
+  <section class="what-you-get" id="service-does" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">מה השירות הזה עושה</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        הופכים אותות ביצועים מפוזרים לתוכנית פעולה שהצוות שלך יכול לבצע.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>מזהה איפה הכנסות דולפות</li>
+        <li>מאבחנת סיבות סבירות</li>
+        <li>מדגישה נקודות חלשות בהמרה ובמוניטיזציה</li>
+        <li>מעדיפה את הפעולות עם ההשפעה הכספית הגבוהה ביותר</li>
+        <li>ממירה אותות מבלבלים לצעדים הבאים ברורים</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <section class="what-you-get" id="what-you-receive" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">מה אתה מקבל</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        אבחון מובנה של פאזה 1 שממוקד בשיקום הכנסות, לא בייעוץ כללי של שיווק.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>ניתוח דליפות הכנסות</li>
+        <li>אבחון ברור של הבעיות המרכזיות</li>
+        <li>תוכנית פעולה עם סדר עדיפויות</li>
+        <li>הזדמנויות השפעה מוערכות</li>
+        <li>דוח מובנה עם צעדים מעשיים</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">התהליך</div>
+      <h2 class="section-title center">איך זה עובד</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>אתה משתף את העסק והקשר הביצועי שלך</h3>
+          <p>אנחנו בודקים את המידע הזמין לגבי תנועה, הצעות, משפך ו/או הגדרת המוניטיזציה.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>אנחנו מנתחים את הנקודות החלשות</h3>
+          <p>אנחנו מחפשים חוסר עקביות בביצועים, חיכוך בהמרה והפסדי מוניטיזציה.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>אנחנו מזהים דליפות בהכנסות</h3>
+          <p>אנחנו מצביעים איפה הכסף אובד ואילו בעיות חשובות להתחיל בהן.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>אתה מקבל פעולות ברורות לשחזור הכנסות</h3>
+          <p>אתה מקבל דוח מובנה שמראה מה לתקן קודם ואיפה הפוטנציאל הגדול ביותר.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="what-you-get" id="who-this-for" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">למי זה מתאים</h2>
+      <p class="section-sub center" style="max-width:680px;margin:10px auto 44px">
+        אם ההכנסות יורדות, זהו שלב האבחון שיעזור לך להתקדם קדימה עם ביטחון.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>עסקים שכבר מקבלים תנועה אבל לא מצליחים להמיר</li>
+        <li>אתרים או משפכים עם תוצאות המרה חלשות</li>
+        <li>עסקים שמנהלים מודעות או שממנוטים תשומת לב</li>
+        <li>בעלים שרוצים החלטות הכנסה ברורות, לא ייעוץ שיווקי כללי</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY THIS IS DIFFERENT -->
+  <section class="what-you-get" id="why-this-is-different" style="padding-top:72px;padding-bottom:36px">
+    <div class="container">
+      <h2 class="section-title center">למה זה שונה</h2>
+      <p class="section-sub center" style="max-width:760px;margin:18px auto 0">
+        ביקורות מסורתיות נוטות להישאר בתצפיות. השירות הזה משתמש בניתוח בעזרת בינה מלאכותית כדי לזהות דפוסים מהר יותר, לארגן ממצאים בצורה ברורה יותר ולהעלות הזדמנויות לשיקום הכנסות בעדיפות גבוהה. התוצאה: תוכנית פעולה שאתה יכול ליישם כבר עכשיו.
+      </p>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" style="padding-top:52px">
+    <div class="container">
+      <div class="section-tag center">מחירים</div>
+      <h2 class="section-title center">בחר את עומק האבחון</h2>
+      <p class="section-sub center" style="max-width:620px;margin:0 auto 44px">
+        בחר את רמת העומק. תקבל פעולות לשיקום הכנסות, ברורות ומסודרות לפי עדיפות, על בסיס הנתונים שלך.
+      </p>
+
+      <div class="pricing-cards">
+        <!-- BASIC -->
+        <div class="pricing-card">
+          <div class="pricing-tier">בסיסי</div>
+          <div class="pricing-price">$199</div>
+          <div class="pricing-sub">בדיקת הכנסות מהירה</div>
+          <ul class="pricing-features">
+            <li class="bold">מתאים לאבחון התחלתי</li>
+            <li>סקירה ממוקדת של דליפות מוניטיזציה סבירות</li>
+            <li>3-5 ממצאים מרכזיים</li>
+            <li>סיכום קצר של פעולות עם צעדים הבאים ברורים</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('basic')">שלח פנייה →</button>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">הכי פופולרי</div>
+          <div class="pricing-tier">סטנדרטי</div>
+          <div class="pricing-price">$399</div>
+          <div class="pricing-sub">אבחון הכנסות</div>
+          <ul class="pricing-features">
+            <li class="bold">מתאים לניתוח מובנה מלא</li>
+            <li>סקירה רחבה יותר של חולשות בהמרה ובמוניטיזציה</li>
+            <li>ממצאים עם סדר עדיפויות</li>
+            <li>המלצות לשיקום עם סיכום ממוקד השפעה</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('standard')">שלח פנייה →</button>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card">
+          <div class="pricing-tier">פרימיום</div>
+          <div class="pricing-price">$799</div>
+          <div class="pricing-sub">צלילה עמוקה לאופטימיזציית הכנסות</div>
+          <ul class="pricing-features">
+            <li class="bold">מתאים לפעולה אסטרטגית עמוקה</li>
+            <li>ניתוח מורחב של סיבות סבירות</li>
+            <li>המלצות מפורטות יותר</li>
+            <li>עדיפות חזקה יותר והנחיה אסטרטגית לצעד הבא</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAiRevOrder('premium')">שלח פנייה →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">הפסיקו לאבד הכנסות בשקט.</h2>
+      <p class="cta-sub">קבלו אבחון ברור של איפה העסק שלכם לא מתפקד — ומה לתקן קודם.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openAiRevOrder('standard')">בקשו את בדיקת ההכנסות שלי</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">שאלות? כתבו לנו</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>אופטימיזציית הכנסות עם בינה מלאכותית</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">כל השירותים</a>
+        <a href="#pricing">מחירים</a>
+        <a href="#how-it-works">איך זה עובד</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- AI REVENUE OPTIMIZATION ORDER MODAL — mailto draft -->
+  <div class="order-overlay" id="aiRevOverlay" onclick="if(event.target===this)closeAiRevOrder()">
+    <div class="order-modal" id="aiRevModal" role="dialog" aria-modal="true" aria-labelledby="aiRev-modal-title">
+      <button class="modal-close" onclick="closeAiRevOrder()" aria-label="סגור">✕</button>
+
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="aiRev-modal-title" class="modal-title">אופטימיזציית הכנסות עם בינה מלאכותית</h2>
+        <p class="modal-sub" id="aiRev-tier-label">בדיקת הכנסות מהירה — $199</p>
+      </div>
+
+      <div class="package-selector" id="aiRevPackageSelector">
+        <label class="pkg-option" id="aiRevTierBasic" onclick="selectAiRevTier('basic')">
+          <div class="pkg-radio" id="aiRevRadioBasic"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">בסיסי</span>
+            <span class="pkg-desc">בדיקת הכנסות מהירה</span>
+          </div>
+          <span class="pkg-price">$199</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierStandard" onclick="selectAiRevTier('standard')">
+          <div class="pkg-radio" id="aiRevRadioStandard"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">סטנדרטי</span>
+            <span class="pkg-desc">אבחון הכנסות</span>
+          </div>
+          <span class="pkg-price">$399</span>
+        </label>
+
+        <label class="pkg-option" id="aiRevTierPremium" onclick="selectAiRevTier('premium')">
+          <div class="pkg-radio" id="aiRevRadioPremium"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">פרימיום</span>
+            <span class="pkg-desc">צלילה עמוקה</span>
+          </div>
+          <span class="pkg-price">$799</span>
+        </label>
+      </div>
+
+      <form class="order-form" id="aiRevForm" onsubmit="submitAiRevOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="aiRevBusinessName">שם העסק</label>
+            <input type="text" id="aiRevBusinessName" class="form-input" placeholder="למשל Acme" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="aiRevWebsiteUrl">כתובת האתר</label>
+            <input type="url" id="aiRevWebsiteUrl" class="form-input" placeholder="https://example.com" required autocomplete="url">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevEmail">האימייל שלך</label>
+          <input type="email" id="aiRevEmail" class="form-input" placeholder="you@company.com" required autocomplete="email">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevBusinessSummary">תיאור קצר של העסק</label>
+          <textarea id="aiRevBusinessSummary" class="form-input" placeholder="מה אתם מוכרים, למי אתם מוכרים, ועל איזה בסיס ההכנסה נבנית." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevRevenueModel">מקור ההכנסה העיקרי / מודל מוניטיזציה</label>
+          <textarea id="aiRevRevenueModel" class="form-input" placeholder="למשל: הזמנות דרך לידים, מנוי SaaS, ecommerce, מודעות, וכו'." rows="3"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aiRevMainConcern">הדאגה המרכזית או המטרה</label>
+          <textarea id="aiRevMainConcern" class="form-input" placeholder="למשל: ירידה בהמרות, ROI חלש במודעות, הכנסות נמוכות מהצפוי, דליפות במסלול, או יעד אחר לשיקום." rows="3" required></textarea>
+        </div>
+
+        <p class="form-error" id="aiRevFormError">אנא מלאו שם העסק, כתובת האתר, אימייל והדאגה המרכזית.</p>
+
+        <button type="submit" class="btn-order-submit" id="aiRevSubmit">
+          <span class="submit-text">שלח פנייה →</span>
+          <span class="submit-loading" style="display:none;">⟳ מכין…</span>
+        </button>
+
+        <p class="modal-footnote">
+          אם יש לכם צילומי מסך או דוחות מיוצאים, צרפו אותם בתשובת האימייל אחרי פתיחת הטיוטה.
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+

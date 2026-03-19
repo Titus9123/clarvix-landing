@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix — Lead Engine (B2B Lead Generation) | clarvix.net</title>
+  <meta name="description" content="Clarvix Lead Engine identifies, qualifies, and delivers B2B leads that match your ideal customer profile. Inquiry is handled via email draft.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/lead-engine.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    // Used by landing/app.js mailto flows.
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">Lead Engine</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">Services</a>
+        <a href="#leadgen-pricing" class="nav-link">Pricing</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <div class="lang-toggle">
+          <a href="index.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openLeadGenOrder('Starter - $299/month')">Get Started →</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">Consistent pipeline</div>
+      <h1 class="hero-title">
+        <span>Stop waiting for prospects.</span><br>
+        <span class="highlight">Get them delivered.</span>
+      </h1>
+      <p class="hero-sub">
+        Clarvix identifies, qualifies, and delivers B2B leads that match your ideal customer profile. Your sales team closes. We prospect.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openLeadGenOrder('Starter - $299/month')">Start inquiry →</button>
+        <a href="#leadgen-pricing" class="btn-ghost">See packages ↓</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">10–60</span>
+          <span class="stat-label">Leads / month</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">4</span>
+          <span class="stat-label">Markets</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Verified</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">ICP</span>
+          <span class="stat-label">Targeted fit</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix Lead Engine" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- LEAD GEN PRICING -->
+  <section class="pricing" id="leadgen-pricing" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">B2B Lead Generation</div>
+      <h2 class="section-title center">Consistent pipeline. Predictable growth.</h2>
+      <p class="section-sub center" style="max-width:560px;margin:0 auto 48px">Qualified leads delivered each month. You close — we prospect.</p>
+
+      <div class="pricing-cards">
+        <!-- STARTER -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Starter</div>
+          <div class="pricing-price">$299</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">10–15 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Includes:</li>
+            <li>10–15 verified leads/month</li>
+            <li>ICP definition session (1h)</li>
+            <li>Monthly delivery report</li>
+            <li>Name, company, role, email</li>
+            <li>EN / ES / HE / AR markets</li>
+            <li>Google Maps data sourcing</li>
+            <li class="bold cross-title">Does not include:</li>
+            <li class="cross">LinkedIn profile URL</li>
+            <li class="cross">Intent signal scoring</li>
+            <li class="cross">Competitor intelligence</li>
+            <li class="cross">Weekly reports</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/month')">Order now →</button>
+        </div>
+
+        <!-- PROFESSIONAL -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Professional</div>
+          <div class="pricing-price">$549</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">20–30 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Starter, plus:</li>
+            <li>20–30 verified leads/month</li>
+            <li>LinkedIn profile URL included</li>
+            <li>Intent signal scoring</li>
+            <li>Competitor intelligence report</li>
+            <li>Weekly delivery reports</li>
+            <li>Email validation (bounce-free)</li>
+            <li>Priority support (24h response)</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/month')">Order now →</button>
+        </div>
+
+        <!-- ENTERPRISE -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Enterprise</div>
+          <div class="pricing-price">$999</div>
+          <div class="pricing-price-period">/ month</div>
+          <div class="pricing-sub">40–60 Qualified B2B Leads</div>
+          <ul class="pricing-features">
+            <li class="bold">Everything in Professional, plus:</li>
+            <li>40–60 verified leads/month</li>
+            <li>Advanced competitor analysis</li>
+            <li>Daily pipeline updates</li>
+            <li>Direct consultation calls (2/mo)</li>
+            <li>Custom CRM-ready format</li>
+            <li>Dedicated account manager</li>
+            <li>Multi-industry targeting</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/month')">Order now →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">The Process</div>
+      <h2 class="section-title center">From inquiry to delivered leads</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>You send an inquiry</h3>
+          <p>Tell us your business and the type of customers you want.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>We define your ICP</h3>
+          <p>We align on industry, role, location, and verification criteria.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>We deliver qualified leads</h3>
+          <p>Each month you receive verified leads in your selected tier format.</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Your team closes</h3>
+          <p>Your sales team converts prospects into customers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">Want qualified B2B leads every month?</h2>
+      <p class="cta-sub">Send an inquiry for your tier. Payment details are provided after confirmation.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openLeadGenOrder('Starter - $299/month')">Start Lead Engine →</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">Questions? Email us</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>Lead Engine</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">All Services</a>
+        <a href="#leadgen-pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="/ai-revenue-optimization.html">AI Revenue Optimization</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- LEAD GEN ORDER MODAL -->
+  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
+    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
+      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="Close">✕</button>
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 class="modal-title">Start Lead Generation</h2>
+        <p class="modal-sub" id="leadgen-plan-label">Starter — $299/month</p>
+      </div>
+      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="lgBusinessName">Business Name</label>
+            <input type="text" id="lgBusinessName" class="form-input" placeholder="e.g. Acme Corp" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="lgEmail">Your Email</label>
+            <input type="email" id="lgEmail" class="form-input" placeholder="you@company.com" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="lgICP">Describe your ideal customer (industry, role, location)</label>
+          <input type="text" id="lgICP" class="form-input" placeholder="e.g. Real estate agencies in Miami, FL — Owner or Manager">
+        </div>
+        <p class="form-error" id="lgFormError">Please fill in your business name and email.</p>
+        <button type="submit" class="btn-order-submit" id="lgSubmit">
+          <span class="submit-text">Send Inquiry →</span>
+          <span class="submit-loading" style="display:none;">⟳ Preparing…</span>
+        </button>
+        <p class="modal-footnote">Payment details are provided after confirmation. We'll confirm your order within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
