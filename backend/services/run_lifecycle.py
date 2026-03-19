@@ -53,8 +53,9 @@ class RunLifecycleService:
         return updated
 
     def _approve_atomic(self, run_id: UUID, run_output: dict) -> WorkflowRunOut:
-        report_json = run_output.get("report_json", {})
-        report_markdown = run_output.get("report_markdown", "")
+        final_report = run_output.get("final_report", {}) if isinstance(run_output.get("final_report", {}), dict) else {}
+        report_json = run_output.get("report_json", {}) or final_report.get("report_json", {})
+        report_markdown = run_output.get("report_markdown", "") or final_report.get("report_markdown", "")
         if not report_markdown:
             raise AppError(
                 "missing_report_markdown",

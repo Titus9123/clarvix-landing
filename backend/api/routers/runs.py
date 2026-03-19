@@ -2,7 +2,7 @@ from uuid import UUID
 
 from fastapi import APIRouter
 
-from backend.api.deps import ai_revenue_workflow, run_lifecycle, run_repo
+from backend.api.deps import ai_revenue_workflow, digital_audit_workflow, run_lifecycle, run_repo
 from backend.schemas.common import RunStatus, RunTransition, WorkflowRunCreate, WorkflowRunOut
 
 
@@ -38,3 +38,8 @@ def transition_run(run_id: UUID, payload: RunTransition) -> WorkflowRunOut:
 @router.post("/execute/ai-revenue/{request_id}", response_model=WorkflowRunOut)
 def execute_ai_revenue_workflow(request_id: UUID) -> WorkflowRunOut:
     return ai_revenue_workflow.execute_for_request(request_id)
+
+
+@router.post("/execute/digital-audit/{request_id}", response_model=WorkflowRunOut)
+def execute_digital_audit_workflow(request_id: UUID) -> WorkflowRunOut:
+    return digital_audit_workflow.execute_for_request(request_id)

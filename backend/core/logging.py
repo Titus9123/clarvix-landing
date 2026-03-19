@@ -17,6 +17,10 @@ class JsonFormatter(logging.Formatter):
             payload["request_id"] = getattr(record, "request_id")
         if hasattr(record, "run_id"):
             payload["run_id"] = getattr(record, "run_id")
+        if hasattr(record, "stage"):
+            payload["stage"] = getattr(record, "stage")
+        if hasattr(record, "payload"):
+            payload["payload"] = getattr(record, "payload")
 
         if record.exc_info:
             payload["exception"] = self.formatException(record.exc_info)
