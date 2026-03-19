@@ -6,7 +6,7 @@ from unittest.mock import patch
 from backend.core.errors import AppError
 from backend.db import database
 from backend.db.repositories import ReportRepository, ServiceRequestRepository, WorkflowRunRepository
-from backend.schemas.ai_revenue import AIRevenueReportV1
+from backend.schemas.ai_revenue import AIRevenueOperationalReportV2
 from backend.schemas.common import (
     RunStatus,
     ServiceRequestCreate,
@@ -41,6 +41,7 @@ class TestAIRevenuePhase2(unittest.TestCase):
         self.workflow = AIRevenueWorkflowService(
             request_repo=self.request_repo,
             run_repo=self.run_repo,
+            report_repo=self.report_repo,
             run_manager=self.run_manager,
         )
 
@@ -61,34 +62,72 @@ class TestAIRevenuePhase2(unittest.TestCase):
         )
 
     def _valid_report_json(self, request_id):
-        return AIRevenueReportV1(
+        return AIRevenueOperationalReportV2(
             request_id=request_id,
-            summary="Revenue leakage and opportunity patterns were detected in deterministic checks.",
-            top_issues=[
+            current_state={
+                "traffic_estimate": 3200,
+                "cta_visibility_score": 0.4,
+                "checkout_dropoff_risk": 0.8,
+                "bounce_risk_hint": 0.7,
+                "avg_session_depth_hint": 1.3,
+                "tracking_coverage_score": 0.45,
+                "funnel_integrity_score": 0.31,
+                "baseline_conversion_rate": 0.13,
+                "observed_conversion_rate": 0.08,
+                "baseline_average_order_value": 129.6,
+                "observed_average_order_value": 120.0,
+                "estimated_monthly_revenue": 30720.0,
+                "primary_concern": "Lead conversion is low after landing visits",
+            },
+            detected_anomalies=[
                 {
-                    "issue": "Primary CTA underperforms",
-                    "impact": "high",
+                    "anomaly_code": "conversion_drop",
+                    "severity": "high",
+                    "metric": "conversion_rate",
+                    "observed_value": 0.08,
+                    "expected_value": 0.13,
+                    "delta": -0.05,
+                    "reason": "Observed conversion rate is below deterministic baseline threshold.",
+                }
+            ],
+            revenue_leaks=[
+                {
+                    "leak_code": "conv_drop_leak",
+                    "description": "Conversion efficiency is below baseline and leaking qualified demand.",
+                    "estimated_monthly_loss": 6758.4,
                     "confidence": 0.82,
-                    "evidence": ["Low CTA visibility score"],
-                    "reasoning": "Strong signal in conversion hints.",
+                    "linked_anomalies": ["conversion_drop"],
                 }
             ],
-            opportunities=[
-                {
-                    "opportunity": "Improve CTA placement",
-                    "expected_effect": "Increase conversion starts",
-                    "effort": "low",
-                    "confidence": 0.76,
-                }
-            ],
-            action_plan=[
+            optimization_actions=[
                 {
                     "priority": "P1",
-                    "action": "Refine CTA hierarchy on key pages",
-                    "owner": "web",
-                    "timeline": "7 days",
+                    "action": "Recover baseline conversion efficiency",
+                    "reason": "Conversion anomaly indicates direct revenue leakage from existing demand.",
+                    "expected_impact": "Reduce checkout and CTA abandonment in high-intent sessions.",
+                    "execution_steps": [
+                        "Reorder CTA hierarchy on top-entry pages by intent depth.",
+                        "Reduce non-essential checkout/form fields to minimum viable path.",
+                    ],
                 }
             ],
+            execution_plan=[
+                {
+                    "sequence": 1,
+                    "action": "Recover baseline conversion efficiency",
+                    "priority": "P1",
+                    "owner": "web",
+                    "eta_days": 10,
+                    "dependency": None,
+                }
+            ],
+            estimated_revenue_gain={
+                "conservative_monthly_gain": 1200.0,
+                "likely_monthly_gain": 2000.0,
+                "optimistic_monthly_gain": 2700.0,
+                "confidence_note": "Simulation uses bounded deterministic heuristics and returns directional ranges.",
+                "assumptions": ["Stable traffic quality in execution window."],
+            },
             review={"status": "needs_review", "reviewed_by": None, "review_notes": None},
         ).model_dump(mode="json")
 
@@ -98,26 +137,77 @@ class TestAIRevenuePhase2(unittest.TestCase):
         self.assertEqual(run.run_status, RunStatus.NEEDS_REVIEW)
         self.assertIn("report_json", run.run_output)
         self.assertIn("report_markdown", run.run_output)
-        self.assertEqual(run.run_output["report_json"]["schema_version"], "ai_revenue_report_v1")
-        self.assertTrue(run.run_output["report_markdown"].startswith("# AI Revenue Optimization Audit"))
+        self.assertEqual(run.run_output["report_json"]["schema_version"], "ai_revenue_operational_v2")
+        self.assertTrue(run.run_output["report_markdown"].startswith("# Revenue Agent Operational Output"))
+        self.assertIn("current_state", run.run_output)
+        self.assertIn("detected_anomalies", run.run_output)
+        self.assertIn("optimization_actions", run.run_output)
+        self.assertIn("execution_plan", run.run_output)
 
-    def test_metrics_tool_path_is_in_process_provider(self) -> None:
+    def test_data_source_uses_in_process_metrics_provider(self) -> None:
         req = self._create_ai_request()
         fake_metrics = InternalMetricsResponse(
             traffic_estimate=3200,
-            conversion_signals={"cta_visibility_score": 0.7, "checkout_dropoff_risk": 0.4},
-            engagement_signals={"bounce_risk_hint": 0.3, "avg_session_depth_hint": 2.2},
+            conversion_signals={"cta_visibility_score": 0.4, "checkout_dropoff_risk": 0.8},
+            engagement_signals={"bounce_risk_hint": 0.7, "avg_session_depth_hint": 1.3},
         )
-        with patch("backend.services.ai_revenue_workflow.build_mock_metrics", return_value=fake_metrics) as mocked:
+        with patch("backend.agents.ai_revenue.revenue_data_source.build_mock_metrics", return_value=fake_metrics) as mocked:
             run = self.workflow.execute_for_request(req.id)
-            mocked.assert_called_once_with(req.website_url)
-            self.assertEqual(run.run_output["metrics_snapshot"]["traffic_estimate"], 3200)
+            self.assertEqual(mocked.call_count, 3)
+            mocked.assert_has_calls(
+                [
+                    unittest.mock.call(req.website_url),
+                    unittest.mock.call(req.website_url),
+                    unittest.mock.call(req.website_url),
+                ]
+            )
+            self.assertEqual(run.run_output["data_snapshot"]["traffic_metrics"]["traffic_estimate"], 3200.0)
+
+    def test_same_input_produces_same_operational_payload(self) -> None:
+        req = self._create_ai_request()
+        run_a = self.workflow.execute_for_request(req.id)
+        run_b = self.workflow.execute_for_request(req.id)
+        self.assertEqual(run_a.run_output["report_json"], run_b.run_output["report_json"])
+
+    def test_anomalies_are_deterministic_and_explicit(self) -> None:
+        req = self._create_ai_request()
+        fake_metrics = InternalMetricsResponse(
+            traffic_estimate=1400,
+            conversion_signals={"cta_visibility_score": 0.2, "checkout_dropoff_risk": 0.92},
+            engagement_signals={"bounce_risk_hint": 0.85, "avg_session_depth_hint": 1.0},
+        )
+        with patch("backend.agents.ai_revenue.revenue_data_source.build_mock_metrics", return_value=fake_metrics):
+            run = self.workflow.execute_for_request(req.id)
+        anomaly_codes = [item["anomaly_code"] for item in run.run_output["detected_anomalies"]]
+        self.assertIn("conversion_drop", anomaly_codes)
+        self.assertIn("traffic_mismatch", anomaly_codes)
+        self.assertIn("missing_tracking", anomaly_codes)
+        self.assertIn("broken_funnel", anomaly_codes)
+
+    def test_action_plan_is_strategy_derived_not_static_template(self) -> None:
+        req = self._create_ai_request()
+        fake_metrics = InternalMetricsResponse(
+            traffic_estimate=1400,
+            conversion_signals={"cta_visibility_score": 0.25, "checkout_dropoff_risk": 0.88},
+            engagement_signals={"bounce_risk_hint": 0.81, "avg_session_depth_hint": 1.1},
+        )
+        with patch("backend.agents.ai_revenue.revenue_data_source.build_mock_metrics", return_value=fake_metrics):
+            run = self.workflow.execute_for_request(req.id)
+
+        actions = run.run_output["optimization_actions"]
+        self.assertGreaterEqual(len(actions), 1)
+        self.assertNotIn(
+            "Fix primary conversion friction and clarify CTA paths on top-entry pages",
+            [item["action"] for item in actions],
+        )
+        for action in actions:
+            self.assertGreaterEqual(len(action["execution_steps"]), 1)
 
     def test_report_schema_validation_failure(self) -> None:
         with self.assertRaises(AppError) as ctx:
             self.report_validator.validate(
                 ServiceType.AI_REVENUE_OPTIMIZATION,
-                {"schema_version": "ai_revenue_report_v1", "summary": "too_short"},
+                {"schema_version": "ai_revenue_operational_v2"},
             )
         self.assertEqual(ctx.exception.code, "invalid_report_payload")
 
@@ -133,14 +223,14 @@ class TestAIRevenuePhase2(unittest.TestCase):
         needs_review = self.lifecycle.transition(
             run.id,
             RunStatus.NEEDS_REVIEW,
-            {"report_json": report_json, "report_markdown": "# AI Revenue Optimization Audit\n\nReviewed."},
+            {"report_json": report_json, "report_markdown": "# Revenue Agent Operational Output\n\nReviewed."},
         )
         self.assertEqual(needs_review.run_status, RunStatus.NEEDS_REVIEW)
 
         approved = self.lifecycle.transition(
             run.id,
             RunStatus.APPROVED,
-            {"report_json": report_json, "report_markdown": "# AI Revenue Optimization Audit\n\nReviewed."},
+            {"report_json": report_json, "report_markdown": "# Revenue Agent Operational Output\n\nReviewed."},
         )
         self.assertEqual(approved.run_status, RunStatus.APPROVED)
         self.assertEqual(len(self.report_repo.list()), 1)
@@ -155,17 +245,17 @@ class TestAIRevenuePhase2(unittest.TestCase):
         self.lifecycle.transition(
             run.id,
             RunStatus.NEEDS_REVIEW,
-            {"report_json": report_json, "report_markdown": "# AI Revenue Optimization Audit\n\nReviewed."},
+            {"report_json": report_json, "report_markdown": "# Revenue Agent Operational Output\n\nReviewed."},
         )
         first_approval = self.lifecycle.transition(
             run.id,
             RunStatus.APPROVED,
-            {"report_json": report_json, "report_markdown": "# AI Revenue Optimization Audit\n\nReviewed."},
+            {"report_json": report_json, "report_markdown": "# Revenue Agent Operational Output\n\nReviewed."},
         )
         second_approval = self.lifecycle.transition(
             run.id,
             RunStatus.APPROVED,
-            {"report_json": report_json, "report_markdown": "# AI Revenue Optimization Audit\n\nReviewed."},
+            {"report_json": report_json, "report_markdown": "# Revenue Agent Operational Output\n\nReviewed."},
         )
 
         self.assertEqual(first_approval.run_status, RunStatus.APPROVED)
@@ -182,7 +272,7 @@ class TestAIRevenuePhase2(unittest.TestCase):
             RunStatus.NEEDS_REVIEW,
             {
                 "report_json": self._valid_report_json(req.id),
-                "report_markdown": "# AI Revenue Optimization Audit\n\nDraft ready.",
+                    "report_markdown": "# Revenue Agent Operational Output\n\nDraft ready.",
             },
         )
 
@@ -190,7 +280,7 @@ class TestAIRevenuePhase2(unittest.TestCase):
             self.lifecycle.transition(
                 run.id,
                 RunStatus.APPROVED,
-                {"report_json": {"schema_version": "ai_revenue_report_v1"}, "report_markdown": "ok markdown"},
+                {"report_json": {"schema_version": "ai_revenue_operational_v2"}, "report_markdown": "ok markdown"},
             )
         self.assertEqual(ctx.exception.code, "invalid_report_payload")
 
@@ -198,6 +288,17 @@ class TestAIRevenuePhase2(unittest.TestCase):
         self.assertEqual(run_after.run_status, RunStatus.NEEDS_REVIEW)
         self.assertEqual(self.request_repo.get(req.id).status.value, "in_review")
         self.assertEqual(len(self.report_repo.list()), 0)
+
+    def test_markdown_adapter_is_consistent_with_operational_payload(self) -> None:
+        req = self._create_ai_request()
+        run = self.workflow.execute_for_request(req.id)
+        payload = run.run_output["report_json"]
+        markdown = run.run_output["report_markdown"]
+
+        self.assertIn("Revenue Agent Operational Output", markdown)
+        self.assertIn(str(payload["estimated_revenue_gain"]["likely_monthly_gain"]), markdown)
+        for action in payload["optimization_actions"]:
+            self.assertIn(action["action"], markdown)
 
 
 if __name__ == "__main__":

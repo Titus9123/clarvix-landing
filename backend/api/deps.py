@@ -21,6 +21,7 @@ run_lifecycle = RunLifecycleService(
 ai_revenue_workflow = AIRevenueWorkflowService(
     request_repo=request_repo,
     run_repo=run_repo,
+    report_repo=report_repo,
     run_manager=run_manager,
 )
 digital_audit_workflow = DigitalAuditWorkflowService(

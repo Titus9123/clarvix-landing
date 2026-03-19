@@ -3,7 +3,7 @@ from typing import Any
 from pydantic import ValidationError
 
 from backend.core.errors import AppError
-from backend.schemas.ai_revenue import AIRevenueReportV1
+from backend.schemas.ai_revenue import AIRevenueOperationalReportV2
 from backend.schemas.common import ServiceType
 from backend.schemas.digital_audit import DigitalAuditReportV1
 
@@ -11,7 +11,7 @@ from backend.schemas.digital_audit import DigitalAuditReportV1
 class ReportValidationService:
     def __init__(self) -> None:
         self._validators = {
-            ServiceType.AI_REVENUE_OPTIMIZATION: AIRevenueReportV1,
+            ServiceType.AI_REVENUE_OPTIMIZATION: AIRevenueOperationalReportV2,
             ServiceType.DIGITAL_AUDIT: DigitalAuditReportV1,
         }
 

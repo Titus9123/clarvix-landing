@@ -1,24 +1,25 @@
 from pydantic import BaseModel, Field
 
-from backend.agents.ai_revenue.revenue_opportunity import (
-    RevenueOpportunityCandidate,
-    RevenueIssueCandidate,
-)
-
-
-class PrioritizedIssue(BaseModel):
+class GenericIssueCandidate(BaseModel):
     issue: str
-    impact: str
     confidence: float = Field(ge=0.0, le=1.0)
-    evidence: list[str]
-    reasoning: str
+    evidence: list[str] = Field(default_factory=list)
 
 
-class PrioritizedOpportunity(BaseModel):
+class GenericOpportunityCandidate(BaseModel):
     opportunity: str
     expected_effect: str
     effort: str
     confidence: float = Field(ge=0.0, le=1.0)
+
+
+class PrioritizedIssue(GenericIssueCandidate):
+    impact: str
+    reasoning: str
+
+
+class PrioritizedOpportunity(GenericOpportunityCandidate):
+    pass
 
 
 class PrioritizationOutput(BaseModel):
@@ -37,8 +38,8 @@ class PrioritizationAgent:
 
     def run(
         self,
-        issues: list[RevenueIssueCandidate],
-        opportunities: list[RevenueOpportunityCandidate],
+        issues: list[GenericIssueCandidate],
+        opportunities: list[GenericOpportunityCandidate],
     ) -> PrioritizationOutput:
         sorted_issues = sorted(issues, key=lambda i: i.confidence, reverse=True)
         ranked_issues: list[PrioritizedIssue] = []

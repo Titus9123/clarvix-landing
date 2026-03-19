@@ -1,12 +1,14 @@
 from uuid import UUID
 
-from backend.agents.ai_revenue.prioritization import PrioritizationOutput
-from backend.agents.ai_revenue.website_analyzer import WebsiteAnalyzerOutput
 from backend.schemas.ai_revenue import (
-    AIRevenueAction,
-    AIRevenueOpportunity,
-    AIRevenueReportV1,
+    AIRevenueOperationalReportV2,
     AIRevenueReview,
+    EstimatedRevenueGain,
+    ExecutionPlanItem,
+    OptimizationAction,
+    RevenueAnomaly,
+    RevenueCurrentState,
+    RevenueLeak,
 )
 
 
@@ -14,88 +16,69 @@ class ReportStructuringAgent:
     def build_report(
         self,
         request_id: UUID,
-        analyzer_output: WebsiteAnalyzerOutput,
-        prioritized: PrioritizationOutput,
-        main_concern: str,
-    ) -> AIRevenueReportV1:
-        actions = [
-            AIRevenueAction(
-                priority="P1",
-                action="Fix primary conversion friction and clarify CTA paths on top-entry pages",
-                owner="web",
-                timeline="7 days",
-            ),
-            AIRevenueAction(
-                priority="P2",
-                action="Align commercial messaging to concern-driven offer blocks",
-                owner="marketing",
-                timeline="14 days",
-            ),
-            AIRevenueAction(
-                priority="P3",
-                action="Track lead intent and post-click progression for optimization cycles",
-                owner="sales",
-                timeline="30 days",
-            ),
-        ]
-
-        opportunities = [
-            AIRevenueOpportunity(
-                opportunity=o.opportunity,
-                expected_effect=o.expected_effect,
-                effort=o.effort,
-                confidence=o.confidence,
-            )
-            for o in prioritized.opportunities
-        ]
-
-        summary = (
-            "Revenue leakage signals were identified from site-level conversion and engagement hints. "
-            f"Main concern considered: {main_concern}. "
-            f"Analyzer summary: {analyzer_output.page_structure_summary}"
-        )
-
-        return AIRevenueReportV1(
+        current_state: RevenueCurrentState,
+        detected_anomalies: list[RevenueAnomaly],
+        revenue_leaks: list[RevenueLeak],
+        optimization_actions: list[OptimizationAction],
+        execution_plan: list[ExecutionPlanItem],
+        estimated_revenue_gain: EstimatedRevenueGain,
+    ) -> AIRevenueOperationalReportV2:
+        return AIRevenueOperationalReportV2(
             request_id=request_id,
-            summary=summary,
-            top_issues=[
-                {
-                    "issue": i.issue,
-                    "impact": i.impact,
-                    "confidence": i.confidence,
-                    "evidence": i.evidence,
-                    "reasoning": i.reasoning,
-                }
-                for i in prioritized.top_issues
-            ],
-            opportunities=opportunities,
-            action_plan=actions,
+            current_state=current_state,
+            detected_anomalies=detected_anomalies,
+            revenue_leaks=revenue_leaks,
+            optimization_actions=optimization_actions,
+            execution_plan=execution_plan,
+            estimated_revenue_gain=estimated_revenue_gain,
             review=AIRevenueReview(status="needs_review"),
         )
 
-    def build_markdown(self, report: AIRevenueReportV1) -> str:
-        issue_lines = "\n".join(
+    def build_markdown(self, report: AIRevenueOperationalReportV2) -> str:
+        anomaly_lines = "\n".join(
             [
-                f"- [{issue.impact.upper()} | conf={issue.confidence:.2f}] {issue.issue}"
-                for issue in report.top_issues
+                (
+                    f"- [{anomaly.severity.upper()}] {anomaly.anomaly_code} "
+                    f"(metric={anomaly.metric}, observed={anomaly.observed_value:.4f}, "
+                    f"expected={anomaly.expected_value:.4f}, delta={anomaly.delta:.4f})"
+                )
+                for anomaly in report.detected_anomalies
             ]
-        )
-        opp_lines = "\n".join(
+        ) or "- No critical anomalies detected in this deterministic cycle."
+        leak_lines = "\n".join(
             [
-                f"- ({opp.effort}) {opp.opportunity} -> {opp.expected_effect} [conf={opp.confidence:.2f}]"
-                for opp in report.opportunities
+                f"- {leak.leak_code}: {leak.description} (estimated_monthly_loss={leak.estimated_monthly_loss:.2f})"
+                for leak in report.revenue_leaks
             ]
-        )
+        ) or "- No explicit leaks detected."
         action_lines = "\n".join(
-            [f"- {a.priority}: {a.action} ({a.owner}, {a.timeline})" for a in report.action_plan]
+            [
+                f"- {action.priority}: {action.action} -> {action.expected_impact}"
+                for action in report.optimization_actions
+            ]
         )
+        plan_lines = "\n".join(
+            [
+                f"- Step {step.sequence}: [{step.priority}] {step.action} ({step.owner}, eta={step.eta_days}d)"
+                for step in report.execution_plan
+            ]
+        )
+        gain = report.estimated_revenue_gain
 
         return (
-            "# AI Revenue Optimization Audit\n\n"
-            f"## Summary\n{report.summary}\n\n"
-            f"## Top Issues\n{issue_lines}\n\n"
-            f"## Opportunities\n{opp_lines}\n\n"
-            f"## Action Plan\n{action_lines}\n\n"
+            "# Revenue Agent Operational Output\n\n"
+            "## Current State\n"
+            f"- estimated_monthly_revenue: {report.current_state.estimated_monthly_revenue:.2f}\n"
+            f"- observed_conversion_rate: {report.current_state.observed_conversion_rate:.4f}\n"
+            f"- baseline_conversion_rate: {report.current_state.baseline_conversion_rate:.4f}\n\n"
+            f"## Detected Anomalies\n{anomaly_lines}\n\n"
+            f"## Revenue Leaks\n{leak_lines}\n\n"
+            f"## Optimization Actions\n{action_lines}\n\n"
+            f"## Execution Plan\n{plan_lines}\n\n"
+            "## Estimated Revenue Gain (Monthly)\n"
+            f"- conservative: {gain.conservative_monthly_gain:.2f}\n"
+            f"- likely: {gain.likely_monthly_gain:.2f}\n"
+            f"- optimistic: {gain.optimistic_monthly_gain:.2f}\n\n"
             "## Review Status\n"
             f"- status: {report.review.status}\n"
         )
