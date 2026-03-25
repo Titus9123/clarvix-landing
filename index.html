@@ -550,16 +550,16 @@
       <h2>Transparent pricing.<br>Real results.</h2>
       <p>No retainers. No vague deliverables. You know exactly what you pay and what you get.</p>
     </div>
-    <div class="pricing-tabs-wrapper">
-      <div class="pricing-tabs">
-        <button class="p-tab active" onclick="switchTab('audit-p')">🔍 Digital Audit</button>
-        <button class="p-tab" onclick="switchTab('leads-p')">🚀 Lead Generation</button>
-        <button class="p-tab" onclick="switchTab('adtech-p')">🤖 AdTech AI</button>
-      </div>
-    </div>
     <div class="pricing-panels">
       <!-- AUDIT PRICING -->
-      <div id="audit-p" class="active">
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header active" onclick="toggleAccordion('audit-p', this)">
+          <span class="acc-icon">🔍</span>
+          <span class="acc-title">Digital Presence Audit</span>
+          <span class="acc-range">$45 – $160 <span style="font-size:0.75rem;opacity:0.6">one-time</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="audit-p" class="acc-panel open">
         <div class="pricing-grid">
           <div class="p-card">
             <div class="p-tier">Basic</div>
@@ -617,11 +617,20 @@
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
           Also available on <a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> ·
           Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($79–$149) and <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($59–$99) add-ons.
-          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM &amp; worldwide.
+          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM &amp; worldwide. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
         </p>
-      </div>
+      </div><!-- end acc-panel audit-p -->
+      </div><!-- end accordion-item -->
+
       <!-- LEADS PRICING -->
-      <div id="leads-p">
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('leads-p', this)">
+          <span class="acc-icon">🚀</span>
+          <span class="acc-title">B2B Lead Generation</span>
+          <span class="acc-range">$149 – $999 <span style="font-size:0.75rem;opacity:0.6">per month</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="leads-p" class="acc-panel">
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">
           🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Accessible plans for businesses in Latin America &amp; emerging markets.
         </p>
@@ -696,9 +705,22 @@
             <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
           </div>
         </div>
-      </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:16px;">
+          🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Plans accessible for LATAM, Israel &amp; global markets.
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel leads-p -->
+      </div><!-- end accordion-item -->
+
       <!-- ADTECH PRICING -->
-      <div id="adtech-p">
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('adtech-p', this)">
+          <span class="acc-icon">🤖</span>
+          <span class="acc-title">AdTech AI Systems</span>
+          <span class="acc-range">$1,500 – $7,500+ <span style="font-size:0.75rem;opacity:0.6">per project</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="adtech-p" class="acc-panel">
         <div class="pricing-grid">
           <div class="p-card">
             <div class="p-tier">Phase 1</div>
@@ -756,8 +778,11 @@
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
           All AdTech AI projects start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
           We scope together before you commit to anything. <a href="#contact">Book yours →</a>
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
         </p>
-      </div>
+      </div><!-- end acc-panel adtech-p -->
+      </div><!-- end accordion-item -->
+
     </div>
   </div>
 </section>
@@ -871,7 +896,8 @@
             <h3 style="color:#fff;margin-bottom:6px;">Send us a message</h3>
             <p style="font-size:0.85rem;margin-bottom:24px;">We'll analyze your situation and reply with our recommendation.</p>
             <form id="contactForm" action="https://formspree.io/f/xqegkzzo" method="POST">
-              <input type="hidden" name="_subject" value="New Clarvix Inquiry">
+              <input type="hidden" name="_subject" value="New Clarvix Inquiry — contact@clarvix.net">
+              <input type="hidden" name="_to" value="contact@clarvix.net">
               <div class="form-row2">
                 <div class="form-group">
                   <label>Your Name *</label>
@@ -879,7 +905,8 @@
                 </div>
                 <div class="form-group">
                   <label>Business Email *</label>
-                  <input type="email" name="email" placeholder="john@company.com" required>
+                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required oninput="document.getElementById('replyto').value=this.value">
+                  <input type="hidden" name="_replyto" id="replyto">
                 </div>
               </div>
               <div class="form-group">
@@ -991,5 +1018,51 @@ document.querySelectorAll('#mobileMenu a').forEach(a => {
   a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
 });
 
+// Accordion pricing
+function toggleAccordion(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
+  btn.classList.toggle('active', !isOpen);
+}
+// Init accordion heights on load
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.acc-panel.open').forEach(function(p) {
+    p.style.maxHeight = p.scrollHeight + 'px';
+  });
+});
+
 // Contact form
-document.getElementBy
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const resp = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      btn.textContent = 'Error — try emailing contact@clarvix.net';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error — try emailing contact@clarvix.net';
+    btn.disabled = false;
+  }
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  nb.style.background = window.scrollY > 50 ? 'rgba(8,13,26,0.98)' : 'rgba(8,13,26,0.88)';
+});
+</script>
+</body>
+</html>

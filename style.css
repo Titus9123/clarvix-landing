@@ -351,19 +351,30 @@ img { max-width: 100%; display: block; }
    PRICING
    ============================================================ */
 #pricing { background: var(--bg2); }
-.pricing-tabs-wrapper { display: flex; justify-content: center; margin-bottom: 48px; }
-.pricing-tabs {
-  display: flex; background: var(--card); border: 1px solid var(--border);
-  border-radius: 12px; padding: 5px; gap: 4px;
+/* Accordion pricing */
+.pricing-accordion-item {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); margin-bottom: 20px; overflow: hidden;
 }
-.p-tab {
-  padding: 10px 22px; border-radius: 8px; font-size: 0.88rem; font-weight: 700;
-  cursor: pointer; border: none; background: transparent; color: var(--text-muted); transition: all 0.2s;
+.pricing-acc-header {
+  width: 100%; display: flex; align-items: center; gap: 14px;
+  padding: 20px 28px; background: transparent; border: none;
+  color: var(--text); cursor: pointer; text-align: left;
+  transition: background 0.2s; font-family: inherit;
 }
-.p-tab.active { background: var(--accent); color: #fff; }
+.pricing-acc-header:hover { background: var(--bg3); }
+.pricing-acc-header.active { background: rgba(99,102,241,0.08); border-bottom: 1px solid var(--border); }
+.acc-icon { font-size: 1.4rem; }
+.acc-title { font-size: 1.05rem; font-weight: 700; flex: 1; }
+.acc-range { font-size: 1rem; font-weight: 700; color: var(--accent); white-space: nowrap; }
+.acc-arrow {
+  font-size: 0.75rem; color: var(--text-dim); transition: transform 0.3s;
+  transform: rotate(-90deg);
+}
+.pricing-acc-header.active .acc-arrow { transform: rotate(0deg); }
 
-.pricing-panels > div { display: none; }
-.pricing-panels > div.active { display: block; }
+.acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 28px; }
+.acc-panel.open { padding: 28px; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .p-card {
@@ -538,16 +549,4 @@ footer {
 
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
-  h2 { font-size: 1.5rem; }
-  .section { padding: 64px 0; }
-  .nav-links { display: none; }
-  .nav-toggle { display: flex; align-items: center; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; text-align: center; }
-  .hero-stats { gap: 24px; }
-  .form-row2 { grid-template-columns: 1fr; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
-  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
-  .pricing-tabs { flex-direction: column; }
-  .lead-stats { grid-template-columns: 1fr 1fr; }
-}
+  h2 { font-
