@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clarvix - AdTech AI Systems | clarvix.net</title>
+  <meta name="description" content="We build autonomous AI agents for programmatic advertising companies — automate campaigns, real-time reporting, and MCP integrations that generate revenue 24/7.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.clarvix.net/adtech-ai.html">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <script>
+    var CONTACT_EMAIL = 'contact@clarvix.net';
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="order-modal.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Clarvix AdTech AI Systems",
+    "url": "https://www.clarvix.net/adtech-ai.html",
+    "logo": "https://www.clarvix.net/images/logo.png",
+    "description": "Autonomous AI agents for programmatic advertising — campaign automation, real-time reporting, and MCP integrations generating revenue 24/7."
+  }
+  </script>
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <div class="logo">
+        <img src="images/logo.png" alt="Clarvix" class="logo-img">
+        <span class="logo-tag">Clarvix Services</span>
+      </div>
+      <div class="nav-right">
+        <a href="/index.html#services" class="nav-link">Services</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+        <a href="#how-it-works" class="nav-link">How it works</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <div class="lang-toggle">
+          <a href="adtech-ai.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
+          <a href="adtech-ai-es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
+          <a href="adtech-ai-he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
+          <a href="adtech-ai-ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
+        </div>
+        <button class="btn-primary" onclick="openAdTechOrder()">Get Started </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero" style="padding-top:92px">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="container hero-content">
+      <div class="badge-pill">Phase 1 of 3 — Now Live</div>
+      <h1 class="hero-title">
+        <span>Your ad campaigns run 24/7.</span><br>
+        <span class="highlight">Your optimization should too.</span>
+      </h1>
+      <p class="hero-sub">
+        We build autonomous AI agents for AdTech and programmatic advertising companies — automating campaigns, reporting, and revenue generation without human limits.
+      </p>
+      <div class="hero-ctas">
+        <button class="btn-primary btn-lg" onclick="openAdTechOrder('discovery')">Get Your AI Blueprint</button>
+        <a href="#pricing" class="btn-ghost">See packages </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Active clients</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">24/7</span>
+          <span class="stat-label">Autonomous operation</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">MCP</span>
+          <span class="stat-label">Native integrations</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num">$1.5k+</span>
+          <span class="stat-label">Starting investment</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-image-wrap">
+      <img src="images/hero_dashboard.png" alt="Clarvix AdTech AI Dashboard" class="hero-img" loading="eager">
+      <div class="hero-img-glow"></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem" style="padding-top:92px;padding-bottom:86px">
+    <div class="container">
+      <h2 class="section-title center">Most AdTech companies optimize manually. That's the bottleneck.</h2>
+      <div class="problem-callout" style="max-width:860px;margin-left:auto;margin-right:auto;margin-top:28px;">
+        <div class="callout-icon">⚙️</div>
+        <div class="callout-text">
+          <strong>Your team is doing by hand what AI agents can do autonomously.</strong>
+          <p style="margin:10px 0 0;line-height:1.7;color:var(--text);">
+            Manual campaign adjustments, delayed reports, and human review cycles cost you performance at scale. While your team sleeps, revenue opportunities expire. Autonomous AI agents close that gap — operating continuously, reacting instantly, optimizing relentlessly.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THIS SERVICE DOES -->
+  <section class="what-you-get" id="service-does" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">What this service does</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        We engineer custom AI agents that integrate directly into your AdTech stack and operate autonomously.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Builds autonomous AI agents for your programmatic advertising infrastructure</li>
+        <li>Automates campaign optimization, bid management, and budget pacing</li>
+        <li>Generates real-time performance reports without manual input</li>
+        <li>Integrates with DSPs, SSPs, and ad networks via MCP protocols</li>
+        <li>Operates continuously — reacting to signals faster than any human team</li>
+        <li>Scales your capacity without scaling your headcount</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHAT YOU RECEIVE -->
+  <section class="what-you-get" id="what-you-receive" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">What you receive</h2>
+      <p class="section-sub center" style="max-width:680px;margin:0 auto 44px">
+        Purpose-built AI infrastructure for your AdTech stack — not a generic automation template.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Custom AI agent architecture designed for your specific stack</li>
+        <li>Deployed autonomous agents connected to your live ad platforms</li>
+        <li>MCP integrations with your DSP, SSP, or ad network</li>
+        <li>Real-time reporting automation eliminating manual dashboards</li>
+        <li>Agent monitoring, tuning, and performance review</li>
+        <li>Clear handoff documentation so your team stays in control</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing" id="pricing" style="padding-top:52px">
+    <div class="container">
+      <div class="section-tag center">Pricing</div>
+      <h2 class="section-title center">Choose your entry point</h2>
+      <p class="section-sub center" style="max-width:620px;margin:0 auto 44px">
+        Start with a blueprint. Scale to full autonomous operation. Each phase builds on the last.
+      </p>
+
+      <div class="pricing-cards">
+        <!-- DISCOVERY -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Discovery</div>
+          <div class="pricing-price">$1,500</div>
+          <div class="pricing-sub">Stack Analysis & AI Blueprint</div>
+          <ul class="pricing-features">
+            <li class="bold">Best for understanding your automation opportunity</li>
+            <li>Full AdTech infrastructure audit</li>
+            <li>AI agent opportunity mapping for your stack</li>
+            <li>Custom implementation roadmap with ROI projections</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAdTechOrder('discovery')">Request inquiry </button>
+        </div>
+
+        <!-- BUILD & TEST -->
+        <div class="pricing-card premium">
+          <div class="pricing-badge">Most Popular</div>
+          <div class="pricing-tier">Build & Test</div>
+          <div class="pricing-price">$3,500</div>
+          <div class="pricing-sub">First Agent Deployment</div>
+          <ul class="pricing-features">
+            <li class="bold">Best for getting your first autonomous agent live</li>
+            <li>1 production-ready AI agent deployed to your stack</li>
+            <li>MCP integrations with your primary ad platform</li>
+            <li>30-day monitoring, optimization, and tuning</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAdTechOrder('build')">Request inquiry </button>
+        </div>
+
+        <!-- PRODUCTION -->
+        <div class="pricing-card">
+          <div class="pricing-tier">Production</div>
+          <div class="pricing-price">$7,500</div>
+          <div class="pricing-sub">Full Autonomous AI Stack</div>
+          <ul class="pricing-features">
+            <li class="bold">Best for complete AdTech automation</li>
+            <li>Multi-agent autonomous system across your full stack</li>
+            <li>Complete MCP integration suite</li>
+            <li>Revenue optimization running on autopilot 24/7</li>
+          </ul>
+          <button class="btn-primary btn-full" onclick="openAdTechOrder('production')">Request inquiry </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works" style="padding-top:72px">
+    <div class="container">
+      <div class="section-tag center">The Process</div>
+      <h2 class="section-title center">How it works</h2>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <h3>We audit your AdTech stack</h3>
+          <p>We analyze your existing platforms, data flows, and manual processes to identify exactly where AI agents deliver the highest ROI.</p>
+        </div>
+        <div class="step-arrow"></div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <h3>We design your agent architecture</h3>
+          <p>We map out the custom AI agent system for your stack — defining what each agent does, how they connect, and what they optimize.</p>
+        </div>
+        <div class="step-arrow"></div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <h3>We build and deploy your first agent</h3>
+          <p>Your autonomous agent goes live connected to your real ad platforms via MCP integrations — tested, monitored, and tuned.</p>
+        </div>
+        <div class="step-arrow"></div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <h3>Your stack runs 24/7 without limits</h3>
+          <p>Your AI agents optimize continuously — no manual cycles, no human bottlenecks, no revenue left on the table overnight.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="what-you-get" id="who-this-for" style="padding-top:72px">
+    <div class="container">
+      <h2 class="section-title center">Who this is for</h2>
+      <p class="section-sub center" style="max-width:680px;margin:10px auto 44px">
+        If manual processes are the ceiling on your ad revenue, autonomous AI is how you break through it.
+      </p>
+      <ul class="pricing-features" style="max-width:720px;margin:0 auto;">
+        <li>Programmatic advertising companies and trading desks</li>
+        <li>DSPs, SSPs, and ad networks looking to automate operations</li>
+        <li>Performance marketing agencies scaling campaign management</li>
+        <li>AdTech startups replacing manual workflows with AI infrastructure</li>
+        <li>Any company where human review cycles are limiting revenue growth</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- WHY THIS IS DIFFERENT -->
+  <section class="what-you-get" id="why-different" style="padding-top:72px;padding-bottom:36px">
+    <div class="container">
+      <h2 class="section-title center">Why this is different</h2>
+      <p class="section-sub center" style="max-width:760px;margin:18px auto 0">
+        Unlike generic AI consultants, we specialize in AdTech infrastructure. Our agents integrate directly into your existing stack via MCP protocols, operate autonomously around the clock, and are engineered to generate measurable revenue — not just surface insights. Phase 1 is live. Phases 2 and 3 scale from there.
+      </p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-glow"></div>
+    <div class="container cta-inner">
+      <h2 class="cta-title">Stop optimizing manually at human speed.</h2>
+      <p class="cta-sub">Get a custom AI blueprint for your AdTech stack — and see exactly where autonomous agents generate the most revenue.</p>
+      <div class="cta-buttons">
+        <button class="btn-primary btn-xl" onclick="openAdTechOrder('build')">Request My AI Blueprint</button>
+        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">Questions? Email us</a>
+      </div>
+      <p class="cta-email">contact@clarvix.net</p>
+      <div class="cta-tagline">
+        <span class="dot red-dot"></span>
+        <span class="dot amber-dot"></span>
+        <span class="dot green-dot"></span>
+        <span class="tagline-text">Facts. Clarity. Action.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
+        <p>AdTech AI Systems</p>
+      </div>
+      <div class="footer-links">
+        <a href="/index.html#services">All Services</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      </div>
+      <p class="footer-copy">© 2026 Clarvix. Facts. Clarity. Action.</p>
+    </div>
+  </footer>
+
+  <!-- ADTECH AI ORDER MODAL -->
+  <div class="order-overlay" id="adTechOverlay" onclick="if(event.target===this)closeAdTechOrder()">
+    <div class="order-modal" id="adTechModal" role="dialog" aria-modal="true" aria-labelledby="adtech-modal-title">
+      <button class="modal-close" onclick="closeAdTechOrder()" aria-label="Close">✕</button>
+
+      <div class="modal-header">
+        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
+        <h2 id="adtech-modal-title" class="modal-title">AdTech AI Systems</h2>
+        <p class="modal-sub" id="adtech-tier-label">Discovery — $1,500</p>
+      </div>
+
+      <div class="package-selector" id="adTechPackageSelector">
+        <label class="pkg-option" id="adTechTierDiscovery" onclick="selectAdTechTier('discovery')">
+          <div class="pkg-radio" id="adTechRadioDiscovery"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Discovery</span>
+            <span class="pkg-desc">Stack Analysis & AI Blueprint</span>
+          </div>
+          <span class="pkg-price">$1,500</span>
+        </label>
+        <label class="pkg-option" id="adTechTierBuild" onclick="selectAdTechTier('build')">
+          <div class="pkg-radio" id="adTechRadioBuild"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Build & Test</span>
+            <span class="pkg-desc">First Agent Deployment</span>
+          </div>
+          <span class="pkg-price">$3,500</span>
+        </label>
+        <label class="pkg-option" id="adTechTierProduction" onclick="selectAdTechTier('production')">
+          <div class="pkg-radio" id="adTechRadioProduction"></div>
+          <div class="pkg-info">
+            <span class="pkg-name">Production</span>
+            <span class="pkg-desc">Full Autonomous AI Stack</span>
+          </div>
+          <span class="pkg-price">$7,500</span>
+        </label>
+      </div>
+
+      <form class="order-form" id="adTechForm" onsubmit="submitAdTechOrder(event)" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="adTechCompany">Company Name</label>
+            <input type="text" id="adTechCompany" class="form-input" placeholder="e.g. Acme AdTech" required autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="adTechUrl">Website URL</label>
+            <input type="url" id="adTechUrl" class="form-input" placeholder="https://yourcompany.com" required autocomplete="url">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="adTechEmail">Your email</label>
+          <input type="email" id="adTechEmail" class="form-input" placeholder="you@company.com" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="adTechStack">Current AdTech stack</label>
+          <textarea id="adTechStack" class="form-input" placeholder="e.g. DV360, The Trade Desk, AppNexus, custom DSP, etc." rows="3"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="adTechChallenge">Main optimization challenge</label>
+          <textarea id="adTechChallenge" class="form-input" placeholder="e.g. manual bid management, slow reporting, campaign optimization bottlenecks, scaling issues." rows="3" required></textarea>
+        </div>
+        <p class="form-error" id="adTechFormError">Please fill in your company name, website URL, email, and your main challenge.</p>
+        <button type="submit" class="btn-order-submit" id="adTechSubmit">
+          <span class="submit-text">Send inquiry </span>
+          <span class="submit-loading" style="display:none;">⏳ Preparing…</span>
+        </button>
+        <p class="modal-footnote">We'll review your stack details and come back with a tailored assessment within 24 hours.</p>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
