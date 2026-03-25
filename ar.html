@@ -1,612 +1,1105 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarvix — تدقيق رقمي وتوليد عملاء B2B | clarvix.net</title>
-  <meta name="description" content="Clarvix delivers professional Digital Presence Audits and B2B Lead Generation. Find out why you're losing leads and get qualified prospects delivered to your inbox every month.">
-  <meta name="keywords" content="digital presence audit, B2B lead generation, lead conversion audit, digital marketing audit, local business leads, SEO audit, Google Business Profile audit">
+  <title>Clarvix | تدقيق رقمي، عملاء B2B وأنظمة AdTech بالذكاء الاصطناعي</title>
+  <meta name="description" content="تقدم Clarvix تدقيق الحضور الرقمي المدعوم بالبيانات مع Lead Conversion Score، وتوليد عملاء B2B المؤهلين، وأنظمة وكلاء AI المستقلة للإعلانات البرمجية. حقائق. وضوح. تصرف.">
+  <meta name="keywords" content="digital presence audit, lead conversion score, B2B lead generation, AdTech AI, programmatic advertising AI agents, digital marketing audit, website audit">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Clarvix">
-  <link rel="canonical" href="https://www.clarvix.net/ar.html">
-
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <script>
-    var AUDIT_PRICES = { basic: 45, standard: 85, premium: 160 };
-    var CONTACT_EMAIL = 'contact@clarvix.net';
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="order-modal.css">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta property="og:description" content="Find out why you're losing leads. Get a professional Digital Audit or B2B Lead Generation service — delivered in 48 hours.">
+  <link rel="canonical" href="https://clarvix.net/ar.html">
+  <meta property="og:title" content="Clarvix | Digital Audit, B2B Leads & AdTech AI">
+  <meta property="og:description" content="Your website has a score. Your competitors have leads you don't. We fix both — with data.">
+  <meta property="og:url" content="https://clarvix.net/ar.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.clarvix.net/">
-  <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
+  <meta property="og:image" content="https://clarvix.net/images/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta name="twitter:description" content="Find out why you're losing leads. Professional Digital Audit or B2B Lead Generation — delivered in 48 hours.">
-
-  <!-- Hreflang for multilingual SEO -->
-  <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
-  <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
-  <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
-  <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
-
-  <!-- Schema.org structured data -->
+  <link rel="alternate" hreflang="en" href="https://clarvix.net/">
+  <link rel="alternate" hreflang="es" href="https://clarvix.net/es.html">
+  <link rel="alternate" hreflang="he" href="https://clarvix.net/he.html">
+  <link rel="alternate" hreflang="ar" href="https://clarvix.net/ar.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "name": "Clarvix",
-    "url": "https://www.clarvix.net",
-    "logo": "https://www.clarvix.net/images/logo.png",
-    "description": "Clarvix delivers professional Digital Presence Audits and B2B Lead Generation for local businesses.",
-    "address": { "@type": "PostalAddress", "addressLocality": "Online", "addressCountry": "US" },
-    "priceRange": "$45 - $999",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Clarvix Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Digital Presence Audit",
-            "description": "Professional Lead Conversion Digital Audit — score your business across 8 categories, get 10 findings and a 30-day action plan."
-          },
-          "price": "45",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "B2B Lead Generation",
-            "description": "Monthly delivery of qualified B2B leads matching your ideal customer profile in EN, ES, HE, and AR markets."
-          },
-          "price": "299",
-          "priceCurrency": "USD"
-        }
-      ]
-    }
+    "url": "https://clarvix.net",
+    "email": "contact@clarvix.net",
+    "description": "Digital presence audits, B2B lead generation, and AI systems for programmatic advertising",
+    "slogan": "Facts. Clarity. Action.",
+    "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],
+    "serviceType": ["Digital Marketing Audit","توليد عملاء B2B","AdTech AI Development"]
   }
   </script>
-
-  <!-- Apollo Website Tracker -->
-  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
-
+  <link rel="stylesheet" href="style.css">
+  <style>
+/* RTL layout overrides */
+.nav-inner { direction: rtl; }
+.nav-links { flex-direction: row-reverse; }
+.nav-right { flex-direction: row-reverse; }
+.hero-grid { direction: rtl; }
+.hero-content { text-align: right; }
+.hero-actions { justify-content: flex-start; }
+.hero-stats { justify-content: flex-start; }
+.detail-grid { direction: rtl; }
+.detail-grid.rev { direction: ltr; }
+.feat-item { flex-direction: row-reverse; text-align: right; }
+.feat-txt { text-align: right; }
+.svc-card { text-align: right; }
+.svc-tags { justify-content: flex-end; }
+.pricing-acc-header { flex-direction: row-reverse; }
+.acc-arrow { transform: rotate(90deg); }
+.pricing-acc-header.active .acc-arrow { transform: rotate(0deg); }
+.p-features { padding-right: 0; }
+.p-feat { flex-direction: row-reverse; }
+.contact-grid { direction: rtl; }
+.contact-points { direction: rtl; }
+.c-point { flex-direction: row-reverse; }
+.c-txt { text-align: right; }
+.form-row2 { direction: rtl; }
+.form-group label { text-align: right; display: block; }
+.step { text-align: right; }
+.faq-q { text-align: right; }
+.faq-a { text-align: right; }
+.footer-grid { direction: rtl; }
+.footer-links { text-align: right; }
+.footer-bottom { direction: rtl; }
+.deliverable-item { flex-direction: row-reverse; }
+.deliv-text { text-align: right; }
+.agent-item { flex-direction: row-reverse; text-align: right; }
+.agent-txt { text-align: right; }
+.stack-tags { justify-content: flex-end; }
+  </style>
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <div class="logo">
-        <img src="images/logo.png" alt="Clarvix" class="logo-img">
-        <span class="logo-tag">تدقيق رقمي وتوليد عملاء</span>
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+      <span class="logo-text">Clarvix</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">الخدمات</a></li>
+      <li><a href="#pricing">الأسعار</a></li>
+      <li><a href="#how">كيف يعمل</a></li>
+      <li><a href="/blog">المدونة</a></li>
+      <li><a href="#contact">تواصل معنا</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <a href="/">EN</a>
+        <a href="/es.html">ES</a>
+        <a href="/he.html">HE</a>
+        <a href="/ar.html" class="active">AR</a>
       </div>
-      <div class="nav-right">
-        <a href="#services" class="nav-link">الخدمات</a>
-        <a href="#pricing" class="nav-link">الأسعار</a>
-        <a href="#how-it-works" class="nav-link">كيف يعمل</a>
-        <a href="/blog/" class="nav-link">المدونة</a>
-        <a href="#contact" class="nav-link">اتصل بنا</a>
-        <div class="lang-toggle">
-          <a href="index.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
-          <a href="es.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
-          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
-          <a href="ar.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
-        </div>
-        <button class="btn-primary" onclick="openOrder()">ابدأ الآن ←</button>
-      </div>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">ابدأ الآن ←</a>
+    </div>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#how">How it works</a>
+    <a href="/blog">Blog</a>
+    <a href="#contact">Contact</a>
+    <div class="lang-switcher">
+      <a href="/" class="active">EN</a>
+      <a href="/es.html">ES</a>
+      <a href="/he.html">HE</a>
+      <a href="/ar.html">AR</a>
+    </div>
+    <a href="#contact" class="btn btn-primary btn-full">ابدأ الآن ←</a>
+  </div>
+</nav>
 
-      <!-- SERVICE 3: ADTECH AI SYSTEMS -->
-      <div style="margin-top:32px">
-        <div class="service-card">
-          <div class="service-card-icon">🤖</div>
-          <div class="service-card-tag">أنظمة الذكاء الاصطناعي للإعلانات</div>
-          <h3 class="service-card-title">وكلاء AI مستقلون — إيرادات 24/7 بدون توقف.</h3>
-          <p class="service-card-desc">
-            المرحلة 1 من 3: بناء وكلاء AI مستقلين لشركات AdTech والإعلانات البرمجية — أتمتة الحملات,
-            تقارير فورية وتكاملات MCP تومّد إيراداڪ عمى مسار الساعة.
-          </p>
-          <div class="leadgen-stats">
-            <div class="lg-stat"><div class="lg-stat-num">3+</div><div class="lg-stat-label">عملاء نشطون</div></div>
-            <div class="lg-stat"><div class="lg-stat-num">24/7</div><div class="lg-stat-label">توفر</div></div>
-            <div class="lg-stat"><div class="lg-stat-num">MCP</div><div class="lg-stat-label">تكاملات</div></div>
-            <div class="lg-stat"><div class="lg-stat-num">$1.5k+</div><div class="lg-stat-label">سعر البداية</div></div>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span>🎯</span> ذكاء رقمي للشركات التي تريد الفوز
+        </div>
+        <h1 class="hero-title">
+          منافسوك<br><em>يسرقون عملاءك</em>.
+        </h1>
+        <p class="hero-sub">
+          تقدم Clarvix البيانات الدقيقة حول سبب عدم تحويل حضورك الرقمي، وعملاء B2B المؤهلين الذين يحتاجهم فريق مبيعاتك، وأنظمة الذكاء الاصطناعي لأتمتة عائداتك الإعلانية.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">احصل على عينة تدقيق مجانية ←</a>
+          <a href="#services" class="btn btn-ghost btn-lg">استكشف خدماتنا</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">8</div>
+            <div class="stat-lbl">فئات التدقيق</div>
           </div>
-          <a href="/adtech-ai-ar.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">اقرأ اممزيد </a>
-        </div>
-      </div>
-
-    </div>
-  </nav>
-
-  <!-- HERO — short, punchy, direct -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="container hero-content">
-      <div class="badge-pill">🔍 تدقيق رقمي وتوليد عملاء B2B</div>
-      <h1 class="hero-title">
-        <span>أنت تخسر عملاء محتملين</span><br>
-        <span class="highlight">كل يوم.</span>
-      </h1>
-      <p class="hero-sub">نكتشف السبب بالضبط ونصلحه. تقوم Clarvix بتدقيق حضورك الرقمي وتوصيل عملاء B2B مؤهلين مباشرة إلى خط مبيعاتك.</p>
-      <div class="hero-ctas">
-        <button class="btn-primary btn-lg" onclick="openOrder()">احصل على تدقيقي ←</button>
-        <a href="#services" class="btn-ghost">انظر خدماتنا ↓</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">8</span>
-          <span class="stat-label">فئات التدقيق</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">48h</span>
-          <span class="stat-label">التسليم</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">4</span>
-          <span class="stat-label">اللغات</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">مدعوم بالبيانات</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-image-wrap">
-      <img src="images/hero_dashboard.png" alt="Clarvix Audit Dashboard" class="hero-img" loading="eager">
-      <div class="hero-img-glow"></div>
-    </div>
-  </section>
-
-  <!-- SERVICES — two cards, side by side, immediately visible -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-tag center">خدماتنا</div>
-      <h2 class="section-title center">ثلاث حزم مميزة لاستعادة الإيرادات</h2>
-      <p class="section-sub center" style="max-width:600px;margin:0 auto 56px">اختر الخدمة التي تناسب مكان فقدان الأموال لديك: تسربات تحقيق الدخل، فجوات تدفق العملاء المحتملين، أو فرص التحويل. كل خدمة مستقلة.</p>
-
-      <div class="services-two-col">
-
-        <!-- SERVICE 1: AUDIT -->
-        <div class="service-card">
-          <div class="service-card-icon">🔍</div>
-          <div class="service-card-tag">تدقيق الحضور الرقمي</div>
-          <h3 class="service-card-title">موقعك يفقد عملاء محتملين. نريك أين بالضبط.</h3>
-          <p class="service-card-desc">نقيّم عملك عبر 8 أبعاد حرجة — السرعة والتتبع والتحويل والحضور المحلي والثقة والمزيد. تحصل على PDF احترافي مع نقاطك و10 نتائج ذات أولوية ومقارنة بالمنافسين وخطة عمل لمدة 30 يومًا.</p>
-          <div class="score-preview">
-            <div class="score-bar-item">
-              <span class="sbi-label">التتبع والإسناد</span>
-              <div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div>
-              <span class="sbi-val red">3/15</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">قمع التحويل</span>
-              <div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div>
-              <span class="sbi-val amber">8/20</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">الحضور المحلي</span>
-              <div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div>
-              <span class="sbi-val red">5/15</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">الأمان والثقة</span>
-              <div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div>
-              <span class="sbi-val green">6/10</span>
-            </div>
+          <div>
+            <div class="stat-num">48h</div>
+            <div class="stat-lbl">التسليم</div>
           </div>
-          <a href="/digital-presence-audit.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">انظر خطط التدقيق ←</a>
+          <div>
+            <div class="stat-num">4</div>
+            <div class="stat-lbl">الأسواق المخدومة</div>
+          </div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">مدعوم بالبيانات</div>
+          </div>
         </div>
+      </div>
 
-        <!-- SERVICE 2: LEAD GEN -->
-        <div class="service-card service-card-leadgen">
-          <div class="service-card-icon">🚀</div>
-          <div class="service-card-tag">توليد عملاء B2B</div>
-          <h3 class="service-card-title">توقف عن انتظار العملاء المحتملين. احصل عليهم كل شهر.</h3>
-          <p class="service-card-desc">نحدد ونؤهل ونوصل عملاء B2B يتطابقون مع ملف عميلك المثالي — الاسم والشركة والدور والبريد الإلكتروني المُتحقق منه. نعمل في أسواق الإنجليزية والإسبانية والعبرية والعربية. فريق المبيعات الخاص بك يُغلق الصفقات. نحن نبحث عن العملاء.</p>
-          <div class="leadgen-stats">
-            <div class="lg-stat">
-              <div class="lg-stat-num">10–60</div>
-              <div class="lg-stat-label">عملاء / شهر</div>
+      <!-- Score card visual -->
+      <div class="hero-visual">
+        <div class="score-card">
+          <div class="score-top">
+            <div>
+              <div class="score-label">Lead Conversion Score</div>
+              <div class="score-num critical">47<span style="font-size:1.4rem;opacity:0.5">/100</span></div>
             </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">4</div>
-              <div class="lg-stat-label">لغات</div>
+            <span class="badge badge-gold">تقرير نموذجي</span>
+          </div>
+          <div class="score-status critical">⚠ حرج — فقدان العملاء النشط</div>
+          <div class="score-bars">
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">قمع التحويل</span><span class="bar-pts" style="color:var(--danger)">7/20</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:35%"></div></div>
             </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">100%</div>
-              <div class="lg-stat-label">موثق</div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">التتبع والنسب</span><span class="bar-pts" style="color:var(--danger)">2/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:13%"></div></div>
             </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">ICP</div>
-              <div class="lg-stat-label">مستهدف</div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">سرعة الصفحة وتجربة المستخدم</span><span class="bar-pts" style="color:var(--warn)">8/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:53%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">الحضور المحلي (GBP)</span><span class="bar-pts" style="color:var(--warn)">9/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">وضوح العرض</span><span class="bar-pts" style="color:var(--danger)">4/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:40%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">تحسين محركات البحث التقني</span><span class="bar-pts" style="color:var(--success)">8/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-g" style="width:80%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">الثقة والأمان</span><span class="bar-pts" style="color:var(--warn)">6/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">سرعة استجابة العميل</span><span class="bar-pts" style="color:var(--danger)">3/5</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
             </div>
           </div>
-          <a href="/lead-engine.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">انظر خطط توليد العملاء ←</a>
+          <div class="score-footer">
+            <span class="score-domain">example-business.com</span>
+            <span class="score-tag">10 ممتازة حاسمة →</span>
+          </div>
         </div>
-
+        <div class="float-el float-1">📊 <span>مقابل 3 منافسين</span></div>
+        <div class="float-el float-2">✅ <span>خطة العمل لمدة 30 يوماً</span></div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- AUDIT PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-tag center">تدقيق الحضور الرقمي</div>
-      <h2 class="section-title center">شاهد الحزم في الصفحة المخصصة</h2>
-      <p class="section-sub center" style="max-width:560px;margin:0 auto 24px">اختر مستوى التدقيق المناسب لهدفك وابدأ الطلب من الصفحة المخصصة.</p>
-      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:0 auto 48px;">
-        <a href="/digital-presence-audit.html#pricing" class="btn-primary btn-xl" style="display:inline-flex;align-items:center;gap:8px">عرض خطط التدقيق →</a>
+<!-- ===== SERVICES OVERVIEW ===== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">ما نقدمه</span>
+      <h2>ثلاث خدمات. هدف واحد:<br>المزيد من الإيرادات لعملك.</h2>
+      <p>سواء كنت بحاجة إلى إصلاح حضورك الرقمي، أو ملء خط الأنابيب الخاص بك في المبيعات، أو أتمتة عائداتك الإعلانية باستخدام AI - Clarvix توفر.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card svc-1">
+        <div class="svc-icon svc-icon-1">🔍</div>
+        <h3>تدقيق الحضور الرقمي</h3>
+        <p>نقيّم موقعك الإلكتروني عبر 8 أبعاد حرجة ونوضح لك بالضبط سبب خسارة العملاء المحتملين - مع البيانات والمعايير وخطة الإصلاح لمدة 30 يوماً.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Lead Conversion Score</span>
+          <span class="svc-tag">معيار المنافس</span>
+          <span class="svc-tag">PDF Report</span>
+          <span class="svc-tag">التسليم 48 ساعة</span>
+        </div>
+        <a href="#audit" class="svc-link">تعرف على المزيد ←</a>
       </div>
-      <div class="pricing-cards" style="display:none">
-
-        <!-- BASIC -->
-        <div class="pricing-card">
-          <div class="pricing-tier">أساسي</div>
-          <div class="pricing-price">$45</div>
-          <div class="pricing-sub">تدقيق تحويل العملاء — التشخيص الأساسي</div>
-          <ul class="pricing-features">
-            <li class="bold">يشمل:</li>
-            <li>نقاط 0–100 (8 فئات)</li>
-            <li>تحليل PageSpeed (موبايل + سطح المكتب)</li>
-            <li>مراجعة النماذج وCTA والاحتكاك</li>
-            <li>التحقق من التتبع (GA4, Pixel)</li>
-            <li>مراجعة GBP أساسية</li>
-            <li>5 نتائج ذات أولوية</li>
-            <li>خطة عمل لمدة 14 يومًا</li>
-            <li>PDF احترافي (8–10 صفحات)</li>
-            <li class="bold cross-title">لا يشمل:</li>
-            <li class="cross">مقارنة معمقة بالمنافسين</li>
-            <li class="cross">10 نتائج كاملة</li>
-            <li class="cross">خطة 30 يوم كاملة</li>
-            <li class="cross">دعم ما بعد التدقيق</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">اطلب الآن ←</button>
+      <div class="svc-card svc-2">
+        <div class="svc-icon svc-icon-2">🚀</div>
+        <h3>توليد عملاء B2B</h3>
+        <p>يحدد وكلاء الذكاء الاصطناعي لدينا عملاءك المثاليين ويسلمهم إليك شهرياً مع الاسم والشركة والمسمى الوظيفي والبريد الإلكتروني. أنت تغلق الصفقات. يملأ وكلاؤنا خط الأنابيب.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">استهداف ICP</span>
+          <span class="svc-tag">يعمل بواسطة وكيل AI</span>
+          <span class="svc-tag">التسليم الشهري</span>
+          <span class="svc-tag">تم التحقق من البريد الإلكتروني</span>
         </div>
-
-        <!-- STANDARD -->
-        <div class="pricing-card premium">
-          <div class="pricing-badge">الأكثر شعبية</div>
-          <div class="pricing-tier">قياسي</div>
-          <div class="pricing-price">$85</div>
-          <div class="pricing-sub">تدقيق كامل + مقارنة تنافسية</div>
-          <ul class="pricing-features">
-            <li class="bold">كل ما في الأساسي، بالإضافة إلى:</li>
-            <li>تحليل 3 منافسين</li>
-            <li>مقارنة (10 مقاييس)</li>
-            <li>10 نتائج منظمة</li>
-            <li>خطة عمل كاملة لمدة 30 يومًا</li>
-            <li>نقاط الهدف المتوقعة</li>
-            <li>أولوية حرجة / مهمة / موصى بها</li>
-            <li>تحديد 'تسريبات العملاء'</li>
-            <li>مراجعة SEO تقنية أساسية</li>
-            <li>PDF كامل (10–12 صفحة)</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">اطلب الآن ←</button>
+        <a href="#leads" class="svc-link">تعرف على المزيد ←</a>
+      </div>
+      <div class="svc-card svc-3">
+        <div class="svc-icon svc-icon-3">🤖</div>
+        <h3>أنظمة AdTech بالذكاء الاصطناعي</h3>
+        <p>نبني هياكل وكلاء ذكاء اصطناعي مستقلة لشركات الإعلانات البرمجية - تحسين الإيرادات واكتشاف الشذوذ وإدارة المخزون بشكل تلقائي.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">CrewAI / LangGraph</span>
+          <span class="svc-tag">تكامل MCP</span>
+          <span class="svc-tag">جاهز للإنتاج</span>
+          <span class="svc-tag">الوكلاء المخصصون</span>
         </div>
-
-        <!-- PREMIUM -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$160</div>
-          <div class="pricing-sub">تدقيق استراتيجي للحضور الرقمي</div>
-          <ul class="pricing-features">
-            <li class="bold">كل ما في القياسي، بالإضافة إلى:</li>
-            <li>تحليل معمق لقمع التحويل</li>
-            <li>تقييم الرسائل والمميزات الاستراتيجية</li>
-            <li>مراجعة متقدمة لنية البحث</li>
-            <li>خريطة احتكاك المستخدم</li>
-            <li>مراجعة السرعة مع شرح تقني</li>
-            <li>خطة استراتيجية 30 + 60 يومًا</li>
-            <li>توصيات أدوات محددة</li>
-            <li>مستند مكافأة: 'تفصيل أولويات التنفيذ'</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">اطلب الآن ←</button>
-        </div>
-
+        <a href="#adtech" class="svc-link">تعرف على المزيد ←</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- LEAD GEN PRICING -->
-  <section class="pricing" id="leadgen-pricing" style="padding-top:0">
-    <div class="container">
-      <div class="section-tag center">توليد عملاء B2B</div>
-      <h2 class="section-title center">شاهد الحزم في الصفحة المخصصة</h2>
-      <p class="section-sub center" style="max-width:560px;margin:0 auto 24px">ابدأ استفسارك الشهري لتوليد العملاء من الصفحة المخصصة.</p>
-      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:0 auto 48px;">
-        <a href="/lead-engine.html#leadgen-pricing" class="btn-primary btn-xl" style="display:inline-flex;align-items:center;gap:8px">عرض خطط توليد العملاء →</a>
-      </div>
-      <div class="pricing-cards" style="display:none">
-
-        <!-- STARTER -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$299</div>
-          <div class="pricing-price-period">/ شهر</div>
-          <div class="pricing-sub">10–15 عميل B2B مؤهل</div>
-          <ul class="pricing-features">
-            <li class="bold">يشمل:</li>
-            <li>10–15 عميل موثق/شهر</li>
-            <li>جلسة تحديد ICP (ساعة)</li>
-            <li>تقرير تسليم شهري</li>
-            <li>الاسم، الشركة، الدور، البريد الإلكتروني</li>
-            <li>أسواق EN / ES / HE / AR</li>
-            <li>بيانات Google Maps</li>
-            <li class="bold cross-title">لا يشمل:</li>
-            <li class="cross">رابط ملف LinkedIn</li>
-            <li class="cross">تسجيل إشارات النية</li>
-            <li class="cross">استخبارات المنافسين</li>
-            <li class="cross">تقارير أسبوعية</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/شهر')">Order Now →</button>
-        </div>
-
-        <!-- PROFESSIONAL -->
-        <div class="pricing-card premium">
-          <div class="pricing-badge">الأكثر شعبية</div>
-          <div class="pricing-tier">Professional</div>
-          <div class="pricing-price">$549</div>
-          <div class="pricing-price-period">/ شهر</div>
-          <div class="pricing-sub">20–30 عميل B2B مؤهل</div>
-          <ul class="pricing-features">
-            <li class="bold">كل ما في Starter، بالإضافة إلى:</li>
-            <li>20–30 عميل موثق/شهر</li>
-            <li>رابط ملف LinkedIn مشمول</li>
-            <li>تسجيل إشارات النية</li>
-            <li>تقرير استخبارات المنافسين</li>
-            <li>تقارير تسليم أسبوعية</li>
-            <li>التحقق من البريد الإلكتروني (بدون ارتداد)</li>
-            <li>دعم ذو أولوية (استجابة 24 ساعة)</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/شهر')">Order Now →</button>
-        </div>
-
-        <!-- ENTERPRISE -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Enterprise</div>
-          <div class="pricing-price">$999</div>
-          <div class="pricing-price-period">/ شهر</div>
-          <div class="pricing-sub">40–60 عميل B2B مؤهل</div>
-          <ul class="pricing-features">
-            <li class="bold">كل ما في Professional، بالإضافة إلى:</li>
-            <li>40–60 عميل موثق/شهر</li>
-            <li>تحليل متقدم للمنافسين</li>
-            <li>تحديثات يومية لخط المبيعات</li>
-            <li>مكالمات استشارية مباشرة (2/شهر)</li>
-            <li>تنسيق جاهز لـ CRM</li>
-            <li>مدير حساب مخصص</li>
-            <li>استهداف متعدد الصناعات</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/شهر')">Order Now →</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-tag center">العملية</div>
-      <h2 class="section-title center">من الطلب إلى الرؤى في 48 ساعة</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>تضع الطلب</h3>
-          <p>شارك رابط موقعك واسم عملك. ادفع بأمان. هذا كل ما نحتاجه للبدء.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>نُجري التدقيق الكامل</h3>
-          <p>نحلل 8 فئات حرجة باستخدام PageSpeed Insights وGoogle والفحص اليدوي. كل نقطة بيانات حقيقية وقابلة للتحقق.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>تستلم تقريرك</h3>
-          <p>PDF احترافي مع نقاط تحويل العملاء لديك وأهم النتائج ومقارنة المنافسين وخطة عمل لمدة 30 يومًا.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h3>تتخذ الإجراء</h3>
-          <p>استخدم الخطة بنفسك أو سلمها لمطورك. كل إصلاح موصوف بلغة بسيطة مع الجهد والتأثير المقدرين.</p>
+<!-- ===== SERVICE 1: AUDIT ===== -->
+<section id="audit" class="detail-section alt">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge badge-blue">Service 01 — تدقيق الحضور الرقمي</span>
+        <h2>موقعك الإلكتروني له درجة.<br>أنت فقط لا تعرفها <span class="highlight">حتى الآن</span>.</h2>
+        <p>يشعر معظم أصحاب الأعمال أن شيئاً خاطئاً في حضورهم الرقمي لكن لا يستطيعون وضع رقم عليه. Clarvix تعطيك درجة تحويل العملاء من 0 إلى 100 - والخريطة الدقيقة لإصلاحها.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Lead Conversion Score (0–100)</strong>
+              <span>8 categories analyzed: speed, tracking, funnel, SEO, local presence, trust, offer clarity, response time.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Top 10 Critical Findings</strong>
+              <span>Each finding has evidence, business impact, a concrete fix, and effort estimate.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Competitor Benchmark</strong>
+              <span>We compare you against 3 direct competitors across 10 metrics. See exactly where you're losing.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>30-Day Action Plan</strong>
+              <span>Prioritized by impact and effort. CRITICAL items first. No fluff. Just what to do and in what order.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Professional 10-Page PDF</strong>
+              <span>Delivered in 48 hours. Presentable to your team, investor, or agency.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary">See Pricing →</a>
+          <a href="#contact" class="btn btn-ghost">Get a Free Sample</a>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section class="video-section" id="video">
-    <div class="container">
-      <div class="section-tag center">شاهده في العمل</div>
-      <h2 class="section-title center">شاهد كيف يعمل تدقيق Clarvix</h2>
-      <div class="video-wrapper">
-        <div class="video-placeholder-box" id="video-placeholder">
-          <div class="vp-content">
-            <div class="vp-icon">🎬</div>
-            <div class="vp-title">جولة فيديو</div>
-            <div class="vp-sub">قريبًا — جولة كاملة في تقرير تدقيق Clarvix حقيقي.<br>تفصيل النقاط والنتائج ومقارنة المنافسين وخطة العمل لمدة 30 يومًا.</div>
-            <div class="vp-badge">🔔 متاح قريبًا</div>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot dot-r"></div>
+            <div class="panel-dot dot-y"></div>
+            <div class="panel-dot dot-g"></div>
+            <h4>Your 10-Page Audit Report</h4>
+          </div>
+          <div class="deliverable-list">
+            <div class="deliverable-item">
+              <span class="deliv-icon">📋</span>
+              <div class="deliv-text">
+                <strong>Cover Page</strong>
+                <span>Business name, score, date, status (Critical / Needs Work / Good)</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">📊</span>
+              <div class="deliv-text">
+                <strong>Executive Summary</strong>
+                <span>4 KPIs, diagnostic text, PageSpeed table</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">📈</span>
+              <div class="deliv-text">
+                <strong>Score Breakdown</strong>
+                <span>8 colored progress bars + total score box</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">🔍</span>
+              <div class="deliv-text">
+                <strong>Top 10 Findings (4 pages)</strong>
+                <span>EXISTS / MISSING / IMPACT / FIX / EFFORT per finding</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">⚔️</span>
+              <div class="deliv-text">
+                <strong>Competitor Benchmark</strong>
+                <span>You مقابل 3 منافسين across 10 metrics</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">🗓️</span>
+              <div class="deliv-text">
+                <strong>30-Day Action Plan</strong>
+                <span>Prioritized actions with days and responsible party</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">⚡</span>
+              <div class="deliv-text">
+                <strong>Next Steps Page</strong>
+                <span>3 concrete actions: Tracking setup / Quick Wins / Monthly monitoring</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-tag center">اتصل بنا</div>
-      <h2 class="section-title">هل أنت مستعد؟ لنتحدث.</h2>
-      <div class="contact-layout">
-        <div class="contact-info-col">
-          <div class="c-info-item"><div class="c-info-icon" style="display:flex;align-items:center;justify-content:center;font-size:20px">✉️</div><div><div style="font-size:12px;color:var(--text-dim);margin-bottom:4px">البريد الإلكتروني</div><div style="color:var(--white);font-weight:500">contact@clarvix.net</div></div></div>
-          <div class="c-info-item"><div class="c-info-icon" style="display:flex;align-items:center;justify-content:center;font-size:20px">⚡</div><div><div style="font-size:12px;color:var(--text-dim);margin-bottom:4px">وقت الاستجابة</div><div style="color:var(--white);font-weight:500">خلال 24 ساعة</div></div></div>
-          <div class="c-info-item"><div class="c-info-icon" style="display:flex;align-items:center;justify-content:center;font-size:20px">🌍</div><div><div style="font-size:12px;color:var(--text-dim);margin-bottom:4px">الأسواق</div><div style="color:var(--white);font-weight:500">إسرا٦يل / LATAM / عالمي</div></div></div>
-          <div class="c-info-item"><div class="c-info-icon" style="display:flex;align-items:center;justify-content:center;font-size:20px">⭐</div><div><div style="font-size:12px;color:var(--text-dim);margin-bottom:4px">Fiverr</div><a href="https://www.fiverr.com/clarvix" target="_blank" style="color:var(--cyan);font-weight:500">fiverr.com/clarvix</a></div></div>
-        </div>
-        <div class="contact-form-col" id="contactFormWrap">
-          <form id="contactForm" action="https://formspree.io/f/REPLACE_FORMSPREE_ID" method="POST">
-            <input type="hidden" name="_subject" value="New Clarvix Inquiry — clarvix.net">
-            <div class="form-row">
-              <div class="form-group"><input type="text" name="name" placeholder="الاسم الكامل" required class="form-input"></div>
-              <div class="form-group"><input type="email" name="email" placeholder="البريد الإلكتروني" required class="form-input"></div>
+<!-- ===== SERVICE 2: LEADS ===== -->
+<section id="leads" class="detail-section">
+  <div class="container">
+    <div class="detail-grid rev">
+      <div class="detail-content">
+        <span class="badge badge-green">Service 02 — توليد عملاء B2B</span>
+        <h2>AI agents working 24/7<br>to fill your <span class="highlight">pipeline</span>.</h2>
+        <p>Our autonomous AI agents identify, enrich, and verify your ideal prospects — so your sales team spends 100% of their time closing, not hunting. Delivered monthly. Ready to use.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>AI-Powered ICP Targeting</strong>
+              <span>Our agents define and hunt your ideal client profile — industry, company size, decision-maker role, geography — with machine precision.</span>
             </div>
-            <div class="form-group"><input type="text" name="company" placeholder="الشركة (اختياري)" class="form-input"></div>
-            <div class="form-group"><select name="service" class="form-input form-select"><option value="">اختر الخدمة...</option><option value="audit">تدقيق الحضور الرقمي</option><option value="leadgen">توليد عملاء B2B</option><option value="adtech">أنظمة AI للإعلانات البرمجية</option><option value="other">غير متأكد / استشارة</option></select></div>
-            <div class="form-group"><textarea name="message" placeholder="كيف يمكننا المساعدة؟" rows="4" required class="form-input form-textarea"></textarea></div>
-            <button type="submit" class="btn-primary btn-full" id="contactSubmitBtn">إرسال الرسالة →</button>
-          </form>
-          <div id="contactSuccess" style="display:none;" class="contact-success-msg">✅ تم استلام رسالتك! سنعود إليك قريباً.</div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Verified Contact Data</strong>
+              <span>Name, company, title, business email, LinkedIn URL. Bounce-tested and verified. Not scraped junk.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Monthly CSV Delivery</strong>
+              <span>Clean spreadsheet delivered to your inbox. Ready to import into any CRM.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Weekly Progress Reports</strong>
+              <span>Available on Professional and Enterprise plans. Know exactly what's being built.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary" style="background:var(--success);">See Lead Plans →</a>
+          <a href="#contact" class="btn btn-ghost">Talk to Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot dot-g"></div>
+            <h4>Sample Lead Delivery</h4>
+          </div>
+          <div class="lead-stats">
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">40–60</div>
+              <div class="lead-stat-lbl">Verified leads/mo (Enterprise)</div>
+              <div class="lead-stat-badge"><span class="badge badge-green">Enterprise</span></div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">10–15</div>
+              <div class="lead-stat-lbl">Verified leads/mo (Starter)</div>
+              <div class="lead-stat-badge"><span class="badge badge-blue">Starter</span></div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">6</div>
+              <div class="lead-stat-lbl">Data fields per lead</div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">100%</div>
+              <div class="lead-stat-lbl">Email verified</div>
+            </div>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.7px;color:var(--text-dim);margin-bottom:12px;">What each lead includes</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="deliverable-item">
+                <span class="deliv-icon">👤</span>
+                <div class="deliv-text"><strong>Full name & professional title</strong><span>CEO, Marketing Director, CTO, etc.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">🏢</span>
+                <div class="deliv-text"><strong>Company name & size range</strong><span>Industry, employees, revenue est.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">📧</span>
+                <div class="deliv-text"><strong>Verified business email</strong><span>Bounce-tested. No personal addresses.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">💼</span>
+                <div class="deliv-text"><strong>LinkedIn profile URL</strong><span>For warm outreach and social proof.</span></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FINAL CTA -->
-  <section class="cta-section" id="cta">
-    <div class="cta-glow"></div>
-    <div class="container cta-inner">
-      <h2 class="cta-title">هل أنت مستعد للتوقف عن خسارة العملاء؟</h2>
-      <p class="cta-sub">احصل على نقاط تحويل العملاء و10 نتائج حرجة وخطة عمل لمدة 30 يومًا. يُسلَّم في 48 ساعة.</p>
-      <div class="cta-buttons">
-        <button class="btn-primary btn-xl" onclick="openOrder()">احصل على تدقيقي ←</button>
-        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">أسئلة؟ راسلنا</a>
+<!-- ===== SERVICE 3: ADTECH AI ===== -->
+<section id="adtech" class="detail-section alt">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge badge-purple">Service 03 — أنظمة AdTech بالذكاء الاصطناعي</span>
+        <h2>AI agents that optimize<br>your ad revenue <span class="highlight">24/7</span>.</h2>
+        <p>We build custom autonomous AI agent systems for programmatic advertising companies. Revenue optimization, anomaly detection, inventory allocation — all running on autopilot while you scale.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Revenue Optimization Agents</strong>
+              <span>Maximize yield from publisher inventory across multiple SSPs automatically.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Anomaly Detection Agents</strong>
+              <span>Catch revenue drops, traffic spikes, and bid irregularities before they hurt your bottom line.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Inventory Allocation Agents</strong>
+              <span>Intelligent distribution of inventory across demand sources for maximum fill rate and eCPM.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>MCP & RAG Integration</strong>
+              <span>We build on your existing data infrastructure — proprietary MCP servers, SQL databases, APIs.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Production Deployment</strong>
+              <span>FastAPI backends, Docker/K8s, Slack bot integration. From scaffold to production.</span>
+            </div>
+          </li>
+        </ul>
+        <div style="margin-top:4px;font-size:0.83rem;color:var(--text-muted);margin-bottom:28px;">
+          Built for: SSPs, DSPs, Publisher Networks, Ad Networks, Yield Management Teams
+        </div>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary" style="background:var(--purple);">See AdTech Plans →</a>
+          <a href="#contact" class="btn btn-ghost">Book a Discovery Call</a>
+        </div>
       </div>
-      <p class="cta-email">contact@clarvix.net</p>
-      <div class="cta-tagline">
-        <span class="dot red-dot"></span>
-        <span class="dot amber-dot"></span>
-        <span class="dot green-dot"></span>
-        <span class="tagline-text">حقائق. وضوح. عمل.</span>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot" style="background:var(--purple)"></div>
+            <h4>Agent Architecture — Sample</h4>
+          </div>
+          <div class="agent-panel">
+            <div class="agent-item">
+              <div class="agent-icon a-ico-p">📈</div>
+              <div class="agent-txt">
+                <strong>Revenue Optimizer Agent</strong>
+                <span>Monitors floor prices, eCPMs, demand patterns → adjusts in real time</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon a-ico-b">🚨</div>
+              <div class="agent-txt">
+                <strong>Anomaly Detector Agent</strong>
+                <span>Watches traffic, fill rates, revenue — alerts on deviations ≥ 15%</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon a-ico-g">⚖️</div>
+              <div class="agent-txt">
+                <strong>Inventory Allocator Agent</strong>
+                <span>Distributes supply across SSPs to maximize yield per impression</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon" style="background:rgba(245,158,11,0.12);font-size:1rem;">💬</div>
+              <div class="agent-txt">
+                <strong>Slack Report Bot</strong>
+                <span>Daily summaries + real-time alerts to your team channel</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+          </div>
+          <div class="stack-tags">
+            <span class="stack-tag">CrewAI</span>
+            <span class="stack-tag">LangGraph</span>
+            <span class="stack-tag">MCP</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">SQLite / PostgreSQL</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">RAG</span>
+            <span class="stack-tag">Slack API</span>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-gold">Pricing</span>
+      <h2>Transparent pricing.<br>Real results.</h2>
+      <p>No retainers. No vague deliverables. You know exactly what you pay and what you get.</p>
+    </div>
+    <div class="pricing-panels">
+      <!-- AUDIT PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header active" onclick="toggleAccordion('audit-p', this)">
+          <span class="acc-icon">🔍</span>
+          <span class="acc-title">تدقيق الحضور الرقمي</span>
+          <span class="acc-range">$45 – $160 <span style="font-size:0.75rem;opacity:0.6">one-time</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="audit-p" class="acc-panel open">
+        <div class="pricing-grid">
+          <div class="p-card">
+            <div class="p-tier">Basic</div>
+            <div class="p-name">Starter Audit</div>
+            <div class="p-desc">Perfect for a first diagnosis. Delivered in 48 hours.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">45</span></div>
+            <div class="p-period">one-time</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Lead Conversion Score (0–100)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>8-category analysis</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Top 10 findings with fixes</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>10-page professional PDF</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>48-hour delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Competitor benchmark</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Most Popular</span>
+            <div class="p-tier">Standard</div>
+            <div class="p-name">Complete Audit</div>
+            <div class="p-desc">Full audit + competitor benchmark. Most clients choose this.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">85</span></div>
+            <div class="p-period">one-time</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Starter</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Competitor benchmark (3 competitors)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30-day prioritized action plan</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>PageSpeed full data table</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>5-day delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Premium</div>
+            <div class="p-name">Full Intelligence</div>
+            <div class="p-desc">Complete audit + video walkthrough + implementation call.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">160</span></div>
+            <div class="p-period">one-time</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Complete</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>8–12 min video walkthrough (Loom)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30-min Q&A implementation call</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Priority delivery (3 days)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Upsell: Monthly monitoring available</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
+          Also available on <a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> ·
+          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($79–$149) and <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($59–$99) add-ons.
+          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM &amp; worldwide. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel audit-p -->
+      </div><!-- end accordion-item -->
+
+      <!-- LEADS PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('leads-p', this)">
+          <span class="acc-icon">🚀</span>
+          <span class="acc-title">توليد عملاء B2B</span>
+          <span class="acc-range">$149 – $999 <span style="font-size:0.75rem;opacity:0.6">per month</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="leads-p" class="acc-panel">
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">
+          🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Accessible plans for businesses in Latin America &amp; emerging markets.
+        </p>
+        <div class="pricing-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+          <div class="p-card">
+            <div class="p-tier">LATAM</div>
+            <div class="p-name">Lead Micro</div>
+            <div class="p-desc">Entry point for small businesses. First qualified leads, zero risk.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">149</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>5–8 AI-sourced verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (1 profile)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Name, title, email, company, LinkedIn</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Monthly CSV delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Weekly reports</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Strategy calls</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Small, Scale Fast</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Starter</div>
+            <div class="p-name">Lead Starter</div>
+            <div class="p-desc">Test the pipeline. Get your first batch of qualified prospects.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">299</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>10–15 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (1 profile)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Name, title, email, company, LinkedIn</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Monthly CSV delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Weekly reports</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Bi-weekly strategy call</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Most Popular</span>
+            <div class="p-tier">Professional</div>
+            <div class="p-name">Lead Pro</div>
+            <div class="p-desc">For teams ready to scale their outbound consistently.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">549</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>20–30 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (2 profiles)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Weekly progress reports</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Bi-weekly strategy call</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CRM-ready format</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">CRM direct integration</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Start Generating Leads</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Enterprise</div>
+            <div class="p-name">Lead Enterprise</div>
+            <div class="p-desc">Full-service pipeline. For serious outbound operations.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">999</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>40–60 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Up to 3 ICP profiles</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Weekly reports + strategy calls</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CRM direct integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Dedicated account manager</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Priority SLA</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:16px;">
+          🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Plans accessible for LATAM, Israel &amp; global markets.
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel leads-p -->
+      </div><!-- end accordion-item -->
+
+      <!-- ADTECH PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('adtech-p', this)">
+          <span class="acc-icon">🤖</span>
+          <span class="acc-title">أنظمة AdTech بالذكاء الاصطناعي</span>
+          <span class="acc-range">$1,500 – $7,500+ <span style="font-size:0.75rem;opacity:0.6">per project</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="adtech-p" class="acc-panel">
+        <div class="pricing-grid">
+          <div class="p-card">
+            <div class="p-tier">Phase 1</div>
+            <div class="p-name">Discovery & Roadmap</div>
+            <div class="p-desc">Audit of your current tech stack + custom AI agent architecture plan.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">1,500</span></div>
+            <div class="p-period">one-time project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Data infrastructure audit</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Agent architecture design (custom)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP/API integration assessment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Technical implementation roadmap</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ROI projection model</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Agent development</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Best Value</span>
+            <div class="p-tier">Phase 2</div>
+            <div class="p-name">Build & Test</div>
+            <div class="p-desc">3 custom AI agents built, tested, and ready for your staging environment.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">3,500</span></div>
+            <div class="p-period">one-time project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Discovery</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>3 autonomous agents built</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CrewAI / LangGraph framework</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP & RAG pipeline integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Slack bot for team alerts</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Staging environment deployment</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full" style="background:var(--purple);">Start Build</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Phase 3</div>
+            <div class="p-name">Production System</div>
+            <div class="p-desc">Full production deployment + 30 days support + team handoff.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">7,500</span></div>
+            <div class="p-period">+ from project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>FastAPI production backend</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Docker / K8s deployment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30 days post-launch support</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Team handoff & documentation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Ongoing retainer available</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
+          All AdTech AI projects start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
+          We scope together before you commit to anything. <a href="#contact">Book yours →</a>
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel adtech-p -->
+      </div><!-- end accordion-item -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how" class="section" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">Process</span>
+      <h2>Simple. Fast. Impactful.</h2>
+      <p>From your first message to a delivered result — no complexity, no endless calls.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>You tell us your situation</h3>
+        <p>Fill the contact form. Tell us your website, business type, and what you need. We reply within 24 hours with a tailored proposal.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We do the work</h3>
+        <p>Our team (and our AI agents) analyze your digital presence, find your ideal leads, or architect your AI system. You don't lift a finger.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>You get real results</h3>
+        <p>A PDF with your Lead Conversion Score. A spreadsheet of verified leads. Or a running AI system. Facts. Clarity. Action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Do you need access to my website backend?</div>
+        <div class="faq-a">No. The standard audit is 100% non-intrusive — we only need your website URL. Optional GA4/GSC read-only access makes the audit deeper but is not required.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the audit take?</div>
+        <div class="faq-a">Basic plan: 48 hours. Standard: 5 days. Premium: 3 days (priority). The clock starts when you provide your business info, not when you pay.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What markets and languages do you serve?</div>
+        <div class="faq-a">We serve businesses in English (US, UK, AU), Spanish (LATAM, Spain), Hebrew (Israel), and Arabic (Israel, MENA). Reports are delivered in your preferred language.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you help implement the audit recommendations?</div>
+        <div class="faq-a">Yes. We offer implementation add-ons: Tracking Fix Pack ($79–$149), GBP Quick Fix ($59–$99), and Speed Quick Wins ($79–$149). Ask us when you order.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What makes Clarvix different from a regular agency?</div>
+        <div class="faq-a">We don't do opinions. Every finding has verifiable evidence, a business impact in numbers, and a concrete fix. The Lead Conversion Score is consistent and comparable. No fluff.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you work outside Fiverr?</div>
+        <div class="faq-a">Yes. You can order directly from this page — especially for Lead Generation and AdTech AI projects. We accept international payments via <strong>Payoneer</strong> (from any country), bank transfer, and Fiverr. Contact us and we'll send you a payment request directly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="badge badge-blue" style="margin-bottom:16px;">Contact</span>
+        <h2>Ready to stop losing leads?</h2>
+        <p>Tell us about your business. We'll reply within 24 hours with a tailored recommendation — no commitment required.</p>
+        <div class="contact-points">
+          <div class="c-point">
+            <div class="c-ico">📧</div>
+            <div class="c-txt">
+              <strong>Email</strong>
+              <span>contact@clarvix.net</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">⏱</div>
+            <div class="c-txt">
+              <strong>Response Time</strong>
+              <span>Within 24 hours, always</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">🌍</div>
+            <div class="c-txt">
+              <strong>الأسواق المخدومة</strong>
+              <span>Israel, Latin America, USA, UK, Australia, Canada</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">🛒</div>
+            <div class="c-txt">
+              <strong>Also on Fiverr</strong>
+              <span>Find us at fiverr.com/clarvix for quick orders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form-card">
+          <div id="formWrapper">
+            <h3 style="color:#fff;margin-bottom:6px;">Send us a message</h3>
+            <p style="font-size:0.85rem;margin-bottom:24px;">We'll analyze your situation and reply with our recommendation.</p>
+            <form id="contactForm" action="https://formspree.io/f/xqegkzzo" method="POST">
+              <input type="hidden" name="_subject" value="New Clarvix Inquiry — contact@clarvix.net">
+              <input type="hidden" name="_to" value="contact@clarvix.net">
+              <div class="form-row2">
+                <div class="form-group">
+                  <label>اسمك *</label>
+                  <input type="text" name="name" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                  <label>البريد الإلكتروني للعمل *</label>
+                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required oninput="document.getElementById('replyto').value=this.value">
+                  <input type="hidden" name="_replyto" id="replyto">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>الشركة / الموقع</label>
+                <input type="text" name="company" placeholder="company.com or Company Name">
+              </div>
+              <div class="form-group">
+                <label>أنا مهتم بـ *</label>
+                <select name="service" required>
+                  <option value="" disabled selected>اختر خدمة...</option>
+                  <option value="تدقيق الحضور الرقمي">🔍 تدقيق الحضور الرقمي ($45–$160)</option>
+                  <option value="توليد عملاء B2B">🚀 توليد عملاء B2B ($149–$999/mo)</option>
+                  <option value="أنظمة AdTech بالذكاء الاصطناعي">🤖 أنظمة AdTech بالذكاء الاصطناعي ($1,500–$7,500+)</option>
+                  <option value="Not sure">💬 Not sure — help me decide</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Tell us about your business</label>
+                <textarea name="message" placeholder="What's your main challenge right now? (optional but helps us give you a better answer)"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
+                إرسال الرسالة ←
+              </button>
+              <p class="form-note">سنرد على بريدك الإلكتروني في غضون 24 ساعة. لا بريد عشوائي، أبداً.</p>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3>!تم استقبال الرسالة</h3>
+            <p>سنحلل موقفك ونرد على بريدك الإلكتروني في غضون 24 ساعة برسالتنا.</p>
+            <br>
+            <p style="font-size:0.83rem;"><strong style="color:var(--text)">Facts. Clarity. Action.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
-        <p>تدقيق رقمي وتوليد عملاء B2B</p>
+        <a href="/" class="logo">
+          <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+          <span class="logo-text">Clarvix</span>
+        </a>
+        <p>Data-backed digital audits, verified B2B leads, and AI systems for programmatic advertising. We don't do opinions — we do evidence.</p>
+        <div class="footer-tagline">FACTS. CLARITY. ACTION.</div>
+        <div class="footer-social">
+          <a href="https://instagram.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Instagram">📸</a>
+          <a href="https://linkedin.com/company/clarvix" class="social-btn" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+          <a href="https://fiverr.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Fiverr">⭐</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#services">الخدمات</a>
-        <a href="#pricing">الأسعار</a>
-        <a href="#how-it-works">كيف يعمل</a>
-        <a href="/adtech-ai-ar.html">أنظمة AI للإعلانات</a>
-        <a href="#contact">اتصل بنا</a>
-        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#audit">تدقيق الحضور الرقمي</a></li>
+          <li><a href="#leads">توليد عملاء B2B</a></li>
+          <li><a href="#adtech">أنظمة AdTech بالذكاء الاصطناعي</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
       </div>
-      <p class="footer-copy">© 2026 Clarvix. حقائق. وضوح. عمل.</p>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#how">How it Works</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Markets</h4>
+        <ul class="footer-links">
+          <li><a href="/">🇺🇸 English</a></li>
+          <li><a href="/es.html">🇪🇸 Español</a></li>
+          <li><a href="/he.html">🇮🇱 עברית</a></li>
+          <li><a href="/ar.html">🇵🇸 العربية</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
-
-  <!-- ORDER MODAL (Audit) -->
-  <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
-    <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" onclick="closeOrder()" aria-label="Close">✕</button>
-      <div class="modal-header">
-        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 id="modal-title" class="modal-title">اطلب تدقيقك</h2>
-        <p class="modal-sub">اختر حزمتك وسنرسل لك تعليمات الدفع في غضون دقائق.</p>
-      </div>
-      <div class="package-selector" id="packageSelector">
-        <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
-          <div class="pkg-radio" id="radioBasic"></div>
-          <div class="pkg-info"><span class="pkg-name">أساسي</span><span class="pkg-desc">التشخيص الأساسي</span></div>
-          <span class="pkg-price">$45</span>
-        </label>
-        <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
-          <div class="pkg-radio" id="radioStandard"></div>
-          <div class="pkg-info"><span class="pkg-name">قياسي</span><span class="pkg-desc">تدقيق كامل + مقارنة</span></div>
-          <span class="pkg-price">$85</span>
-        </label>
-        <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
-          <div class="pkg-radio" id="radioPremium"></div>
-          <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">تدقيق استراتيجي متقدم</span></div>
-          <span class="pkg-price">$160</span>
-        </label>
-      </div>
-      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="businessName">اسم العمل</label>
-            <input type="text" id="businessName" class="form-input" placeholder="مثال: عيادة أسنان الرياض" required autocomplete="organization">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="websiteUrl">رابط الموقع</label>
-            <input type="url" id="websiteUrl" class="form-input" placeholder="https://amalak.com" required autocomplete="url">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="businessCity">المدينة والدولة</label>
-          <input type="text" id="businessCity" class="form-input" placeholder="مثال: الرياض، السعودية" autocomplete="address-level2">
-        </div>
-        <p class="form-error" id="formError">يرجى ملء اسم العمل ورابط الموقع.</p>
-        <button type="submit" class="btn-order-submit" id="orderSubmit">
-          <span class="submit-text">المتابعة للدفع ←</span>
-          <span class="submit-loading" style="display:none;">⟳ جارٍ المعالجة...</span>
-        </button>
-        <p class="modal-footnote">سيتم إرسال تعليمات الدفع إلى بريدك الإلكتروني في غضون دقائق.</p>
-      </form>
+    <div class="footer-bottom">
+      <span>© 2026 Clarvix. All rights reserved.</span>
+      <span>contact@clarvix.net</span>
     </div>
   </div>
+</footer>
 
-  <!-- LEAD GEN ORDER MODAL -->
-  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
-    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
-      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="Close">✕</button>
-      <div class="modal-header">
-        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 class="modal-title">ابدأ توليد العملاء</h2>
-        <p class="modal-sub" id="leadgen-plan-label">Professional — $549/month</p>
-      </div>
-      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="lgBusinessName">اسم العمل</label>
-            <input type="text" id="lgBusinessName" class="form-input" placeholder="مثال: شركة أكمي" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="lgEmail">بريدك الإلكتروني</label>
-            <input type="email" id="lgEmail" class="form-input" placeholder="anta@sharika.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="lgICP">صف عميلك المثالي (الصناعة، الدور، الموقع)</label>
-          <input type="text" id="lgICP" class="form-input" placeholder="مثال: وكالات عقارية في دبي — مالك أو مدير">
-        </div>
-        <p class="form-error" id="lgFormError">يرجى ملء اسم العمل والبريد الإلكتروني.</p>
-        <button type="submit" class="btn-order-submit" id="lgSubmit">
-          <span class="submit-text">إرسال الاستفسار ←</span>
-          <span class="submit-loading" style="display:none;">⟳ جارٍ الإرسال...</span>
-        </button>
-        <p class="modal-footnote">سنؤكد طلبك ونرسل تعليمات الدفع خلال 24 ساعة.</p>
-      </form>
-    </div>
-  </div>
+<script src="app.js"></script>
+<script>
+// Pricing tab switch
+function switchTab(panelId) {
+  document.querySelectorAll('.pricing-panels > div').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.p-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(panelId).classList.add('active');
+  event.target.classList.add('active');
+}
 
-  <script src="app.js"></script>
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
 
+// Close menu on link click
+document.querySelectorAll('#mobileMenu a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+});
+
+// Accordion pricing
+function toggleAccordion(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
+  btn.classList.toggle('active', !isOpen);
+}
+// Init accordion heights on load
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.acc-panel.open').forEach(function(p) {
+    p.style.maxHeight = p.scrollHeight + 'px';
+  });
+});
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const resp = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      btn.textContent = 'Error — try emailing contact@clarvix.net';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error — try emailing contact@clarvix.net';
+    btn.disabled = false;
+  }
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  nb.style.background = window.scrollY > 50 ? 'rgba(8,13,26,0.98)' : 'rgba(8,13,26,0.88)';
+});
+</script>
 </body>
 </html>

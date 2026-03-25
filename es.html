@@ -1,665 +1,1068 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" dir="ltr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarvix — Auditoría Digital y Generación de Leads B2B | clarvix.net</title>
-  <meta name="description" content="Clarvix delivers professional Digital Presence Audits and B2B Lead Generation. Find out why you're losing leads and get qualified prospects delivered to your inbox every month.">
-  <meta name="keywords" content="digital presence audit, B2B lead generation, lead conversion audit, digital marketing audit, local business leads, SEO audit, Google Business Profile audit">
+  <title>Clarvix | Auditoría Digital, Leads B2B y Sistemas AdTech con IA</title>
+  <meta name="description" content="Clarvix entrega auditorías de presencia digital respaldadas por datos con Lead Conversion Score, generación de leads B2B verificados y sistemas autónomos de IA para publicidad programática. Datos. Claridad. Acción.">
+  <meta name="keywords" content="auditoría digital, lead conversion score, generación de leads B2B, AdTech IA, agentes IA publicidad programática, auditoría marketing digital, auditoría sitio web">
   <meta name="robots" content="index, follow">
-  <meta name="author" content="Clarvix">
-  <link rel="canonical" href="https://www.clarvix.net/es.html">
-
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-  <script>
-    var AUDIT_PRICES = { basic: 45, standard: 85, premium: 160 };
-    var CONTACT_EMAIL = 'contact@clarvix.net';
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="order-modal.css">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta property="og:description" content="Find out why you're losing leads. Get a professional Digital Audit or B2B Lead Generation service — delivered in 48 hours.">
+  <link rel="canonical" href="https://clarvix.net/es.html">
+  <meta property="og:title" content="Clarvix | Auditoría Digital, Leads B2B & IA AdTech">
+  <meta property="og:description" content="Tu sitio web tiene una puntuación. Tus competidores tienen leads que tú no tienes. Arreglamos ambos — con datos.">
+  <meta property="og:url" content="https://clarvix.net/es.html">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.clarvix.net/">
-  <meta property="og:image" content="https://www.clarvix.net/images/hero_dashboard.png">
+  <meta property="og:image" content="https://clarvix.net/images/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Clarvix — Digital Audit &amp; B2B Lead Generation">
-  <meta name="twitter:description" content="Find out why you're losing leads. Professional Digital Audit or B2B Lead Generation — delivered in 48 hours.">
-
-  <!-- Hreflang for multilingual SEO -->
-  <link rel="alternate" hreflang="en" href="https://www.clarvix.net/">
-  <link rel="alternate" hreflang="es" href="https://www.clarvix.net/es.html">
-  <link rel="alternate" hreflang="he" href="https://www.clarvix.net/he.html">
-  <link rel="alternate" hreflang="ar" href="https://www.clarvix.net/ar.html">
-  <link rel="alternate" hreflang="x-default" href="https://www.clarvix.net/">
-
-  <!-- Schema.org structured data -->
+  <link rel="alternate" hreflang="en" href="https://clarvix.net/">
+  <link rel="alternate" hreflang="es" href="https://clarvix.net/es.html">
+  <link rel="alternate" hreflang="he" href="https://clarvix.net/he.html">
+  <link rel="alternate" hreflang="ar" href="https://clarvix.net/ar.html">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
+    "@type": "Organization",
     "name": "Clarvix",
-    "url": "https://www.clarvix.net",
-    "logo": "https://www.clarvix.net/images/logo.png",
-    "description": "Clarvix delivers professional Digital Presence Audits and B2B Lead Generation for local businesses.",
-    "address": { "@type": "PostalAddress", "addressLocality": "Online", "addressCountry": "US" },
-    "priceRange": "$45 - $999",
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Clarvix Services",
-      "itemListElement": [
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Digital Presence Audit",
-            "description": "Professional Lead Conversion Digital Audit — score your business across 8 categories, get 10 findings and a 30-day action plan."
-          },
-          "price": "45",
-          "priceCurrency": "USD"
-        },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "B2B Lead Generation",
-            "description": "Monthly delivery of qualified B2B leads matching your ideal customer profile in EN, ES, HE, and AR markets."
-          },
-          "price": "299",
-          "priceCurrency": "USD"
-        }
-      ]
-    }
+    "url": "https://clarvix.net",
+    "email": "contact@clarvix.net",
+    "description": "Auditorías de presencia digital, generación de leads B2B, y sistemas IA para publicidad programática",
+    "slogan": "Datos. Claridad. Acción.",
+    "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],
+    "serviceType": ["Auditoría Marketing Digital","Generación de Leads B2B","Desarrollo IA AdTech"]
   }
   </script>
-
-  <!-- Apollo Website Tracker -->
-  <script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,o.onload=function(){window.trackingFunctions.onLoad({appId:"699ef4b519ae40001de5a9b9"})},document.head.appendChild(o)}initApollo();</script>
-
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <!-- NAV -->
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <div class="logo">
-        <img src="images/logo.png" alt="Clarvix" class="logo-img">
-        <span class="logo-tag">Auditoría Digital y Generación de Leads</span>
+<!-- ===== NAVIGATION ===== -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="logo">
+      <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+      <span class="logo-text">Clarvix</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#pricing">Precios</a></li>
+      <li><a href="#how">Cómo funciona</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang-switcher">
+        <a href="/">EN</a>
+        <a href="/es.html" class="active">ES</a>
+        <a href="/he.html">HE</a>
+        <a href="/ar.html">AR</a>
       </div>
-      <div class="nav-right">
-        <a href="#services" class="nav-link">Servicios</a>
-        <a href="#pricing" class="nav-link">Precios</a>
-        <a href="#how-it-works" class="nav-link">Cómo funciona</a>
-        <a href="/blog/" class="nav-link">Blog</a>
-        <a href="#contact" class="nav-link">Contacto</a>
-        <div class="lang-toggle">
-          <a href="index.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','en')">EN</a><span class="lang-sep">|</span>
-          <a href="es.html" class="lang-btn active" onclick="localStorage.setItem('clarvix_lang','es')">ES</a><span class="lang-sep">|</span>
-          <a href="he.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','he')">HE</a><span class="lang-sep">|</span>
-          <a href="ar.html" class="lang-btn" onclick="localStorage.setItem('clarvix_lang','ar')">AR</a>
-        </div>
-        <button class="btn-primary" onclick="openOrder()">Empezar →</button>
-      </div>
+      <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">Comenzar →</a>
     </div>
-  </nav>
-
-  <!-- HERO — short, punchy, direct -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid"></div>
-    <div class="hero-glow"></div>
-    <div class="container hero-content">
-      <div class="badge-pill">🤖 Auditoría Digital y Generación de Leads B2B</div>
-      <h1 class="hero-title">
-        <span>Estás perdiendo clientes</span><br>
-        <span class="highlight">todos los días.</span>
-      </h1>
-      <p class="hero-sub">Descubrimos exactamente por qué — y lo solucionamos. Clarvix audita tu presencia digital y entrega prospectos B2B calificados directamente a tu pipeline.</p>
-      <div class="hero-ctas">
-        <button class="btn-primary btn-lg" onclick="openOrder()">Obtener mi Auditoría →</button>
-        <a href="#services" class="btn-ghost">Ver nuestros servicios ↓</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <span class="stat-num">8</span>
-          <span class="stat-label">Categorías</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">48h</span>
-          <span class="stat-label">Entrega</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">4</span>
-          <span class="stat-label">Idiomas</span>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <span class="stat-num">100%</span>
-          <span class="stat-label">Basado en datos</span>
-        </div>
-      </div>
+    <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menú">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services">Servicios</a>
+    <a href="#pricing">Precios</a>
+    <a href="#how">Cómo funciona</a>
+    <a href="/blog">Blog</a>
+    <a href="#contact">Contacto</a>
+    <div class="lang-switcher">
+      <a href="/" class="active">EN</a>
+      <a href="/es.html">ES</a>
+      <a href="/he.html">HE</a>
+      <a href="/ar.html">AR</a>
     </div>
-    <div class="hero-image-wrap">
-      <img src="images/hero_dashboard.png" alt="Clarvix Audit Dashboard" class="hero-img" loading="eager">
-      <div class="hero-img-glow"></div>
-    </div>
-  </section>
+    <a href="#contact" class="btn btn-primary btn-full">Comenzar →</a>
+  </div>
+</nav>
 
-  <!-- SERVICES — two cards, side by side, immediately visible -->
-  <section class="services-section" id="services">
-    <div class="container">
-      <div class="section-tag center">Nuestros Servicios</div>
-      <h2 class="section-title center">Tres paquetes premium para recuperar ingresos</h2>
-      <p class="section-sub center" style="max-width:600px;margin:0 auto 56px">Elige el servicio que encaja con dónde se está perdiendo dinero: fugas de monetización, brechas de flujo de leads u oportunidades de conversión. Cada servicio funciona por separado.</p>
-
-      <div class="services-two-col">
-
-        <!-- SERVICE 1: AUDIT -->
-        <div class="service-card">
-          <div class="service-card-icon">🤖</div>
-          <div class="service-card-tag">Auditoría de Presencia Digital</div>
-          <h3 class="service-card-title">Tu sitio web está perdiendo clientes. Te mostramos exactamente dónde.</h3>
-          <p class="service-card-desc">Evaluamos tu negocio en 8 dimensiones críticas — velocidad, seguimiento, conversión, presencia local, confianza y más. Recibes un PDF profesional con tu puntuación, 10 hallazgos priorizados, benchmark de competidores y un plan de acción de 30 días.</p>
-          <div class="score-preview">
-            <div class="score-bar-item">
-              <span class="sbi-label">Seguimiento y Atribución</span>
-              <div class="sbi-bar"><div class="sbi-fill red" style="width:20%"></div></div>
-              <span class="sbi-val red">3/15</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">Embudo de Conversión</span>
-              <div class="sbi-bar"><div class="sbi-fill amber" style="width:40%"></div></div>
-              <span class="sbi-val amber">8/20</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">Presencia Local</span>
-              <div class="sbi-bar"><div class="sbi-fill red" style="width:33%"></div></div>
-              <span class="sbi-val red">5/15</span>
-            </div>
-            <div class="score-bar-item">
-              <span class="sbi-label">Seguridad y Confianza</span>
-              <div class="sbi-bar"><div class="sbi-fill green" style="width:60%"></div></div>
-              <span class="sbi-val green">6/10</span>
-            </div>
+<!-- ===== HERO ===== -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span>🎯</span> Inteligencia Digital para Empresas que Quieren Ganar
+        </div>
+        <h1 class="hero-title">
+          Tus competidores<br>se están <em>comiendo tus leads</em>.
+        </h1>
+        <p class="hero-sub">
+          Clarvix te da los datos exactos de por qué tu presencia digital no convierte,
+          los leads B2B calificados que tu equipo de ventas necesita, y los sistemas de IA para automatizar tus ingresos publicitarios.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Obtener mi Muestra de Auditoría Gratis →</a>
+          <a href="#services" class="btn btn-ghost btn-lg">Explorar Servicios</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="stat-num">8</div>
+            <div class="stat-lbl">Categorías Auditadas</div>
           </div>
-          <a href="/digital-presence-audit.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">Ver Planes de Auditoría →</a>
-        </div>
-
-        <!-- SERVICE 2: LEAD GEN -->
-        <div class="service-card service-card-leadgen">
-          <div class="service-card-icon">🚀</div>
-          <div class="service-card-tag">Generación de Leads B2B</div>
-          <h3 class="service-card-title">Deja de esperar prospectos. Recíbelos cada mes.</h3>
-          <p class="service-card-desc">Identificamos, calificamos y entregamos leads B2B que coinciden con tu perfil de cliente ideal — nombre, empresa, cargo y email verificado. Operamos en mercados de inglés, español, hebreo y árabe. Tu equipo cierra. Nosotros prospectamos.</p>
-          <div class="leadgen-stats">
-            <div class="lg-stat">
-              <div class="lg-stat-num">10–60</div>
-              <div class="lg-stat-label">Leads / mes</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">4</div>
-              <div class="lg-stat-label">Idiomas</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">100%</div>
-              <div class="lg-stat-label">Verificados</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">ICP</div>
-              <div class="lg-stat-label">Segmentado</div>
-            </div>
+          <div>
+            <div class="stat-num">48h</div>
+            <div class="stat-lbl">Entrega</div>
           </div>
-          <a href="/lead-engine.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">Ver Planes de Lead Gen →</a>
-        </div>
-
-      </div>
-
-      <!-- SERVICE 3: ADTECH AI SYSTEMS -->
-      <div style="margin-top:32px">
-        <div class="service-card">
-          <div class="service-card-icon">🤖</div>
-          <div class="service-card-tag">Sistemas IA para AdTech</div>ón de Ingresos con IA</div>
-          <h3 class="service-card-title">Agentes IA Aut&oacute;nomos — Ingresos 24/7. Sin L&iacute;mites.</h3>
-          <p class="service-card-desc">
-            Fase 1 de 3: Construimos agentes IA aut&oacute;nomos para empresas AdTech y publicidad program&aacute;tica &mdash; automatizaci&oacute;n de campa&ntilde;as, reportes en tiempo real e integraciones MCP que generan ingresos 24/7 sin l&iacute;mites de horario.
-          </p>
-          <div class="leadgen-stats">
-            <div class="lg-stat">
-              <div class="lg-stat-num">3+</div><div class="lg-stat-label">Clientes activos</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">24/7</div><div class="lg-stat-label">Disponibilidad</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">Fase 1</div>
-              <div class="lg-stat-label">Producto de diagnóstico</div>
-            </div>
-            <div class="lg-stat">
-              <div class="lg-stat-num">Enfoque</div>
-              <div class="lg-stat-label">Recuperación de ingresos</div>
-            </div>
+          <div>
+            <div class="stat-num">4</div>
+            <div class="stat-lbl">Idiomas</div>
           </div>
-          <a href="/adtech-ai-es.html" class="btn-primary" style="display:inline-flex;align-items:center;gap:8px">Ver planes →</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- AUDIT PRICING -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <div class="section-tag center">Auditoría de Presencia Digital</div>
-      <h2 class="section-title center">Vea los paquetes en la página dedicada</h2>
-      <p class="section-sub center" style="max-width:560px;margin:0 auto 24px">Elija el nivel de auditoría que encaja con su objetivo y solicítela desde la página dedicada.</p>
-      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:0 auto 48px;">
-        <a href="/digital-presence-audit.html#pricing" class="btn-primary btn-xl" style="display:inline-flex;align-items:center;gap:8px">Ver planes de auditoría →</a>
-      </div>
-      <div class="pricing-cards" style="display:none">
-
-        <!-- BASIC -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Básico</div>
-          <div class="pricing-price">$45</div>
-          <div class="pricing-sub">Auditoría de Conversión — Diagnóstico Central</div>
-          <ul class="pricing-features">
-            <li class="bold">Incluye:</li>
-            <li>Puntuación 0–100 (8 categorías)</li>
-            <li>Análisis PageSpeed (móvil + escritorio)</li>
-            <li>Revisión de formularios, CTA y fricción</li>
-            <li>Verificación de seguimiento (GA4, Pixel)</li>
-            <li>Revisión básica de GBP</li>
-            <li>5 hallazgos priorizados</li>
-            <li>Plan de acción de 14 días</li>
-            <li>PDF profesional (8–10 páginas)</li>
-            <li class="bold cross-title">No incluye:</li>
-            <li class="cross">Benchmark profundo de competidores</li>
-            <li class="cross">10 hallazgos completos</li>
-            <li class="cross">Plan completo de 30 días</li>
-            <li class="cross">Soporte post-auditoría</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">Ordenar Ahora →</button>
-        </div>
-
-        <!-- STANDARD -->
-        <div class="pricing-card premium">
-          <div class="pricing-badge">Más Popular</div>
-          <div class="pricing-tier">Estándar</div>
-          <div class="pricing-price">$85</div>
-          <div class="pricing-sub">Auditoría Completa + Benchmark Competitivo</div>
-          <ul class="pricing-features">
-            <li class="bold">Todo en Básico, más:</li>
-            <li>3 competidores analizados</li>
-            <li>Benchmark comparativo (10 métricas)</li>
-            <li>10 hallazgos estructurados</li>
-            <li>Plan de acción completo de 30 días</li>
-            <li>Puntuación objetivo proyectada</li>
-            <li>Prioridad CRÍTICO / IMPORTANTE / RECOMENDADO</li>
-            <li>Identificación de 'Fugas de Leads'</li>
-            <li>Revisión técnica básica de SEO</li>
-            <li>PDF completo (10–12 páginas)</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">Ordenar Ahora →</button>
-        </div>
-
-        <!-- PREMIUM -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$160</div>
-          <div class="pricing-sub">Auditoría Estratégica de Presencia Digital</div>
-          <ul class="pricing-features">
-            <li class="bold">Todo en Estándar, más:</li>
-            <li>Análisis profundo del embudo de conversión</li>
-            <li>Evaluación de mensajería y diferenciadores</li>
-            <li>Revisión avanzada de intención de búsqueda</li>
-            <li>Mapa de fricción del usuario</li>
-            <li>Revisión de velocidad con explicación técnica</li>
-            <li>Plan estratégico 30 + 60 días</li>
-            <li>Recomendaciones de herramientas específicas</li>
-            <li>Doc bonus: 'Prioridades de Implementación'</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">Ordenar Ahora →</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- LEAD GEN PRICING -->
-  <section class="pricing" id="leadgen-pricing" style="padding-top:0">
-    <div class="container">
-      <div class="section-tag center">Generación de Leads B2B</div>
-      <h2 class="section-title center">Vea los paquetes en la página dedicada</h2>
-      <p class="section-sub center" style="max-width:560px;margin:0 auto 24px">Inicia tu consulta mensual de generación de leads desde la página dedicada.</p>
-      <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin:0 auto 48px;">
-        <a href="/lead-engine.html#leadgen-pricing" class="btn-primary btn-xl" style="display:inline-flex;align-items:center;gap:8px">Ver planes de Lead Gen →</a>
-      </div>
-      <div class="pricing-cards" style="display:none">
-
-        <!-- STARTER -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Starter</div>
-          <div class="pricing-price">$299</div>
-          <div class="pricing-price-period">/ mes</div>
-          <div class="pricing-sub">10–15 Leads B2B Calificados</div>
-          <ul class="pricing-features">
-            <li class="bold">Incluye:</li>
-            <li>10–15 leads verificados/mes</li>
-            <li>Sesión de definición de ICP (1h)</li>
-            <li>Informe de entrega mensual</li>
-            <li>Nombre, empresa, cargo, email</li>
-            <li>Mercados EN / ES / HE / AR</li>
-            <li>Datos de Google Maps</li>
-            <li class="bold cross-title">No incluye:</li>
-            <li class="cross">URL de perfil LinkedIn</li>
-            <li class="cross">Puntuación de señales de intención</li>
-            <li class="cross">Inteligencia competitiva</li>
-            <li class="cross">Informes semanales</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Starter - $299/mes')">Order Now →</button>
-        </div>
-
-        <!-- PROFESSIONAL -->
-        <div class="pricing-card premium">
-          <div class="pricing-badge">Más Popular</div>
-          <div class="pricing-tier">Professional</div>
-          <div class="pricing-price">$549</div>
-          <div class="pricing-price-period">/ mes</div>
-          <div class="pricing-sub">20–30 Leads B2B Calificados</div>
-          <ul class="pricing-features">
-            <li class="bold">Todo en Starter, más:</li>
-            <li>20–30 leads verificados/mes</li>
-            <li>URL de perfil LinkedIn incluida</li>
-            <li>Puntuación de señales de intención</li>
-            <li>Informe de inteligencia competitiva</li>
-            <li>Informes de entrega semanales</li>
-            <li>Validación de email (sin rebotes)</li>
-            <li>Soporte prioritario (respuesta 24h)</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Professional - $549/mes')">Order Now →</button>
-        </div>
-
-        <!-- ENTERPRISE -->
-        <div class="pricing-card">
-          <div class="pricing-tier">Enterprise</div>
-          <div class="pricing-price">$999</div>
-          <div class="pricing-price-period">/ mes</div>
-          <div class="pricing-sub">40–60 Leads B2B Calificados</div>
-          <ul class="pricing-features">
-            <li class="bold">Todo en Professional, más:</li>
-            <li>40–60 leads verificados/mes</li>
-            <li>Análisis avanzado de competidores</li>
-            <li>Actualizaciones diarias del pipeline</li>
-            <li>Llamadas de consulta directa (2/mes)</li>
-            <li>Formato listo para CRM</li>
-            <li>Account manager dedicado</li>
-            <li>Segmentación multi-industria</li>
-          </ul>
-          <button class="btn-primary btn-full" onclick="openLeadGenOrder('Enterprise - $999/mes')">Order Now →</button>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
-    <div class="container">
-      <div class="section-tag center">El Proceso</div>
-      <h2 class="section-title center">Del pedido a los resultados en 48 horas</h2>
-      <div class="steps-grid">
-        <div class="step-card">
-          <div class="step-num">01</div>
-          <h3>Haces el pedido</h3>
-          <p>Comparte tu URL y nombre de negocio. Paga de forma segura. Eso es todo lo que necesitamos para empezar.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">02</div>
-          <h3>Ejecutamos la auditoría</h3>
-          <p>Analizamos 8 categorías críticas usando PageSpeed Insights, Google e inspección manual. Cada dato es real y verificable.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">03</div>
-          <h3>Recibes tu informe</h3>
-          <p>Un PDF profesional con tu puntuación, hallazgos principales, benchmark de competidores y plan de acción de 30 días.</p>
-        </div>
-        <div class="step-arrow">→</div>
-        <div class="step-card">
-          <div class="step-num">04</div>
-          <h3>Tomas acción</h3>
-          <p>Usa el plan tú mismo o pásalo a tu desarrollador. Cada corrección está descrita en lenguaje claro con esfuerzo e impacto estimados.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- VIDEO SECTION -->
-  <section class="video-section" id="video">
-    <div class="container">
-      <div class="section-tag center">Vélo en Acción</div>
-      <h2 class="section-title center">Mira cómo funciona una auditoría Clarvix</h2>
-      <div class="video-wrapper">
-        <div class="video-placeholder-box" id="video-placeholder">
-          <div class="vp-content">
-            <div class="vp-icon">🎬</div>
-            <div class="vp-title">Video Explicativo</div>
-            <div class="vp-sub">Próximamente — un recorrido completo por un informe de auditoría real de Clarvix.<br>Desglose de puntuación, hallazgos, benchmark de competidores y plan de 30 días.</div>
-            <div class="vp-badge">🔔 Disponible pronto</div>
+          <div>
+            <div class="stat-num">100%</div>
+            <div class="stat-lbl">Basado en Datos</div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!-- CONTACTO -->
-  <section class="contact-section" id="contact">
-    <div class="container">
-      <div class="section-tag center">Contacto</div>
-      <h2 class="section-title">&iquest;Listo para empezar? Hablemos.</h2>
-      <p class="section-sub center" style="max-width:580px;margin:0 auto 48px">Cu&eacute;ntanos sobre tu negocio. Respondemos en 24 horas con una recomendaci&oacute;n personalizada.</p>
-      <div class="contact-layout">
-        <div class="contact-info-col">
-          <div class="c-info-item">
-            <div class="c-info-icon">📧</div>
-            <div><strong>Email</strong><span>contact@clarvix.net</span></div>
+      <!-- Score card visual -->
+      <div class="hero-visual">
+        <div class="score-card">
+          <div class="score-top">
+            <div>
+              <div class="score-label">Lead Conversion Score</div>
+              <div class="score-num critical">47<span style="font-size:1.4rem;opacity:0.5">/100</span></div>
+            </div>
+            <span class="badge badge-gold">Informe Muestra</span>
           </div>
-          <div class="c-info-item">
-            <div class="c-info-icon">⏱</div>
-            <div><strong>Tiempo de respuesta</strong><span>Dentro de 24 horas</span></div>
+          <div class="score-status critical">⚠ CRÍTICO — Pérdida Activa de Leads</div>
+          <div class="score-bars">
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Embudo de Conversión</span><span class="bar-pts" style="color:var(--danger)">7/20</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:35%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Seguimiento y Atribución</span><span class="bar-pts" style="color:var(--danger)">2/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:13%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Velocidad y UX</span><span class="bar-pts" style="color:var(--warn)">8/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:53%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Presencia Local (GBP)</span><span class="bar-pts" style="color:var(--warn)">9/15</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Claridad de la Oferta</span><span class="bar-pts" style="color:var(--danger)">4/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-r" style="width:40%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">SEO Técnico</span><span class="bar-pts" style="color:var(--success)">8/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-g" style="width:80%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Confianza y Seguridad</span><span class="bar-pts" style="color:var(--warn)">6/10</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
+            </div>
+            <div class="bar-item">
+              <div class="bar-meta"><span class="bar-name">Velocidad de Respuesta</span><span class="bar-pts" style="color:var(--danger)">3/5</span></div>
+              <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
+            </div>
           </div>
-          <div class="c-info-item">
-            <div class="c-info-icon">🌍</div>
-            <div><strong>Mercados</strong><span>Israel, Latinoam&eacute;rica, USA, UK, Australia</span></div>
-          </div>
-          <div class="c-info-item">
-            <div class="c-info-icon">🛒</div>
-            <div><strong>Tambi&eacute;n en Fiverr</strong><span>Pedidos r&aacute;pidos en fiverr.com</span></div>
+          <div class="score-footer">
+            <span class="score-domain">example-business.com</span>
+            <span class="score-tag">10 Hallazgos Críticos →</span>
           </div>
         </div>
-        <div class="contact-form-col" id="contactFormWrap">
-          <form id="contactForm" action="https://formspree.io/f/REPLACE_FORMSPREE_ID" method="POST">
-            <input type="hidden" name="_subject" value="Nueva Consulta Clarvix — clarvix.net">
-            <div class="form-row">
-              <div class="form-group">
-                <label class="form-label">Tu Nombre *</label>
-                <input type="text" name="name" class="form-input" placeholder="Juan P&eacute;rez" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email de Empresa *</label>
-                <input type="email" name="email" class="form-input" placeholder="juan@empresa.com" required>
+        <div class="float-el float-1">📊 <span>vs 3 competidores</span></div>
+        <div class="float-el float-2">✅ <span>Plan de acción 30 días</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES OVERVIEW ===== -->
+<section id="services" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">Lo Que Hacemos</span>
+      <h2>Tres servicios. Un objetivo:<br>más ingresos para tu negocio.</h2>
+      <p>Ya sea que necesites arreglar tu presencia digital, llenar tu pipeline de ventas o automatizar tus ingresos publicitarios con IA — Clarvix entrega.</p>
+    </div>
+    <div class="services-grid">
+      <div class="svc-card svc-1">
+        <div class="svc-icon svc-icon-1">🔍</div>
+        <h3>Auditoría de Presencia Digital</h3>
+        <p>Puntuamos tu sitio web en 8 dimensiones críticas y te mostramos exactamente por qué estás perdiendo leads — con datos, benchmarks y un plan de acción de 30 días.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">Lead Conversion Score</span>
+          <span class="svc-tag">Benchmark vs Competidores</span>
+          <span class="svc-tag">Informe PDF</span>
+          <span class="svc-tag">Entrega 48h</span>
+        </div>
+        <a href="#audit" class="svc-link">Ver más →</a>
+      </div>
+      <div class="svc-card svc-2">
+        <div class="svc-icon svc-icon-2">🚀</div>
+        <h3>Generación de Leads B2B</h3>
+        <p>Nuestros agentes de IA identifican, verifican y entregan tus clientes ideales cada mes — con nombre, empresa, cargo, email y LinkedIn. Tú cierras. Nuestros agentes llenan el pipeline.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">ICP Targeting</span>
+          <span class="svc-tag">Agentes de IA</span>
+          <span class="svc-tag">Entrega Mensual</span>
+          <span class="svc-tag">Email Verificado</span>
+        </div>
+        <a href="#leads" class="svc-link">Ver más →</a>
+      </div>
+      <div class="svc-card svc-3">
+        <div class="svc-icon svc-icon-3">🤖</div>
+        <h3>Sistemas AdTech con IA</h3>
+        <p>Construimos arquitecturas autónomas de agentes de IA para empresas de publicidad programática — optimización de ingresos, detección de anomalías y gestión de inventario en piloto automático.</p>
+        <div class="svc-tags">
+          <span class="svc-tag">CrewAI / LangGraph</span>
+          <span class="svc-tag">Integración MCP</span>
+          <span class="svc-tag">Listo para Producción</span>
+          <span class="svc-tag">Agentes Personalizados</span>
+        </div>
+        <a href="#adtech" class="svc-link">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICE 1: AUDIT ===== -->
+<section id="audit" class="detail-section alt">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge badge-blue">Service 01 — Auditoría de Presencia Digital</span>
+        <h2>Tu sitio web tiene una puntuación.<br>Simplemente no lo sabes <span class="highlight">todavía</span>.</h2>
+        <p>La mayoría de los dueños de negocios sienten que algo está mal con su presencia digital pero no pueden cuantificarlo. Clarvix te da un Lead Conversion Score de 0 a 100 — y la hoja de ruta exacta para arreglarlo.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Lead Conversion Score (0–100)</strong>
+              <span>8 categorías analizadas: velocidad, seguimiento, embudo, SEO, presencia local, confianza, claridad de oferta, velocidad de respuesta.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Top 10 Hallazgos Críticos</strong>
+              <span>Cada hallazgo tiene evidencia, impacto en el negocio, una solución concreta y estimación de esfuerzo.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Benchmark de Competidores</strong>
+              <span>Te comparamos contra 3 competidores directos en 10 métricas. Ve exactamente dónde estás perdiendo.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>Plan de Acción 30 Días</strong>
+              <span>Priorizado por impacto y esfuerzo. Primero los elementos CRÍTICOS. Sin relleno. Solo qué hacer y en qué orden.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-b">✓</div>
+            <div class="feat-txt">
+              <strong>PDF Profesional de 10 Páginas</strong>
+              <span>Entregado en 48 horas. Presentable a tu equipo, inversionista o agencia.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary">Ver Precios →</a>
+          <a href="#contact" class="btn btn-ghost">Obtener una Muestra Gratis</a>
+        </div>
+      </div>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot dot-r"></div>
+            <div class="panel-dot dot-y"></div>
+            <div class="panel-dot dot-g"></div>
+            <h4>Tu Informe de Auditoría de 10 Páginas</h4>
+          </div>
+          <div class="deliverable-list">
+            <div class="deliverable-item">
+              <span class="deliv-icon">📋</span>
+              <div class="deliv-text">
+                <strong>Portada</strong>
+                <span>Nombre del negocio, puntuación, fecha, estado (Crítico / Necesita Trabajo / Bueno)</span>
               </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Empresa / Sitio Web</label>
-              <input type="text" name="company" class="form-input" placeholder="tuempresa.com">
+            <div class="deliverable-item">
+              <span class="deliv-icon">📊</span>
+              <div class="deliv-text">
+                <strong>Resumen Ejecutivo</strong>
+                <span>4 KPIs, texto de diagnóstico, tabla de PageSpeed</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Me interesa *</label>
-              <select name="service" class="form-input" required>
-                <option value="" disabled selected>Selecciona un servicio...</option>
-                <option>🤖 Auditor&iacute;a de Presencia Digital ($45–$160)</option>
-                <option>🚀 Generaci&oacute;n de Leads B2B ($299–$999/mes)</option>
-                <option>🤖 Sistemas IA para AdTech ($1,500–$7,500+)</option>
-                <option>💬 No estoy seguro — ay&uacute;dame a decidir</option>
-              </select>
+            <div class="deliverable-item">
+              <span class="deliv-icon">📈</span>
+              <div class="deliv-text">
+                <strong>Desglose de Puntuación</strong>
+                <span>8 barras de progreso coloreadas + caja de puntuación total</span>
+              </div>
             </div>
-            <div class="form-group">
-              <label class="form-label">Mensaje (opcional)</label>
-              <textarea name="message" class="form-input" rows="3" placeholder="&iquest;Cu&aacute;l es tu principal desaf&iacute;o ahora mismo?"></textarea>
+            <div class="deliverable-item">
+              <span class="deliv-icon">🔍</span>
+              <div class="deliv-text">
+                <strong>Top 10 Hallazgos (4 páginas)</strong>
+                <span>EXISTE / FALTA / IMPACTO / SOLUCIÓN / ESFUERZO por hallazgo</span>
+              </div>
             </div>
-            <button type="submit" class="btn-primary btn-full" id="contactSubmitBtn">Enviar Mensaje →</button>
-            <p class="contact-form-note">Respondemos a tu email en 24 horas. Sin spam.</p>
-          </form>
-          <div id="contactSuccess" style="display:none;" class="contact-success-msg">
-            <div class="contact-success-icon">✅</div>
-            <h3>Mensaje recibido!</h3>
-            <p>Responderemos en 24 horas con nuestra recomendaci&oacute;n.</p>
-            <p class="cta-tagline" style="margin-top:20px">
-              <span class="dot red-dot"></span><span class="dot amber-dot"></span><span class="dot green-dot"></span>
-              <span class="tagline-text">Datos. Claridad. Acción.</span>
-            </p>
+            <div class="deliverable-item">
+              <span class="deliv-icon">⚔️</span>
+              <div class="deliv-text">
+                <strong>Competitor Benchmark</strong>
+                <span>You vs 3 competidores across 10 metrics</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">🗓️</span>
+              <div class="deliv-text">
+                <strong>Plan de Acción 30 Días</strong>
+                <span>Acciones priorizadas con días y responsable</span>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <span class="deliv-icon">⚡</span>
+              <div class="deliv-text">
+                <strong>Página de Próximos Pasos</strong>
+                <span>3 acciones concretas: Configurar rastreo / Rápidas Ganancias / Monitoreo Mensual</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- FINAL CTA -->
-  <section class="cta-section" id="cta">
-    <div class="cta-glow"></div>
-    <div class="container cta-inner">
-      <h2 class="cta-title">¿Listo para dejar de perder clientes?</h2>
-      <p class="cta-sub">Obtén tu puntuación de conversión, 10 hallazgos críticos y tu plan de acción de 30 días. Entregado en 48 horas.</p>
-      <div class="cta-buttons">
-        <button class="btn-primary btn-xl" onclick="openOrder()">Obtener mi Auditoría →</button>
-        <a href="mailto:contact@clarvix.net" class="btn-ghost-light">¿Preguntas? Escríbenos</a>
+  </div>
+</section>
+
+<!-- ===== SERVICE 2: LEADS ===== -->
+<section id="leads" class="detail-section">
+  <div class="container">
+    <div class="detail-grid rev">
+      <div class="detail-content">
+        <span class="badge badge-green">Service 02 — Generación de Leads B2B</span>
+        <h2>Agentes de IA trabajando 24/7<br>para llenar tu <span class="highlight">pipeline</span>.</h2>
+        <p>Nuestros agentes de IA autónomos identifican, enriquecen y verifican tus prospectos ideales — para que tu equipo de ventas dedique el 100% de su tiempo a cerrar, no a buscar. Entrega mensual. Listo para usar.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Targeting de ICP Impulsado por IA</strong>
+              <span>Nuestros agentes definen y buscan tu perfil de cliente ideal — industria, tamaño de empresa, rol del tomador de decisiones, geografía — con precisión de máquina.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Datos de Contacto Verificados</strong>
+              <span>Nombre, empresa, título, email comercial, URL de LinkedIn. Probado de rechazo y verificado. Sin basura raspada.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Entrega Mensual en CSV</strong>
+              <span>Hoja de cálculo limpia entregada a tu bandeja de entrada. Lista para importar en cualquier CRM.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Reportes de Progreso Semanales</strong>
+              <span>Disponible en planes Profesional y Enterprise. Sabe exactamente qué se está construyendo.</span>
+            </div>
+          </li>
+        </ul>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary" style="background:var(--success);">Ver Planes de Leads →</a>
+          <a href="#contact" class="btn btn-ghost">Habla con Nosotros</a>
+        </div>
       </div>
-      <p class="cta-email">contact@clarvix.net</p>
-      <div class="cta-tagline">
-        <span class="dot red-dot"></span>
-        <span class="dot amber-dot"></span>
-        <span class="dot green-dot"></span>
-        <span class="tagline-text">Datos. Claridad. Acción.</span>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot dot-g"></div>
+            <h4>Muestra de Entrega de Leads</h4>
+          </div>
+          <div class="lead-stats">
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">40–60</div>
+              <div class="lead-stat-lbl">Verified leads/mo (Enterprise)</div>
+              <div class="lead-stat-badge"><span class="badge badge-green">Enterprise</span></div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">10–15</div>
+              <div class="lead-stat-lbl">Verified leads/mo (Starter)</div>
+              <div class="lead-stat-badge"><span class="badge badge-blue">Starter</span></div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">6</div>
+              <div class="lead-stat-lbl">Campos de datos por lead</div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">100%</div>
+              <div class="lead-stat-lbl">Email verificado</div>
+            </div>
+          </div>
+          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.7px;color:var(--text-dim);margin-bottom:12px;">What each lead includes</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div class="deliverable-item">
+                <span class="deliv-icon">👤</span>
+                <div class="deliv-text"><strong>Nombre completo y título profesional</strong><span>CEO, Director de Marketing, CTO, etc.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">🏢</span>
+                <div class="deliv-text"><strong>Nombre de empresa y rango de tamaño</strong><span>Industria, empleados, ingresos est.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">📧</span>
+                <div class="deliv-text"><strong>Email comercial verificado</strong><span>Probado de rechazo. Sin direcciones personales.</span></div>
+              </div>
+              <div class="deliverable-item">
+                <span class="deliv-icon">💼</span>
+                <div class="deliv-text"><strong>URL de perfil de LinkedIn</strong><span>Para alcance cálido y prueba social.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
+<!-- ===== SERVICE 3: ADTECH AI ===== -->
+<section id="adtech" class="detail-section alt">
+  <div class="container">
+    <div class="detail-grid">
+      <div class="detail-content">
+        <span class="badge badge-purple">Service 03 — Sistemas AdTech con IA</span>
+        <h2>Agentes de IA que optimizan<br>tus ingresos publicitarios <span class="highlight">24/7</span>.</h2>
+        <p>Construimos sistemas personalizados de agentes de IA autónomos para empresas de publicidad programática. Optimización de ingresos, detección de anomalías, asignación de inventario — todo corriendo en piloto automático mientras escalas.</p>
+        <ul class="feat-list">
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Agentes de Optimización de Ingresos</strong>
+              <span>Maximiza el rendimiento del inventario de editores en múltiples SSPs automáticamente.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Agentes de Detección de Anomalías</strong>
+              <span>Detecta caídas de ingresos, picos de tráfico e irregularidades en pujas antes de que afecten tu resultado final.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Agentes de Asignación de Inventario</strong>
+              <span>Distribución inteligente de inventario entre fuentes de demanda para máxima tasa de llenado y eCPM.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Integración MCP y RAG</strong>
+              <span>Construimos sobre tu infraestructura de datos existente — servidores MCP propios, bases de datos SQL, APIs.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-p">✓</div>
+            <div class="feat-txt">
+              <strong>Despliegue en Producción</strong>
+              <span>Backends FastAPI, Docker/K8s, integración de bot de Slack. De base a producción.</span>
+            </div>
+          </li>
+        </ul>
+        <div style="margin-top:4px;font-size:0.83rem;color:var(--text-muted);margin-bottom:28px;">
+          Construido para: SSPs, DSPs, Redes de Editores, Redes de Publicidad, Equipos de Gestión de Rendimiento
+        </div>
+        <div class="cta-row">
+          <a href="#pricing" class="btn btn-primary" style="background:var(--purple);">Ver Planes AdTech →</a>
+          <a href="#contact" class="btn btn-ghost">Reservar Llamada de Descubrimiento</a>
+        </div>
+      </div>
+      <div>
+        <div class="detail-panel">
+          <div class="panel-header">
+            <div class="panel-dot" style="background:var(--purple)"></div>
+            <h4>Arquitectura de Agentes — Muestra</h4>
+          </div>
+          <div class="agent-panel">
+            <div class="agent-item">
+              <div class="agent-icon a-ico-p">📈</div>
+              <div class="agent-txt">
+                <strong>Agente Optimizador de Ingresos</strong>
+                <span>Monitorea precios límite, eCPMs, patrones de demanda → ajusta en tiempo real</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon a-ico-b">🚨</div>
+              <div class="agent-txt">
+                <strong>Agente Detector de Anomalías</strong>
+                <span>Observa tráfico, tasas de llenado, ingresos — alerta en desviaciones ≥ 15%</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon a-ico-g">⚖️</div>
+              <div class="agent-txt">
+                <strong>Agente Asignador de Inventario</strong>
+                <span>Distribuye oferta en SSPs para maximizar rendimiento por impresión</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+            <div class="agent-item">
+              <div class="agent-icon" style="background:rgba(245,158,11,0.12);font-size:1rem;">💬</div>
+              <div class="agent-txt">
+                <strong>Bot de Reportes de Slack</strong>
+                <span>Resúmenes diarios + alertas en tiempo real al canal de tu equipo</span>
+              </div>
+              <span class="agent-arrow">→</span>
+            </div>
+          </div>
+          <div class="stack-tags">
+            <span class="stack-tag">CrewAI</span>
+            <span class="stack-tag">LangGraph</span>
+            <span class="stack-tag">MCP</span>
+            <span class="stack-tag">FastAPI</span>
+            <span class="stack-tag">SQLite / PostgreSQL</span>
+            <span class="stack-tag">Docker</span>
+            <span class="stack-tag">RAG</span>
+            <span class="stack-tag">Slack API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-gold">Precios</span>
+      <h2>Precios transparentes.<br>Resultados reales.</h2>
+      <p>Sin retainers. Sin entregables vagos. Sabes exactamente qué pagas y qué recibes.</p>
+    </div>
+    <div class="pricing-panels">
+      <!-- AUDIT PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header active" onclick="toggleAccordion('audit-p', this)">
+          <span class="acc-icon">🔍</span>
+          <span class="acc-title">Auditoría de Presencia Digital</span>
+          <span class="acc-range">$45 – $160 <span style="font-size:0.75rem;opacity:0.6">one-time</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="audit-p" class="acc-panel open">
+        <div class="pricing-grid">
+          <div class="p-card">
+            <div class="p-tier">Básico</div>
+            <div class="p-name">Auditoría Básica</div>
+            <div class="p-desc">Perfecta para un primer diagnóstico. Entregada en 48 horas.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">45</span></div>
+            <div class="p-period">única vez</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Lead Conversion Score (0–100)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Análisis de 8 categorías</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Top 10 hallazgos con soluciones</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>PDF profesional de 10 páginas</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Entrega 48 horas</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Benchmark de competidores</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Recorrido en video</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Más Popular</span>
+            <div class="p-tier">Estándar</div>
+            <div class="p-name">Auditoría Completa</div>
+            <div class="p-desc">Auditoría completa + benchmark de competidores. La mayoría de los clientes eligen esta.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">85</span></div>
+            <div class="p-period">única vez</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Todo en Auditoría Básica</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Benchmark de competidores (3 competidores)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Plan de acción priorizado 30 días</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Tabla de datos completa de PageSpeed</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Entrega 5 días</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Recorrido en video</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Premium</div>
+            <div class="p-name">Inteligencia Total</div>
+            <div class="p-desc">Auditoría completa + recorrido en video + llamada de implementación.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">160</span></div>
+            <div class="p-period">única vez</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Todo en Auditoría Completa</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Recorrido en video de 8-12 min (Loom)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Llamada de Q&A de implementación 30 min</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Entrega prioritaria (3 días)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Venta adicional: Monitoreo mensual disponible</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
+          También disponible en <a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> ·
+          ¿Necesitas implementación? Pregunta por nuestros <strong style="color:var(--text-muted)">Paquete de Corrección de Rastreo</strong> ($79–$149) y <strong style="color:var(--text-muted)">Corrección Rápida GBP</strong> ($59–$99) complementos.
+          · 💳 <strong style="color:var(--text-muted)">Pagos internacionales seguros vía <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — disponible desde Israel, LATAM y en todo el mundo. <a href="#contact" style="color:var(--accent)">Contáctanos para pagar →</a>
+        </p>
+      </div><!-- end acc-panel audit-p -->
+      </div><!-- end accordion-item -->
+
+      <!-- LEADS PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('leads-p', this)">
+          <span class="acc-icon">🚀</span>
+          <span class="acc-title">Generación de Leads B2B</span>
+          <span class="acc-range">$149 – $999 <span style="font-size:0.75rem;opacity:0.6">per month</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="leads-p" class="acc-panel">
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">
+          🌎 <strong style="color:var(--text-muted)">Comenzando en $149/mes</strong> — Planes accesibles para negocios en América Latina y mercados emergentes.
+        </p>
+        <div class="pricing-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+          <div class="p-card">
+            <div class="p-tier">LATAM</div>
+            <div class="p-name">Lead Micro</div>
+            <div class="p-desc">Punto de entrada para pequeños negocios. Primeros leads calificados, cero riesgo.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">149</span></div>
+            <div class="p-period">por mes</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>5–8 leads verificados obtenidos por IA/mes</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Definición de ICP (1 perfil)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Nombre, título, email, empresa, LinkedIn</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Entrega mensual en CSV</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Reportes semanales</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Strategy calls</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Small, Scale Fast</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Starter</div>
+            <div class="p-name">Lead Starter</div>
+            <div class="p-desc">Test the pipeline. Get your first batch of qualified prospects.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">299</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>10–15 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (1 profile)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Name, title, email, company, LinkedIn</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Monthly CSV delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Weekly reports</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Bi-weekly strategy call</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Más Popular</span>
+            <div class="p-tier">Professional</div>
+            <div class="p-name">Lead Pro</div>
+            <div class="p-desc">For teams ready to scale their outbound consistently.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">549</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>20–30 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (2 profiles)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Weekly progress reports</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Bi-weekly strategy call</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CRM-ready format</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">CRM direct integration</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Start Generating Leads</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Enterprise</div>
+            <div class="p-name">Lead Enterprise</div>
+            <div class="p-desc">Full-service pipeline. For serious outbound operations.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">999</span></div>
+            <div class="p-period">per month</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>40–60 verified leads/month</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Up to 3 ICP profiles</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Weekly reports + strategy calls</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CRM direct integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Dedicated account manager</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Priority SLA</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:16px;">
+          🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Plans accessible for LATAM, Israel &amp; global markets.
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel leads-p -->
+      </div><!-- end accordion-item -->
+
+      <!-- ADTECH PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('adtech-p', this)">
+          <span class="acc-icon">🤖</span>
+          <span class="acc-title">Sistemas AdTech con IA</span>
+          <span class="acc-range">$1,500 – $7,500+ <span style="font-size:0.75rem;opacity:0.6">per project</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="adtech-p" class="acc-panel">
+        <div class="pricing-grid">
+          <div class="p-card">
+            <div class="p-tier">Phase 1</div>
+            <div class="p-name">Discovery & Roadmap</div>
+            <div class="p-desc">Audit of your current tech stack + custom AI agent architecture plan.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">1,500</span></div>
+            <div class="p-period">one-time project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Data infrastructure audit</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Agent architecture design (custom)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP/API integration assessment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Technical implementation roadmap</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ROI projection model</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Agent development</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Best Value</span>
+            <div class="p-tier">Phase 2</div>
+            <div class="p-name">Build & Test</div>
+            <div class="p-desc">3 custom AI agents built, tested, and ready for your staging environment.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">3,500</span></div>
+            <div class="p-period">one-time project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Discovery</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>3 autonomous agents built</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CrewAI / LangGraph framework</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP & RAG pipeline integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Slack bot for team alerts</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Staging environment deployment</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full" style="background:var(--purple);">Start Build</a>
+          </div>
+          <div class="p-card">
+            <div class="p-tier">Phase 3</div>
+            <div class="p-name">Production System</div>
+            <div class="p-desc">Full production deployment + 30 days support + team handoff.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">7,500</span></div>
+            <div class="p-period">+ from project</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>FastAPI production backend</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Docker / K8s deployment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30 days post-launch support</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Team handoff & documentation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Ongoing retainer available</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
+          </div>
+        </div>
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
+          All AdTech AI projects start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
+          We scope together before you commit to anything. <a href="#contact">Book yours →</a>
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
+        </p>
+      </div><!-- end acc-panel adtech-p -->
+      </div><!-- end accordion-item -->
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how" class="section" style="background:var(--bg2);">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">Process</span>
+      <h2>Simple. Fast. Impactful.</h2>
+      <p>From your first message to a delivered result — no complexity, no endless calls.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>You tell us your situation</h3>
+        <p>Fill the contact form. Tell us your website, business type, and what you need. We reply within 24 hours with a tailored proposal.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>We do the work</h3>
+        <p>Our team (and our AI agents) analyze your digital presence, find your ideal leads, or architect your AI system. You don't lift a finger.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>You get real results</h3>
+        <p>A PDF with your Lead Conversion Score. A spreadsheet of verified leads. Or a running AI system. Facts. Clarity. Action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">FAQ</span>
+      <h2>Common Questions</h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <div class="faq-q">Do you need access to my website backend?</div>
+        <div class="faq-a">No. The standard audit is 100% non-intrusive — we only need your website URL. Optional GA4/GSC read-only access makes the audit deeper but is not required.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the audit take?</div>
+        <div class="faq-a">Basic plan: 48 hours. Standard: 5 days. Premium: 3 days (priority). The clock starts when you provide your business info, not when you pay.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What markets and languages do you serve?</div>
+        <div class="faq-a">We serve businesses in English (US, UK, AU), Spanish (LATAM, Spain), Hebrew (Israel), and Arabic (Israel, MENA). Reports are delivered in your preferred language.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can you help implement the audit recommendations?</div>
+        <div class="faq-a">Yes. We offer implementation add-ons: Tracking Fix Pack ($79–$149), GBP Quick Fix ($59–$99), and Speed Quick Wins ($79–$149). Ask us when you order.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What makes Clarvix different from a regular agency?</div>
+        <div class="faq-a">We don't do opinions. Every finding has verifiable evidence, a business impact in numbers, and a concrete fix. The Lead Conversion Score is consistent and comparable. No fluff.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do you work outside Fiverr?</div>
+        <div class="faq-a">Yes. You can order directly from this page — especially for Lead Generation and AdTech AI projects. We accept international payments via <strong>Payoneer</strong> (from any country), bank transfer, and Fiverr. Contact us and we'll send you a payment request directly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="badge badge-blue" style="margin-bottom:16px;">Contact</span>
+        <h2>Ready to stop losing leads?</h2>
+        <p>Tell us about your business. We'll reply within 24 hours with a tailored recommendation — no commitment required.</p>
+        <div class="contact-points">
+          <div class="c-point">
+            <div class="c-ico">📧</div>
+            <div class="c-txt">
+              <strong>Email</strong>
+              <span>contact@clarvix.net</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">⏱</div>
+            <div class="c-txt">
+              <strong>Response Time</strong>
+              <span>Within 24 hours, always</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">🌍</div>
+            <div class="c-txt">
+              <strong>Idiomas</strong>
+              <span>Israel, Latin America, USA, UK, Australia, Canada</span>
+            </div>
+          </div>
+          <div class="c-point">
+            <div class="c-ico">🛒</div>
+            <div class="c-txt">
+              <strong>Also on Fiverr</strong>
+              <span>Find us at fiverr.com/clarvix for quick orders</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="contact-form-card">
+          <div id="formWrapper">
+            <h3 style="color:#fff;margin-bottom:6px;">Send us a message</h3>
+            <p style="font-size:0.85rem;margin-bottom:24px;">We'll analyze your situation and reply with our recommendation.</p>
+            <form id="contactForm" action="https://formspree.io/f/xqegkzzo" method="POST">
+              <input type="hidden" name="_subject" value="New Clarvix Inquiry — contact@clarvix.net">
+              <input type="hidden" name="_to" value="contact@clarvix.net">
+              <div class="form-row2">
+                <div class="form-group">
+                  <label>Tu Nombre *</label>
+                  <input type="text" name="name" placeholder="John Smith" required>
+                </div>
+                <div class="form-group">
+                  <label>Email del Negocio *</label>
+                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required oninput="document.getElementById('replyto').value=this.value">
+                  <input type="hidden" name="_replyto" id="replyto">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Empresa / Sitio Web</label>
+                <input type="text" name="company" placeholder="company.com or Company Name">
+              </div>
+              <div class="form-group">
+                <label>Me interesa *</label>
+                <select name="service" required>
+                  <option value="" disabled selected>Selecciona un servicio...</option>
+                  <option value="Auditoría de Presencia Digital">🔍 Auditoría de Presencia Digital ($45–$160)</option>
+                  <option value="Generación de Leads B2B">🚀 Generación de Leads B2B ($149–$999/mo)</option>
+                  <option value="Sistemas AdTech con IA">🤖 Sistemas AdTech con IA ($1,500–$7,500+)</option>
+                  <option value="Not sure">💬 Not sure — help me decide</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Cuéntanos sobre tu negocio</label>
+                <textarea name="message" placeholder="What's your main challenge right now? (optional but helps us give you a better answer)"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
+                Enviar Mensaje →
+              </button>
+              <p class="form-note">Te respondemos en 24 horas. Sin spam.</p>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3>¡Mensaje recibido!</h3>
+            <p>Analizaremos tu situación y te responderemos en 24 horas con nuestra recomendación.</p>
+            <br>
+            <p style="font-size:0.83rem;"><strong style="color:var(--text)">Facts. Clarity. Action.</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.png" alt="Clarvix" class="footer-logo-img">
-        <p>Auditoría Digital y Generación de Leads B2B</p>
+        <a href="/" class="logo">
+          <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+          <span class="logo-text">Clarvix</span>
+        </a>
+        <p>Auditorías digitales respaldadas por datos, leads B2B verificados y sistemas IA para publicidad programática. No hacemos opiniones — hacemos evidencia.</p>
+        <div class="footer-tagline">DATOS. CLARIDAD. ACCIÓN.</div>
+        <div class="footer-social">
+          <a href="https://instagram.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Instagram">📸</a>
+          <a href="https://linkedin.com/company/clarvix" class="social-btn" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+          <a href="https://fiverr.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Fiverr">⭐</a>
+        </div>
       </div>
-      <div class="footer-links">
-        <a href="#services">Servicios</a>
-        <a href="#pricing">Precios</a>
-        <a href="#how-it-works">Cómo funciona</a>
-        <a href="/adtech-ai-es.html">AdTech AI</a>
-        <a href="#contact">Contacto</a>
-        <a href="mailto:contact@clarvix.net">contact@clarvix.net</a>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul class="footer-links">
+          <li><a href="#audit">Auditoría de Presencia Digital</a></li>
+          <li><a href="#leads">Generación de Leads B2B</a></li>
+          <li><a href="#adtech">Sistemas AdTech con IA</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+        </ul>
       </div>
-      <p class="footer-copy">© 2026 Clarvix. Datos. Claridad. Acción.</p>
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul class="footer-links">
+          <li><a href="#how">Cómo Funciona</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Mercados</h4>
+        <ul class="footer-links">
+          <li><a href="/">🇺🇸 English</a></li>
+          <li><a href="/es.html">🇪🇸 Español</a></li>
+          <li><a href="/he.html">🇮🇱 עברית</a></li>
+          <li><a href="/ar.html">🇵🇸 العربية</a></li>
+        </ul>
+      </div>
     </div>
-  </footer>
-
-  <!-- ORDER MODAL (Audit) -->
-  <div class="order-overlay" id="orderOverlay" onclick="handleOverlayClick(event)">
-    <div class="order-modal" id="orderModal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" onclick="closeOrder()" aria-label="Close">✕</button>
-      <div class="modal-header">
-        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 id="modal-title" class="modal-title">Pedir tu Auditoría</h2>
-        <p class="modal-sub">Selecciona tu paquete y te enviaremos instrucciones de pago en minutos.</p>
-      </div>
-      <div class="package-selector" id="packageSelector">
-        <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
-          <div class="pkg-radio" id="radioBasic"></div>
-          <div class="pkg-info"><span class="pkg-name">Básico</span><span class="pkg-desc">Diagnóstico Central</span></div>
-          <span class="pkg-price">$45</span>
-        </label>
-        <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
-          <div class="pkg-radio" id="radioStandard"></div>
-          <div class="pkg-info"><span class="pkg-name">Estándar</span><span class="pkg-desc">Auditoría Completa + Benchmark</span></div>
-          <span class="pkg-price">$85</span>
-        </label>
-        <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
-          <div class="pkg-radio" id="radioPremium"></div>
-          <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">Auditoría Estratégica Avanzada</span></div>
-          <span class="pkg-price">$160</span>
-        </label>
-      </div>
-      <form class="order-form" id="orderForm" onsubmit="submitOrder(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="businessName">Nombre del Negocio</label>
-            <input type="text" id="businessName" class="form-input" placeholder="ej. Clínica Dental Monterrey" required autocomplete="organization">
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="websiteUrl">URL del Sitio Web</label>
-            <input type="url" id="websiteUrl" class="form-input" placeholder="https://tunegocio.com" required autocomplete="url">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="businessCity">Ciudad y País</label>
-          <input type="text" id="businessCity" class="form-input" placeholder="ej. Ciudad de México, México" autocomplete="address-level2">
-        </div>
-        <p class="form-error" id="formError">Por favor completa el nombre del negocio y la URL.</p>
-        <button type="submit" class="btn-order-submit" id="orderSubmit">
-          <span class="submit-text">Proceder al Pago →</span>
-          <span class="submit-loading" style="display:none;">⟳ Procesando...</span>
-        </button>
-        <p class="modal-footnote">Las instrucciones de pago se enviarán a tu email en minutos.</p>
-      </form>
+    <div class="footer-bottom">
+      <span>© 2026 Clarvix. All rights reserved.</span>
+      <span>contact@clarvix.net</span>
     </div>
   </div>
+</footer>
 
-  <!-- LEAD GEN ORDER MODAL -->
-  <div class="order-overlay" id="leadgenOverlay" onclick="if(event.target===this)closeLeadGenOrder()">
-    <div class="order-modal" id="leadgenModal" role="dialog" aria-modal="true">
-      <button class="modal-close" onclick="closeLeadGenOrder()" aria-label="Close">✕</button>
-      <div class="modal-header">
-        <img src="images/logo.png" alt="Clarvix" class="modal-logo-img">
-        <h2 class="modal-title">Iniciar Generación de Leads</h2>
-        <p class="modal-sub" id="leadgen-plan-label">Professional — $549/month</p>
-      </div>
-      <form class="order-form" id="leadgenForm" onsubmit="submitLeadGenOrder(event)" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label" for="lgBusinessName">Nombre del Negocio</label>
-            <input type="text" id="lgBusinessName" class="form-input" placeholder="ej. Acme Corp" required>
-          </div>
-          <div class="form-group">
-            <label class="form-label" for="lgEmail">Tu Email</label>
-            <input type="email" id="lgEmail" class="form-input" placeholder="tu@empresa.com" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="lgICP">Describe tu cliente ideal (industria, cargo, ubicación)</label>
-          <input type="text" id="lgICP" class="form-input" placeholder="ej. Agencias inmobiliarias en CDMX — Dueño o Gerente">
-        </div>
-        <p class="form-error" id="lgFormError">Por favor completa el nombre del negocio y el email.</p>
-        <button type="submit" class="btn-order-submit" id="lgSubmit">
-          <span class="submit-text">Enviar Consulta →</span>
-          <span class="submit-loading" style="display:none;">⟳ Enviando...</span>
-        </button>
-        <p class="modal-footnote">Confirmaremos tu pedido y enviaremos instrucciones de pago en 24 horas.</p>
-      </form>
-    </div>
-  </div>
+<script src="app.js"></script>
+<script>
+// Pricing tab switch
+function switchTab(panelId) {
+  document.querySelectorAll('.pricing-panels > div').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.p-tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(panelId).classList.add('active');
+  event.target.classList.add('active');
+}
 
-  <script src="app.js"></script>
+// Mobile menu
+function toggleMenu() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+}
 
+// Close menu on link click
+document.querySelectorAll('#mobileMenu a').forEach(a => {
+  a.addEventListener('click', () => document.getElementById('mobileMenu').classList.remove('open'));
+});
+
+// Accordion pricing
+function toggleAccordion(panelId, btn) {
+  const panel = document.getElementById(panelId);
+  const isOpen = panel.classList.contains('open');
+  panel.classList.toggle('open', !isOpen);
+  panel.style.maxHeight = isOpen ? '0' : panel.scrollHeight + 'px';
+  btn.classList.toggle('active', !isOpen);
+}
+// Init accordion heights on load
+window.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.acc-panel.open').forEach(function(p) {
+    p.style.maxHeight = p.scrollHeight + 'px';
+  });
+});
+
+// Contact form
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('button[type="submit"]');
+  btn.textContent = 'Sending...';
+  btn.disabled = true;
+  try {
+    const resp = await fetch(this.action, {
+      method: 'POST',
+      body: new FormData(this),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (resp.ok) {
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      btn.textContent = 'Error — try emailing contact@clarvix.net';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error — try emailing contact@clarvix.net';
+    btn.disabled = false;
+  }
+});
+
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const nb = document.getElementById('navbar');
+  nb.style.background = window.scrollY > 50 ? 'rgba(8,13,26,0.98)' : 'rgba(8,13,26,0.88)';
+});
+</script>
 </body>
 </html>
