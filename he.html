@@ -687,19 +687,20 @@
           </div>
           <div class="p-card">
             <div class="p-tier">Premium</div>
-            <div class="p-name">Full Intelligence</div>
-            <div class="p-desc">Complete audit + video walkthrough + implementation call.</div>
+            <div class="p-name">מודיעין מלא</div>
+            <div class="p-desc">הביקורת המקיפה ביותר — ניתוח עמוק, תוכן מוכן לשימוש וסריקת התקדמות חינם אחרי 60 יום.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">160</span></div>
-            <div class="p-period">one-time</div>
+            <div class="p-period">חד פעמי</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>Everything in Complete</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>8–12 min video walkthrough (Loom)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>30-min Q&A implementation call</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Priority delivery (3 days)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Upsell: Monthly monitoring available</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>הכל בביקורת המלאה</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>5 מתחרים מנותחים (במקום 3)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>מפת דרכים ל-90 יום עם יעדים שבועיים</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>3 שדרוגי תוכן מוכנים להדבקה (כותרת, CTA, מטא)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>סריקת התקדמות חינם אחרי 60 יום</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>מסירה מועדפת (3 ימים)</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+            <a href="#contact" class="btn btn-ghost btn-full">להתחיל</a>
           </div>
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
@@ -1003,7 +1004,7 @@
               </div>
               <div class="form-group">
                 <label>מעוניין ב *</label>
-                <select name="service" required>
+                <select name="service">
                   <option value="" disabled selected>בחר שירות...</option>
                   <option value="ביקורת נוכחות דיגיטלית">🔍 ביקורת נוכחות דיגיטלית ($45–$160)</option>
                   <option value="ייצור לידים B2B">🚀 ייצור לידים B2B ($149–$999/mo)</option>
@@ -1015,7 +1016,9 @@
                 <label>Tell us about your business</label>
                 <textarea name="message" placeholder="What's your main challenge right now? (optional but helps us give you a better answer)"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
+                            <!-- Anti-spam honeypot – hidden from real users -->
+              <input type="text" name="_gotcha" style="display:none!important" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
                 שלח הודעה ←
               </button>
               <p class="form-note">נשיב לך בתוך 24 שעות. ללא דואר זבל, לעולם.</p>
@@ -1124,15 +1127,83 @@ window.addEventListener('DOMContentLoaded', function() {
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
+
+  // ── Rate limiting: 1 submission per 60s per session ──────────────
+  var lastSub = sessionStorage.getItem('clarvix_last_contact');
+  if (lastSub && (Date.now() - parseInt(lastSub)) < 60000) {
+    alert('Please wait a moment before sending another message.');
+    return;
+  }
+
+  // ── Honeypot check ────────────────────────────────────────────────
+  if (document.querySelector('input[name="_gotcha"]').value !== '') return;
+
+  // ── Sanitize helper (strip HTML/script tags, trim, limit length) ──
+  function sanitize(val, maxLen) {
+    if (!val) return '';
+    // Strip HTML tags
+    val = val.replace(/<[^>]*>/g, '');
+    // Strip potential script injections
+    val = val.replace(/javascript:/gi, '').replace(/on\w+\s*=/gi, '');
+    // Trim and limit
+    return val.trim().substring(0, maxLen || 1000);
+  }
+
+  // ── Validate & sanitize each field ───────────────────────────────
+  var nameEl    = this.querySelector('input[name="name"]');
+  var emailEl   = this.querySelector('input[name="email"]');
+  var companyEl = this.querySelector('input[name="company"]');
+  var serviceEl = this.querySelector('select[name="service"]');
+  var msgEl     = this.querySelector('textarea[name="message"]');
+
+  var name    = sanitize(nameEl    ? nameEl.value    : '', 120);
+  var email   = sanitize(emailEl   ? emailEl.value   : '', 200);
+  var company = sanitize(companyEl ? companyEl.value : '', 200);
+  var service = sanitize(serviceEl ? serviceEl.value : '', 80);
+  var message = sanitize(msgEl     ? msgEl.value     : '', 3000);
+
+  if (name.length < 2) {
+    alert('Please enter your name (at least 2 characters).');
+    return;
+  }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Write sanitized values back
+  if (nameEl)    nameEl.value    = name;
+  if (emailEl)   emailEl.value   = email;
+  if (companyEl) companyEl.value = company;
+  if (serviceEl) serviceEl.value = service;
+  if (msgEl)     msgEl.value     = message;
+
+  var btn = this.querySelector('button[type="submit"]');
+  var origText = btn.textContent;
+  btn.textContent = 'Sending…';
   btn.disabled = true;
+
   try {
-    const resp = await fetch(this.action, {
+    var formData = new FormData(this);
+    var resp = await fetch(this.action, {
       method: 'POST',
-      body: new FormData(this),
+      body: formData,
       headers: { 'Accept': 'application/json' }
     });
+    if (resp.ok) {
+      sessionStorage.setItem('clarvix_last_contact', Date.now().toString());
+      document.getElementById('formWrapper').style.display = 'none';
+      var succ = document.getElementById('formSuccess');
+      if (succ) succ.style.display = 'block';
+    } else {
+      throw new Error('Server error ' + resp.status);
+    }
+  } catch (err) {
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert('Something went wrong. Please try again or email us at contact@clarvix.net');
+  }
+});
     if (resp.ok) {
       document.getElementById('formWrapper').style.display = 'none';
       document.getElementById('formSuccess').classList.add('show');

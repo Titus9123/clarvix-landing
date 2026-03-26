@@ -3,3 +3,5 @@ __pycache__/
 *.pyo
 *.pyd
 db/clarvix_ops.db
+.env
+*.db

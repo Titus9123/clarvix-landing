@@ -651,18 +651,19 @@
           <div class="p-card">
             <div class="p-tier">Premium</div>
             <div class="p-name">Inteligencia Total</div>
-            <div class="p-desc">Auditoría completa + recorrido en video + llamada de implementación.</div>
+            <div class="p-desc">La auditoría más completa — inteligencia profunda, copy listo para usar y un rescan gratuito a los 60 días.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">160</span></div>
             <div class="p-period">única vez</div>
             <hr class="p-divider">
             <ul class="p-features">
               <li class="p-feat"><span class="ck">✓</span><span>Todo en Auditoría Completa</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Recorrido en video de 8-12 min (Loom)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Llamada de Q&A de implementación 30 min</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>5 competidores analizados (vs 3)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Hoja de ruta 90 días con hitos semanales</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>3 mejoras de copy listas para pegar (titular, CTA, meta)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Rescan de progreso gratuito a los 60 días</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Entrega prioritaria (3 días)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Venta adicional: Monitoreo mensual disponible</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Comenzar</a>
           </div>
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
@@ -966,7 +967,7 @@
               </div>
               <div class="form-group">
                 <label>Me interesa *</label>
-                <select name="service" required>
+                <select name="service">
                   <option value="" disabled selected>Selecciona un servicio...</option>
                   <option value="Auditoría de Presencia Digital">🔍 Auditoría de Presencia Digital ($45–$160)</option>
                   <option value="Generación de Leads B2B">🚀 Generación de Leads B2B ($149–$999/mo)</option>
@@ -978,7 +979,9 @@
                 <label>Cuéntanos sobre tu negocio</label>
                 <textarea name="message" placeholder="What's your main challenge right now? (optional but helps us give you a better answer)"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
+                            <!-- Anti-spam honeypot – hidden from real users -->
+              <input type="text" name="_gotcha" style="display:none!important" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button type="submit" class="btn btn-primary btn-full" style="font-size:1rem;padding:16px;">
                 Enviar Mensaje →
               </button>
               <p class="form-note">Te respondemos en 24 horas. Sin spam.</p>
@@ -1087,15 +1090,83 @@ window.addEventListener('DOMContentLoaded', function() {
 // Contact form
 document.getElementById('contactForm').addEventListener('submit', async function(e) {
   e.preventDefault();
-  const btn = this.querySelector('button[type="submit"]');
-  btn.textContent = 'Sending...';
+
+  // ── Rate limiting: 1 submission per 60s per session ──────────────
+  var lastSub = sessionStorage.getItem('clarvix_last_contact');
+  if (lastSub && (Date.now() - parseInt(lastSub)) < 60000) {
+    alert('Please wait a moment before sending another message.');
+    return;
+  }
+
+  // ── Honeypot check ────────────────────────────────────────────────
+  if (document.querySelector('input[name="_gotcha"]').value !== '') return;
+
+  // ── Sanitize helper (strip HTML/script tags, trim, limit length) ──
+  function sanitize(val, maxLen) {
+    if (!val) return '';
+    // Strip HTML tags
+    val = val.replace(/<[^>]*>/g, '');
+    // Strip potential script injections
+    val = val.replace(/javascript:/gi, '').replace(/on\w+\s*=/gi, '');
+    // Trim and limit
+    return val.trim().substring(0, maxLen || 1000);
+  }
+
+  // ── Validate & sanitize each field ───────────────────────────────
+  var nameEl    = this.querySelector('input[name="name"]');
+  var emailEl   = this.querySelector('input[name="email"]');
+  var companyEl = this.querySelector('input[name="company"]');
+  var serviceEl = this.querySelector('select[name="service"]');
+  var msgEl     = this.querySelector('textarea[name="message"]');
+
+  var name    = sanitize(nameEl    ? nameEl.value    : '', 120);
+  var email   = sanitize(emailEl   ? emailEl.value   : '', 200);
+  var company = sanitize(companyEl ? companyEl.value : '', 200);
+  var service = sanitize(serviceEl ? serviceEl.value : '', 80);
+  var message = sanitize(msgEl     ? msgEl.value     : '', 3000);
+
+  if (name.length < 2) {
+    alert('Please enter your name (at least 2 characters).');
+    return;
+  }
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+    alert('Please enter a valid email address.');
+    return;
+  }
+
+  // Write sanitized values back
+  if (nameEl)    nameEl.value    = name;
+  if (emailEl)   emailEl.value   = email;
+  if (companyEl) companyEl.value = company;
+  if (serviceEl) serviceEl.value = service;
+  if (msgEl)     msgEl.value     = message;
+
+  var btn = this.querySelector('button[type="submit"]');
+  var origText = btn.textContent;
+  btn.textContent = 'Sending…';
   btn.disabled = true;
+
   try {
-    const resp = await fetch(this.action, {
+    var formData = new FormData(this);
+    var resp = await fetch(this.action, {
       method: 'POST',
-      body: new FormData(this),
+      body: formData,
       headers: { 'Accept': 'application/json' }
     });
+    if (resp.ok) {
+      sessionStorage.setItem('clarvix_last_contact', Date.now().toString());
+      document.getElementById('formWrapper').style.display = 'none';
+      var succ = document.getElementById('formSuccess');
+      if (succ) succ.style.display = 'block';
+    } else {
+      throw new Error('Server error ' + resp.status);
+    }
+  } catch (err) {
+    btn.textContent = origText;
+    btn.disabled = false;
+    alert('Something went wrong. Please try again or email us at contact@clarvix.net');
+  }
+});
     if (resp.ok) {
       document.getElementById('formWrapper').style.display = 'none';
       document.getElementById('formSuccess').classList.add('show');

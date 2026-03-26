@@ -1,4 +1,4 @@
-/* ================================================================
+﻿/* ================================================================
    CLARVIX — app.js
    ─ Multilingual support (EN / ES / HE / AR)
    ─ Order modal + mailto intake flow (Audit & Lead Gen)
@@ -507,4 +507,118 @@ function initScoreBars() {
   }, { threshold: 0.35 });
 
   barObserver.observe(scorePreview);
+}
+
+/* ─────────────────────────────────────────────────────────────────────
+   CONTACT FORM — Formspree handler
+   Replace REPLACE_FORMSPREE_ID in the HTML with your actual Formspree ID
+   Instructions: go to formspree.io → New Form → connect contact@clarvix.net
+   ───────────────────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', function () {
+  var cf = document.getElementById('contactForm');
+  if (!cf) return;
+
+  cf.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var btn = document.getElementById('contactSubmitBtn');
+    var origText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending...';
+
+    fetch(cf.action, {
+      method: 'POST',
+      body: new FormData(cf),
+      headers: { 'Accept': 'application/json' }
+    }).then(function (resp) {
+      if (resp.ok) {
+        document.getElementById('contactFormWrap').querySelector('form').style.display = 'none';
+        document.getElementById('contactSuccess').style.display = 'block';
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Error — email contact@clarvix.net directly';
+      }
+    }).catch(function () {
+      btn.disabled = false;
+      btn.textContent = 'Error — email contact@clarvix.net directly';
+    });
+  });
+});
+
+// ─── ADTECH AI ORDER MODAL ───────────────────────────────────────────────────
+var _adTechTier = 'discovery';
+var _adTechTierLabels = {
+  discovery:  'Stack Analysis & AI Blueprint — $1,500',
+  build:      'First Agent Deployment — $3,500',
+  production: 'Full Autonomous AI Stack — $7,500'
+};
+var _adTechTierPrices = { discovery: '$1,500', build: '$3,500', production: '$7,500' };
+
+function openAdTechOrder(tier) {
+  tier = tier || 'discovery';
+  selectAdTechTier(tier);
+  document.getElementById('adTechOverlay').style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAdTechOrder() {
+  document.getElementById('adTechOverlay').style.display = 'none';
+  document.body.style.overflow = '';
+}
+
+function selectAdTechTier(tier) {
+  _adTechTier = tier;
+  var lbl = document.getElementById('adtech-tier-label');
+  if (lbl) lbl.textContent = _adTechTierLabels[tier] || '';
+  ['discovery','build','production'].forEach(function(t) {
+    var el = document.getElementById('adTechTier' + t.charAt(0).toUpperCase() + t.slice(1));
+    var rd = document.getElementById('adTechRadio' + t.charAt(0).toUpperCase() + t.slice(1));
+    if (el) el.classList.toggle('selected', t === tier);
+    if (rd) rd.classList.toggle('selected', t === tier);
+  });
+}
+
+function submitAdTechOrder(e) {
+  e.preventDefault();
+  var company   = (document.getElementById('adTechCompany')   || {}).value || '';
+  var url       = (document.getElementById('adTechUrl')       || {}).value || '';
+  var email     = (document.getElementById('adTechEmail')     || {}).value || '';
+  var stack     = (document.getElementById('adTechStack')     || {}).value || '';
+  var challenge = (document.getElementById('adTechChallenge') || {}).value || '';
+  var errEl     = document.getElementById('adTechFormError');
+
+  if (!company || !url || !email || !challenge) {
+    if (errEl) errEl.style.display = 'block';
+    return;
+  }
+  if (errEl) errEl.style.display = 'none';
+
+  var subject = 'Clarvix AdTech AI Inquiry — ' + _adTechTierLabels[_adTechTier];
+  var body =
+    'Package: ' + _adTechTierLabels[_adTechTier] + '\n\n' +
+    'Company: ' + company + '\n' +
+    'Website: ' + url + '\n' +
+    'Email: ' + email + '\n\n' +
+    'Current AdTech Stack:\n' + stack + '\n\n' +
+    'Main Challenge:\n' + challenge;
+
+  var btn = document.getElementById('adTechSubmit');
+  if (btn) {
+    var st = btn.querySelector('.submit-text');
+    var ld = btn.querySelector('.submit-loading');
+    if (st) st.style.display = 'none';
+    if (ld) ld.style.display = 'inline';
+  }
+
+  setTimeout(function() {
+    window.location.href =
+      'mailto:' + CONTACT_EMAIL +
+      '?subject=' + encodeURIComponent(subject) +
+      '&body=' + encodeURIComponent(body);
+    if (btn) {
+      var st = btn.querySelector('.submit-text');
+      var ld = btn.querySelector('.submit-loading');
+      if (st) st.style.display = 'inline';
+      if (ld) ld.style.display = 'none';
+    }
+  }, 400);
 }
