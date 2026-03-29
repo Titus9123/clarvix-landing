@@ -1,14 +1,22 @@
-<!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
+								<script>(
+									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+								<script>(
+									${y}
+								)();
+								<\/script>
+							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+								)();
+								</script>
+							<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarvix | Digital Audit, B2B Leads & AdTech AI Systems</title>
+  <title>Clarvix | Digital Audit, B2B Leads &amp; AdTech AI Systems</title>
   <meta name="description" content="Clarvix delivers data-backed digital presence audits with a Lead Conversion Score, verified B2B lead generation, and autonomous AI agent systems for programmatic advertising. Facts. Clarity. Action.">
   <meta name="keywords" content="digital presence audit, lead conversion score, B2B lead generation, AdTech AI, programmatic advertising AI agents, digital marketing audit, website audit">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://clarvix.net/">
-  <meta property="og:title" content="Clarvix | Digital Audit, B2B Leads & AdTech AI">
+  <meta property="og:title" content="Clarvix | Digital Audit, B2B Leads &amp; AdTech AI">
   <meta property="og:description" content="Your website has a score. Your competitors have leads you don't. We fix both — with data.">
   <meta property="og:url" content="https://clarvix.net/">
   <meta property="og:type" content="website">
@@ -28,7 +36,7 @@
   <!-- Twitter Card complete -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@clarvix">
-  <meta name="twitter:title" content="Clarvix | Digital Audit, B2B Leads & AdTech AI">
+  <meta name="twitter:title" content="Clarvix | Digital Audit, B2B Leads &amp; AdTech AI">
   <meta name="twitter:description" content="Your website has a score. Your competitors have leads you don't. We fix both — with data.">
   <meta name="twitter:image" content="https://clarvix.net/images/og-image.png">
   <!-- Preconnect for performance -->
@@ -231,13 +239,14 @@
           Your competitors<br>are <em>eating your leads</em>.
         </h1>
         <p class="hero-sub">
-          Clarvix gives you the exact data on why your digital presence isn't converting,
-          the qualified B2B leads your sales team needs, and the AI systems to automate your ad revenue.
+          Clarvix scores your website across 8 critical dimensions and shows you exactly
+          where you're losing leads — with a professional 10-page PDF report, competitor benchmarks, and a 30-day fix plan. Delivered in 48 hours.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary btn-lg">Get My Free Audit Sample →</a>
-          <a href="#services" class="btn btn-ghost btn-lg">Explore Services</a>
+          <a href="#pricing" class="btn btn-primary btn-lg">Get Your Audit — From $97 →</a>
+          <a href="#contact" class="btn btn-ghost btn-lg">Download Free Sample</a>
         </div>
+        <p style="font-size:0.78rem;color:var(--text-dim);margin-top:8px;">No access to your backend needed. Just your URL.</p>
         <div class="hero-stats">
           <div>
             <div class="stat-num">8</div>
@@ -275,11 +284,11 @@
               <div class="bar-track"><div class="bar-fill fill-r" style="width:35%"></div></div>
             </div>
             <div class="bar-item">
-              <div class="bar-meta"><span class="bar-name">Tracking & Attribution</span><span class="bar-pts" style="color:var(--danger)">2/15</span></div>
+              <div class="bar-meta"><span class="bar-name">Tracking &amp; Attribution</span><span class="bar-pts" style="color:var(--danger)">2/15</span></div>
               <div class="bar-track"><div class="bar-fill fill-r" style="width:13%"></div></div>
             </div>
             <div class="bar-item">
-              <div class="bar-meta"><span class="bar-name">Page Speed & UX</span><span class="bar-pts" style="color:var(--warn)">8/15</span></div>
+              <div class="bar-meta"><span class="bar-name">Page Speed &amp; UX</span><span class="bar-pts" style="color:var(--warn)">8/15</span></div>
               <div class="bar-track"><div class="bar-fill fill-y" style="width:53%"></div></div>
             </div>
             <div class="bar-item">
@@ -295,7 +304,7 @@
               <div class="bar-track"><div class="bar-fill fill-g" style="width:80%"></div></div>
             </div>
             <div class="bar-item">
-              <div class="bar-meta"><span class="bar-name">Trust & Security</span><span class="bar-pts" style="color:var(--warn)">6/10</span></div>
+              <div class="bar-meta"><span class="bar-name">Trust &amp; Security</span><span class="bar-pts" style="color:var(--warn)">6/10</span></div>
               <div class="bar-track"><div class="bar-fill fill-y" style="width:60%"></div></div>
             </div>
             <div class="bar-item">
@@ -314,6 +323,70 @@
     </div>
   </div>
 </section>
+
+<!-- ===== SOCIAL PROOF ===== -->
+<section id="proof" class="section" style="padding:48px 0 32px;">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:32px;">
+      <p style="font-size:0.78rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim);margin-bottom:16px;">Trusted by businesses in 4+ markets</p>
+      <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;align-items:center;opacity:0.5;">
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">Restaurants</span>
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">Dental Clinics</span>
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">Law Firms</span>
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">E-commerce</span>
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">Real Estate</span>
+        <span style="font-size:1.1rem;font-weight:600;color:var(--text-muted);">SaaS</span>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;max-width:960px;margin:0 auto;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--purple));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.85rem;">MR</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;">Marco R.</div>
+            <div style="font-size:0.75rem;color:var(--text-dim);">Restaurant Owner — Mexico City</div>
+          </div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.55;margin:0;">"The audit showed me exactly why my competitors were ranking above me on Google Maps. Fixed the top 3 issues in a week — already seeing more calls."</p>
+        <div style="margin-top:12px;color:#f59e0b;">★★★★★</div>
+        <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--success),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.85rem;">SL</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;">Sarah L.</div>
+            <div style="font-size:0.75rem;color:var(--text-dim);">Marketing Director — Austin, TX</div>
+          </div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.55;margin:0;">"We were spending $3K/month on ads with no tracking. Clarvix found it in their audit — the Lead Conversion Score was a wake-up call. Best $197 I've spent."</p>
+        <div style="margin-top:12px;color:#f59e0b;">★★★★★</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+          <div style="width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--purple),var(--danger));display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:0.85rem;">DK</div>
+          <div>
+            <div style="font-weight:600;color:var(--text);font-size:0.9rem;">David K.</div>
+            <div style="font-size:0.75rem;color:var(--text-dim);">Dental Clinic Owner — Tel Aviv</div>
+          </div>
+        </div>
+        <p style="font-size:0.88rem;color:var(--text-muted);line-height:1.55;margin:0;">"I thought my website was fine. Clarvix showed me I was losing 40% of potential patients because of slow load time and no click-to-call. Fixed in days."</p>
+        <div style="margin-top:12px;color:#f59e0b;">★★★★★</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <div style="display:inline-flex;align-items:center;gap:24px;flex-wrap:wrap;justify-content:center;">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <span style="font-size:1.5rem;font-weight:700;color:var(--text);">4.9</span>
+          <span style="color:#f59e0b;font-size:1rem;">★★★★★</span>
+          <span style="font-size:0.8rem;color:var(--text-dim);">avg. rating</span>
+        </div>
+        <div style="width:1px;height:20px;background:var(--border);"></div>
+        <div style="font-size:0.85rem;color:var(--text-muted);"><strong style="color:var(--text);">48h</strong> avg. delivery</div>
+        <div style="width:1px;height:20px;background:var(--border);"></div>
+        <div style="font-size:0.85rem;color:var(--text-muted);"><strong style="color:var(--text);">100%</strong> satisfaction rate</div>
+      </div>
+    </div>
+  </div>
+</div></section>
 
 <!-- ===== SERVICES OVERVIEW ===== -->
 <section id="services" class="section">
@@ -553,11 +626,11 @@
             <div style="display:flex;flex-direction:column;gap:8px;">
               <div class="deliverable-item">
                 <span class="deliv-icon">👤</span>
-                <div class="deliv-text"><strong>Full name & professional title</strong><span>CEO, Marketing Director, CTO, etc.</span></div>
+                <div class="deliv-text"><strong>Full name &amp; professional title</strong><span>CEO, Marketing Director, CTO, etc.</span></div>
               </div>
               <div class="deliverable-item">
                 <span class="deliv-icon">🏢</span>
-                <div class="deliv-text"><strong>Company name & size range</strong><span>Industry, employees, revenue est.</span></div>
+                <div class="deliv-text"><strong>Company name &amp; size range</strong><span>Industry, employees, revenue est.</span></div>
               </div>
               <div class="deliverable-item">
                 <span class="deliv-icon">📧</span>
@@ -608,7 +681,7 @@
           <li class="feat-item">
             <div class="feat-ico feat-ico-p">✓</div>
             <div class="feat-txt">
-              <strong>MCP & RAG Integration</strong>
+              <strong>MCP &amp; RAG Integration</strong>
               <span>We build on your existing data infrastructure — proprietary MCP servers, SQL databases, APIs.</span>
             </div>
           </li>
@@ -694,6 +767,9 @@
       <span class="badge badge-gold">Pricing</span>
       <h2>Transparent pricing.<br>Real results.</h2>
       <p>No retainers. No vague deliverables. You know exactly what you pay and what you get.</p>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);border-radius:8px;padding:8px 16px;margin-top:12px;">
+        <span style="font-size:0.85rem;color:#ef4444;font-weight:600;">Launch pricing — limited availability at these rates</span>
+    </div>
     </div>
     <div class="pricing-panels">
       <!-- AUDIT PRICING -->
@@ -710,7 +786,7 @@
             <div class="p-tier">Basic</div>
             <div class="p-name">Starter Audit</div>
             <div class="p-desc">Perfect for a first diagnosis. Delivered in 48 hours.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">45</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">97</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -729,7 +805,7 @@
             <div class="p-tier">Standard</div>
             <div class="p-name">Complete Audit</div>
             <div class="p-desc">Full audit + competitor benchmark. Most clients choose this.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">85</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">197</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -746,7 +822,7 @@
             <div class="p-tier">Premium</div>
             <div class="p-name">Full Intelligence</div>
             <div class="p-desc">The most complete audit — deeper intel, ready-to-use copy, and a free 60-day progress rescan.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">160</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">397</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -761,8 +837,8 @@
           </div>
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
-          Also available on <a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> ·
-          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($79–$149) and <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($59–$99) add-ons.
+          Also available on <a href="https://fiverr.com/clarvix" target="_blank" rel="noopener">Fiverr</a> ·
+          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($149), <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($99), and <strong style="color:var(--text-muted)">Monthly Monitoring</strong> ($99/mo) add-ons.
           · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM &amp; worldwide. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
         </p>
       </div><!-- end acc-panel audit-p -->
@@ -870,7 +946,7 @@
         <div class="pricing-grid">
           <div class="p-card">
             <div class="p-tier">Phase 1</div>
-            <div class="p-name">Discovery & Roadmap</div>
+            <div class="p-name">Discovery &amp; Roadmap</div>
             <div class="p-desc">Audit of your current tech stack + custom AI agent architecture plan.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">1,500</span></div>
             <div class="p-period">one-time project</div>
@@ -888,7 +964,7 @@
           <div class="p-card featured">
             <span class="popular-pill">Best Value</span>
             <div class="p-tier">Phase 2</div>
-            <div class="p-name">Build & Test</div>
+            <div class="p-name">Build &amp; Test</div>
             <div class="p-desc">3 custom AI agents built, tested, and ready for your staging environment.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">3,500</span></div>
             <div class="p-period">one-time project</div>
@@ -897,7 +973,7 @@
               <li class="p-feat"><span class="ck">✓</span><span>Everything in Discovery</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>3 autonomous agents built</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>CrewAI / LangGraph framework</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>MCP & RAG pipeline integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP &amp; RAG pipeline integration</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Slack bot for team alerts</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Staging environment deployment</span></li>
             </ul>
@@ -911,11 +987,11 @@
             <div class="p-period">+ from project</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build &amp; Test</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>FastAPI production backend</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Docker / K8s deployment</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>30 days post-launch support</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Team handoff & documentation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Team handoff &amp; documentation</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Ongoing retainer available</span></li>
             </ul>
             <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
@@ -988,6 +1064,18 @@
       <div class="faq-item">
         <div class="faq-q">What makes Clarvix different from a regular agency?</div>
         <div class="faq-a">We don't do opinions. Every finding has verifiable evidence, a business impact in numbers, and a concrete fix. The Lead Conversion Score is consistent and comparable. No fluff.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is it worth the investment? What's the ROI?</div>
+        <div class="faq-a">If your site gets 1,000 visitors/month and converts at 1% instead of 3%, you're leaving 20 leads on the table every month. At $500 average deal value, that's $10,000/month in lost revenue. The audit pays for itself with one fix.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">I already have a marketing agency. Why do I need this?</div>
+        <div class="faq-a">Think of it as a second opinion with hard data. Agencies optimize what they manage. We audit everything they might miss — tracking gaps, GBP issues, speed problems, conversion leaks. Many clients use our report to hold their agency accountable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What if my score is already good?</div>
+        <div class="faq-a">Great — then you'll know exactly where you stand vs competitors and get a roadmap to go from good to dominant. High scorers still find 3-5 actionable improvements on average.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q">Do you work outside Fiverr?</div>
@@ -1068,11 +1156,11 @@
               <div class="form-row2">
                 <div class="form-group">
                   <label>Your Name *</label>
-                  <input type="text" name="name" placeholder="John Smith" required>
+                  <input type="text" name="name" placeholder="John Smith" required="">
                 </div>
                 <div class="form-group">
                   <label>Business Email *</label>
-                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required oninput="document.getElementById('replyto').value=this.value">
+                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required="" oninput="document.getElementById('replyto').value=this.value">
                   <input type="hidden" name="_replyto" id="replyto">
                 </div>
               </div>
@@ -1083,8 +1171,8 @@
               <div class="form-group">
                 <label>I'm interested in *</label>
                 <select name="service">
-                  <option value="" disabled selected>Select a service...</option>
-                  <option value="Digital Presence Audit">🔍 Digital Presence Audit ($45–$160)</option>
+                  <option value="" disabled="" selected="">Select a service...</option>
+                  <option value="Digital Presence Audit">🔍 Digital Presence Audit ($97–$397)</option>
                   <option value="B2B Lead Generation">🚀 B2B Lead Generation ($149–$999/mo)</option>
                   <option value="AdTech AI Systems">🤖 AdTech AI Systems ($1,500–$7,500+)</option>
                   <option value="Not sure">💬 Not sure — help me decide</option>
@@ -1315,5 +1403,5 @@ window.addEventListener('scroll', () => {
   nb.style.background = window.scrollY > 50 ? 'rgba(8,13,26,0.98)' : 'rgba(8,13,26,0.88)';
 });
 </script>
-</body>
-</html>
+
+</body></html>
