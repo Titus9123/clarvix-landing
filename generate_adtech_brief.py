@@ -252,7 +252,7 @@ def draw_hf(c, doc, lang_data):
     c.line(MARGIN, 0.55*inch, W - MARGIN, 0.55*inch)
     # Logo attempt
     try:
-        c.drawImage(LOGO_PATH, MARGIN, 0.19*inch, width=65, height=22,
+        c.drawImage(LOGO_PATH, MARGIN, 0.19*inch, width=100, height=34,
                     preserveAspectRatio=True, mask='auto')
     except: pass
     c.setFont("Helvetica", 7.5); c.setFillColor(STEEL)
@@ -269,10 +269,10 @@ def draw_cover(c, doc, lang_data):
     c.rect(0, 0, W, 4, fill=1, stroke=0)
     # Logo
     try:
-        c.drawImage(LOGO_PATH, W/2-110, H-2.0*inch, width=220, height=74,
+        c.drawImage(LOGO_PATH, W/2-140, H-2.0*inch, width=280, height=94,
                     preserveAspectRatio=True, mask='auto')
     except:
-        c.setFillColor(CYAN); c.setFont("Helvetica-Bold", 36)
+        c.setFillColor(CYAN); c.setFont("Helvetica-Bold", 42)
         c.drawCentredString(W/2, H - 1.8*inch, "CLARVIX")
     # Badge
     c.setFillColor(CYAN); c.rect(W/2-155, H-2.68*inch, 310, 20, fill=1, stroke=0)
