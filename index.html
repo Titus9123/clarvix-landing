@@ -1379,33 +1379,6 @@ document.getElementById('contactForm').addEventListener('submit', async function
     alert('Something went wrong. Please try again or email us at contact@clarvix.net');
   }
 });
-    if (resp.ok) {
-      sessionStorage.setItem('clarvix_last_contact', Date.now().toString());
-      document.getElementById('formWrapper').style.display = 'none';
-      var succ = document.getElementById('formSuccess');
-      if (succ) succ.style.display = 'block';
-    } else {
-      throw new Error('Server error ' + resp.status);
-    }
-  } catch (err) {
-    btn.textContent = origText;
-    btn.disabled = false;
-    alert('Something went wrong. Please try again or email us at contact@clarvix.net');
-  }
-});
-    if (resp.ok) {
-      document.getElementById('formWrapper').style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
-    } else {
-      btn.textContent = 'Error — try emailing contact@clarvix.net';
-      btn.disabled = false;
-    }
-  } catch(err) {
-    btn.textContent = 'Error — try emailing contact@clarvix.net';
-    btn.disabled = false;
-  }
-});
-
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   const nb = document.getElementById('navbar');
