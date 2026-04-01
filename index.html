@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clarvix | Digital Audit, B2B Leads & AdTech AI Systems</title>
-  <meta name="description" content="Clarvix delivers data-backed digital presence audits with a Lead Conversion Score, verified B2B lead generation, and autonomous AI agent systems for programmatic advertising. Facts. Clarity. Action.">
+  <title>Clarvix | Digital Audit, AI Smart Agents & AdTech AI Systems</title>
+  <meta name="description" content="Clarvix delivers data-backed digital presence audits with a Lead Conversion Score, AI-powered WhatsApp smart agents for business automation, and autonomous AI systems for programmatic advertising. Facts. Clarity. Action.">
   <meta name="keywords" content="digital presence audit, lead conversion score, B2B lead generation, AdTech AI, programmatic advertising AI agents, digital marketing audit, website audit">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://clarvix.net/">
-  <meta property="og:title" content="Clarvix | Digital Audit, B2B Leads & AdTech AI">
+  <meta property="og:title" content="Clarvix | Digital Audit, AI Smart Agents & AdTech AI">
   <meta property="og:description" content="Your website has a score. Your competitors have leads you don't. We fix both — with data.">
   <meta property="og:url" content="https://clarvix.net/">
   <meta property="og:type" content="website">
@@ -28,10 +28,25 @@
     "description": "Digital presence audits, B2B lead generation, and AI systems for programmatic advertising",
     "slogan": "Facts. Clarity. Action.",
     "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],    "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],
-    "serviceType": ["Digital Marketing Audit","B2B Lead Generation","AdTech AI Development"]
+    "serviceType": ["Digital Marketing Audit","AI Smart Agents","AdTech AI Development"]
   }
   </script>
   <link rel="stylesheet" href="style.css">
+  <!-- Geo-redirect: Israel visitors → Hebrew version -->
+  <script>
+  (function(){
+    try {
+      var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      if (tz === 'Asia/Jerusalem' && !sessionStorage.getItem('clarvix_lang_override')) {
+        window.location.replace('/he.html');
+      }
+    } catch(e){}
+  })();
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('.lang-switcher a');
+    if (a) sessionStorage.setItem('clarvix_lang_override', '1');
+  });
+  </script>
 </head>
 <body>
 
@@ -219,16 +234,16 @@
         <a href="#audit" class="svc-link">Learn more →</a>
       </div>
       <div class="svc-card svc-2">
-        <div class="svc-icon svc-icon-2">🚀</div>
-        <h3>B2B Lead Generation</h3>
-        <p>Our AI agents identify, verify, and deliver your ideal clients every month — with name, company, role, email, and LinkedIn. You close deals. Our agents fill the pipeline.</p>
+        <div class="svc-icon svc-icon-2">🤖</div>
+        <h3>AI Smart Agents</h3>
+        <p>We install AI-powered agents on WhatsApp, web chat, and voice that work 24/7 — answering questions, booking appointments, capturing leads, and never missing a message.</p>
         <div class="svc-tags">
-          <span class="svc-tag">ICP Targeting</span>
-          <span class="svc-tag">AI Agent Powered</span>
-          <span class="svc-tag">Monthly Delivery</span>
-          <span class="svc-tag">Email Verified</span>
+          <span class="svc-tag">WhatsApp AI</span>
+          <span class="svc-tag">24/7 Automation</span>
+          <span class="svc-tag">Lead Capture</span>
+          <span class="svc-tag">Multilingual</span>
         </div>
-        <a href="#leads" class="svc-link">Learn more →</a>
+        <a href="#agents" class="svc-link">Learn more →</a>
       </div>      <div class="svc-card svc-3">
         <div class="svc-icon svc-icon-3">🤖</div>
         <h3>AdTech AI Systems</h3>
@@ -356,45 +371,46 @@
   </div>
 </section>
 
-<!-- ===== SERVICE 2: LEADS ===== -->
-<section id="leads" class="detail-section">
+<!-- ===== SERVICE 2: AI SMART AGENTS ===== -->
+<section id="agents" class="detail-section">
   <div class="container">
     <div class="detail-grid rev">
       <div class="detail-content">
-        <span class="badge badge-green">Service 02 — B2B Lead Generation</span>
-        <h2>AI agents working 24/7<br>to fill your <span class="highlight">pipeline</span>.</h2>
-        <p>Our autonomous AI agents identify, enrich, and verify your ideal prospects — so your sales team spends 100% of their time closing, not hunting. Delivered monthly. Ready to use.</p>
+        <span class="badge badge-green">Service 02 — AI Smart Agents</span>
+        <h2>Your business, answering<br><span class="highlight">24/7</span> — on autopilot.</h2>
+        <p>We install AI-powered agents on WhatsApp, web chat, and voice that handle customer questions, book appointments, capture leads, and send reminders — while you sleep. Works in Hebrew, English, Arabic, and Spanish.</p>
         <ul class="feat-list">
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>AI-Powered ICP Targeting</strong>
-              <span>Our agents define and hunt your ideal client profile — industry, company size, decision-maker role, geography — with machine precision.</span>
-            </div>
-          </li>
-          <li class="feat-item">
-            <div class="feat-ico feat-ico-g">✓</div>
-            <div class="feat-txt">              <strong>Verified Contact Data</strong>
-              <span>Name, company, title, business email, LinkedIn URL. Bounce-tested and verified. Not scraped junk.</span>
+              <strong>WhatsApp AI Agent</strong>
+              <span>Your customers message WhatsApp — the AI responds instantly with accurate answers, booking links, and follow-ups. No human needed.</span>
             </div>
           </li>
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>Monthly CSV Delivery</strong>
-              <span>Clean spreadsheet delivered to your inbox. Ready to import into any CRM.</span>
+              <strong>Automatic Lead Capture</strong>
+              <span>Every conversation is a lead. The agent collects name, business type, and need — and sends you a summary.</span>
             </div>
           </li>
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>Weekly Progress Reports</strong>
-              <span>Available on Professional and Enterprise plans. Know exactly what's being built.</span>
+              <strong>Appointment Booking</strong>
+              <span>Integrates with Google Calendar. Customers pick a time, get a confirmation. Zero back-and-forth.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>Multilingual Support</strong>
+              <span>The agent detects the customer's language and responds in kind — Hebrew, English, Arabic, Spanish.</span>
             </div>
           </li>
         </ul>
         <div class="cta-row">
-          <a href="#pricing" class="btn btn-primary" style="background:var(--success);">See Lead Plans →</a>
+          <a href="#pricing" class="btn btn-primary" style="background:var(--success);">See Agent Plans →</a>
           <a href="#contact" class="btn btn-ghost">Talk to Us</a>
         </div>
       </div>
@@ -402,46 +418,13 @@
         <div class="detail-panel">
           <div class="panel-header">
             <div class="panel-dot dot-g"></div>
-            <h4>Sample Lead Delivery</h4>
-          </div>          <div class="lead-stats">
-            <div class="lead-stat-card">
-              <div class="lead-stat-num">40–60</div>
-              <div class="lead-stat-lbl">Verified leads/mo (Enterprise)</div>
-              <div class="lead-stat-badge"><span class="badge badge-green">Enterprise</span></div>
-            </div>
-            <div class="lead-stat-card">
-              <div class="lead-stat-num">10–15</div>
-              <div class="lead-stat-lbl">Verified leads/mo (Starter)</div>
-              <div class="lead-stat-badge"><span class="badge badge-blue">Starter</span></div>
-            </div>
-            <div class="lead-stat-card">
-              <div class="lead-stat-num">6</div>
-              <div class="lead-stat-lbl">Data fields per lead</div>
-            </div>
-            <div class="lead-stat-card">
-              <div class="lead-stat-num">100%</div>
-              <div class="lead-stat-lbl">Email verified</div>
-            </div>
+            <h4>Why Businesses Switch to AI Agents</h4>
           </div>
-          <div style="margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
-            <div style="font-size:0.72rem;text-transform:uppercase;letter-spacing:0.7px;color:var(--text-dim);margin-bottom:12px;">What each lead includes</div>
-            <div style="display:flex;flex-direction:column;gap:8px;">
-              <div class="deliverable-item">
-                <span class="deliv-icon">👤</span>
-                <div class="deliv-text"><strong>Full name & professional title</strong><span>CEO, Marketing Director, CTO, etc.</span></div>
-              </div>
-              <div class="deliverable-item">
-                <span class="deliv-icon">🏢</span>
-                <div class="deliv-text"><strong>Company name & size range</strong><span>Industry, employees, revenue est.</span></div>              </div>
-              <div class="deliverable-item">
-                <span class="deliv-icon">📧</span>
-                <div class="deliv-text"><strong>Verified business email</strong><span>Bounce-tested. No personal addresses.</span></div>
-              </div>
-              <div class="deliverable-item">
-                <span class="deliv-icon">💼</span>
-                <div class="deliv-text"><strong>LinkedIn profile URL</strong><span>For warm outreach and social proof.</span></div>
-              </div>
-            </div>
+          <div class="lead-stats">
+            <div class="lead-stat-card"><div class="lead-stat-num">24/7</div><div class="lead-stat-lbl">Always online</div></div>
+            <div class="lead-stat-card"><div class="lead-stat-num">&lt;3s</div><div class="lead-stat-lbl">Avg response time</div></div>
+            <div class="lead-stat-card"><div class="lead-stat-num">85%</div><div class="lead-stat-lbl">Less missed inquiries</div></div>
+            <div class="lead-stat-card"><div class="lead-stat-num">10x</div><div class="lead-stat-lbl">ROI vs receptionist</div></div>
           </div>
         </div>
       </div>
@@ -568,7 +551,7 @@
     <div class="pricing-tabs-wrapper">
       <div class="pricing-tabs">
         <button class="p-tab active" onclick="switchTab('audit-p')">🔍 Digital Presence Audit<span style="display:block;font-size:0.72rem;opacity:0.6;margin-top:2px;">$95 – $395</span></button>
-        <button class="p-tab" onclick="switchTab('leads-p')">🚀 Lead Generation</button>
+        <button class="p-tab" onclick="switchTab('agents-p')">🤖 AI Smart Agents<span style="display:block;font-size:0.72rem;opacity:0.6;margin-top:2px;">From $299/mo</span></button>
         <button class="p-tab" onclick="switchTab('adtech-p')">🤖 AdTech AI</button>
       </div>
     </div>
@@ -633,77 +616,65 @@
           Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($149), <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($99), and <strong style="color:var(--text-muted)">Monthly Monitoring</strong> ($99/mo) add-ons.
         </p>
       </div>
-      <!-- LEADS PRICING -->
-      <div id="leads-p">
-        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">          🌎 <strong style="color:var(--text-muted)">Starting at $149/mo</strong> — Accessible plans for businesses in Latin America &amp; emerging markets.
+      <!-- AI SMART AGENTS PRICING -->
+      <div id="agents-p">
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">
+          🚀 <strong style="color:var(--success)">Launch offer: 50% off setup + 14 days free!</strong>
         </p>
-        <div class="pricing-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
-          <div class="p-card">
-            <div class="p-tier">LATAM</div>
-            <div class="p-name">Lead Micro</div>
-            <div class="p-desc">Entry point for small businesses. First qualified leads, zero risk.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">149</span></div>
-            <div class="p-period">per month</div>
-            <hr class="p-divider">
-            <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>5–8 AI-sourced verified leads/month</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (1 profile)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Name, title, email, company, LinkedIn</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Monthly CSV delivery</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Weekly reports</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Strategy calls</span></li>
-            </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Start Small, Scale Fast</a>
-          </div>
+        <div class="pricing-grid">
           <div class="p-card">
             <div class="p-tier">Starter</div>
-            <div class="p-name">Lead Starter</div>
-            <div class="p-desc">Test the pipeline. Get your first batch of qualified prospects.</div>
+            <div class="p-name">Smart Responder</div>
+            <div class="p-desc">WhatsApp AI that answers FAQs and books appointments.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">299</span></div>
-            <div class="p-period">per month</div>
+            <div class="p-period">per month + $500 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>10–15 verified leads/month</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (1 profile)</span></li>              <li class="p-feat"><span class="ck">✓</span><span>Name, title, email, company, LinkedIn</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Monthly CSV delivery</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Weekly reports</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Bi-weekly strategy call</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>WhatsApp AI agent — 24/7</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>FAQ auto-responses</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Google Calendar booking</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Automated reminders</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Up to 500 conversations/mo</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>1 language</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
           </div>
           <div class="p-card featured">
             <span class="popular-pill">Most Popular</span>
             <div class="p-tier">Professional</div>
-            <div class="p-name">Lead Pro</div>
-            <div class="p-desc">For teams ready to scale their outbound consistently.</div>
+            <div class="p-name">Smart Business</div>
+            <div class="p-desc">Multi-language AI with lead capture and monthly reports.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">549</span></div>
-            <div class="p-period">per month</div>
+            <div class="p-period">per month + $1,000 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>20–30 verified leads/month</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ICP definition (2 profiles)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Weekly progress reports</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Bi-weekly strategy call</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>CRM-ready format</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">CRM direct integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Smart Responder</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Multi-language (HE+EN+AR)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Lead capture forms</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Automated follow-ups</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Monthly reports</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Knowledge base (RAG)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Up to 2,000 conversations/mo</span></li>
             </ul>
-            <a href="#contact" class="btn btn-primary btn-full">Start Generating Leads</a>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
           </div>
           <div class="p-card">
             <div class="p-tier">Enterprise</div>
-            <div class="p-name">Lead Enterprise</div>
-            <div class="p-desc">Full-service pipeline. For serious outbound operations.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">999</span></div>            <div class="p-period">per month</div>
+            <div class="p-name">Smart Enterprise</div>
+            <div class="p-desc">Full AI: voice agent, multi-channel, CRM, dashboard.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">999</span></div>
+            <div class="p-period">per month + $2,000 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>40–60 verified leads/month</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Up to 3 ICP profiles</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Weekly reports + strategy calls</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>CRM direct integration</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Dedicated account manager</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Priority SLA</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Smart Business</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>AI voice agent (receptionist)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>WhatsApp + Web + Instagram</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Custom analytics dashboard</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CRM integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Unlimited conversations</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Dedicated onboarding</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Start Generating Leads</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
           </div>
         </div>
       </div>
