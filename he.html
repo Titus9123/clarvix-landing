@@ -139,6 +139,144 @@
     });
   })();
   </script>
+
+  <style>
+    /* === RTL FIXES FOR HEBREW === */
+    
+    /* Price display: force LTR for dollar amounts so $97 renders correctly */
+    .p-price, .pricing-card-price {
+      direction: ltr;
+      unicode-bidi: isolate;
+      text-align: center !important;
+    }
+    
+    /* Service cards: clear right-aligned text with proper margins */
+    .svc-card {
+      text-align: right;
+      padding-right: 2rem;
+    }
+    
+    /* Detail sections: add clear separators between service blocks */
+    .detail-section {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 5rem 0;
+      margin-bottom: 0;
+    }
+    .detail-section:last-of-type {
+      border-bottom: none;
+    }
+    
+    /* Feature list items: proper RTL alignment with icon on right */
+    .feat-item {
+      flex-direction: row-reverse;
+      text-align: right;
+    }
+    .feat-item .feat-ico {
+      margin-left: 1rem;
+      margin-right: 0;
+    }
+    .feat-item .feat-txt {
+      text-align: right;
+    }
+    
+    /* Detail grid: ensure content flows RTL */
+    .detail-grid {
+      direction: rtl;
+    }
+    .detail-grid.rev {
+      direction: rtl;
+    }
+    
+    /* Pricing accordion: cleaner blocks with right-side indicators */
+    .pricing-acc-header, .acc-head {
+      text-align: right;
+      flex-direction: row-reverse;
+    }
+    .acc-title {
+      text-align: right;
+    }
+    .acc-arrow {
+      margin-left: auto;
+      margin-right: 0;
+    }
+    
+    /* Pricing cards grid: proper spacing */
+    .pricing-cards-grid, .pricing-grid {
+      direction: rtl;
+      gap: 1.5rem;
+    }
+    
+    /* Individual pricing card: right-aligned with clean borders */
+    .p-card, .pricing-card {
+      text-align: right;
+      border-right: 3px solid rgba(0,200,150,0.3);
+      border-left: none;
+      padding: 2rem;
+    }
+    .p-card.featured, .pricing-card.popular {
+      border-right: 3px solid #00c896;
+    }
+    
+    /* Feature checkmarks in pricing: RTL flow */
+    .p-card ul li, .pricing-card-features li {
+      direction: rtl;
+      text-align: right;
+      padding-right: 1.5rem;
+      padding-left: 0;
+    }
+    .p-card ul li::before, .pricing-card-features li::before {
+      right: 0;
+      left: auto;
+    }
+    
+    /* Badges: right-aligned */
+    .badge {
+      display: inline-block;
+    }
+    
+    /* Stat cards: center content */
+    .stat-grid {
+      direction: rtl;
+    }
+    
+    /* Service tags: RTL flow */
+    .svc-tags {
+      direction: rtl;
+      justify-content: flex-start;
+    }
+    
+    /* Links: right-aligned arrows become left arrows for RTL */
+    .svc-link {
+      direction: rtl;
+    }
+    
+    /* CTA buttons: centered */
+    .pricing-card-cta, .p-cta {
+      text-align: center;
+      display: block;
+    }
+    
+    /* Popular badge: centered */
+    .popular-badge {
+      text-align: center;
+    }
+    
+    /* Pricing note: center */
+    .pricing-note {
+      text-align: center;
+      direction: rtl;
+    }
+    
+    /* Fix p-tier and p-name right alignment */
+    .p-tier, .p-name {
+      text-align: right;
+    }
+    
+    /* Period label under price */
+    .p-period {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
@@ -673,7 +811,7 @@
             <div class="p-tier">בסיסי</div>
             <div class="p-name">ביקורת בסיסית</div>
             <div class="p-desc">מושלם לאבחון ראשון. מסופק תוך 48 שעות.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">97/span&gt;</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">97</span></div>
             <div class="p-period">חד פעמי</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -692,7 +830,7 @@
             <div class="p-tier">סטנדרט</div>
             <div class="p-name">ביקורת מלאה</div>
             <div class="p-desc">ביקורת מלאה + השוואת מתחרים. רוב הלקוחות בוחרים בזה.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">197/span&gt;</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">197</span></div>
             <div class="p-period">חד פעמי</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -709,7 +847,7 @@
             <div class="p-tier">Premium</div>
             <div class="p-name">מודיעין מלא</div>
             <div class="p-desc">הביקורת המקיפה ביותר — ניתוח עמוק, תוכן מוכן לשימוש וסריקת התקדמות חינם אחרי 60 יום.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">397/span&gt;</span></div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">397</span></div>
             <div class="p-period">חד פעמי</div>
             <hr class="p-divider">
             <ul class="p-features">
