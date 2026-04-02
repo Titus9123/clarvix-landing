@@ -90,9 +90,17 @@
     }
   ]
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-/* RTL layout overrides */
+/* Arabic font override */
+body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, button {
+  font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+}
+
+/* RTL layout overrides — Arabic */
 .nav-inner { direction: rtl; }
 .nav-links { flex-direction: row-reverse; }
 .nav-right { flex-direction: row-reverse; }
@@ -101,19 +109,20 @@
 .hero-actions { justify-content: flex-start; }
 .hero-stats { justify-content: flex-start; }
 .detail-grid { direction: rtl; }
-.detail-grid.rev { direction: ltr; }
-.feat-item { flex-direction: row-reverse; text-align: right; }
+.detail-grid.rev { direction: rtl; }
+.feat-item { flex-direction: row; text-align: right; gap: 14px; }
+.feat-ico { flex-shrink: 0; }
 .feat-txt { text-align: right; }
 .svc-card { text-align: right; }
-.svc-tags { justify-content: flex-end; }
+.svc-tags { justify-content: flex-start; }
 .pricing-acc-header { flex-direction: row-reverse; }
 .acc-arrow { transform: rotate(90deg); }
 .pricing-acc-header.active .acc-arrow { transform: rotate(0deg); }
 .p-features { padding-right: 0; }
-.p-feat { flex-direction: row-reverse; }
+.p-feat { flex-direction: row; }
 .contact-grid { direction: rtl; }
 .contact-points { direction: rtl; }
-.c-point { flex-direction: row-reverse; }
+.c-point { flex-direction: row; text-align: right; }
 .c-txt { text-align: right; }
 .form-row2 { direction: rtl; }
 .form-group label { text-align: right; display: block; }
@@ -123,12 +132,37 @@
 .footer-grid { direction: rtl; }
 .footer-links { text-align: right; }
 .footer-bottom { direction: rtl; }
-.deliverable-item { flex-direction: row-reverse; }
-.deliv-text { text-align: right; }
-.agent-item { flex-direction: row-reverse; text-align: right; }
+.deliverable-item { flex-direction: row; text-align: right; gap: 14px; padding: 14px 16px; }
+.deliv-icon { flex-shrink: 0; font-size: 1.2rem; }
+.deliv-text { text-align: right; flex: 1; }
+.panel-header { flex-direction: row-reverse; justify-content: flex-end; }
+.agent-item { flex-direction: row; text-align: right; gap: 14px; }
 .agent-txt { text-align: right; }
-.stack-tags { justify-content: flex-end; }
+.stack-tags { justify-content: flex-start; }
   </style>
+  <script>
+  (function(){
+    // Israel visitors: show only HE/AR in lang-switcher
+    document.addEventListener('DOMContentLoaded', function() {
+      if (window.location.search.indexOf('admin=1') !== -1) {
+        localStorage.setItem('clarvix_admin', '1');
+      }
+      var isAdmin = localStorage.getItem('clarvix_admin') === '1';
+      if (isAdmin) return;
+
+      var tz;
+      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch(e) { tz = ''; }
+      if (tz !== 'Asia/Jerusalem') return;
+
+      document.querySelectorAll('.lang-switcher a').forEach(function(link) {
+        var text = link.textContent.trim().toUpperCase();
+        if (text === 'EN' || text === 'ES') {
+          link.style.display = 'none';
+        }
+      });
+    });
+  })();
+  </script>
 </head>
 <body>
 
