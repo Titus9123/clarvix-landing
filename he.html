@@ -1,25 +1,12 @@
+﻿<!DOCTYPE html>
 <html lang="he" dir="rtl">
-								<script>(
-									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
-								<script>(
-									${y}
-								)();
-								<\/script>
-							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
-								)();
-								</script>
-							<head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Clarvix | ביקורת דיגיטלית, עובד דיגיטלי AI ומערכות AdTech</title>
   <meta name="description" content="Clarvix מעביר ביקורות נוכחות דיגיטלית מבוססות נתונים עם Lead Conversion Score, עובדים דיגיטליים AI רב-ערוציים לעסקים ומערכות AI אוטונומיות לפרסום פרוגרמטי. עובדות. הבהרה. פעולה.">
-  <meta name="keywords" content="ביקורת דיגיטלית, ביקורת נוכחות דיגיטלית, עובד דיגיטלי AI, בוט וואטסאפ לעסקים, אוטומציה לעסקים, סוכן AI לעסקים, שירות לקוחות אוטומטי, קביעת תורים אוטומטית, ניהול לידים, בינה מלאכותית לעסקים, digital presence audit, AI employee, WhatsApp bot, AdTech AI">
+  <meta name="keywords" content="digital presence audit, lead conversion score, AI employee, WhatsApp automation, multi-channel AI agent, AdTech AI, programmatic advertising AI agents, digital marketing audit">
   <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="IL">
-  <meta name="geo.placename" content="Israel">
-  <meta name="geo.position" content="31.5;34.75">
-  <meta name="ICBM" content="31.5, 34.75">
-  <meta name="language" content="Hebrew">
   <link rel="canonical" href="https://clarvix.net/he.html">
   <meta property="og:title" content="Clarvix | ביקורת דיגיטלית, עובד דיגיטלי AI ומערכות AdTech">
   <meta property="og:description" content="לאתר שלך יש ציון. למתחרים שלך יש לידים שאין לך. אנחנו פותרים את שניהם — עם נתונים.">
@@ -53,47 +40,9 @@
       "email": "contact@clarvix.net",
       "description": "ביקורות נוכחות דיגיטלית מבוססות נתונים, עובדים דיגיטליים AI רב-ערוציים ומערכות AI לפרסום פרוגרמטי.",
       "slogan": "עובדות. הבהרה. פעולה.",
-      "priceRange": "$97 - $7,500+ / ₪1,200 - ₪5,500/mo",
+      "priceRange": "$67 - $2500",
       "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],
       "knowsLanguage": ["en","es","he","ar"]
-    }
-    ,{
-      "@type": "Service",
-      "name": "ביקורת נוכחות דיגיטלית / Digital Presence Audit",
-      "description": "ביקורת מקיפה של הנוכחות הדיגיטלית של העסק שלך: SEO, רשתות חברתיות, Google Business, מתחרים, המרת לידים ועוד. דוח PDF מפורט עם תוכנית פעולה.",
-      "provider": {"@type": "Organization", "name": "Clarvix"},
-      "areaServed": {"@type": "Country", "name": "Israel"},
-      "availableLanguage": ["Hebrew", "English", "Spanish", "Arabic"],
-      "offers": [
-        {"@type": "Offer", "name": "Essentials Audit", "price": "97", "priceCurrency": "USD"},
-        {"@type": "Offer", "name": "Growth Audit", "price": "197", "priceCurrency": "USD"},
-        {"@type": "Offer", "name": "Authority Audit", "price": "397", "priceCurrency": "USD"}
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "עובד דיגיטלי AI / AI Employee",
-      "description": "סוכן AI שעובד 24/7 על וואטסאפ וערוצים נוספים: קביעת תורים, מעקב לידים, מענה אוטומטי ללקוחות, ודוחות חכמים לבעל העסק.",
-      "provider": {"@type": "Organization", "name": "Clarvix"},
-      "areaServed": {"@type": "Country", "name": "Israel"},
-      "availableLanguage": ["Hebrew", "English", "Arabic", "Russian", "Spanish"],
-      "offers": [
-        {"@type": "Offer", "name": "Smart Receptionist", "price": "1200", "priceCurrency": "ILS", "unitText": "month"},
-        {"@type": "Offer", "name": "Business Autopilot", "price": "2800", "priceCurrency": "ILS", "unitText": "month"},
-        {"@type": "Offer", "name": "AI Operations Manager", "price": "5500", "priceCurrency": "ILS", "unitText": "month"}
-      ]
-    },
-    {
-      "@type": "Service",
-      "name": "AdTech AI / פרסום ממוכן עם בינה מלאכותית",
-      "description": "סוכני AI לפרסום ממוכן: אופטימיזציה אוטומטית של קמפיינים, ניהול ביד ומיקוד קהלים חכם בכל הפלטפורמות.",
-      "provider": {"@type": "Organization", "name": "Clarvix"},
-      "areaServed": {"@type": "Country", "name": "Israel"},
-      "offers": [
-        {"@type": "Offer", "name": "Campaign Optimizer", "price": "1500", "priceCurrency": "USD", "unitText": "month"},
-        {"@type": "Offer", "name": "Growth Engine", "price": "3500", "priceCurrency": "USD", "unitText": "month"},
-        {"@type": "Offer", "name": "Enterprise AI Suite", "price": "7500", "priceCurrency": "USD", "unitText": "month"}
-      ]
     },
     {
       "@context": "https://schema.org",
@@ -134,16 +83,8 @@
   ]
   </script>
   <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
-/* Hebrew font override */
-body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, button {
-  font-family: 'Heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
-}
-
-/* RTL layout overrides — Hebrew */
+/* RTL layout overrides */
 .nav-inner { direction: rtl; }
 .nav-links { flex-direction: row-reverse; }
 .nav-right { flex-direction: row-reverse; }
@@ -152,20 +93,19 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
 .hero-actions { justify-content: flex-start; }
 .hero-stats { justify-content: flex-start; }
 .detail-grid { direction: rtl; }
-.detail-grid.rev { direction: rtl; }
-.feat-item { flex-direction: row; text-align: right; gap: 14px; }
-.feat-ico { flex-shrink: 0; }
+.detail-grid.rev { direction: ltr; }
+.feat-item { flex-direction: row-reverse; text-align: right; }
 .feat-txt { text-align: right; }
 .svc-card { text-align: right; }
-.svc-tags { justify-content: flex-start; }
+.svc-tags { justify-content: flex-end; }
 .pricing-acc-header { flex-direction: row-reverse; }
 .acc-arrow { transform: rotate(90deg); }
 .pricing-acc-header.active .acc-arrow { transform: rotate(0deg); }
 .p-features { padding-right: 0; }
-.p-feat { flex-direction: row; }
+.p-feat { flex-direction: row-reverse; }
 .contact-grid { direction: rtl; }
 .contact-points { direction: rtl; }
-.c-point { flex-direction: row; text-align: right; }
+.c-point { flex-direction: row-reverse; }
 .c-txt { text-align: right; }
 .form-row2 { direction: rtl; }
 .form-group label { text-align: right; display: block; }
@@ -175,190 +115,31 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
 .footer-grid { direction: rtl; }
 .footer-links { text-align: right; }
 .footer-bottom { direction: rtl; }
-.deliverable-item { flex-direction: row; text-align: right; gap: 14px; padding: 14px 16px; }
-.deliv-icon { flex-shrink: 0; font-size: 1.2rem; }
-.deliv-text { text-align: right; flex: 1; }
-.panel-header { flex-direction: row-reverse; justify-content: flex-end; }
-.agent-item { flex-direction: row; text-align: right; gap: 14px; }
+.deliverable-item { flex-direction: row-reverse; }
+.deliv-text { text-align: right; }
+.agent-item { flex-direction: row-reverse; text-align: right; }
 .agent-txt { text-align: right; }
-.stack-tags { justify-content: flex-start; }
+.stack-tags { justify-content: flex-end; }
   </style>
-  <script>
-  (function(){
-    // On Hebrew page: set override so user stays on Hebrew if they navigated here
-    document.addEventListener('click', function(e) {
-      var a = e.target.closest('.lang-switcher a');
-      if (a) sessionStorage.setItem('clarvix_lang_override', '1');
-    });
-
-    // Israel visitors: show only HE/AR in lang-switcher
-    // Admin override: add ?admin=1 to URL once, or localStorage clarvix_admin=1
-    document.addEventListener('DOMContentLoaded', function() {
-      if (window.location.search.indexOf('admin=1') !== -1) {
-        localStorage.setItem('clarvix_admin', '1');
-      }
-      var isAdmin = localStorage.getItem('clarvix_admin') === '1';
-      if (isAdmin) return; // Admin sees all languages
-
-      var tz;
-      try { tz = Intl.DateTimeFormat().resolvedOptions().timeZone; } catch(e) { tz = ''; }
-      var isIsrael = (tz === 'Asia/Jerusalem');
-      if (!isIsrael) return; // Non-Israel visitors see all languages
-
-      // Hide EN and ES links for Israel visitors
-      document.querySelectorAll('.lang-switcher a').forEach(function(link) {
-        var href = link.getAttribute('href') || '';
-        var text = link.textContent.trim().toUpperCase();
-        if (text === 'EN' || text === 'ES') {
-          link.style.display = 'none';
-        }
-      });
-    });
-  })();
-  </script>
-
-  <style>
-    /* === RTL FIXES FOR HEBREW === */
-    
-    /* Price display: force LTR for dollar amounts so $97 renders correctly */
-    .p-price, .pricing-card-price {
-      direction: ltr;
-      unicode-bidi: isolate;
-      text-align: center !important;
-    }
-    
-    /* Service cards: clear right-aligned text with proper margins */
-    .svc-card {
-      text-align: right;
-      padding-right: 2rem;
-    }
-    
-    /* Detail sections: add clear separators between service blocks */
-    .detail-section {
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-      padding: 5rem 0;
-      margin-bottom: 0;
-    }
-    .detail-section:last-of-type {
-      border-bottom: none;
-    }
-    
-    /* Feature list: row = icon on right in RTL doc (DO NOT use row-reverse) */
-    .feat-item {
-      flex-direction: row;
-      text-align: right;
-      align-items: flex-start;
-    }
-    .feat-item .feat-ico {
-      margin-left: 0;
-      margin-right: 0;
-    }
-    .feat-item .feat-txt {
-      text-align: right;
-    }
-
-    /* Detail grid */
-    .detail-grid { direction: rtl; }
-    .detail-grid.rev { direction: rtl; }
-    
-    /* Pricing accordion: cleaner blocks with right-side indicators */
-    .pricing-acc-header, .acc-head {
-      text-align: right;
-      flex-direction: row-reverse;
-    }
-    .acc-title {
-      text-align: right;
-    }
-    .acc-arrow {
-      margin-left: auto;
-      margin-right: 0;
-    }
-    
-    /* Pricing cards grid: proper spacing */
-    .pricing-cards-grid, .pricing-grid {
-      direction: rtl;
-      gap: 1.5rem;
-    }
-    
-    /* Individual pricing card: right-aligned with clean borders */
-    .p-card, .pricing-card {
-      text-align: right;
-      border-right: 3px solid rgba(0,200,150,0.3);
-      border-left: none;
-      padding: 2rem;
-    }
-    .p-card.featured, .pricing-card.popular {
-      border-right: 3px solid #00c896;
-    }
-    
-    /* Feature checkmarks in pricing: RTL flow */
-    .p-card ul li, .pricing-card-features li {
-      direction: rtl;
-      text-align: right;
-      padding-right: 1.5rem;
-      padding-left: 0;
-    }
-    .p-card ul li::before, .pricing-card-features li::before {
-      right: 0;
-      left: auto;
-    }
-    
-    /* Badges: right-aligned */
-    .badge {
-      display: inline-block;
-    }
-    
-    /* Stat cards: center content */
-    .stat-grid {
-      direction: rtl;
-    }
-    
-    /* Service tags: RTL flow */
-    .svc-tags {
-      direction: rtl;
-      justify-content: flex-start;
-    }
-    
-    /* Links: right-aligned arrows become left arrows for RTL */
-    .svc-link {
-      direction: rtl;
-    }
-    
-    /* CTA buttons: centered */
-    .pricing-card-cta, .p-cta {
-      text-align: center;
-      display: block;
-    }
-    
-    /* Popular badge: centered */
-    .popular-badge {
-      text-align: center;
-    }
-    
-    /* Pricing note: center */
-    .pricing-note {
-      text-align: center;
-      direction: rtl;
-    }
-    
-    /* Fix p-tier and p-name right alignment */
-    .p-tier, .p-name {
-      text-align: right;
-    }
-    
-    /* Period label under price */
-    .p-period {
-      text-align: center;
-    }
-  </style>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KQ8MQBNQ');</script>
+  <!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KQ8MQBNQ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ===== NAVIGATION ===== -->
 <nav id="navbar">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+      <img src="/images/logo-128.webp" alt="Clarvix" onerror="this.style.display='none'">
       <span class="logo-text">Clarvix</span>
     </a>
     <ul class="nav-links">
@@ -375,17 +156,16 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         <a href="/he.html" class="active">HE</a>
         <a href="/ar.html">AR</a>
       </div>
-            <p style="font-size:0.95rem;color:rgba(255,255,255,0.7);margin-top:12px;">🔒 לא צריך גישה לבקאנד שלך. רק ה-URL שלך.</p>
       <a href="#contact" class="btn btn-primary" style="padding:10px 20px;font-size:0.85rem;">התחל עכשיו ←</a>
     </div>
     <button class="nav-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
   </div>
   <div class="mobile-menu" id="mobileMenu">
-    <a href="#services">שירותים</a>
-    <a href="#pricing">מחירים</a>
-    <a href="#how">איך זה עובד</a>
-    <a href="/blog">בלוג</a>
-    <a href="#contact">צור קשר</a>
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#how">How it works</a>
+    <a href="/blog">Blog</a>
+    <a href="#contact">Contact</a>
     <div class="lang-switcher">
       <a href="/" class="active">EN</a>
       <a href="/es.html">ES</a>
@@ -405,7 +185,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         <div class="hero-eyebrow">
           <span>🎯</span> אינטליגנציה דיגיטלית לעסקים שרוצים לנצח
         </div>
-        <img src="/images/logo.png" alt="Clarvix" style="height:64px;width:auto;margin-bottom:16px;display:block;">
+        <img src="/images/logo-128.webp" alt="Clarvix" style="height:64px;width:auto;margin-bottom:16px;display:block;">
         <h1 class="hero-title">
           המתחרים שלך<br><em>אוכלים את הלידים שלך</em>.
         </h1>
@@ -413,8 +193,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           Clarvix נותן לך את הנתונים המדויקים מדוע הנוכחות הדיגיטלית שלך לא ממירה, עובדים דיגיטליים AI שעונים ללקוחות, קובעים פגישות ומנהלים לידים 24/7, ומערכות AI לאוטומציה של הפרסום שלך.
         </p>
         <div class="hero-actions">
-          <a href="#contact" class="btn btn-primary btn-lg">קבל ביקורת — החל מ-$97 ←</a>
-          <a href="#services" class="btn btn-ghost btn-lg">הורד דוגמה חינם</a>
+          <a href="#contact" class="btn btn-primary btn-lg">קבל דוגמת ביקורת חינם ←</a>
+          <a href="#services" class="btn btn-ghost btn-lg">גלה שירותים</a>
         </div>
         <div class="hero-stats">
           <div>
@@ -494,49 +274,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
 </section>
 
 <!-- ===== SERVICES OVERVIEW ===== -->
-
-    <section style="padding:60px 20px;background:linear-gradient(135deg,#0a0a0a 0%,#1a1a2e 100%);">
-      <div style="max-width:900px;margin:0 auto;text-align:center;">
-        <h2 style="font-size:1.8rem;color:#fff;margin-bottom:8px;">מה אומרים הלקוחות שלנו</h2>
-        <p style="color:rgba(255,255,255,0.6);margin-bottom:24px;">עסקים אמיתיים. תוצאות אמיתיות.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:32px;"><span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">מסעדות</span>
-          <span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">מרפאות שיניים</span>
-          <span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">משרדי עורכי דין</span>
-          <span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">מסחר אלקטרוני</span>
-          <span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">נדל"ן</span>
-          <span style="background:rgba(99,102,241,0.15);color:#818cf8;padding:6px 14px;border-radius:20px;font-size:0.8rem;">SaaS</span></div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-bottom:32px;">
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;text-align:right;">
-            <div style="color:#f59e0b;margin-bottom:8px;">★★★★★</div>
-            <p style="color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.5;margin-bottom:12px;">"האודיט חשף 3 בעיות SEO קריטיות שעלו לנו ~40% מהתנועה. תוך שבועיים, התנועה האורגנית עלתה ב-28%."</p>
-            <div style="display:flex;align-items:center;gap:10px;flex-direction:row-reverse;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#8b5cf6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;">MR</div>
-              <div><div style="color:#fff;font-size:0.85rem;font-weight:600;">מרקו ר.</div><div style="color:rgba(255,255,255,0.5);font-size:0.75rem;">CEO, מסעדה • מקסיקו סיטי</div></div>
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;text-align:right;">
-            <div style="color:#f59e0b;margin-bottom:8px;">★★★★★</div>
-            <p style="color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.5;margin-bottom:12px;">"חשבתי שהאתר שלי בסדר. הדוח של Clarvix הראה לי שהדף נטען ב-8.2 שניות במובייל. ירדנו ל-2.1 שניות וההמרות עלו ב-35%."</p>
-            <div style="display:flex;align-items:center;gap:10px;flex-direction:row-reverse;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#ec4899,#f43f5e);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;">SL</div>
-              <div><div style="color:#fff;font-size:0.85rem;font-weight:600;">שרה ל.</div><div style="color:rgba(255,255,255,0.5);font-size:0.75rem;">מנהלת שיווק • אוסטין, TX</div></div>
-            </div>
-          </div>
-          <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:24px;text-align:right;">
-            <div style="color:#f59e0b;margin-bottom:8px;">★★★★★</div>
-            <p style="color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.5;margin-bottom:12px;">"ההשוואה התחרותית הייתה חושפנית. 4 מתחרים עוקפים אותנו בכל מדד. תוכנית 30 יום שמה אותנו קדימה תוך 3 שבועות."</p>
-            <div style="display:flex;align-items:center;gap:10px;flex-direction:row-reverse;">
-              <div style="width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,#10b981,#059669);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:0.85rem;">DK</div>
-              <div><div style="color:#fff;font-size:0.85rem;font-weight:600;">דוד ק.</div><div style="color:rgba(255,255,255,0.5);font-size:0.75rem;">מייסד SaaS • תל אביב</div></div>
-            </div>
-          </div></div>
-        <div style="display:flex;justify-content:center;gap:40px;flex-wrap:wrap;"><div style="text-align:center;"><div style="font-size:1.5rem;font-weight:700;color:#6366f1;">4.9</div><div style="color:rgba(255,255,255,0.5);font-size:0.8rem;">דירוג ממוצע</div></div>
-          <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:700;color:#6366f1;">48h</div><div style="color:rgba(255,255,255,0.5);font-size:0.8rem;">משלוח</div></div>
-          <div style="text-align:center;"><div style="font-size:1.5rem;font-weight:700;color:#6366f1;">100%</div><div style="color:rgba(255,255,255,0.5);font-size:0.8rem;">שביעות רצון</div></div></div>
-      </div>
-    </section>
-
-    <section id="services" class="section">
+<section id="services" class="section">
   <div class="container">
     <div class="section-header">
       <span class="badge badge-blue">מה אנחנו עושים</span>
@@ -559,14 +297,14 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
       <div class="svc-card svc-2">
         <div class="svc-icon svc-icon-2">🤖</div>
         <h3>עובד דיגיטלי AI</h3>
-        <p>עובד דיגיטלי AI שעונה ללקוחות שלך 24/7 בוואטסאפ, לוכד לידים, קובע פגישות ומדבר בעברית, אנגלית, ערבית וספרדית — בפחות מ-30 שניות. מזכירה דיגיטלית שלא ישנה לעולם.</p>
+        <p>אנחנו מתקינים לעסק שלך עובד AI שעובד 24/7 — עונה ללקוחות בוואטסאפ, אינסטגרם, פייסבוק ו-X, קובע תורים, לוכד לידים, מבקש ביקורות ומדווח לך הכל. ב-5 שפות.</p>
         <div class="svc-tags">
-          <span class="svc-tag">AI בוואטסאפ</span>
-          <span class="svc-tag">אוטומציה 24/7</span>
+          <span class="svc-tag">WhatsApp 24/7</span>
+          <span class="svc-tag">רב-ערוצי</span>
+          <span class="svc-tag">קביעת תורים</span>
           <span class="svc-tag">לכידת לידים</span>
-          <span class="svc-tag">רב-שפתי</span>
         </div>
-        <a href="#agents" class="svc-link">ראה עוד ←</a>
+        <a href="#ai-employee" class="svc-link">ראה עוד ←</a>
       </div>
       <div class="svc-card svc-3">
         <div class="svc-icon svc-icon-3">🤖</div>
@@ -596,7 +334,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           <li class="feat-item">
             <div class="feat-ico feat-ico-b">✓</div>
             <div class="feat-txt">
-              <strong>ציון המרת לידים (0–100)</strong>
+              <strong>Lead Conversion Score (0–100)</strong>
               <span>8 קטגוריות מנותחות: מהירות, מעקב, משפך, SEO, נוכחות מקומית, אמון, בהירות הצעה, זמן תגובה.</span>
             </div>
           </li>
@@ -699,95 +437,120 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
   </div>
 </section>
 
-<!-- ===== SERVICE 2: LEADS ===== -->
-<section id="agents" class="detail-section alt">
+<!-- ===== SERVICE 2: AI EMPLOYEE ===== -->
+<section id="ai-employee" class="detail-section">
   <div class="container">
-    <div class="detail-grid">
+    <div class="detail-grid rev">
       <div class="detail-content">
         <span class="badge badge-green">Service 02 — עובד דיגיטלי AI</span>
-        <h2>עובד דיגיטלי AI<br>שעובד <span class="highlight">24/7</span> בשבילך.</h2>
-        <p>הסוכן החכם שלנו עונה ללקוחות שלך בוואטסאפ בפחות מ-30 שניות, לוכד לידים, קובע פגישות ומדבר בעברית, אנגלית, ערבית וספרדית — בלי להעסיק אף עובד. מזכירה דיגיטלית שלא ישנה לעולם.</p>
+        <h2>עובד AI שלא ישן,<br>לא חולה, ועולה פחות מ<span class="highlight">part-time</span>.</h2>
+        <p>אנחנו מתקינים לעסק שלך סוכן AI שעונה ללקוחות 24/7 בוואטסאפ, אינסטגרם, פייסבוק ו-X — קובע תורים, לוכד לידים, מבקש ביקורות Google, ומדווח לך הכל. ב-5 שפות. מוכן תוך 48 שעות.</p>
         <ul class="feat-list">
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>עובד דיגיטלי AI בוואטסאפ</strong>
-              <span>עונה לכל הודעה בוואטסאפ אוטומטית — שאלות נפוצות, מחירים, שעות פעילות ומידע על השירותים שלך.</span>
+              <strong>תגובה בפחות מ-30 שניות</strong>
+              <span>כל הודעה בוואטסאפ, DM באינסטגרם, פייסבוק או X — נענית מיידית. 24/7. אף לקוח לא ממתין.</span>
             </div>
           </li>
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>לכידת לידים אוטומטית</strong>
-              <span>כל שיחה נשמרת — שם, טלפון, מה מעניין אותם. הלידים מגיעים ישירות ל-ניהול הלידים שלך.</span>
+              <strong>קביעת תורים אוטומטית</strong>
+              <span>הסוכן קובע ישירות ביומן Google, שולח אישור ללקוח ותזכורת 24 שעות לפני. בלי התערבות.</span>
             </div>
           </li>
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>קביעת פגישות</strong>
-              <span>הסוכן מציע זמנים פנויים, מאשר ומתאם ללוח השנה של העסק — בלי התערבות אנושית.</span>
+              <strong>לכידת לידים + CRM</strong>
+              <span>שם, טלפון, עניין — נשמר אוטומטית ב-Google Sheets, Monday או HubSpot. אפס עבודה ידנית.</span>
             </div>
           </li>
           <li class="feat-item">
             <div class="feat-ico feat-ico-g">✓</div>
             <div class="feat-txt">
-              <strong>תמיכה רב-שפתית</strong>
-              <span>עברית, אנגלית, ערבית וספרדית — הסוכן מזהה שפה ועונה בשפה של הלקוח.</span>
+              <strong>ביקורות Google אוטומטיות</strong>
+              <span>אחרי כל שירות, הסוכן שולח בקשת ביקורת. עוד ביקורות = יותר לקוחות חדשים.</span>
+            </div>
+          </li>
+          <li class="feat-item">
+            <div class="feat-ico feat-ico-g">✓</div>
+            <div class="feat-txt">
+              <strong>5 שפות · זיהוי אוטומטי</strong>
+              <span>עברית, אנגלית, ערבית, רוסית, ספרדית. הסוכן מזהה את השפה ועונה בהתאם.</span>
             </div>
           </li>
         </ul>
         <div class="cta-row">
-          <a href="#pricing" class="btn btn-primary" style="background:#10b981;box-shadow:0 8px 32px rgba(16,185,129,0.28);">לראות תוכניות ←</a>
-          <a href="#contact" class="btn btn-ghost" style="border-color:rgba(16,185,129,0.4);color:#34d399;">לתאם שיחת היכרות</a>
+          <a href="#pricing" class="btn btn-primary" style="background:var(--success);">ראה תוכניות ←</a>
+          <a href="#contact" class="btn btn-ghost">דבר איתנו</a>
         </div>
       </div>
       <div>
         <div class="detail-panel">
           <div class="panel-header">
-            <div class="panel-dot" style="background:#25D366"></div>
-            <div class="panel-dot" style="background:var(--green)"></div>
-            <h4>איך הסוכן עובד בוואטסאפ</h4>
+            <div class="panel-dot dot-g"></div>
+            <h4>איך העובד הדיגיטלי עובד</h4>
           </div>
           <div class="agent-panel">
             <div class="agent-item">
               <div class="agent-icon a-ico-g">💬</div>
               <div class="agent-txt">
                 <strong>לקוח שולח הודעה</strong>
-                <span>WhatsApp מקבל את ההודעה — טקסט, קול או תמונה</span>
+                <span>WhatsApp, Instagram DM, Facebook, או X — 24/7</span>
               </div>
-              <span class="agent-arrow">←</span>
+              <span class="agent-arrow">→</span>
             </div>
             <div class="agent-item">
-              <div class="agent-icon a-ico-g">🤖</div>
+              <div class="agent-icon a-ico-b">🧠</div>
               <div class="agent-txt">
-                <strong>עובד דיגיטלי AI מנתח ומגיב</strong>
-                <span>זיהוי שפה, הבנת כוונה, תשובה מותאמת תוך &lt;30 שניות</span>
+                <strong>AI מנתח ועונה תוך 3 שניות</strong>
+                <span>זיהוי כוונה, שפה, תשובה מותאמת אישית</span>
               </div>
-              <span class="agent-arrow">←</span>
+              <span class="agent-arrow">→</span>
             </div>
             <div class="agent-item">
               <div class="agent-icon a-ico-g">📋</div>
               <div class="agent-txt">
-                <strong>לכידת ליד + ניהול לידים</strong>
-                <span>שם, טלפון, תחום עניין — הכל נשמר אוטומטית במערכת</span>
+                <strong>ליד נלכד + נשמר ב-CRM</strong>
+                <span>שם, טלפון, עניין — אוטומטי</span>
               </div>
-              <span class="agent-arrow">←</span>
+              <span class="agent-arrow">→</span>
             </div>
             <div class="agent-item">
-              <div class="agent-icon a-ico-g">📅</div>
+              <div class="agent-icon" style="background:rgba(245,158,11,0.12);font-size:1rem;">📅</div>
               <div class="agent-txt">
-                <strong>קביעת פגישה</strong>
-                <span>הסוכן מציע זמנים, מאשר ומסנכרן ללוח השנה שלך</span>
+                <strong>תור נקבע ביומן</strong>
+                <span>אישור + תזכורת 24 שעות לפני</span>
               </div>
-              <span class="agent-arrow">←</span>
+              <span class="agent-arrow">→</span>
             </div>
-            <div class="agent-item" style="border:none;">
-              <div class="agent-icon a-ico-g">📊</div>
+            <div class="agent-item">
+              <div class="agent-icon" style="background:rgba(239,68,68,0.12);font-size:1rem;">⭐</div>
               <div class="agent-txt">
-                <strong>דוח ביצועים</strong>
-                <span>24/7 זמינות · &lt;30s תגובה · 85% פחות שיחות חמוצות · 10x ROI</span>
+                <strong>בקשת ביקורת Google + מעקב</strong>
+                <span>אחרי שירות: משוב, הנחות להפניות</span>
               </div>
+              <span class="agent-arrow">→</span>
+            </div>
+          </div>
+          <div class="lead-stats" style="margin-top:16px">
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">4</div>
+              <div class="lead-stat-lbl">ערוצים פעילים</div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">&lt;3s</div>
+              <div class="lead-stat-lbl">זמן תגובה</div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">24/7</div>
+              <div class="lead-stat-lbl">זמינות</div>
+            </div>
+            <div class="lead-stat-card">
+              <div class="lead-stat-num">5</div>
+              <div class="lead-stat-lbl">שפות</div>
             </div>
           </div>
         </div>
@@ -849,7 +612,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           <a href="#contact" class="btn btn-ghost">זימון שיחת גילוי</a>
         </div>
         <div style="margin-top:12px;">
-          <a href="clarvix-adtech-ai-agents-he.pdf" target="_blank" class="btn btn-ghost" style="font-size:0.82rem;padding:6px 14px;border-color:var(--purple);color:var(--purple);">📄 הורד תקציר שירות (PDF)</a>
+          <a href="clarvix-adtech-ai-agents-he.pdf" target="_blank" class="btn btn-ghost" style="font-size:0.82rem;padding:6px 14px;border-color:var(--purple);color:var(--purple);">📄 Download Service Brief (PDF)</a>
         </div>
       </div>
       <div>
@@ -922,52 +685,52 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         <button class="pricing-acc-header active" onclick="toggleAccordion('audit-p', this)">
           <span class="acc-icon">🔍</span>
           <span class="acc-title">ביקורת נוכחות דיגיטלית</span>
-          <span class="acc-range">$97 – $397 <span style="font-size:0.75rem;opacity:0.6">חד פעמי</span></span>
+          <span class="acc-range">$67 – $497 <span style="font-size:0.75rem;opacity:0.6">one-time</span></span>
           <span class="acc-arrow">▼</span>
         </button>
       <div id="audit-p" class="acc-panel open">
         <div class="pricing-grid">
           <div class="p-card">
-            <div class="p-tier">בסיסי</div>
-            <div class="p-name">ביקורת בסיסית</div>
-            <div class="p-desc">מושלם לאבחון ראשון. מסופק תוך 48 שעות.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">97</span></div>
-            <div class="p-period">חד פעמי</div>
+            <div class="p-tier">Tier 1</div>
+            <div class="p-name">דוח בריאות דיגיטלית</div>
+            <div class="p-desc">דוח בלבד. מושלם לאבחון ראשוני. מסופק תוך 48 שעות.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">67</span></div>
+            <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
               <li class="p-feat"><span class="ck">✓</span><span>Lead Conversion Score (0–100)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ניתוח 8 קטגוריות</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>10 ממצאים עליונים עם תיקונים</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>PDF מקצועי 10 עמודים</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>מסירה ב-48 שעות</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">השוואת מתחרים</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">הדרכת וידאו</span></li>
-            </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">להתחיל</a>
-          </div>
-          <div class="p-card featured">
-            <span class="popular-pill">הכי פופולרי</span>
-            <div class="p-tier">סטנדרט</div>
-            <div class="p-name">ביקורת מלאה</div>
-            <div class="p-desc">ביקורת מלאה + השוואת מתחרים. רוב הלקוחות בוחרים בזה.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">197</span></div>
-            <div class="p-period">חד פעמי</div>
-            <hr class="p-divider">
-            <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>הכל בביקורת הבסיסית</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>השוואת מתחרים (3 מתחרים)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>תוכנית פעולה 30 יום ממוקדת</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>טבלת נתוני PageSpeed מלאה</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>מסירה ב-5 ימים</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>8-category analysis</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Top 10 findings with fixes</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>10-page professional PDF</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>48-hour delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Competitor benchmark</span></li>
               <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
             </ul>
-            <a href="#contact" class="btn btn-primary btn-full">להתחיל</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+          </div>
+          <div class="p-card featured">
+            <span class="popular-pill">Most Popular</span>
+            <div class="p-tier">Tier 2</div>
+            <div class="p-name">תוכנית אסטרטגית</div>
+            <div class="p-desc">דוח + תוכנית פעולה + המלצות. מרבית הלקוחות בוחרים בזה.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">197</span></div>
+            <div class="p-period">one-time</div>
+            <hr class="p-divider">
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Starter</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Competitor benchmark (3 competitors)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30-day prioritized action plan</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>PageSpeed full data table</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>5-day delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
           </div>
           <div class="p-card">
-            <div class="p-tier">Premium</div>
-            <div class="p-name">מודיעין מלא</div>
-            <div class="p-desc">הביקורת המקיפה ביותר — ניתוח עמוק, תוכן מוכן לשימוש וסריקת התקדמות חינם אחרי 60 יום.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">397</span></div>
+            <div class="p-tier">Tier 3</div>
+            <div class="p-name">שותף לצמיחה</div>
+            <div class="p-desc">דוח + תוכנית + שכבת ייעוץ. השותפות המקיפה ביותר לתמיכה בהטמעה.</div>
+            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">497</span></div>
             <div class="p-period">חד פעמי</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -983,10 +746,9 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
           Also available on <a href="https://fiverr.com" target="_blank" rel="noopener">Fiverr</a> ·
-          צריך יישום? שאל על <strong style="color:var(--text-muted)">חבילת תיקון מעקב</strong> ($79–$149) and <strong style="color:var(--text-muted)">תיקון מהיר GBP</strong> ($59–$99) תוספות.
-          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — זמין מישראל, LATAM ועולמי. <a href="#contact" style="color:var(--accent)">צור קשר לתשלום →</a>
+          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($79–$149) and <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($59–$99) add-ons.
+          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM &amp; worldwide. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
         </p>
-          <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);border-radius:8px;padding:8px 16px;margin-top:12px;"><span style="font-size:0.85rem;color:#ef4444;font-weight:600;">🔥 מחירי השקה — זמינות מוגבלת בתעריפים אלה</span></div>
       </div><!-- end acc-panel audit-p -->
       </div><!-- end accordion-item -->
 
@@ -1014,7 +776,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
               <li class="p-feat"><span class="ck">✓</span><span>סוכן WhatsApp AI 24/7</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>מענה אוטומטי תוך &lt;30 שניות</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>שאלות נפוצות של העסק טעונות</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>לכידת לידים → ניהול אוטומטי</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>לכידת לידים → CRM</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>תזכורות לפגישות</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>בקשת ביקורות Google</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>דוח ביצועים חודשי</span></li>
@@ -1036,7 +798,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
               <li class="p-feat"><span class="ck">✓</span><span>קביעת תורים אוטומטית ב-Google Calendar</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>פולואפ חכם (24 שעות אם אין הזמנה)</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>טיפוח לקוח אחרי שירות</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>אינטגרציה עם מערכת ניהול לידים</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>אינטגרציה עם CRM</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>דשבורד אנליטיקס שבועי</span></li>
             </ul>
             <a href="#contact" class="btn btn-primary btn-full">קבל טייס אוטומטי</a>
@@ -1073,68 +835,68 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         <button class="pricing-acc-header" onclick="toggleAccordion('adtech-p', this)">
           <span class="acc-icon">🤖</span>
           <span class="acc-title">מערכות AdTech עם AI</span>
-          <span class="acc-range">$1,500 – $7,500+ <span style="font-size:0.75rem;opacity:0.6">לפרויקט</span></span>
+          <span class="acc-range">$1,500 – $7,500+ <span style="font-size:0.75rem;opacity:0.6">per project</span></span>
           <span class="acc-arrow">▼</span>
         </button>
       <div id="adtech-p" class="acc-panel">
         <div class="pricing-grid">
           <div class="p-card">
-            <div class="p-tier">שלב 1</div>
-            <div class="p-name">גילוי ומפת דרכים</div>
-            <div class="p-desc">ביקורת ה-tech stack הנוכחי שלך + תוכנית ארכיטקטורת סוכני AI מותאמת.</div>
+            <div class="p-tier">Phase 1</div>
+            <div class="p-name">Discovery & Roadmap</div>
+            <div class="p-desc">Audit of your current tech stack + custom AI agent architecture plan.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">1,500</span></div>
-            <div class="p-period">חד פעמי project</div>
+            <div class="p-period">one-time project</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>ביקורת תשתית נתונים</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>עיצוב ארכיטקטורת סוכנים (מותאם)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>הערכת אינטגרציית MCP/API</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>מפת דרכים ליישום טכני</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>מודל הקרנת ROI</span></li>
-              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">פיתוח סוכנים</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Data infrastructure audit</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Agent architecture design (custom)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP/API integration assessment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Technical implementation roadmap</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ROI projection model</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Agent development</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">הזמן שיחת גילוי</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
           </div>
           <div class="p-card featured">
-            <span class="popular-pill">הכי משתלם</span>
-            <div class="p-tier">שלב 2</div>
-            <div class="p-name">בנייה ובדיקה</div>
-            <div class="p-desc">3 סוכני AI מותאמים נבנו, נבדקו ומוכנים לסביבת הבדיקה שלך.</div>
+            <span class="popular-pill">Best Value</span>
+            <div class="p-tier">Phase 2</div>
+            <div class="p-name">Build & Test</div>
+            <div class="p-desc">3 custom AI agents built, tested, and ready for your staging environment.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">3,500</span></div>
-            <div class="p-period">חד פעמי project</div>
+            <div class="p-period">one-time project</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>הכל בשלב הגילוי</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>3 סוכנים אוטונומיים נבנו</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Framework CrewAI / LangGraph</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>אינטגרציית pipeline MCP ו-RAG</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>בוט Slack להתראות צוות</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>פריסה בסביבת בדיקה</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Discovery</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>3 autonomous agents built</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>CrewAI / LangGraph framework</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>MCP & RAG pipeline integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Slack bot for team alerts</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Staging environment deployment</span></li>
             </ul>
-            <a href="#contact" class="btn btn-primary btn-full" style="background:var(--purple);">התחל בנייה</a>
+            <a href="#contact" class="btn btn-primary btn-full" style="background:var(--purple);">Start Build</a>
           </div>
           <div class="p-card">
-            <div class="p-tier">שלב 3</div>
-            <div class="p-name">מערכת ייצור</div>
-            <div class="p-desc">פריסה מלאה בייצור + 30 יום תמיכה + העברה לצוות.</div>
+            <div class="p-tier">Phase 3</div>
+            <div class="p-name">Production System</div>
+            <div class="p-desc">Full production deployment + 30 days support + team handoff.</div>
             <div class="p-price"><span class="p-currency">$</span><span class="p-amount">7,500</span></div>
             <div class="p-period">+ from project</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>הכל בבנייה ובדיקה</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Backend ייצור FastAPI</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>פריסת Docker / K8s</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>30 יום תמיכה אחרי השקה</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>העברה לצוות ותיעוד</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ריטיינר מתמשך זמין</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>FastAPI production backend</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Docker / K8s deployment</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>30 days post-launch support</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Team handoff & documentation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Ongoing retainer available</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">הזמן שיחת גילוי</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
           </div>
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
-          כל פרויקטי AdTech AI start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
+          All AdTech AI projects start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
           We scope together before you commit to anything. <a href="#contact">Book yours →</a>
-          · 💳 <strong style="color:var(--text-muted)">תשלומים בינלאומיים via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">צור קשר לתשלום →</a>
+          · 💳 <strong style="color:var(--text-muted)">International payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact us to pay →</a>
         </p>
       </div><!-- end acc-panel adtech-p -->
       </div><!-- end accordion-item -->
@@ -1148,24 +910,69 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
   <div class="container">
     <div class="section-header">
       <span class="badge badge-blue">Process</span>
-      <h2>פשוט. מהיר. משפיע.</h2>
-      <p>מההודעה הראשונה שלך לתוצאה מסופקת — ללא מורכבות, ללא שיחות אינסופיות.</p>
+      <h2>Simple. Fast. Impactful.</h2>
+      <p>From your first message to a delivered result — no complexity, no endless calls.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01</div>
-        <h3>אתה מספר לנו על המצב</h3>
-        <p>מלא את טופס הקשר. ספר לנו על האתר, סוג העסק ומה שאתה צריך. נשיב תוך 24 שעות עם הצעה מותאמת.</p>
+        <h3>You tell us your situation</h3>
+        <p>Fill the contact form. Tell us your website, business type, and what you need. We reply within 24 hours with a tailored proposal.</p>
       </div>
       <div class="step">
         <div class="step-num">02</div>
-        <h3>אנחנו עושים את העבודה</h3>
-        <p>הצוות שלנו (וסוכני ה-AI שלנו) מנתחים את הנוכחות הדיגיטלית שלך, מוצאים את הלידים האידיאליים שלך, או מתכננים את מערכת ה-AI שלך. אתה לא מזיז אצבע.</p>
+        <h3>We do the work</h3>
+        <p>Our team (and our AI agents) analyze your digital presence, find your ideal leads, or architect your AI system. You don't lift a finger.</p>
       </div>
       <div class="step">
         <div class="step-num">03</div>
-        <h3>אתה מקבל תוצאות אמיתיות</h3>
-        <p>PDF עם ציון המרת הלידים שלך. גיליון חישוב של לידים מאומתים. או מערכת AI פעילה. עובדות. בהירות. פעולה.</p>
+        <h3>You get real results</h3>
+        <p>A PDF with your Lead Conversion Score. A spreadsheet of verified leads. Or a running AI system. Facts. Clarity. Action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST BADGES ===== -->
+<section class="section trust-badges-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">אמון</span>
+      <h2>בנוי על טכנולוגיה מובילה בתעשייה</h2>
+    </div>
+    <div class="trust-badges-grid">
+      <div class="trust-badge-item"><span class="trust-icon">📊</span><span>Google Analytics</span></div>
+      <div class="trust-badge-item"><span class="trust-icon">🔍</span><span>Google Search Console</span></div>
+      <div class="trust-badge-item"><span class="trust-icon">⚡</span><span>PageSpeed Insights</span></div>
+      <div class="trust-badge-item"><span class="trust-icon">🤖</span><span>ניתוח AI</span></div>
+      <div class="trust-badge-item"><span class="trust-icon">🔒</span><span>תעודת SSL</span></div>
+      <div class="trust-badge-item"><span class="trust-icon">🌐</span><span>4 שפות</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-blue">המלצות</span>
+      <h2>מה הלקוחות שלנו אומרים</h2>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"הביקורת חשפה בעיות מעקב שלא ידענו שקיימות. תוך שבוע מיישום ההמלצות, ראינו עלייה של 23% בשליחת טפסים. הנתונים לא משקרים."</p>
+        <div class="testimonial-author"><strong>Michael R.</strong><span>מנהל שיווק, חברת SaaS — אוסטין, TX</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"Clarvix מצאו 14 בעיות באתר שלנו ש-3 סוכנויות שונות פספסו. ציון ההמרה נתן לנו מדד ברור. עלינו מ-38 ל-71 תוך 30 יום."</p>
+        <div class="testimonial-author"><strong>Sarah K.</strong><span>מנכ״לית, מותג אי-קומרס — תל אביב</span></div>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">"בלי סיבובים, בלי דעות — רק ראיות ופתרונות. דוח ה-PDF היה כל כך מפורט שהמפתח שלנו יישם הכל בלי שאלה אחת נוספת. שווה כל שקל."</p>
+        <div class="testimonial-author"><strong>Carlos M.</strong><span>בעלים, משרד עורכי דין — מדריד</span></div>
       </div>
     </div>
   </div>
@@ -1175,49 +982,36 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
 <section id="faq" class="section">
   <div class="container">
     <div class="section-header">
-      <span class="badge badge-blue">שאלות נפוצות</span>
-      <h2>שאלות נפוצות</h2>
+      <span class="badge badge-blue">FAQ</span>
+      <h2>Common Questions</h2>
     </div>
     <div class="faq-grid">
       <div class="faq-item">
-        <div class="faq-q">האם אתם צריכים גישה לבאקנד שלי?</div>
-        <div class="faq-a">לא. הביקורת הסטנדרטית היא 100% לא פולשנית — אנחנו צריכים רק את ה-URL שלך. גישת קריאה בלבד ל-GA4/GSC מעמיקה את הביקורת אך אינה חובה.</div>
+        <div class="faq-q">Do you need access to my website backend?</div>
+        <div class="faq-a">No. The standard audit is 100% non-intrusive — we only need your website URL. Optional GA4/GSC read-only access makes the audit deeper but is not required.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">כמה זמן לוקחת הביקורת?</div>
-        <div class="faq-a">תוכנית בסיסית: 48 שעות. סטנדרט: 5 ימים. פרימיום: 3 ימים (עדיפות). השעון מתחיל כשאתה מספק את המידע, לא כשאתה משלם.</div>
+        <div class="faq-q">How long does the audit take?</div>
+        <div class="faq-a">Basic plan: 48 hours. Standard: 5 days. Premium: 3 days (priority). The clock starts when you provide your business info, not when you pay.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">באילו שווקים ושפות אתם פועלים?</div>
-        <div class="faq-a">אנחנו משרתים עסקים באנגלית (US, UK, AU), ספרדית (LATAM, ספרד), עברית (ישראל) וערבית (ישראל, MENA). הדוחות מסופקים בשפה המועדפת עליך.</div>
+        <div class="faq-q">What markets and languages do you serve?</div>
+        <div class="faq-a">We serve businesses in English (US, UK, AU), Spanish (LATAM, Spain), Hebrew (Israel), and Arabic (Israel, MENA). Reports are delivered in your preferred language.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">האם אתם יכולים לעזור ליישם את המלצות הביקורת?</div>
-        <div class="faq-a">כן. אנחנו מציעים תוספות יישום: חבילת תיקון מעקב ($79–$149), תיקון מהיר GBP ($59–$99) וניצחונות מהירות ($79–$149). שאל כשאתה מזמין.</div>
+        <div class="faq-q">Can you help implement the audit recommendations?</div>
+        <div class="faq-a">Yes. We offer implementation add-ons: Tracking Fix Pack ($79–$149), GBP Quick Fix ($59–$99), and Speed Quick Wins ($79–$149). Ask us when you order.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">מה מבדיל את Clarvix מסוכנות רגילה?</div>
-        <div class="faq-a">אנחנו לא עושים דעות. לכל ממצא יש ראיות הניתנות לאימות, השפעה עסקית במספרים ותיקון קונקרטי. ציון המרת הלידים עקבי וניתן להשוואה. ללא מילוי.</div>
+        <div class="faq-q">What makes Clarvix different from a regular agency?</div>
+        <div class="faq-a">We don't do opinions. Every finding has verifiable evidence, a business impact in numbers, and a concrete fix. The Lead Conversion Score is consistent and comparable. No fluff.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">אתם עובדים מחוץ ל-Fiverr?</div>
+        <div class="faq-q">Do you work outside Fiverr?</div>
         <div class="faq-a">Yes. You can order directly from this page — especially for Lead Generation and AdTech AI projects. We accept international payments via <strong>Payoneer</strong> (from any country), bank transfer, and Fiverr. Contact us and we'll send you a payment request directly.</div>
       </div>
     </div>
-  
-          <div class="faq-item">
-            <div class="faq-question">האם זה שווה את ההשקעה? מה ה-ROI?</div>
-            <div class="faq-answer"><p>בעיה קריטית אחת שלא זוהתה יכולה לעלות לך אלפי דולרים כל חודש. הלקוחות שלנו מחזירים את ההשקעה תוך 2-3 שבועות.</p></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">כבר יש לי סוכנות שיווק. למה אני צריך את זה?</div>
-            <div class="faq-answer"><p>סוכנויות מריצות קמפיינים. אנחנו מאבחנים את הבסיס. האודיט שלנו משלים את הסוכנות שלך.</p></div>
-          </div>
-          <div class="faq-item">
-            <div class="faq-question">מה אם הציון שלי כבר טוב?</div>
-            <div class="faq-answer"><p>מצוין — אז האודיט מאשר שאתה בכיוון נכון ומראה לך איפה לעבור מ"טוב" ל"מצוין". תקבל השוואות מול מתחרים ישירים.</p></div>
-          </div>
-        </div>
+  </div>
 </section>
 
 <!-- ===== CONTACT ===== -->
@@ -1225,9 +1019,9 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
   <div class="container">
     <div class="contact-grid">
       <div class="contact-info">
-        <span class="badge badge-blue" style="margin-bottom:16px;">צור קשר</span>
-        <h2>מוכן להפסיק לאבד לידים?</h2>
-        <p>ספר לנו על העסק שלך. נשיב תוך 24 שעות עם המלצה מותאמת — ללא התחייבות.</p>
+        <span class="badge badge-blue" style="margin-bottom:16px;">Contact</span>
+        <h2>Ready to stop losing leads?</h2>
+        <p>Tell us about your business. We'll reply within 24 hours with a tailored recommendation — no commitment required.</p>
         <div class="contact-points">
           <div class="c-point">
             <div class="c-ico">📧</div>
@@ -1239,8 +1033,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           <div class="c-point">
             <div class="c-ico">⏱</div>
             <div class="c-txt">
-              <strong>זמן תגובה</strong>
-              <span>תוך 24 שעות, תמיד</span>
+              <strong>Response Time</strong>
+              <span>Within 24 hours, always</span>
             </div>
           </div>
           <div class="c-point">
@@ -1253,8 +1047,8 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           <div class="c-point">
             <div class="c-ico">🛒</div>
             <div class="c-txt">
-              <strong>גם ב-Fiverr</strong>
-              <span>מצא אותנו ב-fiverr.com/clarvix להזמנות מהירות</span>
+              <strong>Also on Fiverr</strong>
+              <span>Find us at fiverr.com/clarvix for quick orders</span>
             </div>
           </div>
         </div>
@@ -1262,19 +1056,19 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
       <div>
         <div class="contact-form-card">
           <div id="formWrapper">
-            <h3 style="color:#fff;margin-bottom:6px;">שלח לנו הודעה</h3>
-            <p style="font-size:0.85rem;margin-bottom:24px;">ננתח את המצב שלך ונשיב עם ההמלצה שלנו.</p>
+            <h3 style="color:#fff;margin-bottom:6px;">Send us a message</h3>
+            <p style="font-size:0.85rem;margin-bottom:24px;">We'll analyze your situation and reply with our recommendation.</p>
             <form id="contactForm" action="https://formspree.io/f/xqegkzzo" method="POST">
               <input type="hidden" name="_subject" value="New Clarvix Inquiry — contact@clarvix.net">
               <input type="hidden" name="_to" value="contact@clarvix.net">
               <div class="form-row2">
                 <div class="form-group">
                   <label>שמך *</label>
-                  <input type="text" name="name" placeholder="John Smith" required="">
+                  <input type="text" name="name" placeholder="John Smith" required>
                 </div>
                 <div class="form-group">
                   <label>אימייל העסקי *</label>
-                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required="" oninput="document.getElementById('replyto').value=this.value">
+                  <input type="email" name="email" id="contactEmail" placeholder="john@company.com" required oninput="document.getElementById('replyto').value=this.value">
                   <input type="hidden" name="_replyto" id="replyto">
                 </div>
               </div>
@@ -1285,15 +1079,15 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
               <div class="form-group">
                 <label>מעוניין ב *</label>
                 <select name="service">
-                  <option value="" disabled="" selected="">בחר שירות...</option>
-                  <option value="ביקורת נוכחות דיגיטלית">🔍 ביקורת נוכחות דיגיטלית ($97–$397)</option>
+                  <option value="" disabled selected>בחר שירות...</option>
+                  <option value="ביקורת נוכחות דיגיטלית">🔍 ביקורת נוכחות דיגיטלית ($67–$497)</option>
                   <option value="עובד דיגיטלי AI">🤖 עובד דיגיטלי AI (₪1,200–₪5,500/חודש)</option>
-                  <option value="מערכות AdTech עם AI">🤖 מערכות AdTech עם AI ($1,500–$7,500+)</option>
+                  <option value="מערכות AdTech עם AI">🚀 מערכות AdTech עם AI ($1,500–$7,500+)</option>
                   <option value="לא בטוח">💬 לא בטוח — עזרו לי להחליט</option>
                 </select>
               </div>
               <div class="form-group">
-                <label>ספר לנו על העסק שלך</label>
+                <label>ספר/י לנו על העסק שלך</label>
                 <textarea name="message" placeholder="מהו האתגר העיקרי שלך כרגע? (לא חובה אבל עוזר לנו לתת לך תשובה טובה יותר)"></textarea>
               </div>
                             <!-- Anti-spam honeypot – hidden from real users -->
@@ -1309,7 +1103,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
             <h3>!ההודעה התקבלה</h3>
             <p>ננתח את המצב שלך ונשלח לך תשובה תוך 24 שעות.</p>
             <br>
-            <p style="font-size:0.83rem;"><strong style="color:var(--text)">עובדות. בהירות. פעולה.</strong></p>
+            <p style="font-size:0.83rem;"><strong style="color:var(--text)">Facts. Clarity. Action.</strong></p>
           </div>
         </div>
       </div>
@@ -1323,11 +1117,11 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+          <img src="/images/logo-128.webp" alt="Clarvix" onerror="this.style.display='none'">
           <span class="logo-text">Clarvix</span>
         </a>
         <p>ביקורות דיגיטליות מבוססות נתונים, עובדים דיגיטליים AI רב-ערוציים ומערכות AI לפרסום פרוגרמטי. אנחנו לא עושים דעות — אנחנו עושים ראיות.</p>
-        <div class="footer-tagline">עובדות. בהירות. פעולה.</div>
+        <div class="footer-tagline">עובדות. הבהרה. פעולה.</div>
         <div class="footer-social">
           <a href="https://instagram.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Instagram">📸</a>
           <a href="https://linkedin.com/company/clarvix" class="social-btn" target="_blank" rel="noopener" title="LinkedIn">💼</a>
@@ -1340,11 +1134,11 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
           <li><a href="#audit">ביקורת נוכחות דיגיטלית</a></li>
           <li><a href="#ai-employee">עובד דיגיטלי AI</a></li>
           <li><a href="#adtech">מערכות AdTech עם AI</a></li>
-          <li><a href="#pricing">מחירים</a></li>
+          <li><a href="#pricing">מחירון</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>החברה</h4>
+        <h4>חברה</h4>
         <ul class="footer-links">
           <li><a href="#how">איך זה עובד</a></li>
           <li><a href="/blog">בלוג</a></li>
@@ -1353,7 +1147,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
         </ul>
       </div>
       <div class="footer-col">
-        <h4>שווקים</h4>
+        <h4>Markets</h4>
         <ul class="footer-links">
           <li><a href="/">🇺🇸 English</a></li>
           <li><a href="/es.html">🇪🇸 Español</a></li>
@@ -1364,6 +1158,7 @@ body, h1, h2, h3, h4, h5, h6, p, a, span, li, label, input, textarea, select, bu
     </div>
     <div class="footer-bottom">
       <span>© 2026 Clarvix. כל הזכויות שמורות.</span>
+      <span><a href="/privacy.html" style="color:#8892a4;text-decoration:none;">מדיניות פרטיות</a></span>
       <span>contact@clarvix.net</span>
     </div>
   </div>
@@ -1411,7 +1206,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
   // ── Rate limiting: 1 submission per 60s per session ──────────────
   var lastSub = sessionStorage.getItem('clarvix_last_contact');
   if (lastSub && (Date.now() - parseInt(lastSub)) < 60000) {
-    alert('אנא המתן רגע לפני שליחת הודעה נוספת.');
+    alert('Please wait a moment before sending another message.');
     return;
   }
 
@@ -1443,11 +1238,11 @@ document.getElementById('contactForm').addEventListener('submit', async function
   var message = sanitize(msgEl     ? msgEl.value     : '', 3000);
 
   if (name.length < 2) {
-    alert('אנא הכנס את שמך (לפחות 2 תווים).');
+    alert('Please enter your name (at least 2 characters).');
     return;
   }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-    alert('אנא הכנס כתובת אימייל תקינה.');
+    alert('Please enter a valid email address.');
     return;
   }
 
@@ -1460,7 +1255,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
   var btn = this.querySelector('button[type="submit"]');
   var origText = btn.textContent;
-  btn.textContent = 'שולח…';
+  btn.textContent = 'Sending…';
   btn.disabled = true;
 
   try {
@@ -1481,14 +1276,52 @@ document.getElementById('contactForm').addEventListener('submit', async function
   } catch (err) {
     btn.textContent = origText;
     btn.disabled = false;
-    alert('משהו השתבש. נסה שוב או שלח לנו אימייל ל-contact@clarvix.net');
+    alert('Something went wrong. Please try again or email us at contact@clarvix.net');
   }
 });
+    if (resp.ok) {
+      document.getElementById('formWrapper').style.display = 'none';
+      document.getElementById('formSuccess').classList.add('show');
+    } else {
+      btn.textContent = 'Error — try emailing contact@clarvix.net';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    btn.textContent = 'Error — try emailing contact@clarvix.net';
+    btn.disabled = false;
+  }
+});
+
 // Navbar scroll effect
 window.addEventListener('scroll', () => {
   const nb = document.getElementById('navbar');
   nb.style.background = window.scrollY > 50 ? 'rgba(8,13,26,0.98)' : 'rgba(8,13,26,0.88)';
 });
+// Call tracking
+document.addEventListener('click', function(e) {
+  var el = e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+  if (el) { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: el.href.startsWith('tel:') ? 'phone_click' : 'email_click', link: el.href }); }
+});
 </script>
 
-</body></html>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/972539464262?text=%D7%A9%D7%9C%D7%95%D7%9D%20Clarvix%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%9C%20%D7%94%D7%A9%D7%99%D7%A8%D7%95%D7%AA%D7%99%D7%9D%20%D7%A9%D7%9C%D7%9B%D7%9D" target="_blank" rel="noopener" class="whatsapp-float" title="צ'אט בוואטסאפ">
+  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/69d245151772311c3585e35c/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body>
+</html>

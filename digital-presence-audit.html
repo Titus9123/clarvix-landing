@@ -99,11 +99,11 @@
       <p class="section-sub center" style="max-width:560px;margin:0 auto 48px">Delivered as a professional PDF. Real data. No fluff.</p>
 
       <div class="pricing-cards">
-        <!-- BASIC -->
+        <!-- TIER 1 -->
         <div class="pricing-card">
-          <div class="pricing-tier">Basic</div>
-          <div class="pricing-price">$45</div>
-          <div class="pricing-sub">Lead Conversion Audit — Core Diagnosis</div>
+          <div class="pricing-tier">Tier 1</div>
+          <div class="pricing-price">$67</div>
+          <div class="pricing-sub">Digital Health Report — Report Only</div>
           <ul class="pricing-features">
             <li class="bold">Includes:</li>
             <li>Score 0–100 (8 categories)</li>
@@ -120,15 +120,15 @@
             <li class="cross">Full 30-day plan</li>
             <li class="cross">Post-audit support</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('basic')">Order now →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('tier1')">Order now →</button>
         </div>
 
-        <!-- STANDARD -->
+        <!-- TIER 2 -->
         <div class="pricing-card premium">
           <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-tier">Standard</div>
-          <div class="pricing-price">$85</div>
-          <div class="pricing-sub">Full Audit + Competitive Benchmark</div>
+          <div class="pricing-tier">Tier 2</div>
+          <div class="pricing-price">$197</div>
+          <div class="pricing-sub">Strategy Blueprint — Report + Action Plan + Recommendations</div>
           <ul class="pricing-features">
             <li class="bold">Everything in Basic, plus:</li>
             <li>3 competitors analyzed</li>
@@ -141,14 +141,14 @@
             <li>Basic technical SEO review</li>
             <li>Full PDF (10–12 pages)</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('standard')">Order now →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('tier2')">Order now →</button>
         </div>
 
-        <!-- PREMIUM -->
+        <!-- TIER 3 -->
         <div class="pricing-card">
-          <div class="pricing-tier">Premium</div>
-          <div class="pricing-price">$160</div>
-          <div class="pricing-sub">Strategic Digital Presence Audit</div>
+          <div class="pricing-tier">Tier 3</div>
+          <div class="pricing-price">$497</div>
+          <div class="pricing-sub">Growth Partner — Report + Plan + Consulting Layer</div>
           <ul class="pricing-features">
             <li class="bold">Everything in Standard, plus:</li>
             <li>Deep conversion funnel analysis</li>
@@ -160,7 +160,7 @@
             <li>Specific tool recommendations</li>
             <li>Bonus doc: 'Implementation Priorities Breakdown'</li>
           </ul>
-          <button class="btn-primary btn-full" onclick="openOrder('premium')">Order now →</button>
+          <button class="btn-primary btn-full" onclick="openOrder('tier3')">Order now →</button>
         </div>
       </div>
     </div>
@@ -248,20 +248,20 @@
       </div>
 
       <div class="package-selector" id="packageSelector">
-        <label class="pkg-option" id="pkgBasic" onclick="selectPackage('basic')">
-          <div class="pkg-radio" id="radioBasic"></div>
-          <div class="pkg-info"><span class="pkg-name">Basic</span><span class="pkg-desc">Core Diagnosis</span></div>
-          <span class="pkg-price">$45</span>
+        <label class="pkg-option" id="pkgTier1" onclick="selectPackage('tier1')">
+          <div class="pkg-radio" id="radioTier1"></div>
+          <div class="pkg-info"><span class="pkg-name">Tier 1</span><span class="pkg-desc">Digital Health Report</span></div>
+          <span class="pkg-price">$67</span>
         </label>
-        <label class="pkg-option" id="pkgStandard" onclick="selectPackage('standard')">
-          <div class="pkg-radio" id="radioStandard"></div>
-          <div class="pkg-info"><span class="pkg-name">Standard</span><span class="pkg-desc">Full Audit + Benchmark</span></div>
-          <span class="pkg-price">$85</span>
+        <label class="pkg-option" id="pkgTier2" onclick="selectPackage('tier2')">
+          <div class="pkg-radio" id="radioTier2"></div>
+          <div class="pkg-info"><span class="pkg-name">Tier 2</span><span class="pkg-desc">Strategy Blueprint</span></div>
+          <span class="pkg-price">$197</span>
         </label>
-        <label class="pkg-option" id="pkgPremium" onclick="selectPackage('premium')">
-          <div class="pkg-radio" id="radioPremium"></div>
-          <div class="pkg-info"><span class="pkg-name">Premium</span><span class="pkg-desc">Strategic Advanced Audit</span></div>
-          <span class="pkg-price">$160</span>
+        <label class="pkg-option" id="pkgTier3" onclick="selectPackage('tier3')">
+          <div class="pkg-radio" id="radioTier3"></div>
+          <div class="pkg-info"><span class="pkg-name">Tier 3</span><span class="pkg-desc">Growth Partner</span></div>
+          <span class="pkg-price">$497</span>
         </label>
       </div>
 

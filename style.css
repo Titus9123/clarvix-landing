@@ -548,6 +548,85 @@ footer {
   .steps::before { display: none; }
 }
 
+/* === TRUST BADGES === */
+.trust-badges-section { padding: 3rem 0; }
+.trust-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.trust-badge-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.2rem;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  transition: border-color 0.2s;
+}
+.trust-badge-item:hover { border-color: var(--accent); }
+.trust-icon { font-size: 1.6rem; }
+
+/* === TESTIMONIALS === */
+.testimonials-section { padding: 4rem 0; }
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.testimonial-card {
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.testimonial-stars { color: #f59e0b; font-size: 1.2rem; letter-spacing: 2px; }
+.testimonial-text {
+  color: var(--text);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-style: italic;
+  flex: 1;
+}
+.testimonial-author strong { color: var(--text); display: block; font-size: 0.9rem; }
+.testimonial-author span { color: var(--text-dim); font-size: 0.8rem; }
+
+/* === WHATSAPP FLOATING BUTTON === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.6);
+}
+
+@media (max-width: 900px) {
+  .trust-badges-grid { grid-template-columns: repeat(3, 1fr); }
+  .testimonials-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   h2 { font-
