@@ -551,3 +551,83 @@ footer {
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   h2 { font-
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #25d366, #20ba5a);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float svg {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-float.whatsapp-rtl {
+  right: auto;
+  left: 30px;
+}
+
+/* Cookie Consent Banner adjustments */
+#cookieConsent a {
+  color: #1a6bff;
+  text-decoration: underline;
+}
+
+#cookieConsent a:hover {
+  color: #2570ff;
+}
+
+/* === WHATSAPP FLOATING BUTTON === */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+  z-index: 9999;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.55);
+  opacity: 1;
+}
+.whatsapp-rtl {
+  right: auto;
+  left: 24px;
+}
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: 80px;
+    right: 16px;
+    width: 50px;
+    height: 50px;
+  }
+  .whatsapp-rtl {
+    right: auto;
+    left: 16px;
+  }
+}

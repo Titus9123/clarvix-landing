@@ -90,11 +90,47 @@
         }
       ]
     }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Clarvix",
+    "url": "https://clarvix.net",
+    "email": "contact@clarvix.net",
+    "telephone": "+972-53-946-4262",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Netivot",
+      "addressCountry": "IL"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 31.4167,
+      "longitude": 34.5833
+    },
+    "areaServed": ["IL","US","GB","AU","CA","ES","MX","AR","CO"],
+    "priceRange": "$95-$7500",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Sunday","Monday","Tuesday","Wednesday","Thursday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "sameAs": [
+      "https://instagram.com/clarvix",
+      "https://linkedin.com/company/clarvix",
+      "https://facebook.com/clarvixdigital",
+      "https://fiverr.com/clarvix"
+    ]
+  }
+  </script>
   ]
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" href="/images/logo.webp" as="image" type="image/webp">
+  <link rel="preload" href="style.css" as="style">
   <link rel="stylesheet" href="style.css">
   <style>
 /* Arabic font override */
@@ -172,6 +208,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-KQ8MQBNQ');</script>
 <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4R22F19B8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-P4R22F19B8');
+  </script>
+
+  <!-- Facebook Pixel — REPLACE 000000000000000 WITH YOUR ACTUAL PIXEL ID -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '000000000000000');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=000000000000000&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel -->
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
@@ -183,7 +244,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav id="navbar">
   <div class="nav-inner">
     <a href="/" class="logo">
-      <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
+      <picture>
+      <source srcset="/images/logo.webp" type="image/webp">
+      <img src="/images/logo-sm.png" alt="Clarvix" width="40" height="40" onerror="this.style.display='none'">
+    </picture>
       <span class="logo-text">Clarvix</span>
     </a>
     <ul class="nav-links">
@@ -230,7 +294,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="hero-eyebrow">
           <span>🎯</span> ذكاء رقمي للشركات التي تريد الفوز
         </div>
-        <img src="/images/logo.png" alt="Clarvix" style="height:64px;width:auto;margin-bottom:16px;display:block;">
+        <picture style="height:64px;width:auto;margin-bottom:16px;display:block;">
+        <source srcset="/images/logo.webp" type="image/webp">
+        <img src="/images/logo-sm.png" alt="Clarvix" width="40" height="40" style="height:64px;width:auto;margin-bottom:16px;display:block;" onerror="this.style.display='none'">
+      </picture>
         <h1 class="hero-title">
           منافسوك<br><em>يسرقون عملاءك</em>.
         </h1>
@@ -1138,6 +1205,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 إرسال الرسالة ←
               </button>
               <p class="form-note">سنرد على بريدك الإلكتروني في غضون 24 ساعة. لا بريد عشوائي، أبداً.</p>
+              <p style="font-size:0.72rem;color:var(--text-dim);margin-top:8px;text-align:center;">بالنقر على الإرسال، فإنك توافق على <a href="/privacy-policy.html" style="color:var(--accent);">سياسة الخصوصية</a> الخاصة بنا.</p>
             </form>
           </div>
           <div class="form-success" id="formSuccess">
@@ -1159,14 +1227,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="/images/logo.png" alt="Clarvix" onerror="this.style.display='none'">
-          <span class="logo-text">Clarvix</span>
+      <picture>
+      <source srcset="/images/logo.webp" type="image/webp">
+      <img src="/images/logo-sm.png" alt="Clarvix" width="40" height="40" onerror="this.style.display='none'">
+    </picture>
+      <span class="logo-text">Clarvix</span>
         </a>
         <p>تدقيقات رقمية مدعومة بالبيانات، عملاء B2B مُتحقق منهم، وأنظمة AI للإعلانات البرمجية. لا نقدم آراء — نقدم أدلة.</p>
         <div class="footer-tagline">حقائق. وضوح. عمل.</div>
         <div class="footer-social">
+          <a href="https://facebook.com/clarvixdigital" class="social-btn" target="_blank" rel="noopener" title="Facebook">📘</a>
           <a href="https://instagram.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Instagram">📸</a>
           <a href="https://linkedin.com/company/clarvix" class="social-btn" target="_blank" rel="noopener" title="LinkedIn">💼</a>
+          <a href="https://x.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="X (Twitter)">𝕏</a>
           <a href="https://fiverr.com/clarvix" class="social-btn" target="_blank" rel="noopener" title="Fiverr">⭐</a>
         </div>
       </div>
@@ -1200,12 +1273,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="footer-bottom">
       <span>© 2026 Clarvix. جميع الحقوق محفوظة.</span>
+      <a href="/privacy-policy.html" style="color:var(--text-dim);text-decoration:underline;">سياسة الخصوصية</a>
       <span>contact@clarvix.net</span>
     </div>
   </div>
 </footer>
 
-<script src="app.js"></script>
+<script src="app.js" defer></script>
 <script>
 // Pricing tab switch
 function switchTab(panelId) {
@@ -1340,4 +1414,28 @@ s0.parentNode.insertBefore(s1,s0);
 })();
 </script>
 <!--End of Tawk.to Script-->
+  <!-- Cookie Consent Banner -->
+  <div id="cookieConsent" style="display:none;position:fixed;bottom:0;left:0;right:0;background:rgba(13,21,38,0.97);border-top:1px solid rgba(30,60,110,0.55);padding:16px 24px;z-index:10000;backdrop-filter:blur(12px);">
+    <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+      <p style="color:#94a3b8;font-size:0.82rem;margin:0;flex:1;min-width:280px;">نستخدم ملفات تعريف الارتباط وأدوات التحليل (Google Analytics, Facebook Pixel) لتحسين تجربتك. بالاستمرار في التصفح، فإنك توافق على <a href="/privacy-policy.html" style="color:#1a6bff;">سياسة الخصوصية</a>.</p>
+      <div style="display:flex;gap:8px;">
+        <button onclick="acceptCookies()" style="background:#1a6bff;color:#fff;border:none;padding:8px 20px;border-radius:8px;cursor:pointer;font-size:0.82rem;font-weight:600;">قبول</button>
+        <button onclick="declineCookies()" style="background:transparent;color:#94a3b8;border:1px solid rgba(30,60,110,0.55);padding:8px 16px;border-radius:8px;cursor:pointer;font-size:0.82rem;">رفض</button>
+      </div>
+    </div>
+  </div>
+  <script>
+  (function(){
+    if(!localStorage.getItem('clarvix_cookies')){
+      document.getElementById('cookieConsent').style.display='block';
+    }
+  })();
+  function acceptCookies(){localStorage.setItem('clarvix_cookies','accepted');document.getElementById('cookieConsent').style.display='none';}
+  function declineCookies(){localStorage.setItem('clarvix_cookies','declined');document.getElementById('cookieConsent').style.display='none';}
+  </script>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/972539464262?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%2C%20%D8%A7%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D9%85%D8%B9%D8%B1%D9%81%D8%A9%20%D8%A7%D9%84%D9%85%D8%B2%D9%8A%D8%AF%20%D8%B9%D9%86%20%D8%AE%D8%AF%D9%85%D8%A7%D8%AA%20Clarvix" class="whatsapp-float whatsapp-rtl" target="_blank" rel="noopener" aria-label="Chat on WhatsApp" title="Chat with us on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#fff" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  </script>
 </body></html>
