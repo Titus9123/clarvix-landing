@@ -634,6 +634,9 @@ footer {
   }
 }
 
+/* === HIDE VAPI DEFAULT WIDGET === */
+#vapi-support-btn, .vapi-btn { display: none !important; }
+
 /* === NOA VOICE CALL FLOATING BUTTON === */
 .noa-call-float {
   position: fixed;
