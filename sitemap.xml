@@ -58,13 +58,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://www.clarvix.net/lead-engine.html</loc>
-    <lastmod>2026-03-18</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-
   <!-- AdTech AI Systems pages (4 languages) -->
   <url>
     <loc>https://www.clarvix.net/adtech-ai.html</loc>
