@@ -627,21 +627,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span style="font-size:0.85rem;color:#ef4444;font-weight:600;">Launch pricing — limited availability at these rates</span>
       </div>
     </div>
-    <div class="pricing-tabs-wrapper">
-      <div class="pricing-tabs">
-        <button class="p-tab active" onclick="switchTab('audit-p')">🔍 Digital Presence Audit<span style="display:block;font-size:0.72rem;opacity:0.6;margin-top:2px;">$97 – $195</span></button>
-        <button class="p-tab" onclick="switchTab('agents-p')">🤖 AI Smart Agents<span style="display:block;font-size:0.72rem;opacity:0.6;margin-top:2px;">From $299/mo</span></button>
-        <button class="p-tab" onclick="switchTab('adtech-p')">🤖 AdTech AI</button>
-      </div>
-    </div>
     <div class="pricing-panels">
       <!-- AUDIT PRICING -->
-      <div id="audit-p" class="active">
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header active" onclick="toggleAccordion('audit-p', this)">
+          <span class="acc-icon">🔍</span>
+          <span class="acc-title">Digital Presence Audit</span>
+          <span class="acc-range">₪350 – ₪700 <span style="font-size:0.75rem;opacity:0.6">one-time</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="audit-p" class="acc-panel open">
         <div class="pricing-grid">
           <div class="p-card">
-            <div class="p-tier">Basic</div>            <div class="p-name">Starter Audit</div>
+            <div class="p-tier">Basic</div>
+            <div class="p-name">Starter Audit</div>
             <div class="p-desc">Perfect for a first diagnosis. Delivered in 48 hours.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">97</span></div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">350</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -660,7 +661,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="p-tier">Standard</div>
             <div class="p-name">Complete Audit</div>
             <div class="p-desc">Full audit + competitor benchmark. Most clients choose this.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">139</span></div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">500</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -668,7 +669,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li class="p-feat"><span class="ck">✓</span><span>Competitor benchmark (3 competitors)</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>30-day prioritized action plan</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>PageSpeed full data table</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>5-day delivery</span></li>              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>5-day delivery</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Video walkthrough</span></li>
             </ul>
             <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
           </div>
@@ -676,7 +678,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="p-tier">Premium</div>
             <div class="p-name">Full Intelligence</div>
             <div class="p-desc">The most complete audit — deeper intel, ready-to-use copy, and a free 60-day progress rescan.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">195</span></div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">700</span></div>
             <div class="p-period">one-time</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -692,79 +694,106 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
           Also available on <a href="https://fiverr.com/albertneuman402" target="_blank" rel="noopener">Fiverr</a> ·
-          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> ($80–$150), <strong style="color:var(--text-muted)">GBP Quick Fix</strong> ($60–$100), and <strong style="color:var(--text-muted)">Monthly Monitoring</strong> ($99/mo) add-ons.
+          Need implementation? Ask about our <strong style="color:var(--text-muted)">Tracking Fix Pack</strong> (₪290–₪550) and <strong style="color:var(--text-muted)">GBP Quick Fix</strong> (₪220–₪370) add-ons.
+          · 💳 <strong style="color:var(--text-muted)">Secure international payments via <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong> — available from Israel, LATAM & worldwide. <a href="#contact" style="color:var(--accent)">Contact for payment →</a>
         </p>
-      </div>
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);border-radius:8px;padding:8px 16px;margin-top:12px;"><span style="font-size:0.85rem;color:#ef4444;font-weight:600;">🔥 Launch pricing — limited availability at these rates</span></div>
+      </div><!-- end acc-panel audit-p -->
+      </div><!-- end accordion-item -->
+
       <!-- AI SMART AGENTS PRICING -->
-      <div id="agents-p">
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('agents-p', this)">
+          <span class="acc-icon">🤖</span>
+          <span class="acc-title">AI Smart Agents</span>
+          <span class="acc-range">₪1,200 – ₪5,500 <span style="font-size:0.75rem;opacity:0.6">per month</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="agents-p" class="acc-panel">
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-bottom:20px;">
-          🚀 <strong style="color:var(--success)">Launch offer: 50% off setup + 14 days free!</strong>
+          🤖 <strong style="color:var(--text-muted)">An AI employee costs less than a part-time secretary</strong> — works 24/7, 5 languages, zero sick days.
         </p>
         <div class="pricing-grid">
           <div class="p-card">
-            <div class="p-tier">Starter</div>
-            <div class="p-name">Smart Responder</div>
-            <div class="p-desc">WhatsApp AI that answers FAQs and books appointments.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">299</span></div>
-            <div class="p-period">per month + $500 setup</div>
+            <div class="p-tier">Tier 1</div>
+            <div class="p-name">Smart Receptionist</div>
+            <div class="p-desc">24/7 WhatsApp AI agent. Answers, captures leads, books appointments, requests reviews.</div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">1,200</span></div>
+            <div class="p-period">per month · ₪2,500 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>WhatsApp AI agent — 24/7</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>FAQ auto-responses</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Google Calendar booking</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Automated reminders</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Up to 500 conversations/mo</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>1 language</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>24/7 WhatsApp AI agent</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Auto-response in &lt;30 seconds</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Business FAQ loaded</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Lead capture → auto CRM</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Appointment reminders</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Google review requests</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Monthly performance report</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Instagram / Facebook / X</span></li>
             </ul>
             <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
           </div>
           <div class="p-card featured">
             <span class="popular-pill">Most Popular</span>
-            <div class="p-tier">Professional</div>
-            <div class="p-name">Smart Business</div>
-            <div class="p-desc">Multi-language AI with lead capture and monthly reports.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">549</span></div>
-            <div class="p-period">per month + $1,000 setup</div>
+            <div class="p-tier">Tier 2</div>
+            <div class="p-name">Business Autopilot</div>
+            <div class="p-desc">Multi-channel AI: WhatsApp, Instagram, Facebook & X. Full appointment automation.</div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">2,800</span></div>
+            <div class="p-period">per month · ₪5,000 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>Everything in Smart Responder</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Multi-language (HE+EN+AR)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Lead capture forms</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Automated follow-ups</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Monthly reports</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Knowledge base (RAG)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Up to 2,000 conversations/mo</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Smart Receptionist +</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>WhatsApp + Instagram + Facebook + X</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Auto Google Calendar booking</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Smart follow-up (24h if no booking)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Post-service customer nurture</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Lead management integration</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Weekly analytics dashboard</span></li>
             </ul>
-            <a href="#contact" class="btn btn-primary btn-full">Get Started</a>
+            <a href="#contact" class="btn btn-primary btn-full">Get Autopilot</a>
           </div>
           <div class="p-card">
-            <div class="p-tier">Enterprise</div>
-            <div class="p-name">Smart Enterprise</div>
-            <div class="p-desc">Full AI: voice agent, multi-channel, CRM, dashboard.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">999</span></div>
-            <div class="p-period">per month + $2,000 setup</div>
+            <div class="p-tier">Tier 3</div>
+            <div class="p-name">AI Operations Manager</div>
+            <div class="p-desc">Full AI ops: RAG knowledge base, auto quotes, complaint handling, payment links.</div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">5,500</span></div>
+            <div class="p-period">per month · ₪10,000 setup</div>
             <hr class="p-divider">
             <ul class="p-features">
-              <li class="p-feat"><span class="ck">✓</span><span>Everything in Smart Business</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>AI voice agent (receptionist)</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>WhatsApp + Web + Instagram</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Custom analytics dashboard</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>CRM integration</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Unlimited conversations</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>Dedicated onboarding</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Autopilot +</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Full RAG knowledge base</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Auto quotes & estimates</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Auto language detection (5 languages)</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Smart complaint handling + escalation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Daily owner summary via WhatsApp</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Payment link automation</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>Priority support + monthly review</span></li>
             </ul>
-            <a href="#contact" class="btn btn-ghost btn-full">Get Started</a>
+            <a href="#contact" class="btn btn-ghost btn-full">Get AI Ops Manager</a>
           </div>
         </div>
-      </div>
-      <!-- ADTECH PRICING -->
-      <div id="adtech-p">
+        <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:16px;">
+          💡 <strong style="color:#10b981">A human secretary costs ₪5,000–8,000/mo</strong> — our AI employee does more, 24/7, at less than half the price.
+          · 💳 Pay via bank transfer, Bit, or PayBox. <a href="#contact" style="color:var(--accent)">Contact us →</a>
+        </p>
+      </div><!-- end acc-panel agents-p -->
+      </div><!-- end accordion-item -->
+
+      <!-- ADTECH AI PRICING -->
+      <div class="pricing-accordion-item">
+        <button class="pricing-acc-header" onclick="toggleAccordion('adtech-p', this)">
+          <span class="acc-icon">🤖</span>
+          <span class="acc-title">AdTech AI Systems</span>
+          <span class="acc-range">₪5,500 – ₪27,500+ <span style="font-size:0.75rem;opacity:0.6">per project</span></span>
+          <span class="acc-arrow">▼</span>
+        </button>
+      <div id="adtech-p" class="acc-panel">
         <div class="pricing-grid">
           <div class="p-card">
             <div class="p-tier">Phase 1</div>
             <div class="p-name">Discovery & Roadmap</div>
             <div class="p-desc">Audit of your current tech stack + custom AI agent architecture plan.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">1,500</span></div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">5,500</span></div>
             <div class="p-period">one-time project</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -772,7 +801,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <li class="p-feat"><span class="ck">✓</span><span>Agent architecture design (custom)</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>MCP/API integration assessment</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Technical implementation roadmap</span></li>
-              <li class="p-feat"><span class="ck">✓</span><span>ROI projection model</span></li>              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Agent development</span></li>
+              <li class="p-feat"><span class="ck">✓</span><span>ROI projection model</span></li>
+              <li class="p-feat"><span class="cx">–</span><span style="opacity:0.5">Agent development</span></li>
             </ul>
             <a href="#contact" class="btn btn-ghost btn-full">Book Discovery Call</a>
           </div>
@@ -781,7 +811,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="p-tier">Phase 2</div>
             <div class="p-name">Build & Test</div>
             <div class="p-desc">3 custom AI agents built, tested, and ready for your staging environment.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">3,600</span></div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">13,000</span></div>
             <div class="p-period">one-time project</div>
             <hr class="p-divider">
             <ul class="p-features">
@@ -798,10 +828,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="p-tier">Phase 3</div>
             <div class="p-name">Production System</div>
             <div class="p-desc">Full production deployment + 30 days support + team handoff.</div>
-            <div class="p-price"><span class="p-currency">$</span><span class="p-amount">7,500</span></div>
-            <div class="p-period">+ from project</div>
+            <div class="p-price"><span class="p-currency">₪</span><span class="p-amount">27,500</span></div>
+            <div class="p-period">+ per project</div>
             <hr class="p-divider">
-            <ul class="p-features">              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
+            <ul class="p-features">
+              <li class="p-feat"><span class="ck">✓</span><span>Everything in Build & Test</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>FastAPI production backend</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>Docker / K8s deployment</span></li>
               <li class="p-feat"><span class="ck">✓</span><span>30 days post-launch support</span></li>
@@ -814,8 +845,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p style="text-align:center;font-size:0.83rem;color:var(--text-dim);margin-top:20px;">
           All AdTech AI projects start with a <strong style="color:var(--text-muted)">free 30-min discovery call</strong>.
           We scope together before you commit to anything. <a href="#contact">Book yours →</a>
+          · 💳 <strong style="color:var(--text-muted)">Pay via bank transfer, Bit, PayBox or <a href="https://payoneer.com" target="_blank" rel="noopener" style="color:var(--accent)">Payoneer</a></strong>. <a href="#contact" style="color:var(--accent)">Contact for payment →</a>
         </p>
-      </div>
+      </div><!-- end acc-panel adtech-p -->
+      </div><!-- end accordion-item -->
+
     </div>
   </div>
 </section>
@@ -1054,11 +1088,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script src="app.js" defer></script>
 <script>
 // Pricing tab switch
-function switchTab(panelId) {
-  document.querySelectorAll('.pricing-panels > div').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.p-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(panelId).classList.add('active');
-  event.target.classList.add('active');
+// Toggle accordion panels
+function toggleAccordion(panelId, buttonElement) {
+  // Close all other panels
+  document.querySelectorAll('.acc-panel').forEach(panel => {
+    panel.classList.remove('open');
+  });
+  document.querySelectorAll('.pricing-acc-header').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  // Open the clicked panel
+  const panel = document.getElementById(panelId);
+  if (panel) {
+    panel.classList.add('open');
+    buttonElement.classList.add('active');
+  }
 }
 
 // Mobile menu

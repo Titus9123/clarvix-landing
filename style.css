@@ -374,8 +374,8 @@ img { max-width: 100%; display: block; }
 }
 .pricing-acc-header.active .acc-arrow { transform: rotate(0deg); }
 
-.acc-panel { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 28px; }
-.acc-panel.open { padding: 28px; }
+.acc-panel { display: none; overflow: hidden; padding: 0 28px; }
+.acc-panel.open { display: block; padding: 28px; }
 
 .pricing-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
 .p-card {
@@ -552,8 +552,9 @@ footer {
 .p-tab:hover { color: var(--text); background: rgba(255,255,255,0.04); }
 .p-tab.active { background: var(--accent); color: #fff; box-shadow: var(--shadow-a); }
 
-.pricing-panels > div { display: none; }
-.pricing-panels > div.active { display: block; }
+.pricing-panels > div:not(.pricing-accordion-item) { display: none; }
+.pricing-panels > div:not(.pricing-accordion-item).active { display: block; }
+.pricing-accordion-item { display: block; }
 
 /* ============================================================
    RESPONSIVE — TABLET & MOBILE NAV (<=1024px)
