@@ -1,0 +1,41 @@
+name: GAD Daily Run — Finance & Analytics
+
+on:
+  schedule:
+    # 05:00 UTC = 08:00 Israel (UTC+3)
+    - cron: '0 5 * * *'
+  workflow_dispatch:
+
+jobs:
+  trigger-gad:
+    name: Trigger GAD agent via SaaS
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST /api/runs — GAD daily_run
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://mcp.clarvix.net/api/runs" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
+            -d '{
+              "agent_name": "GAD",
+              "task_type": "daily_run",
+              "service_type": "analytics",
+              "input_payload": {
+                "triggered_by": "github_actions",
+                "workflow": "gad_daily",
+                "schedule": "0 5 * * *"
+              }
+            }')
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -gt 299 ]; then
+            echo "ERROR: SaaS returned HTTP $HTTP_CODE"
+            exit 1
+          fi
+          echo "✅ GAD daily run triggered successfully"

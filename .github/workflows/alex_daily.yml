@@ -1,0 +1,41 @@
+name: ALEX Daily Run — Sales Hunter
+
+on:
+  schedule:
+    # 06:00 UTC = 09:00 Israel (UTC+3)
+    - cron: '0 6 * * *'
+  workflow_dispatch:   # permite trigger manual desde GitHub UI
+
+jobs:
+  trigger-alex:
+    name: Trigger ALEX agent via SaaS
+    runs-on: ubuntu-latest
+    steps:
+      - name: POST /api/runs — ALEX daily_run
+        run: |
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
+            "https://mcp.clarvix.net/api/runs" \
+            -H "Content-Type: application/json" \
+            -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
+            -d '{
+              "agent_name": "ALEX",
+              "task_type": "daily_run",
+              "service_type": "lead_generation",
+              "input_payload": {
+                "triggered_by": "github_actions",
+                "workflow": "alex_daily",
+                "schedule": "0 6 * * *"
+              }
+            }')
+
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | head -n-1)
+
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response: $BODY"
+
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -gt 299 ]; then
+            echo "ERROR: SaaS returned HTTP $HTTP_CODE"
+            exit 1
+          fi
+          echo "✅ ALEX daily run triggered successfully"
