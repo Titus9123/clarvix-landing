@@ -11,21 +11,23 @@ jobs:
     name: Trigger MIRA ads performance run
     runs-on: ubuntu-latest
     steps:
-      - name: POST /api/runs — MIRA ads_review
+      - name: POST /mcp/call — MIRA ads create_run
         run: |
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/api/runs" \
+            "https://mcp.clarvix.net/mcp/call" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
             -d '{
-              "agent_name": "MIRA",
-              "task_type": "ads_review",
-              "service_type": "advertising",
-              "input_payload": {
-                "triggered_by": "github_actions",
-                "workflow": "mira_ads",
-                "schedule": "0 9 * * 2,5",
-                "platforms": ["facebook", "instagram", "google"]
+              "tool": "create_run",
+              "input": {
+                "agent_name": "MIRA",
+                "task_type": "ads_review",
+                "input_data": {
+                  "triggered_by": "github_actions",
+                  "workflow": "mira_ads",
+                  "schedule": "0 9 * * 2,5",
+                  "platforms": ["facebook", "instagram", "google"]
+                }
               }
             }')
 

@@ -11,20 +11,22 @@ jobs:
     name: Trigger ALEX agent via SaaS
     runs-on: ubuntu-latest
     steps:
-      - name: POST /api/runs — ALEX daily_run
+      - name: POST /mcp/call — ALEX create_run
         run: |
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/api/runs" \
+            "https://mcp.clarvix.net/mcp/call" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
             -d '{
-              "agent_name": "ALEX",
-              "task_type": "daily_run",
-              "service_type": "lead_generation",
-              "input_payload": {
-                "triggered_by": "github_actions",
-                "workflow": "alex_daily",
-                "schedule": "0 6 * * *"
+              "tool": "create_run",
+              "input": {
+                "agent_name": "ALEX",
+                "task_type": "daily_run",
+                "input_data": {
+                  "triggered_by": "github_actions",
+                  "workflow": "alex_daily",
+                  "schedule": "0 6 * * *"
+                }
               }
             }')
 

@@ -11,20 +11,22 @@ jobs:
     name: Trigger MIRA daily content run
     runs-on: ubuntu-latest
     steps:
-      - name: POST /api/runs — MIRA daily_run
+      - name: POST /mcp/call — MIRA create_run
         run: |
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/api/runs" \
+            "https://mcp.clarvix.net/mcp/call" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
             -d '{
-              "agent_name": "MIRA",
-              "task_type": "daily_run",
-              "service_type": "content",
-              "input_payload": {
-                "triggered_by": "github_actions",
-                "workflow": "mira_daily",
-                "schedule": "0 7 * * *"
+              "tool": "create_run",
+              "input": {
+                "agent_name": "MIRA",
+                "task_type": "daily_run",
+                "input_data": {
+                  "triggered_by": "github_actions",
+                  "workflow": "mira_daily",
+                  "schedule": "0 7 * * *"
+                }
               }
             }')
 

@@ -11,20 +11,22 @@ jobs:
     name: Trigger GAD agent via SaaS
     runs-on: ubuntu-latest
     steps:
-      - name: POST /api/runs — GAD daily_run
+      - name: POST /mcp/call — GAD create_run
         run: |
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/api/runs" \
+            "https://mcp.clarvix.net/mcp/call" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
             -d '{
-              "agent_name": "GAD",
-              "task_type": "daily_run",
-              "service_type": "analytics",
-              "input_payload": {
-                "triggered_by": "github_actions",
-                "workflow": "gad_daily",
-                "schedule": "0 5 * * *"
+              "tool": "create_run",
+              "input": {
+                "agent_name": "GAD",
+                "task_type": "daily_run",
+                "input_data": {
+                  "triggered_by": "github_actions",
+                  "workflow": "gad_daily",
+                  "schedule": "0 5 * * *"
+                }
               }
             }')
 

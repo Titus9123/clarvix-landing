@@ -12,21 +12,23 @@ jobs:
     name: Trigger BEN morning client check
     runs-on: ubuntu-latest
     steps:
-      - name: POST /api/runs — BEN morning_run
+      - name: POST /mcp/call — BEN create_run
         run: |
           RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/api/runs" \
+            "https://mcp.clarvix.net/mcp/call" \
             -H "Content-Type: application/json" \
             -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
             -d '{
-              "agent_name": "BEN",
-              "task_type": "morning_run",
-              "service_type": "client_success",
-              "input_payload": {
-                "triggered_by": "github_actions",
-                "workflow": "ben_morning",
-                "schedule": "0 5 * * 0-4",
-                "check_type": "client_health_review"
+              "tool": "create_run",
+              "input": {
+                "agent_name": "BEN",
+                "task_type": "morning_run",
+                "input_data": {
+                  "triggered_by": "github_actions",
+                  "workflow": "ben_morning",
+                  "schedule": "0 5 * * 0-4",
+                  "check_type": "client_health_review"
+                }
               }
             }')
 
