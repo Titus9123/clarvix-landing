@@ -1,25 +1,24 @@
-name: MIRA — Ads Manager (Martes y Viernes)
+name: MIRA — Weekly Optimize (Sábados)
 
 on:
   schedule:
-    - cron: '0 9 * * 2'   # Martes 11:00 Israel
-    - cron: '0 9 * * 5'   # Viernes 11:00 Israel
+    - cron: '0 8 * * 6'   # Sábados 10:00 Israel
   workflow_dispatch:
 
 jobs:
-  mira-ads:
+  mira-optimize:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
       - run: pip install anthropic requests
-      - name: Run MIRA ADS_MANAGER
+      - name: Run MIRA OPTIMIZE
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           MCP_URL:           ${{ secrets.MCP_URL }}
           MCP_API_KEY:       ${{ secrets.CLARVIX_API_KEY }}
-          MIRA_MODE:         ADS_MANAGER
+          MIRA_MODE:         OPTIMIZE
         run: python scripts/trigger_mira.py

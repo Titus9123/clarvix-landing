@@ -1,43 +1,37 @@
-name: MIRA Daily Run — Content & Brand
+name: MIRA — Daily Content (09:00 Israel)
 
 on:
   schedule:
-    # 07:00 UTC = 10:00 Israel (UTC+3)
-    - cron: '0 7 * * *'
+    - cron: '0 7 * * 0-4'   # 09:00 Israel (UTC+2), Dom-Jue
+    - cron: '0 7 * * 5'     # Viernes — contenido pre-Shabbat
   workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Modo'
+        required: false
+        default: 'DAILY'
+        type: choice
+        options: [DAILY, ADS_MANAGER, OPTIMIZE, CAMPAIGN]
+      note:
+        description: 'Nota adicional para MIRA'
+        required: false
+        default: ''
 
 jobs:
-  trigger-mira-daily:
-    name: Trigger MIRA daily content run
+  mira-daily:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: POST /mcp/call — MIRA create_run
-        run: |
-          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST \
-            "https://mcp.clarvix.net/mcp/call" \
-            -H "Content-Type: application/json" \
-            -H "X-API-Key: ${{ secrets.CLARVIX_API_KEY }}" \
-            -d '{
-              "tool": "create_run",
-              "input": {
-                "agent_name": "MIRA",
-                "task_type": "daily_run",
-                "input_data": {
-                  "triggered_by": "github_actions",
-                  "workflow": "mira_daily",
-                  "schedule": "0 7 * * *"
-                }
-              }
-            }')
-
-          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
-          BODY=$(echo "$RESPONSE" | head -n-1)
-
-          echo "HTTP Status: $HTTP_CODE"
-          echo "Response: $BODY"
-
-          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -gt 299 ]; then
-            echo "ERROR: SaaS returned HTTP $HTTP_CODE"
-            exit 1
-          fi
-          echo "✅ MIRA daily run triggered successfully"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install anthropic requests
+      - name: Run MIRA
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          MCP_URL:           ${{ secrets.MCP_URL }}
+          MCP_API_KEY:       ${{ secrets.CLARVIX_API_KEY }}
+          MIRA_MODE:         ${{ github.event.inputs.mode || 'DAILY' }}
+          MIRA_NOTE:         ${{ github.event.inputs.note || '' }}
+        run: python scripts/trigger_mira.py
