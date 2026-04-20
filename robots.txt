@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.clarvix.net/sitemap.xml
+Sitemap: https://clarvix.net/sitemap.xml

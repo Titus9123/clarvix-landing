@@ -51,13 +51,60 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/"/>
   </url>
 
-  <!-- Service pages EN -->
+  <!-- Digital Presence Audit pages (4 languages) -->
   <url>
     <loc>https://clarvix.net/digital-presence-audit.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clarvix.net/digital-presence-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clarvix.net/digital-presence-audit-es.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://clarvix.net/digital-presence-audit-he.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://clarvix.net/digital-presence-audit-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/digital-presence-audit.html"/>
   </url>
+  <url>
+    <loc>https://clarvix.net/digital-presence-audit-es.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clarvix.net/digital-presence-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clarvix.net/digital-presence-audit-es.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://clarvix.net/digital-presence-audit-he.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://clarvix.net/digital-presence-audit-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/digital-presence-audit.html"/>
+  </url>
+  <url>
+    <loc>https://clarvix.net/digital-presence-audit-he.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clarvix.net/digital-presence-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clarvix.net/digital-presence-audit-es.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://clarvix.net/digital-presence-audit-he.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://clarvix.net/digital-presence-audit-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/digital-presence-audit.html"/>
+  </url>
+  <url>
+    <loc>https://clarvix.net/digital-presence-audit-ar.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://clarvix.net/digital-presence-audit.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://clarvix.net/digital-presence-audit-es.html"/>
+    <xhtml:link rel="alternate" hreflang="he" href="https://clarvix.net/digital-presence-audit-he.html"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://clarvix.net/digital-presence-audit-ar.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/digital-presence-audit.html"/>
+  </url>
+
+  <!-- Lead Engine -->
+  <url>
+    <loc>https://clarvix.net/lead-engine.html</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
   <!-- AdTech AI Systems pages (4 languages) -->
   <url>
     <loc>https://clarvix.net/adtech-ai.html</loc>
@@ -133,12 +180,6 @@
   <!-- Blog index -->
   <url>
     <loc>https://clarvix.net/blog/</loc>
-    <lastmod>2026-04-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clarvix.net/blog/index.html</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
