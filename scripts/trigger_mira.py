@@ -53,8 +53,16 @@ Genera y publica el contenido del día. Decide si es post o carrusel.
 - Miércoles: post de dato impactante israelí (stat local)
 - Jueves: carrusel de conversión directa o testimonial
 - Viernes: post ligero pre-Shabbat (cultura, team, humor profesional)
-Siempre: save_content() primero → luego post_to_instagram() + post_to_facebook()
-Cierre: store_learning('mira_daily_decision', {fecha, tipo, servicio, hook, plataforma})
+Siempre: save_content() primero → luego:
+  1. post_to_instagram() — con imagen (carrusel o foto)
+  2. post_to_facebook() — mismo caption + imagen
+  3. post_to_x() — versión corta <280 chars, solo texto, hook potente
+  4. post_to_linkedin() — versión profesional más desarrollada, sin hashtags exagerados
+ADAPTACIÓN POR RED:
+- Instagram/Facebook: caption en hebreo con emojis + hashtags
+- X: texto corto y directo en hebreo, máx 280 chars, 1-2 hashtags
+- LinkedIn: párrafo profesional en hebreo o inglés según el tema (AdTech → inglés, SMB → hebreo)
+Cierre: store_learning('mira_daily_decision', {fecha, tipo, servicio, hook, plataformas})
 
 MODO ADS_MANAGER (Martes y Viernes):
 Lee métricas de ads. Detecta underperformers y winners.
@@ -192,6 +200,30 @@ MIRA_TOOLS = [
                 "message":    {"type": "string"},
                 "image_url":  {"type": "string"},
                 "link":       {"type": "string"},
+                "content_id": {"type": "integer"}
+            }
+        }
+    },
+    {
+        "name": "post_to_x",
+        "description": "Publica un tweet en @Clarvix_Digital vía X API v2. Máximo 280 caracteres. Solo texto (sin imagen).",
+        "input_schema": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+                "text":       {"type": "string", "description": "Contenido del tweet. Máximo 280 chars."},
+                "content_id": {"type": "integer"}
+            }
+        }
+    },
+    {
+        "name": "post_to_linkedin",
+        "description": "Publica en la Company Page de Clarvix en LinkedIn vía UGC Posts API. Solo texto.",
+        "input_schema": {
+            "type": "object",
+            "required": ["text"],
+            "properties": {
+                "text":       {"type": "string", "description": "Contenido del post para LinkedIn."},
                 "content_id": {"type": "integer"}
             }
         }
