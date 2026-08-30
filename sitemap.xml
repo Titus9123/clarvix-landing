@@ -18,21 +18,6 @@
   <url><loc>https://clarvix.net/ga4-gtm-audit-israel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://clarvix.net/google-ads-waste-audit-israel/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://clarvix.net/adtech-control-tower/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarvix.net/asset-lab/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/ai-subscription-cost-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/how-much-do-ai-tools-cost-per-month/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/movebudget/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarvix.net/movebudget/apartment-moving-cost-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/movebudget/first-month-apartment-budget/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/monthly-budget-planner/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/paycheck-budget-template/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/debt-payoff-tracker/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/weekly-meal-planner-printable/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/grocery-list-template/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/meal-prep-checklist/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url>
     <loc>https://clarvix.net/lead-tracking-audit-israel/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://clarvix.net/lead-tracking-audit-israel/" />
@@ -249,43 +234,4 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://clarvix.net/revenue-leak-monitoring-israel/" />
     <changefreq>weekly</changefreq><priority>0.8</priority>
   </url>
-  <url><loc>https://clarvix.net/budgetreset/bill-payment-calendar/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/savings-challenge-tracker/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/biweekly-budget-planner/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/chatgpt-vs-claude-cost/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/ai-tools-budget-for-small-business/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/free-vs-paid-ai-tools/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/movebudget/moving-checklist-printable/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/movebudget/utility-setup-checklist/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/movebudget/security-deposit-calculator/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/family-meal-planner/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/budget-grocery-list/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/meal-planner-for-two/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url>
-    <loc>https://clarvix.net/habitgrid/</loc>
-    <lastmod>2026-06-02</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url><loc>https://clarvix.net/aistackcost/best-ai-tools-for-content-creators/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/ai-tools-for-real-estate-agents/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/ai-tools-for-students-budget/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/agency-ai-stack-budget/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/aistackcost/ai-tools-roi-calculator-guide/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/rent-budget-calculator/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/zero-based-budget-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/emergency-fund-calculator/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/student-budget-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/budgetreset/couples-budget-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/movebudget/moving-truck-rental-cost/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/movebudget/movers-cost-estimator/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/movebudget/apartment-application-fees/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/movebudget/renters-insurance-moving-checklist/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/movebudget/first-apartment-furniture-budget/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/cheap-weekly-meal-plan/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/meal-planning-for-busy-families/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/healthy-grocery-list-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/meal-plan-calendar-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
-  <url><loc>https://clarvix.net/mealplansheet/pantry-inventory-template/</loc><changefreq>monthly</changefreq><priority>0.68</priority></url>
 </urlset>
