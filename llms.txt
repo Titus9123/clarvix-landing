@@ -1,0 +1,28 @@
+# Clarvix
+
+> Clarvix finds and prioritizes revenue leaks for Israeli SMBs and clinics: broken conversion tracking, wasted ad spend, and funnel/attribution gaps across Google Ads, Meta Ads, GA4, Search Console, and Google Tag Manager. Read-only by default — nothing changes on a client's ad accounts or analytics without their explicit approval.
+
+## Service tiers
+
+- Public Revenue Leak Scan: free, no-credentials automated scan of a business's public ad and site signals.
+- Revenue Leak Verify Lite: one-time paid, read-only verification against a client's own GA4/Search Console/Tag Manager.
+- Revenue Leak Monitor: recurring monthly monitoring with alerts and prioritized fix proposals.
+- AdTech Control Tower: recurring monthly executive briefs plus a human-approved implementation backlog.
+
+## Pages
+
+- [Home](https://clarvix.net/): overview of the four service tiers and how the revenue-leak audit works.
+- [Blog](https://clarvix.net/blog/): articles on digital presence audits and B2B lead generation for Israeli SMBs.
+- [Revenue Leak Scan Israel](https://clarvix.net/revenue-leak-scan-israel/)
+- [GA4 + GTM Audit Israel](https://clarvix.net/ga4-gtm-audit-israel/)
+- [Google Ads Waste Audit Israel](https://clarvix.net/google-ads-waste-audit-israel/)
+- [Lead Tracking Audit Israel](https://clarvix.net/lead-tracking-audit-israel/)
+- [Clinic Marketing Audit Israel](https://clarvix.net/clinic-marketing-audit-israel/)
+
+## Languages
+
+Available in English, Spanish (/es.html), Hebrew (/he.html), and Arabic (/ar.html), serving Israeli SMBs and clinics.
+
+## Contact
+
+contact@clarvix.net
